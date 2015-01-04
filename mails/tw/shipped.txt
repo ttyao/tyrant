@@ -1,0 +1,19 @@
+
+[{shop_url}] 
+
+{lastname} {firstname} 您好,
+
+Your order has been shipped 
+
+您的訂單{order_name} 已經發貨。
+
+多謝惠顧 {shop_name}! 		 
+
+您可以查看您的訂單，並從這裡下載您的發票"訂單記錄"
+[{history_url}]
+在您的客戶賬戶點擊"我的賬戶"
+[{my_account_url}]。 
+
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
+

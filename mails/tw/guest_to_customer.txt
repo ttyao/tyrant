@@ -1,0 +1,19 @@
+
+[{shop_url}] 
+
+{lastname} {firstname} 您好, 
+
+Your guest account for {shop_name} has been transformed into a
+customer account. 
+
+電郵地址： {email}
+
+密碼： {passwd} 		 
+
+Please be careful when sharing these login details with others. 
+
+您可以在我們的店舖裡使用客戶賬戶： {shop_url} 
+
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
+

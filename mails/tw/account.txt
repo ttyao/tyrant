@@ -1,0 +1,30 @@
+
+[{shop_url}] 
+
+{lastname} {firstname} 您好,
+
+感謝您在 {shop_name} 創建賬戶。 
+
+以下是您的登錄信息：
+
+電郵地址： {email}
+
+密碼： {passwd} 		 
+
+重要的安全提示：
+
+* 始終保持你的帳戶詳細信息的安全。
+
+* 永遠不要透露您的登錄信息給任何人。
+
+* 定期更改密碼。
+
+*
+如果您懷疑有人違法使用您的帳戶，請立即通知我們。
+
+您現在可以在我們的店鋪下單了： {shop_name}
+[{shop_url}] 
+
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
+

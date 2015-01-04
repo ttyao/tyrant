@@ -1,0 +1,335 @@
+<pos_static_blocks>
+<!-- static block configuration -->
+	<block>
+		<id_posstaticblock>1</id_posstaticblock>
+		<identify>newsletter</identify>
+		<hook_position>blockFooter1</hook_position>
+		<name_module>blocknewsletter</name_module>
+		<hook_module>displayFooter</hook_module>
+		<posorder>0</posorder>
+		<insert_module>1</insert_module>
+		<active>0</active>
+		<is_default>0</is_default>
+		<showhook>1</showhook>
+	</block>
+	<block>
+		<id_posstaticblock>2</id_posstaticblock>
+		<identify>social</identify>
+		<hook_position>blockFooter1</hook_position>
+		<name_module></name_module>
+		<hook_module></hook_module>
+		<posorder>0</posorder>
+		<insert_module>0</insert_module>
+		<active>0</active>
+		<is_default>0</is_default>
+		<showhook>1</showhook>
+	</block>
+	<block>
+		<id_posstaticblock>3</id_posstaticblock>
+		<identify>logo-footer</identify>
+		<hook_position>blockFooter2</hook_position>
+		<name_module></name_module>
+		<hook_module></hook_module>
+		<posorder>0</posorder>
+		<insert_module>0</insert_module>
+		<active>0</active>
+		<is_default>0</is_default>
+		<showhook>1</showhook>
+	</block>
+	<block>
+		<id_posstaticblock>4</id_posstaticblock>
+		<identify>footer-center-1</identify>
+		<hook_position>blockFooter2</hook_position>
+		<name_module>blockcms</name_module>
+		<hook_module>displayFooter</hook_module>
+		<posorder>0</posorder>
+		<insert_module>1</insert_module>
+		<active>0</active>
+		<is_default>0</is_default>
+		<showhook>1</showhook>
+	</block>
+	<block>
+		<id_posstaticblock>5</id_posstaticblock>
+		<identify>footer-center-2</identify>
+		<hook_position>blockFooter2</hook_position>
+		<name_module>blockmyaccountfooter</name_module>
+		<hook_module>displayFooter</hook_module>
+		<posorder>0</posorder>
+		<insert_module>1</insert_module>
+		<active>0</active>
+		<is_default>0</is_default>
+		<showhook>1</showhook>
+	</block>
+	<block>
+		<id_posstaticblock>6</id_posstaticblock>
+		<identify>footer-center-3</identify>
+		<hook_position>blockFooter2</hook_position>
+		<name_module>blockcategories</name_module>
+		<hook_module>displayFooter</hook_module>
+		<posorder>0</posorder>
+		<insert_module>1</insert_module>
+		<active>0</active>
+		<is_default>0</is_default>
+		<showhook>1</showhook>
+	</block>
+	<block>
+		<id_posstaticblock>7</id_posstaticblock>
+		<identify>footer-center-4</identify>
+		<hook_position>blockFooter2</hook_position>
+		<name_module></name_module>
+		<hook_module></hook_module>
+		<posorder>0</posorder>
+		<insert_module>0</insert_module>
+		<active>0</active>
+		<is_default>0</is_default>
+		<showhook>1</showhook>
+	</block>
+	<block>
+		<id_posstaticblock>8</id_posstaticblock>
+		<identify>footer-bottom</identify>
+		<hook_position>blockFooter3</hook_position>
+		<name_module></name_module>
+		<hook_module></hook_module>
+		<posorder>0</posorder>
+		<insert_module>0</insert_module>
+		<active>0</active>
+		<is_default>0</is_default>
+		<showhook>1</showhook>
+	</block>
+<!-- block language configuration -->	
+	<block_language>
+		<id_posstaticblock>1</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>Newsletter</title>
+		<description>
+		<![CDATA[]]>
+		</description>
+	</block_language>
+	<block_language>
+		<id_posstaticblock>1</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>Newsletter</title>
+		<description>
+		<![CDATA[]]>
+		</description>
+	</block_language>
+	<block_language>
+		<id_posstaticblock>2</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>Social</title>
+		<description>
+		<![CDATA[
+<div class="col-xs-12 col-sm-12 col-md-5">
+<ul class="link-follow">
+<li class="first"><a class="facebook fa fa-facebook" href="https://www.facebook.com/posthemes"><span>facebook</span></a></li>
+<li><a class="rss fa fa-rss" href="#"><span>rss</span></a></li>
+<li><a class="twitter fa fa-twitter" href="https://twitter.com/posthemes"><span>twitter</span></a></li>
+<li><a class="skype fa fa-skype" href="#"><span>skype</span></a></li>
+<li class="last"><a class="dribbble fa fa-dribbble" href="#"><span>dribbble</span></a></li>
+</ul>
+</div>
+		]]>
+		</description>
+	</block_language>
+	<block_language>
+		<id_posstaticblock>2</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>Social</title>
+		<description>
+		<![CDATA[
+<div class="col-xs-12 col-sm-12 col-md-5">
+<ul class="link-follow">
+<li class="first"><a class="facebook fa fa-facebook" href="https://www.facebook.com/posthemes"><span>facebook</span></a></li>
+<li><a class="rss fa fa-rss" href="#"><span>rss</span></a></li>
+<li><a class="twitter fa fa-twitter" href="https://twitter.com/posthemes"><span>twitter</span></a></li>
+<li><a class="skype fa fa-skype" href="#"><span>skype</span></a></li>
+<li class="last"><a class="dribbble fa fa-dribbble" href="#"><span>dribbble</span></a></li>
+</ul>
+</div>
+		]]>
+		</description>
+	</block_language>
+	<block_language>
+		<id_posstaticblock>3</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>Footer Static Col 1</title>
+		<description>
+		<![CDATA[
+<div class="col-xs-12 col-sm-6 col-md-4">
+<div class="img-logo"><a href="#"> <img class="img-responsive" src="/pos_rossi/img/cms/logo.png" alt="" /> </a></div>
+<div class="footer-static-content ">
+<p>This is Photoshops version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit...</p>
+</div>
+</div>
+		]]>
+		</description>
+	</block_language>
+	<block_language>
+		<id_posstaticblock>3</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>Footer Static Col 1</title>
+		<description>
+		<![CDATA[
+<div class="col-xs-12 col-sm-6 col-md-4">
+<div class="img-logo"><a href="#"> <img class="img-responsive" src="/pos_rossi/img/cms/logo.png" alt="" /> </a></div>
+<div class="footer-static-content ">
+<p>This is Photoshops version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit...</p>
+</div>
+</div>
+		]]>
+		</description>
+	</block_language>
+	<block_language>
+		<id_posstaticblock>4</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>Footer Static Col 2</title>
+		<description>
+		<![CDATA[]]>
+		</description>
+	</block_language>
+	<block_language>
+		<id_posstaticblock>4</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>Footer Static Col 2</title>
+		<description>
+		<![CDATA[]]>
+		</description>
+	</block_language>
+	<block_language>
+		<id_posstaticblock>5</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>Footer Static Col 3</title>
+		<description>
+		<![CDATA[]]>
+		</description>
+	</block_language>
+	<block_language>
+		<id_posstaticblock>5</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>Footer Static Col 3</title>
+		<description>
+		<![CDATA[]]>
+		</description>
+	</block_language>
+	<block_language>
+		<id_posstaticblock>6</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>Footer Static Col 4</title>
+		<description>
+		<![CDATA[]]>
+		</description>
+	</block_language>
+	<block_language>
+		<id_posstaticblock>6</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>Footer Static Col 4</title>
+		<description>
+		<![CDATA[]]>
+		</description>
+	</block_language>
+	<block_language>
+		<id_posstaticblock>7</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>Footer Static Col 5</title>
+		<description>
+		<![CDATA[
+<section class="footer-block col-xs-12 col-sm-6 col-md-2">
+<div class="title_block">
+<h4>our services</h4>
+</div>
+<div class="block_content toggle-footer">
+<ul>
+<li><a title="Our stores" href="#">Our stores</a></li>
+<li><a title="About us" href="#">About us</a></li>
+<li><a title="Information" href="#">Information</a></li>
+<li><a title="Privacy Policy" href="#">Privacy Policy</a></li>
+<li><a title="Terms & Condition" href="#">Terms & Condition</a></li>
+</ul>
+</div>
+</section>
+		]]>
+		</description>
+	</block_language>
+	<block_language>
+		<id_posstaticblock>7</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>Footer Static Col 5</title>
+		<description>
+		<![CDATA[
+<section class="footer-block col-xs-12 col-sm-6 col-md-2">
+<div class="title_block">
+<h4>our services</h4>
+</div>
+<div class="block_content toggle-footer">
+<ul>
+<li><a title="Our stores" href="#">Our stores</a></li>
+<li><a title="About us" href="#">About us</a></li>
+<li><a title="Information" href="#">Information</a></li>
+<li><a title="Privacy Policy" href="#">Privacy Policy</a></li>
+<li><a title="Terms & Condition" href="#">Terms & Condition</a></li>
+</ul>
+</div>
+</section>
+		]]>
+		</description>
+	</block_language>
+	<block_language>
+		<id_posstaticblock>8</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>Copyright</title>
+		<description>
+		<![CDATA[
+<div class="row">
+<div class="col-xs-12 col-sm-6"><address>Copyright &copy; 2014 <a href="http://www.posthemes.com/">Posthemes</a>. All Rights Reserved</address></div>
+<div class="col-xs-12 col-sm-6 payment"><a href="#"><img src="/pos_rossi/img/cms/payment.png" alt="" /></a></div>
+</div>
+		]]>
+		</description>
+	</block_language>
+	<block_language>
+		<id_posstaticblock>8</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>Copyright</title>
+		<description>
+		<![CDATA[
+<div class="row">
+<div class="col-xs-12 col-sm-6"><address>Copyright &copy; 2014 <a href="http://www.posthemes.com/">Posthemes</a>. All Rights Reserved</address></div>
+<div class="col-xs-12 col-sm-6 payment"><a href="#"><img src="/pos_rossi/img/cms/payment.png" alt="" /></a></div>
+</div>
+		]]>
+		</description>
+	</block_language>
+<!-- block shop configuration -->
+	<block_shop>
+		<id_posstaticblock>1</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	<block_shop>
+		<id_posstaticblock>2</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	<block_shop>
+		<id_posstaticblock>3</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	<block_shop>
+		<id_posstaticblock>4</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	<block_shop>
+		<id_posstaticblock>5</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	<block_shop>
+		<id_posstaticblock>6</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	<block_shop>
+		<id_posstaticblock>7</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	<block_shop>
+		<id_posstaticblock>8</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+</pos_static_blocks>

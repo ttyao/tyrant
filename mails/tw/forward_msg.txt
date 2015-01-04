@@ -1,0 +1,14 @@
+
+[{shop_url}] 
+
+{lastname} {firstname} 您好, 
+
+{employee} wanted to forward this discussion to you. 
+
+對話記錄： {messages}
+
+{employee} added "{comment}" 		 
+
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
+

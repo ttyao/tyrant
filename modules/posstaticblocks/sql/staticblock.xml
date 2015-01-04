@@ -1,0 +1,278 @@
+<pos_static_blocks>
+<!-- static block configuration -->
+	<block>
+		<id_posstaticblock>1</id_posstaticblock>
+		<identify>call_us_247</identify>
+		<hook_position>blockPosition1</hook_position>
+		<name_module></name_module>
+		<hook_module></hook_module>
+		<posorder>0</posorder>
+		<insert_module>0</insert_module>
+		<active>0</active>
+		<showhook>1</showhook>
+	</block>
+	<block>
+		<id_posstaticblock>4</id_posstaticblock>
+		<identify>pt_ver_menu_idcat_3</identify>
+		<hook_position>top</hook_position>
+		<name_module></name_module>
+		<hook_module></hook_module>
+		<posorder>0</posorder>
+		<insert_module>0</insert_module>
+		<active>0</active>
+		<showhook>0</showhook>
+	</block>
+	<block>
+		<id_posstaticblock>8</id_posstaticblock>
+		<identify>banner_static_top</identify>
+		<hook_position>blockPosition3</hook_position>
+		<name_module></name_module>
+		<hook_module></hook_module>
+		<posorder>0</posorder>
+		<insert_module>0</insert_module>
+		<active>0</active>
+		<showhook>1</showhook>
+	</block>
+	<block>
+		<id_posstaticblock>9</id_posstaticblock>
+		<identify>static_category_block</identify>
+		<hook_position>blockPosition3</hook_position>
+		<name_module>postabcateslider3</name_module>
+		<hook_module>displayRightColumn</hook_module>
+		<posorder>0</posorder>
+		<insert_module>1</insert_module>
+		<active>0</active>
+		<showhook>1</showhook>
+	</block>
+	<block>
+		<id_posstaticblock>10</id_posstaticblock>
+		<identify>static-box-top-1</identify>
+		<hook_position>blockPosition3</hook_position>
+		<name_module></name_module>
+		<hook_module></hook_module>
+		<posorder>0</posorder>
+		<insert_module>0</insert_module>
+		<active>0</active>
+		<showhook>1</showhook>
+	</block>
+	<block>
+		<id_posstaticblock>11</id_posstaticblock>
+		<identify>right_banner</identify>
+		<hook_position>rightColumn</hook_position>
+		<name_module></name_module>
+		<hook_module></hook_module>
+		<posorder>0</posorder>
+		<insert_module>0</insert_module>
+		<active>0</active>
+		<showhook>1</showhook>
+	</block>
+	<block>
+		<id_posstaticblock>14</id_posstaticblock>
+		<identify>banner_static_left</identify>
+		<hook_position>blockPosition2</hook_position>
+		<name_module></name_module>
+		<hook_module></hook_module>
+		<posorder>0</posorder>
+		<insert_module>0</insert_module>
+		<active>0</active>
+		<showhook>1</showhook>
+	</block>
+<!-- block lang configuration -->
+	<block_lang>
+		<id_posstaticblock>1</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>Contact Us</title>
+		<description>
+		<![CDATA[
+<p class="call_us_247">Call us 24/7: (+66) 123-456-789</p>
+		]]>
+		</description>
+	</block_lang>
+	<block_lang>
+		<id_posstaticblock>1</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>Contact Us</title>
+		<description>
+		<![CDATA[
+<p class="call_us_247">Call us 24/7: (+66) 123-456-789</p>
+		]]>
+		</description>
+	</block_lang>
+	<block_lang>
+		<id_posstaticblock>4</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>Vegamenu Static</title>
+		<description>
+		<![CDATA[
+<p><a href="/pos_rossi/en/12-football"><img class="img-responsive" src="/pos_rossi/img/cms/img_custum.jpg" alt="" /></a></p>
+		]]>
+		</description>
+	</block_lang>
+	<block_lang>
+		<id_posstaticblock>4</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>Vegamenu Static</title>
+		<description>
+		<![CDATA[
+<p><a href="/pos_rossi/fr/12-football"><img class="img-responsive" src="/pos_rossi/img/cms/img_custum.jpg" alt="" /></a></p>
+		]]>
+		</description>
+	</block_lang>
+	<block_lang>
+		<id_posstaticblock>8</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>Banner Static Top</title>
+		<description>
+		<![CDATA[
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+<div class="home-banner"><a href="/pos_rossi/en/12-football"> <img class="img-responsive" src="/pos_rossi/img/cms/img_banner124.jpg" alt="" /> </a></div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="home-banner"><a href="/pos_rossi/en/13-tennis"> <img class="img-responsive" src="/pos_rossi/img/cms/img_banner2356.jpg" alt="" /> </a></div>
+</div>
+</div>
+		]]>
+		</description>
+	</block_lang>
+	<block_lang>
+		<id_posstaticblock>8</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>Banner Static Top</title>
+		<description>
+		<![CDATA[
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+<div class="home-banner"><a href="/pos_rossi/fr/12-football"> <img class="img-responsive" src="/pos_rossi/img/cms/img_banner124.jpg" alt="" /> </a></div>
+</div>
+<div class="col-xs-12 col-sm-6">
+<div class="home-banner"><a href="/pos_rossi/fr/13-tennis"> <img class="img-responsive" src="/pos_rossi/img/cms/img_banner2356.jpg" alt="" /> </a></div>
+</div>
+</div>
+		]]>
+		</description>
+	</block_lang>
+	<block_lang>
+		<id_posstaticblock>9</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>Static Category Block</title>
+		<description>
+		<![CDATA[]]>
+		</description>
+	</block_lang>
+	<block_lang>
+		<id_posstaticblock>9</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>Static Category Block</title>
+		<description>
+		<![CDATA[]]>
+		</description>
+	</block_lang>
+	<block_lang>
+		<id_posstaticblock>10</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>Static Box Top 1</title>
+		<description>
+		<![CDATA[
+<div class="staticboxtop">
+<div class="textbox">
+<h3>This is Photoshops version of Lorem</h3>
+<p>This is Photoshops version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum</p>
+</div>
+</div>
+		]]>
+		</description>
+	</block_lang>
+	<block_lang>
+		<id_posstaticblock>10</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>Static Box Top 1</title>
+		<description>
+		<![CDATA[
+<div class="staticboxtop">
+<div class="textbox">
+<h3>This is Photoshops version of Lorem</h3>
+<p>This is Photoshops version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum</p>
+</div>
+</div>
+		]]>
+		</description>
+	</block_lang>
+	<block_lang>
+		<id_posstaticblock>11</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>Banner Static Right</title>
+		<description>
+		<![CDATA[
+<div class="banner-right hidden-xs">
+<div class="right-block-static-inner"><a href="/pos_rossi/en/12-football"> <img class="img-responsive" src="/pos_rossi/img/cms/banner-right.jpg" alt="" /> </a></div>
+</div>
+		]]>
+		</description>
+	</block_lang>
+	<block_lang>
+		<id_posstaticblock>11</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>Banner Static Right</title>
+		<description>
+		<![CDATA[
+<div class="banner-right hidden-xs">
+<div class="right-block-static-inner"><a href="/pos_rossi/fr/12-football"> <img class="img-responsive" src="/pos_rossi/img/cms/banner-right.jpg" alt="" /> </a></div>
+</div>
+		]]>
+		</description>
+	</block_lang>
+	<block_lang>
+		<id_posstaticblock>14</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>Banner Static Left</title>
+		<description>
+		<![CDATA[
+<div class="banner-right hidden-xs">
+<div class="right-block-static-inner"><a href="/pos_rossi/en/12-football"> <img class="img-responsive" src="/pos_rossi/img/cms/banner-right.jpg" alt="" /> </a></div>
+</div>
+		]]>
+		</description>
+	</block_lang>
+	<block_lang>
+		<id_posstaticblock>14</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>Banner Static Left</title>
+		<description>
+		<![CDATA[
+<div class="banner-right hidden-xs">
+<div class="right-block-static-inner"><a href="/pos_rossi/fr/12-football"> <img class="img-responsive" src="/pos_rossi/img/cms/banner-right.jpg" alt="" /> </a></div>
+</div>
+		]]>
+		</description>
+	</block_lang>
+<!-- block shop configuration -->
+	<block_shop>
+		<id_posstaticblock>1</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	<block_shop>
+		<id_posstaticblock>4</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	<block_shop>
+		<id_posstaticblock>8</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	<block_shop>
+		<id_posstaticblock>9</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	<block_shop>
+		<id_posstaticblock>10</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	<block_shop>
+		<id_posstaticblock>11</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	<block_shop>
+		<id_posstaticblock>14</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+</pos_static_blocks>

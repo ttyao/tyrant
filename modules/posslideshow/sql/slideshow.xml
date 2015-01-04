@@ -1,0 +1,87 @@
+<pos_slideshow>
+<!-- slideshow  configuration -->
+	<slideshow>
+		<id_pos_slideshow>3</id_pos_slideshow>
+		<porder>0</porder>
+		<active>1</active>
+	</slideshow>
+	<slideshow>
+		<id_pos_slideshow>4</id_pos_slideshow>
+		<porder>0</porder>
+		<active>1</active>
+	</slideshow>
+
+
+<!-- slide language configuration -->
+	<slideshow_lang>
+		<id_pos_slideshow>3</id_pos_slideshow>
+		<id_lang>1</id_lang>
+		<title>bannerSequence1</title>
+		<link>http://posthemes.com/</link>
+		<description>
+		<![CDATA[
+<h2 class="title" style="">The summer</h2>
+<h3 class="subtitle" style="">sport collection</h3>
+<div class="intro subtitle" style="">
+This is Photoshops version  of Lorem Ipsum. Proin gravida nibh vel velit auctor  aliquet. Aenean sollicitudin, lorem quis
+</div>
+		]]>
+		</description>
+	</slideshow_lang>
+	<slideshow_lang>
+		<id_pos_slideshow>4</id_pos_slideshow>
+		<id_lang>1</id_lang>
+		<title>bannerSequence2</title>
+		<link>http://posthemes.com/</link>
+		<description>
+		<![CDATA[
+<h2 class="title" style="">The winter</h2>
+<h3 class="subtitle" style="">sport winter</h3>
+<div class="intro subtitle" style="">
+This is Photoshops version  of Lorem Ipsum. Proin gravida nibh vel velit auctor  aliquet. Aenean sollicitudin, lorem quis
+</div>
+		]]>
+		</description>
+	</slideshow_lang>
+	
+	<slideshow_lang>
+		<id_pos_slideshow>3</id_pos_slideshow>
+		<id_lang>2</id_lang>
+		<title>bannerSequence1</title>
+		<link>http://posthemes.com/</link>
+		<description>
+		<![CDATA[
+<h2 class="title" style="">The summer</h2>
+<h3 class="subtitle" style="">sport collection</h3>
+<div class="intro subtitle" style="">
+This is Photoshops version  of Lorem Ipsum. Proin gravida nibh vel velit auctor  aliquet. Aenean sollicitudin, lorem quis
+</div>
+		]]>
+		</description>
+	</slideshow_lang>
+	<slideshow_lang>
+		<id_pos_slideshow>4</id_pos_slideshow>
+		<id_lang>2</id_lang>
+		<title>bannerSequence1</title>
+		<link>http://posthemes.com/</link>
+		<description>
+		<![CDATA[
+<h2 class="title" style="">The winter</h2>
+<h3 class="subtitle" style="">sport winter</h3>
+<div class="intro subtitle" style="">
+This is Photoshops version  of Lorem Ipsum. Proin gravida nibh vel velit auctor  aliquet. Aenean sollicitudin, lorem quis
+</div>
+		]]>
+		</description>
+	</slideshow_lang>
+	
+<!-- slideshop configuration -->
+	<slideshow_shop>
+		<id_pos_slideshow>3</id_pos_slideshow>
+		<id_shop>1</id_shop>
+	</slideshow_shop>
+        <slideshow_shop>
+		<id_pos_slideshow>4</id_pos_slideshow>
+		<id_shop>1</id_shop>
+	</slideshow_shop>
+</pos_slideshow>

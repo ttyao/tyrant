@@ -1,0 +1,20 @@
+
+[{shop_url}] 
+
+{lastname} {firstname} 您好, 
+
+我們正在處理您在 {shop_name} 的訂單 {order_name}。 
+
+您可以查看您的訂單，並從這裡下載您的發票"訂單記錄"
+[{history_url}]
+在您的客戶賬戶點擊"我的賬戶"
+[{my_account_url}]。 
+
+If you have a guest account, you can follow your order via the
+"Guest Tracking"
+[{guest_tracking_url}?id_order={order_name}] section
+on our shop. 
+
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
+

@@ -1,0 +1,11 @@
+
+[{shop_url}] 
+
+您好， 
+
+因為您訂閱了電子通訊，我們很高興回饋您以下折扣券：
+{discount} 
+
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
+
