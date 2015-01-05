@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Blog EN</title>
+	<atom:link href="http://www.prestashop.com/blog/en/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.prestashop.com/blog/en</link>
+	<description></description>
+	<lastBuildDate>Thu, 18 Dec 2014 15:11:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.4</generator>
+		<item>
+		<title>Selling digital products online, a Success Story</title>
+		<link>http://www.prestashop.com/blog/en/selling-digital-products-online-a-success/</link>
+		<comments>http://www.prestashop.com/blog/en/selling-digital-products-online-a-success/#comments</comments>
+		<pubDate>Thu, 18 Dec 2014 14:30:50 +0000</pubDate>
+		<dc:creator>Magali Ferber</dc:creator>
+				<category><![CDATA[Success Stories]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=19210</guid>
+		<description><![CDATA[Dulzura de Papel is a PrestaShop store designed and developed by Jimena, a passionate graphic designer, photographer, and graphic studio owner from Buenos Aires. She found a niche market in selling customizable themed decorations for children parties such as birthdays, &#8230; <a href="http://www.prestashop.com/blog/en/selling-digital-products-online-a-success/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p><img class="alignright size-full wp-image-19211" title="DulzuraDePapel1" src="http://www.prestashop.com/blog/en/files/2014/12/DulzuraDePapel1.png" alt="Selling digital products online, a Success" width="580" height="351" /></p>
+<p>Dulzura de Papel is a PrestaShop store designed and developed by Jimena, a passionate graphic designer, photographer, and graphic studio owner from Buenos Aires. She found a niche market in selling customizable themed decorations for children parties such as birthdays, baby showers and baptisms.<br />
+<span id="more-19210"></span><br />
+Jimena’s dreams are big and she trusts PrestaShop to support her as she takes on new challenges like expanding her shop beyond Argentina’s boundaries through to the rest of the world. In this article, we share Jimena’s success story and her ecommerce advice for fellow merchants looking to sell downloadable products online.</p>
+<h2 style="color: #ff61b0;">An entrepreneurial mom</h2>
+<p>Through her daughter’s school, Jimena met fellow moms who inspired the idea behind Dulzura de Papel. “I wanted to create a beautiful, yet quick and easily customizable solution for moms who want a special party for their kids, but have no time to deal with decorations.” With Dulzura de Papel, customers can download customizable themed decorations for children parties.</p>
+<p>“This is a slow change from my physical graphic studio to a web store that can run on its own”, shares Jimena, “and this migration will give me the flexibility to do what I love: spending time with my daughter.”</p>
+<p><img class="alignright size-full wp-image-19212" title="DulzuraDePapel2" src="http://www.prestashop.com/blog/en/files/2014/12/DulzuraDePapel2.png" alt="An Entrepreneurial Mom" width="580" height="257" /></p>
+<h2 style="color: #ff61b0;">The perfect software for her dream store</h2>
+<p>Finding the perfect software wasn’t easy. “I first tried to build the store in WordPress because I was familiar with it. I bought modules and tried to install them, but it was extremely difficult. Even the WordPress Phone Support in Argentina told me it would be hard to make it work the way I wanted.”</p>
+<p>Determined, Jimena searched for another software with features that will allow her to run a digital online store. “PrestaShop had everything I was looking for and even more.” Jimena was impressed with native features that allow her to successfully sell her digital products. “The stock version already has very powerful functionalities, such as the IP Geo-localization and the multi-language option.”</p>
+<h2 style="color: #ff61b0;">The online marketing strategy</h2>
+<p>Having launched Dulzura de Papel, the next step was to drive traffic to her website using social media and other marketing strategies. Jimena advertises her brand and concept through her Facebook page (with over 26K fans) all at the low cost of zero. To drive traffic to the website, she shares links on social media that take customers to free products on her online store. She also promotes sales on major Argentinian shopping days including: Mother’s Day, Father’s Day, Children’s Day and Teacher’s Day.</p>
+<p><img class="alignright size-full wp-image-19213" title="DulzuraDePapel3" src="http://www.prestashop.com/blog/en/files/2014/12/DulzuraDePapel3.png" alt="The Online Marketing Strategy" width="580" height="291" /></p>
+<h2 style="color: #ff61b0;">A simple buying process</h2>
+<p>Digital products require no inventory or shipping logistics, but it is essential to have a clear and simple buying process. The checkout process should also be easy because little information is needed. Jimena shortened her checkout process, with PrestaShop Addons’ One Page Checkout.</p>
+<p>Through this simplified checkout process, Dulzura de Papel’s customers make their payments, receive a link via email, then download a Zip file with High Quality PDFs.</p>
+<p>Because many of Dulzura de Papel’s customers are sometimes unfamiliar with downloadable products, Jimena uses various methods to guide them:</p>
+<div style="margin-left: 15px; font-size: 14px;"><span style="color: #ff31b0; font-weight: bold;">1.</span> <span style="font-weight: bold;">Information Pages and Demo Product:</span> “How to buy” and “How it works” tabs in the main menu take you to static pages that clearly explain every step of the buying process. Customers also have access to a sample PDF that demonstrates how fast and easy it is to edit the text on the designs once they make a purchase.</p>
+<p><span style="color: #ff31b0; font-weight: bold;">2.</span> <span style="font-weight: bold;">Pop-Up:</span> A pop-up message is generated after each purchase, to reassure and remind customers that an email has been sent with the link to download the product.</p>
+<p><span style="color: #ff31b0; font-weight: bold;">3.</span> <span style="font-weight: bold;">Guide:</span> A tutorial is attached to the email with editing and printing instruction as well as other tips and ideas.</p>
+</div>
+<p><img class="alignright size-full wp-image-19214" title="DulzuraDePapel4" src="http://www.prestashop.com/blog/en/files/2014/12/DulzuraDePapel4.png" alt="A Simple Buying Process" width="580" height="282" /></p>
+<h2 style="color: #ff61b0;">The protection of her digital product’s copyright</h2>
+<p>The same way Jimena explains the checkout process for her customers, she clarifies the terms of use. She highlights that sharing, selling or publishing any design is an infringement of Dulzura de Papel’s Copyright.</p>
+<p>“PrestaShop’s software includes a digital product configuration that generates download links valid only for 30 days after the purchase, limited to up to 3 downloads. This is great because it limits the risk of diffusion.” Additionally, Jimena password protects the products in case a customer tries to open it on any design software to modify the illustrations. “Because all the products include a trademark that reads ‘dulzuradepapel.com’, I don’t want anyone to modify the design. Of course, you can’t control absolutely everything that customers do, but these are great ways of enforcing copyright rules.”</p>
+<p><img class="alignright size-full wp-image-19215" title="DulzuraDePapel5" src="http://www.prestashop.com/blog/en/files/2014/12/DulzuraDePapel5.png" alt="The protection of her digital product’s copyright" width="580" height="327" /></p>
+<h2 style="color: #ff61b0;">The future of Dulzura de Papel</h2>
+<p>“Most of my customers come from Argentina, Mexico and other Spanish speaking countries,” claims Jimena, “For now my store is only available in Spanish. My plan is to translate my website into different languages, starting with English and Portuguese, so that people from anywhere in the world will be able to buy and download my designs. PrestaShop allows me to do just that.”</p>
+<p>“My advice to all the merchants starting out is to take the step. PrestaShop is a safe, versatile and dynamic software with many benefits and options that can make almost anything come true.” Jimena’s dedication led her to create a beautiful and successful online store with PrestaShop &#8212; turning her dream into a reality.</p>
+<hr align="left" size="2" width="20%" />
+<p>Inspired to make your dreams come true? Get started with <a href="http://www.prestashop.com/en/download" target="_blank">PrestaShop</a>’s free and open source ecommerce software. Not ready to start selling just yet? Read more <a href="http://www.prestashop.com/blog/en/category/ecommerce-success-stories/" target="_blank">PrestaShop Success Stories</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/selling-digital-products-online-a-success/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Top 10 Ecommerce Newsletters of 2014 from PrestaShop merchants</title>
+		<link>http://www.prestashop.com/blog/en/top-10-ecommerce-newsletters-of-2014-from-prestashop-merchants/</link>
+		<comments>http://www.prestashop.com/blog/en/top-10-ecommerce-newsletters-of-2014-from-prestashop-merchants/#comments</comments>
+		<pubDate>Wed, 17 Dec 2014 14:30:11 +0000</pubDate>
+		<dc:creator>Julie Liu</dc:creator>
+				<category><![CDATA[Ecommerce Tips and Advice]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=19168</guid>
+		<description><![CDATA[It seems like just yesterday we were making summer plans, but with a blink of an eye, the year has passed and we’re almost into 2015. Throughout this year, we’ve seen some great newsletters from PrestaShop merchants. Although it was &#8230; <a href="http://www.prestashop.com/blog/en/top-10-ecommerce-newsletters-of-2014-from-prestashop-merchants/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p><img class="aligncenter size-large wp-image-19169" title="BP_top10newsletters" src="http://www.prestashop.com/blog/en/files/2014/12/BP_top10newsletters-1024x537.jpg" alt="Top 10 Ecommerce Newsletters of 2014 from PrestaShop merchants" width="584" height="306" /></p>
+<p>It seems like just yesterday we were making summer plans, but with a blink of an eye, the year has passed and we’re almost into 2015. Throughout this year, we’ve seen some great newsletters from PrestaShop merchants.</p>
+<p>Although it was hard, we’ve narrowed them down to the top 10 ecommerce newsletters of 2014. We’ve listed each newsletter’s subject line, shop, reasons why we think it’s great and what you should try next year. Let’s get started!</p>
+<p><span id="more-19168"></span></p>
+<div style="float: left; width: 340px; margin-right: 10px;">
+<h4 style="color: #1296a3;"><span style="color: #000000;">1.</span> Thank You for Signing Up &#8211; Here is Your Voucher! by <a style="color: #1296a3; text-decoration: underline;" href="http://www.bloch.com.au/" target="_blank">Bloch Australia</a></h4>
+<p><strong>Why it’s great:</strong> This email rewards customers for subscribing to newsletter and encourages them to shop with a discount code. The timeliness of this coupon code is key in driving conversions and convincing customers to make their first purchase.<br />
+<strong>What to try:</strong> Welcome new customers with a coupon.</p>
+<p>(<a href="http://us5.campaign-archive2.com/?u=9c73a1a1b6076ffb51472af60&amp;id=cbcc67ef03&amp;e=3598629b90" target="_blank">View it live</a>)</p>
+</div>
+<p><img class=" wp-image-19170 alignright" title="1. Thank You for Signing Up Here is Your Voucher" src="http://www.prestashop.com/blog/en/files/2014/12/1.-Thank-You-for-Signing-Up-Here-is-Your-Voucher.png" alt="Bloch Australia" width="210" height="280" /></p>
+<div style="float: left; width: 340px; margin-right: 10px;">
+<h4 style="color: #1296a3;"><span style="color: #000000;">2.</span> International Delivery &amp; New Tools by <a style="color: #1296a3; text-decoration: underline;" href="https://www.eatingtools.com/" target="_blank">Eating Tools</a></h4>
+<p><strong>Why it’s great:</strong> Newsletters give the perfect opportunity to reach out to your customers. Use it to tell them about new services like international shipping or new products. This newsletter does a great job at both and draws us in by share the new product’s story.<br />
+<strong>What to try:</strong> Tell customers about new services!</p>
+<p>(<a href="http://www.prestashop.com/blog/en/files/2014/12/2-large1.png" target="_blank">Click to Enlarge</a>)</p>
+</div>
+<p><img class="alignright wp-image-19181" title="2. eatingtools" src="http://www.prestashop.com/blog/en/files/2014/12/2.-eatingtools.png" alt="Eating Tools" width="210" height="280" /></p>
+<div style="float: left; width: 340px; margin-right: 10px;">
+<h4 style="color: #1296a3;"><span style="color: #000000;">3.</span> ARTOYZ NEWS 211 : Artoyz’s new look with news! by <a style="color: #1296a3; text-decoration: underline;" href="http://artoyz.com/" target="_blank">Artoyz</a></h4>
+<p><strong>Why it’s great:</strong> This newsletter announces the new shop design so customers expect and aren’t confused by the updated design. Most merchants get so excited for their new website design, they forget to tell customers about it – don’t let it be you.<br />
+<strong>What to try:</strong> Announce your website redesign.</p>
+<p>(<a href="http://us3.campaign-archive1.com/?u=5fc4d904321aa12ac274e17be&amp;id=08449cf5da&amp;e=951556627b" target="_blank">View it live</a>)</p>
+</div>
+<p><img class="alignright  wp-image-19184" title="3. ARTOYZ NEWS 211   Artoyz fait peau neuve avec le plein de news" src="http://www.prestashop.com/blog/en/files/2014/12/3.-ARTOYZ-NEWS-211-Artoyz-fait-peau-neuve-avec-le-plein-de-news.png" alt="Artoyz" width="210" height="280" /></p>
+<div style="float: left; width: 340px; margin-right: 10px;">
+<h4 style="color: #1296a3;"><span style="color: #000000;">4.</span> CITIZEN : Extra thin Eco-Drive watches by <a style="color: #1296a3; text-decoration: underline;" href="http://www.timefy.com/fr/" target="_blank">Timefy</a></h4>
+<p><strong>Why it’s great:</strong> Timefy features the brand, Citizen, up and center in both the subject line and newsletter content. It’s great for building your store’s credibility and grabbing your customers’ attention. This is especially true if you sell well-known brand names.<br />
+<strong>What to try:</strong> Highlight popular brands.</p>
+<p>(<a href="http://www.prestashop.com/blog/en/files/2014/12/4-Large1.png" target="_blank">Click to Enlarge</a>)</p>
+</div>
+<p><img class="alignright  wp-image-19185" title="4. CITIZEN les montres extra plates Eco Drive" src="http://www.prestashop.com/blog/en/files/2014/12/4.-CITIZEN-les-montres-extra-plates-Eco-Drive-julie.liu-prestashop.com-Prestashop-SA-Mail.png" alt="Timefy" width="210" height="280" /></p>
+<div style="float: left; width: 340px; margin-right: 10px;">
+<h4 style="color: #1296a3;"><span style="color: #000000;">5.</span> welcome bordeaux ! by <a style="color: #1296a3; text-decoration: underline;" href="http://tinycottons.com/" target="_blank">Tiny Cottons</a></h4>
+<p><strong>Why it’s great:</strong> To start, we love their super short subject line because it’s effortless to read. Once you open the email, the newsletter is dedicated entirely to one topic, or in this case, color &#8211; Bordeaux.<br />
+<strong>What to try:</strong> Feature a season’s hottest color.</p>
+<p>(<a href="http://us7.campaign-archive1.com/?u=ebdd970f3e0157c26ecb9f6cf&amp;id=a8d17f9b8d&amp;e=1de933fd50" target="_blank">View it live</a>)</p>
+</div>
+<p><img class="alignright  wp-image-19187" title="5. welcome bordeaux" src="http://www.prestashop.com/blog/en/files/2014/12/5.-welcome-bordeaux.png" alt="Tiny Cottons" width="210" height="280" /></p>
+<div style="float: left; width: 340px; margin-right: 10px;">
+<h4 style="color: #1296a3;"><span style="color: #000000;">6.</span> NEW IN: NEOPRENE COLLECTION by <a style="color: #1296a3; text-decoration: underline;" href="http://www.bimbaylola.com/" target="_blank">Bimba y Lola</a></h4>
+<p><strong>Why it’s great:</strong> Try adding some pizazz to your 2015 newsletters with .gif images. Bimba y Lola used them to feature multiple products at once, while keeping the email short and simple. Get started by creating your own with this free <a href="http://gifmaker.me/" target="_blank">online gif maker</a>.<br />
+<strong>What to try:</strong> Bring products to life with gifs.</p>
+<p>(<a href="http://www.prestashop.com/blog/en/files/2014/12/6.-large-bimba-y-lola.gif" target="_blank">Click to Enlarge</a>)</p>
+</div>
+<p><img class="alignright  wp-image-19188" title="6. bimba y lola" src="http://www.prestashop.com/blog/en/files/2014/12/6.-bimba-y-lola.gif" alt="Bimba y Lola" width="210" height="280" /></p>
+<div style="float: left; width: 340px; margin-right: 10px;">
+<h4 style="color: #1296a3;"><span style="color: #000000;">7.</span> Julie, enjoy exclusive access to summer + PLUS SHIP FREE by <a style="color: #1296a3; text-decoration: underline;" href="http://condura.com.au/" target="_blank">Condura</a></h4>
+<p><strong>Why it’s great:</strong> The personalization in the subject line immediately grabs our attention. Adding your customers’ name can make a standard message seem personal. Then once a customer opens this newsletter, there is a coupon code enticing customers (like me) to shop.<br />
+<strong>What to try:</strong> Personalize emails with customer information.</p>
+<p>(<a href="http://condura.cmail2.com/t/ViewEmail/t/1E34C373FBF72796/34BA5AA3877E8DFD6A4D01E12DB8921D" target="_blank">View it live</a>)</p>
+</div>
+<p><img class="alignright  wp-image-19189" title="7. Redirecting" src="http://www.prestashop.com/blog/en/files/2014/12/7.-Redirecting.png" alt="Condura" width="210" height="280" /></p>
+<div style="float: left; width: 340px; margin-right: 10px;">
+<h4 style="color: #1296a3;"><span style="color: #000000;">8.</span> 15% off Mokosh skincare | Filter fluoride by 97% | Hot new Veggie spiralizer | $10 off Bokashi composting kit by <a style="color: #1296a3; text-decoration: underline;" href="http://www.biome.com.au/" target="_blank">Biome</a></h4>
+<p><strong>Why it’s great:</strong> The subject lines does a great job summarizing the entire newsletter. Even before I open it, I know the deals I can expect within the email. If I’m looking for something in particular, I know where it is listed.<br />
+<strong>What to try:</strong> Promote your sale in the subject line</p>
+<p>(<a href="https://go.madmimi.com/redirects/1412734136-300912bc6d3c77d0b3382af796aabb54-15b3b47?pa=25524177318&amp;amx=6812250723" target="_blank">View it live</a>)</p>
+</div>
+<p><img class="alignright  wp-image-19190" title="8. 15  off Mokosh skincare Filter fluoride by 97 Hot new Veggie spiralizer 10 off Bokashi composting kit" src="http://www.prestashop.com/blog/en/files/2014/12/8.-15-off-Mokosh-skincare-Filter-fluoride-by-97-Hot-new-Veggie-spiralizer-10-off-Bokashi-composting-kit.png" alt="Biome" width="210" height="280" /></p>
+<div style="float: left; width: 340px; margin-right: 10px;">
+<h4 style="color: #1296a3;"><span style="color: #000000;">9.</span> Gifts to Put a Spring in Mom&#8217;s Step! by <a style="color: #1296a3; text-decoration: underline;" href="http://www.gretelhome.com/" target="_blank">Gretel Home</a></h4>
+<p><strong>Why it’s great:</strong> Holidays roll around like clockwork. Gift ideas take the stress out of holiday shopping by making it effortlessly easy to find the perfect present. This newsletter does a great job in helping customers purchase the perfect Mother’s day gift by suggesting products for all types of moms.<br />
+<strong>What to try:</strong> Feature products with gift guides.</p>
+<p>(<a href="http://www.prestashop.com/blog/en/files/2014/12/9-large1.png" target="_blank">Click to Enlarge</a>)</p>
+</div>
+<p><img class="alignright  wp-image-19191" title="9. Gifts To Put a Spring in Mom s Step" src="http://www.prestashop.com/blog/en/files/2014/12/9.-Gifts-To-Put-a-Spring-in-Mom-s-Step.png" alt="Gretel Home" width="210" height="280" /></p>
+<div style="float: left; width: 340px; margin-right: 10px;">
+<h4 style="color: #1296a3;"><span style="color: #000000;">10.</span> It&#8217;s National Handbag Day! 20% Off Bags! by <a style="color: #1296a3; text-decoration: underline;" href="http://www.whatgoesaroundnyc.com/" target="_blank">What goes around comes around</a></h4>
+<p><strong>Why it’s great:</strong> Who doesn’t love a great celebration? Although National Handbag Day isn’t widely celebrated throughout the world, it’s very relevant for this PrestaShop store. We love how they thought outside the box!<br />
+<strong>What to try:</strong> Celebrate unique yet relevant holidays.</p>
+<p>(<a href="http://www.whatgoesaroundnyc.com/news/2014/101014.html" target="_blank">View it live</a>)</p>
+</div>
+<p><img class="alignright  wp-image-19192" title="10. It s National Handbag Day" src="http://www.prestashop.com/blog/en/files/2014/12/10.-It-s-National-Handbag-Day.png" alt="What goes around comes around" width="210" height="280" /></p>
+<hr align="left" size="2" width="20%" />
+<p>Which of these newsletters will inspire yours in 2015? Tell us in the comments below. Ready to start sending your own newsletters? Purchase the <a href="http://addons.prestashop.com/en/advertising-marketing-newsletter-modules/4932-newsletter-statistics.html" target="_blank">Newsletter Module from PrestaShop Addons</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/top-10-ecommerce-newsletters-of-2014-from-prestashop-merchants/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>The 14 Most Popular Articles of 2014</title>
+		<link>http://www.prestashop.com/blog/en/the-14-most-popular-articles-of-2014/</link>
+		<comments>http://www.prestashop.com/blog/en/the-14-most-popular-articles-of-2014/#comments</comments>
+		<pubDate>Mon, 15 Dec 2014 09:35:56 +0000</pubDate>
+		<dc:creator>Camille Sila</dc:creator>
+				<category><![CDATA[Ecommerce Tips and Advice]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=19155</guid>
+		<description><![CDATA[The end of the year is coming up. It&#8217;s time to take stock of the past year and also give thanks! We&#8217;d like to thank you, our readers, who&#8217;ve been with us for all of our posts and made valuable &#8230; <a href="http://www.prestashop.com/blog/en/the-14-most-popular-articles-of-2014/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p><img class="aligncenter size-large wp-image-19156" title="BP_Top14" src="http://www.prestashop.com/blog/en/files/2014/12/BP_Top14-1024x537.jpg" alt="The 14 Most Popular Articles of 2014" width="584" height="306" /></p>
+<p>The end of the year is coming up. It&#8217;s time to take stock of the past year and also give thanks! We&#8217;d like to thank you, our readers, who&#8217;ve been with us for all of our posts and made valuable contributions.</p>
+<p>You&#8217;ve found these articles interesting and compelling, you&#8217;ve liked them and commented on them &#8211; but perhaps you&#8217;ve missed a few. Here are the top 14 most-read articles of the year from the PrestaShop blog &#8211; make sure you haven&#8217;t missed an important one!<br />
+<span id="more-19155"></span></p>
+<h4>1. <a style="color: #336e52; text-decoration: underline;" href="http://www.prestashop.com/blog/en/building-an-online-store-10-questions-to-ask-before-hiring-an-e-commerce-developer/" target="_blank">Building an Online Store: 10 Questions to Ask Before Hiring an Ecommerce Developer</a></h4>
+<p>Finding the developer or the agency to build the store of your dreams is easier said than done! We&#8217;ve made a list of the 10 essential questions to ask before hiring an ecommerce developer.</p>
+<h4>2. <a style="color: #336e52; text-decoration: underline;" href="http://www.prestashop.com/blog/en/the-10-best-kpis-every-online-store-owner-should-keep-an-eye-on/" target="_blank">The 10 Best KPIs Every Online Store Owner Should Keep an Eye On</a></h4>
+<p>Determine what your strengths and weaknesses are by tracking your store&#8217;s performance, and grow your business. Here&#8217;s a non-exhaustive list of key performance indicators you should keep an eye on.</p>
+<h4>3. <a style="color: #336e52; text-decoration: underline;" href="http://www.prestashop.com/blog/en/5-creative-online-business-ideas-ecommerce-inspiration/" target="_blank">5 Creative Online Business Ideas for Ecommerce Inspiration</a></h4>
+<p>Are you thinking about your ecommerce project and looking for an original idea to set yourself apart from the competition? Don&#8217;t miss this article which will inspire you, with stores that have brought some original thinking to their sectors.</p>
+<h4>4. <a style="color: #336e52; text-decoration: underline;" href="http://www.prestashop.com/blog/en/10-free-tools-for-every-ecommerce-professional/" target="_blank">10 Free Tools for Every Ecommerce Professional</a></h4>
+<p>This is the ideal article for ecommerce professionals on a limited budget! From design and SEO to user testing and password management, here are 10 free tools that will make your life easier and boost your business.</p>
+<h4>5. <a style="color: #336e52; text-decoration: underline;" href="http://www.prestashop.com/blog/en/5-examples-of-ecommerce-product-pages-that-convert/" target="_blank">5 Examples of Ecommerce Product Pages That Convert</a></h4>
+<p>Everyone knows that product pages play a crucial role in your visitors&#8217; purchasing decisions. Simple optimizations can dramatically increase your conversion rate. Find out what they are in this article!</p>
+<h4>6. <a style="color: #336e52; text-decoration: underline;" href="http://www.prestashop.com/blog/en/how-to-create-an-online-store-10-steps-to-write-your-business-plan/" target="_blank">How to Create an Online Store: 10 Steps to Write Your Business Plan</a></h4>
+<p>It&#8217;s a required step for all entrepreneurs, but it can turn out to be complex. There&#8217;s a lot of information in a business plan, and it&#8217;s not always easy to keep track of everything! Here are the 10 key steps for making a good one.</p>
+<h4>7. <a style="color: #336e52; text-decoration: underline;" href="http://www.prestashop.com/blog/en/diy-ecommerce-guide-to-gorgeous-product-photography/" target="_blank">DIY Ecommerce Guide to Gorgeous Product Photography</a></h4>
+<p>Here&#8217;s the perfect guide to taking gorgeous product photos. Thomas Kragelund, an expert in product image optimization, reveals all his secrets for visuals that will improve your conversion rate.</p>
+<h4>8. <a style="color: #336e52; text-decoration: underline;" href="http://www.prestashop.com/blog/en/5-secrets-for-better-ecommerce-conversions/" target="_blank">5 Secrets for Better Ecommerce Conversions</a></h4>
+<p>Conversion: the holy grail of ecommerce. Set off on your quest for a better conversion rate by implementing the 5 simple tips we share with you in this article.</p>
+<h4>9. <a style="color: #336e52; text-decoration: underline;" href="http://www.prestashop.com/blog/en/find-the-right-seo-keywords-for-your-online-store/" target="_blank">How to Find the Right SEO Keywords for Your Online Store – Part 1/2</a></h4>
+<p>Our SEO specialist explains step-by-step how to find the right keywords for your online store. In the second part of the article, learn how to structure your ecommerce site with these keywords.</p>
+<h4>10. <a style="color: #336e52; text-decoration: underline;" href="http://www.prestashop.com/blog/en/examples-of-ecommerce-marketing-emails-that-work/" target="_blank">E-mail Marketing: 6 Examples of Ecommerce Marketing Emails That Work</a></h4>
+<p>E-mail is not dead! When it comes to drawing traffic to your site or building customer loyalty, it&#8217;s an ideal communication tool. Learn about best practices for email marketing and take inspiration from these examples of emails that work.</p>
+<h4>11. <a style="color: #336e52; text-decoration: underline;" href="http://www.prestashop.com/blog/en/10-essential-ecommerce-metrics-for-google-analytics/" target="_blank">10 Essential Ecommerce Metrics for Google Analytics</a></h4>
+<p>To get more information about your performance and better understand your user flows through the conversion funnel, read this article on the 10 essential ecommerce metrics for Google Analytics.</p>
+<h4>12. <a style="color: #336e52; text-decoration: underline;" href="http://www.prestashop.com/blog/en/10-things-i-wish-i-knew-before-opening-an-ecommerce-site/" target="_blank">10 Things I Wish I Knew Before Opening an Ecommerce Site</a></h4>
+<p>Ecommerce site owners share their experience with you, talking about the 10 things they would have liked to know before opening their online store. Read this article and you&#8217;ll be ready to launch into your own ecommerce adventure.</p>
+<h4>13. <a style="color: #336e52; text-decoration: underline;" href="http://www.prestashop.com/blog/en/12-free-ways-to-grow-your-ecommerce-business/" target="_blank">12 Free Ways to Grow Your Ecommerce Business</a></h4>
+<p>Did you know that there are many free ways to grow your business and your sales? Here&#8217;s a quick overview of these free tips!</p>
+<h4>14. <a style="color: #336e52; text-decoration: underline;" href="http://www.prestashop.com/blog/en/7-strategies-to-implement-when-your-website-traffic-drops/" target="_blank">7 Strategies to Implement When Your Website Traffic Drops</a></h4>
+<p>What should you do when your online store shows a serious drop in traffic? First piece of advice: above all, don&#8217;t panic! We&#8217;ve got 7 strategies you can implement to turn that trend around.</p>
+<p>Keep reading our blog and find lots of good advice so you can succeed online and take advantage of everything PrestaShop has to offer!<br />
+What if you&#8217;re not a merchant yet? Bring your ecommerce plans to life by <a href="http://www.prestashop.com/en/download" target="_blank">downloading PrestaShop</a> for free today!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/the-14-most-popular-articles-of-2014/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>The Complete Guide to Create CMS Pages for your Online Store</title>
+		<link>http://www.prestashop.com/blog/en/the-complete-guide-to-create-cms-pages-for-your-online-store/</link>
+		<comments>http://www.prestashop.com/blog/en/the-complete-guide-to-create-cms-pages-for-your-online-store/#comments</comments>
+		<pubDate>Wed, 10 Dec 2014 13:32:58 +0000</pubDate>
+		<dc:creator>Magali Ferber</dc:creator>
+				<category><![CDATA[Ecommerce Tips and Advice]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=19089</guid>
+		<description><![CDATA[Have you ever thought about the purpose of the links on the footer of every website? How about the static pages those links take you, such as the &#8220;About Us&#8221;, &#8220;Delivery&#8221;, &#8220;Legal Notice&#8221; or &#8220;Terms and Conditions&#8221;? Even if tiny &#8230; <a href="http://www.prestashop.com/blog/en/the-complete-guide-to-create-cms-pages-for-your-online-store/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p><img class="aligncenter size-large wp-image-19107" title="BP_CMSpages" src="http://www.prestashop.com/blog/en/files/2014/12/BP_CMSpages-1024x537.jpg" alt="" width="584" height="306" /></p>
+<p>Have you ever thought about the purpose of the links on the footer of every website? How about the static pages those links take you, such as the &#8220;About Us&#8221;, &#8220;Delivery&#8221;, &#8220;Legal Notice&#8221; or &#8220;Terms and Conditions&#8221;?</p>
+<p>Even if tiny fonts and complex sentence structures make you want to ignore their existence, these pages can affect your brand’s reputation, your store’s reliability and most importantly, your company’s legal status.</p>
+<p>This article guides you through the process of writing your online store’s CMS pages, and explains how to add and modify them in your PrestaShop Back Office.<br />
+<span id="more-19089"></span></p>
+<h2><span style="color: #6b7c5b;"><span style="color: #f2a9cd;">1.</span> Look around</span></h2>
+<p>Just look, don&#8217;t look-copy-paste move. Every company’s needs are different and your CMS pages should be customized to fit them. This doesn&#8217;t mean you can&#8217;t check out your competition. On the contrary, your competitors can sometimes be your best guide!</p>
+<p>Locate your competitors&#8217; list of CMS pages and check them out! Analyze their content, strong points, weak points, tone of voice, and layout (including screenshots, videos, and forms). You now have a good framework to help you work the next step: self-analysis.</p>
+<h2><span style="color: #6b7c5b;"><span style="color: #f2a9cd;">2. </span>Think of your company</span></h2>
+<p>Brainstorm and define the 2 most important aspects of your CMS page content:</p>
+<div style="padding: 0 0 0 15px; font-size: 14px;"><strong>1. What to communicate</strong>- Imagine you are a customer visiting your online store for the first time. What kind of information would you like to have at the tip of your fingers? Some examples include information on: the company, who to contact with questions, how to make a purchase, the return process, shipping. Compare your ideas with the previous analysis of your competitors’ CMS pages, and create a final list of topics you’d like to communicate.</div>
+<div style="padding: 0 0 0 15px; font-size: 14px;"><strong>2. How to communicate it</strong> &#8211; The tone of voice and your content should reflect your company&#8217;s culture. Keep in mind that even if your culture is friendly and relaxed, CMS pages like the Terms and Conditions, or the Privacy Policy are legally binding, so consult a legal advisor.</div>
+<h2><span style="color: #6b7c5b;"><span style="color: #f2a9cd;">3.</span> Decide which type of CMS page you need</span></h2>
+<p>CMS pages fall into one of three categories. We listed each type, recommended important pages and detailed their purpose. Whether you are looking to write content from scratch or rewrite an existing page, remember that each type is necessary because they each affect your company differently.</p>
+<div style="padding: 0 0 0 15px; font-size: 14px;"><strong>a. Information Pages</strong><br />
+<span style="font-style: italic;">About Us&#8221;, &#8220;Contact Us&#8221;</span><br />
+Tell compelling stories and inspire your shoppers with these pages to build trust in your brand. The more human your company appears, the more trust you generate; and trust is directly related to sales. This applies to all online stores, regardless of your product.</div>
+<div style="padding: 0 0 0 15px; font-size: 14px;"><strong>b. Process / Procedure Pages</strong><br />
+<span style="font-style: italic;">Shipping Policy&#8221;, &#8220;Refunds and Exchanges&#8221;</span><br />
+Explain every step of the purchasing process, including delivery procedures. If you sell internationally, explain how it works. If you offer discounts, include an explanation of how they are redeemed and if they are cumulative. If customers can return your product, make sure you clearly state how to return it, under which conditions, additional costs, whether return postage is included and whether they’ll receive a cash or store credit.</div>
+<div style="padding: 0 0 0 15px; font-size: 14px;">
+<p><strong>c. Legal Pages</strong><br />
+<span style="font-style: italic;">Terms and Conditions&#8221; or &#8220;Secure Payment”</span><br />
+Protect your company with legal documents. As your company will be legally bound to them, consult a legal advisor to ensure you are fully protected. We’ll talk about them in detail below.</p>
+</div>
+<h2><span style="color: #6b7c5b;"><span style="color: #f2a9cd;">4.</span> Find the perfect page title</span></h2>
+<p>Sometimes it can be hard to find the perfect title for your pages. No worries! We put together this list of common CMS pages, a short description of each and two catchy titles to get you started.</p>
+<p><strong>Company Information Pages</strong></p>
+<div style="padding: 0 0 0 15px;">
+<p style="margin: 0;"><span style="text-decoration: underline;">About Us</span> &#8211; share the history and news of your company.</p>
+<ul style="margin: 0 0 12px 0; padding: 0 0 0 30px;">
+<li>Our Story</li>
+<li>About [Insert Company Name]</li>
+</ul>
+<p style="margin: 0;"><span style="text-decoration: underline;">Contact Us</span> – list phone numbers, emails, or office addresses.</p>
+<ul style="margin: 0 0 12px 0; padding: 0 0 0 30px;">
+<li>We’re here for you</li>
+<li>Give us a shout!</li>
+</ul>
+<p style="margin: 0;"><span style="text-decoration: underline;">Careers</span> – display job openings on your site.</p>
+<ul style="margin: 0 0 12px 0; padding: 0 0 0 30px;">
+<li>Love what you do</li>
+<li>Do you have what it takes?</li>
+</ul>
+<p style="margin: 0;"><span style="text-decoration: underline;">Our Team</span> – talk about the team running your shop.</p>
+<ul style="margin: 0 0 12px 0; padding: 0 0 0 30px;">
+<li>What makes us different</li>
+<li>The dream team</li>
+</ul>
+<p style="margin: 0;"><span style="text-decoration: underline;">Our Stores</span> – list retail locations (if any).</p>
+<ul style="margin: 0 0 12px 0; padding: 0 0 0 30px;">
+<li>Visit us in [Insert Location]</li>
+<li>Stop on by</li>
+</ul>
+</div>
+<p><strong>Process / Procedure Pages</strong></p>
+<div style="padding: 0 0 0 15px;">
+<p style="margin: 0;"><span style="text-decoration: underline;">Shipping Policy</span> &#8211; list shipping carriers, speeds (or times) and corresponding fees.</p>
+<ul style="margin: 0 0 12px 0; padding: 0 0 0 30px;">
+<li>From our warehouse to you</li>
+<li>Deliveries</li>
+</ul>
+<p style="margin: 0;"><span style="text-decoration: underline;">International Shipping</span> – detail international shipping locations, carriers, taxes, regulations, and most importantly any fees.</p>
+<ul style="margin: 0 0 12px 0; padding: 0 0 0 30px;">
+<li>We ship everywhere!</li>
+<li>Not sure if we ship to you?</li>
+</ul>
+<p style="margin: 0;"><span style="text-decoration: underline;">Returns and Exchanges</span> – tell customers if and how they can return or exchange merchandise.</p>
+<ul style="margin: 0 0 12px 0; padding: 0 0 0 30px;">
+<li>Didn’t like it? No worries</li>
+<li>How returns work</li>
+</ul>
+<p style="margin: 0;"><span style="text-decoration: underline;">Coupons and Promotions</span> – list discounts with their conditions.</p>
+<ul style="margin: 0 0 12px 0; padding: 0 0 0 30px;">
+<li>Beauty Deals</li>
+<li>More ways to save</li>
+</ul>
+</div>
+<p><strong>Legal Pages</strong><br />
+Due to the nature of these pages, we suggest keeping these titles as they are so that they are easy to find.</p>
+<div style="padding: 0 0 0 15px; font-size: 14px;">
+<p style="margin: 0;"><span style="text-decoration: underline;">Terms and Conditions</span> – define your company, its official name, location, jurisdiction, as well as any copyrights and trademarks. Next, define your product, its uses, warranties and limitations. List the selling process in including all the conditions of sale. Include a “limitation of liability” that limits damages resulting from the use of your product. Finally, include a modification clause that allows you to periodically update this document. Draft your <a href="https://termsfeed.com/generator/new/terms-conditions?utm_expid=86438702-166.CGO3vkkrS3u2YOz1dy4Nlg.0&amp;utm_referrer=https%3A%2F%2Ftermsfeed.com%2Fterms-conditions%2Fgenerator%2F" target="_blank">terms and conditions using this generator</a>, then have your lawyer review the document.</p>
+<ul style="padding: 0 0 0 30px; margin: 0 0 12px 0;">
+<li>Terms of Use</li>
+<li>Terms of Service</li>
+</ul>
+<p style="margin: 0 0 12px 0;"><span style="text-decoration: underline;">Privacy Policy</span> – detail your policy on customer data. It should answer: What customer information do you collect, which do you store, do you track customer activities, and how is that data used?</p>
+<p style="margin: 0;"><span style="text-decoration: underline;">Secure Payment</span> &#8211; clarify your payment solutions and detail the payment structure, deadlines, processes, verification, and what happens when payments aren’t completed. If you charge additional international payment processing fees, include them here.</p>
+<ul style="padding: 0 0 0 30px; margin: 0 0 12px 0;">
+<li>Payment Terms</li>
+<li>Payment Options</li>
+</ul>
+<p style="margin: 0;"><span style="text-decoration: underline;">Community Rules</span> – list rules for interacting within your community, like writing reviews or participating on your forums and blogs. Be sure to state consequences of not abiding by the rules, to include content removal or banned user accounts. Also remember, as important as it is to list these rules, they are only effective if you actively enforce them.</p>
+<ul style="padding: 0 0 0 30px; margin: 0 0 12px 0;">
+<li>Community Guidelines</li>
+<li>Respect the Community</li>
+</ul>
+</div>
+<h2><span style="color: #6b7c5b;"><span style="color: #f2a9cd;">5.</span> Write the content</span></h2>
+<p style="margin-bottom: 0;">Here are tips to keep in mind when writing CMS page content:</p>
+<ul style="padding: 0 0 0 30px; margin: 0 0 12px 0;">
+<li>Cover only the topics relevant to your industry and your company.</li>
+<li>Write in simple English, using legal jargon only when necessary.</li>
+<li>Avoid unclear or undefined points, be specific.</li>
+<li>Communicate with a voice that represents your company’s culture.</li>
+<li>Keep your text short and concise.</li>
+<li>Organize your content into appropriate sections and headings.</li>
+<li>If you don’t have enough content to fill out an entire section, combine them.</li>
+</ul>
+<p>We’ve given you all the tools you need to write great CMS pages. Now it’s your turn.</p>
+<h2><span style="color: #6b7c5b;"><span style="color: #f2a9cd;">6.</span> Integrate your pages</span></h2>
+<p>If you are a PrestaShop user, your online store comes with a set of default pages. It is essential that you update these pages and create new ones once you have new titles and content ready. Access them through your BACK OFFICE &gt; PREFERENCES &gt; CMS.</p>
+<h2><span style="color: #6b7c5b;"><span style="color: #f2a9cd;">7.</span> Update and maintain</span></h2>
+<p>Keep your CMS pages current with updated information. An outdated Contact Us page with an invalid phone number can negatively affect your company&#8217;s reputation. More importantly, an obsolete Legal page can result in serious legal issues! Set a reminder to update and maintain your CMS pages.</p>
+<p>Please note that this guide is informative, and does not constitute legal advice.</p>
+<p>Ready to create great CMS pages for your online store? Download <a href="http://www.prestashop.com/en/download" target="_blank">PrestaShop’s free ecommerce software</a> to get started! Already a CMS expert, share your tips in the comments!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/the-complete-guide-to-create-cms-pages-for-your-online-store/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Ecommerce SEO Trends for 2015</title>
+		<link>http://www.prestashop.com/blog/en/ecommerce-seo-trends-for-2015/</link>
+		<comments>http://www.prestashop.com/blog/en/ecommerce-seo-trends-for-2015/#comments</comments>
+		<pubDate>Mon, 08 Dec 2014 10:53:09 +0000</pubDate>
+		<dc:creator>Gary Le Masson</dc:creator>
+				<category><![CDATA[Ecommerce Tips and Advice]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=19063</guid>
+		<description><![CDATA[What will Search Engine Optimization look like in 2015? It&#8217;s become something of a tradition for SEO professionals to come up with their predictions at the end of each year: are we looking at a full-scale revolution or a few &#8230; <a href="http://www.prestashop.com/blog/en/ecommerce-seo-trends-for-2015/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p>What will Search Engine Optimization look like in 2015? It&#8217;s become something of a tradition for SEO professionals to come up with their predictions at the end of each year: are we looking at a full-scale revolution or a few minor changes? Here&#8217;s what I think we&#8217;re in for in 2015&#8230;</p>
+<p><img class="aligncenter size-full wp-image-19074" title="Blog-Post-SEO2015" src="http://www.prestashop.com/blog/en/files/2014/12/Blog-Post-SEO2015.jpg" alt="" width="580" height="305" /></p>
+<p><span id="more-19063"></span></p>
+<h4><span style="color: #009345;">SEO will be (almost) the same in 2015</span></h4>
+<p>Panda, Penguin, Hummingbird, Caffeine &#8230; Although Google is always telling us about its latest algorithm updates, SEO in general remains largely the same, with, of course, a few developments here and there. As the saying goes, if the algorithm ain&#8217;t broke, don&#8217;t fix it.</p>
+<p><strong>As far as I can see, Google Search is striving to achieve two goals:</strong></p>
+<ul style="padding: 0 0 0 30px;">
+<li>To make its users happy by displaying high-quality, relevant results</li>
+<li>To increase revenue from these search results through AdWords</li>
+</ul>
+<p><strong>Google&#8217;s aim is not to provide you with free traffic</strong>, generating more free traffic is the purpose of SEO. I think it&#8217;s vital to make this distinction.</p>
+<p><strong>Since 1998, Google&#8217;s algorithm &#8216;recipe&#8217; has used more or less the same ingredients:</strong></p>
+<ul style="padding: 0 0 0 30px;">
+<li>Relevance (how well your website corresponds to the search query)</li>
+<li>Popularity (how many links direct towards your site)</li>
+</ul>
+<p>Given <a href="http://gs.statcounter.com/#all-search_engine-ww-monthly-201310-201410" target="_blank">Google&#8217;s worldwide monopoly over the market</a>, this strategy is clearly working, so I see no reason why Google would decide to rethink its algorithm.</p>
+<p>So, my prediction for 2015 is that SEO will continue to develop along much the same lines (an opinion shared by <a href="http://moz.com/rand/google-seo-dont-actually-change-much/" target="_blank">Rand Fishkin, founder of Moz</a> on his blog.</p>
+<h4><span style="color: #009345;">So, how will SEO develop exactly?</span></h4>
+<p>Here at <a href="http://www.prestashop.com" target="_blank">PrestaShop</a>, we are committed to discussing e-commerce with e-merchants. Since SEO is an essential growth tool for small stores, I have put together my list of predictions for the future of e-commerce SEO.</p>
+<h4><span style="color: #009345;">2015 will be all about mobile</span></h4>
+<p>Back in early 2014, <a href="http://searchengineland.com/matt-cutts-mobile-queries-may-surpass-pc-year-186816" target="_blank">Matt Cutts</a> had already predicted that numbers of search requests sent from mobile devices would surpass those of PCs.</p>
+<p>Likewise in the UK, <a href="https://www.internetretailer.com/2014/09/02/mobile-visitors-overtake-desktop-visitors-rthe-uk" target="_blank">Internet Retailer announced in September</a>, that mobile and tablet traffic to its retail site had overtaken that of PCs.</p>
+<p>Below you can see a comparison of global traffic from PCs, smartphones and tablets compiled by StatCounter.</p>
+<p style="text-align: center;"><a href="http://gs.statcounter.com/#desktop+mobile+tablet-comparison-ww-monthly-201311-201410" target="_blank"><img class="aligncenter  wp-image-19064" title="graphe" src="http://www.prestashop.com/blog/en/files/2014/12/graphe.jpg" alt="" width="512" height="300" /></a></p>
+<p>If you play around a bit on the StatCounter website and filter the results by country, you will in fact see that mobile is already the dominant channel in certain markets. I&#8217;m especially thinking of <a href="http://gs.statcounter.com/#desktop+mobile+tablet-comparison-IN-monthly-201311-201410" target="_blank">India here, where mobile is leagues ahead of the rest, accounting for 70% of total traffic</a>. But whatever your target location, the trend is catching.</p>
+<p>You should also bear in mind that more and more people are <a href="http://www.businessinsider.com/a-majority-uses-mobile-as-second-screen-2013-5" target="_blank">using their smartphones while watching TV</a>.</p>
+<p>The mobile and tablet boom is well and truly underway, and to come back to SEO, Google – who is also seeing growth in mobile traffic – wants to satisfy its users by providing as many mobile-compatible hits as possible. That&#8217;s why Google favors online retailers with mobile sites, to the detriment of those who are still only desktop-ready.</p>
+<p>In the US, Google already displays a site&#8217;s mobile compatibility right from the SERP (Search Engine Result Page):</p>
+<div style="height: 445px;">
+<p style="text-align: center; float: left; padding: 0 15px;"><img class="aligncenter  wp-image-17888" title="screen-search" src="http://www.prestashop.com/blog/en/files/2014/12/screen-search-576x1024.png" alt="" width="250" height="442" /></p>
+<p style="text-align: center; float: left;"><img class="aligncenter  wp-image-17889" title="screen-search2" src="http://www.prestashop.com/blog/en/files/2014/12/screen-search2-576x1024.png" alt="" width="250" height="442" /></p>
+</div>
+<p>According to <a href="https://www.stonetemple.com/googles-gary-illyes-discusses-mobile-as-a-ranking-factor/" target="_blank">Gary Illyes</a>, in order to receive this little &#8216;mobile-friendly&#8217; badge of honor on results pages, all you need to do is take the Google Webmaster Mobile-Friendly Test. This tool will let you see whether your site is mobile-friendly and if it meets Google&#8217;s criteria:<br />
+<a href="https://www.google.com/webmasters/tools/mobile-friendly/" target="_blank">Take the mobile test</a></p>
+<p>If you want to delve even deeper, I recommend reading <a href="https://plus.google.com/u/0/+JohnMueller/posts/WT5YccbhkXi" target="_blank">this G+ blog post by John Mueller</a>, which does just that.</p>
+<p><strong>My Mobile SEO recommendation for 2015</strong></p>
+<p>You will need a mobile-friendly version of your online store. If you want to continue developing your SEO, you have two main options: using a responsive design template (whereby layout changes according to the viewing environment), or a dedicated mobile site, i.e. http://m.example.com.</p>
+<ul style="padding: 0 0 0 30px;">
+<li><a href="http://addons.prestashop.com/en/3-templates-prestashop?m=true&amp;responsive=1" target="_blank">All of PrestaShop&#8217;s responsive design templates</a></li>
+<li><a href="http://addons.prestashop.com/en/mobile/8936-shopgate.html" target="_blank">The Shopgate solution for creating a dedicated mobile site</a></li>
+</ul>
+<p><strong>My Mobile SEO prediction</strong></p>
+<p>I anticipate that in 2015, or latest 2016, 100% of all Google results matching queries made from a smartphone will be mobile-friendly. In other words <strong>you&#8217;ll no longer see desktop sites on your smartphone</strong>.</p>
+<h4><span style="color: #009345;">An HTTP-secure year</span></h4>
+<p>Google&#8217;s other main campaign for 2014 was to urge websites to switch over to HTTPS from HTTP. They even added it as a <a href="http://searchengineland.com/google-starts-giving-ranking-boost-secure-httpsssl-sites-199446" target="_blank">ranking signal in their search algorithm</a>.</p>
+<p>But don&#8217;t get ahead of yourself by thinking this alone will get you on the first page of Google results! However, since every little bit helps, why not give it a try?<br />
+<strong>My Security SEO recommendation</strong></p>
+<p>Switch your online store to HTTPS in 2015.</p>
+<h4><span style="color: #009345;">Back to basics</span></h4>
+<p>So, here is why I mentioned SEO evolution&#8230; although SEO is undergoing constant change, the process of optimizing your website for Google searches remains largely the same:</p>
+<p><span style="font-style: italic; font-size: 18px;">To come first, you need to have the best content with the best links.</span></p>
+<p><strong>Start by identifying keywords</strong></p>
+<p><a href="http://www.prestashop.com/blog/en/find-the-right-seo-keywords-for-your-online-store/" target="_blank">Find the right SEO keywords for your online store</a></p>
+<h4><span style="color: #009345;">Your New Year&#8217;s resolutions for SEO-friendly content</span></h4>
+<p><a href="http://www.prestashop.com/blog/en/how-to-use-your-seo-keywords-to-structure-your-ecommerce-site/" target="_blank">Structure your online store for optimum SEO</a></p>
+<p><a href="http://www.prestashop.com/blog/en/content-marketing-for-ecommerce-technical-checklist-writing-process/" target="_blank">Then think about your Content Marketing strategy</a></p>
+<p>You should also make sure the titles and descriptions you use on product and category pages are properly formulated to maximize SERP CTR and conversion.</p>
+<h4><span style="color: #009345;">My Link Building recommendation for 2015</span></h4>
+<p>Half the battle when creating a good SEO strategy is getting linking right. But that doesn&#8217;t just mean optimizing the tags used in your online store or writing a few blog posts; to increase your SEO in 2015, you will still need links, but they will have to be good quality.</p>
+<p><strong>What Google is doing to e-commerce sites with poor links</strong></p>
+<p style="text-align: center;"><img class="aligncenter size-full wp-image-19067" title="matt-cutts-vs-netlinking" src="http://www.prestashop.com/blog/en/files/2014/12/matt-cutts-vs-netlinking.gif" alt="" width="360" height="240" /></p>
+<p>Google has declared all-out war on websites selling links, and has even reported them in its Webmaster Guidelines violations. From a legal standpoint, even though Google doesn&#8217;t make the law, it really does rule over the Internet, so I would recommend taking extreme precaution if you don&#8217;t want to get caught by <a href="http://en.wikipedia.org/wiki/Google_Penguin" target="_blank">PINGUIN</a>.</p>
+<p><strong>In the meantime, here are a few Link Building tips for 2015</strong></p>
+<ul style="padding: 0 0 0 30px;">
+<li>Don&#8217;t construct your own link building if you don&#8217;t know what you&#8217;re doing.</li>
+<li>Enlist the help of an SEO agency or professional.</li>
+<li>Don&#8217;t use (or stop using) link-selling sites.</li>
+<li>Don&#8217;t optimize by using keyword-rich anchor text such as my keyword.</li>
+<li>Use unique anchors or ones that contain the name of your website, for example.</li>
+<li>Think about consistency with websites that redirect to you or your online store.</li>
+<li>If you&#8217;re still in the habit of exchanging links with other websites, stop right now!</li>
+<li>Don&#8217;t get led into believing that link building is just about inserting a few links into blog comments, forum posts or directories.</li>
+<li>Remember that a good link is one that will bring in traffic.</li>
+<li>Use links that direct to different pages of your website.</li>
+</ul>
+<p>Finally, know that it&#8217;s not true that you need to pay to have links. Remember that your product pages and your blog content can provide you with links just by being top quality.</p>
+<h2><span style="color: #0000fe;">My SEO tracker for 2015</span></h2>
+<p>Any SEO expert will tell you that, if you want to get better at SEO, you need carry out a daily inspection of specialist blogs. Below are a few sites I recommend you check out in 2015.</p>
+<p><strong>Googlers to follow in 2015</strong></p>
+<p style="padding-left: 30px;"><a href="https://www.google.com/+JohnMueller" target="_blank">https://www.google.com/+JohnMueller</a><br />
+<a href="https://www.google.com/+GaryIllyes" target="_blank">https://www.google.com/+GaryIllyes</a><br />
+<a href="https://www.google.com/+PierreFar" target="_blank">https://www.google.com/+PierreFar</a><br />
+<a href="https://www.google.com/+MaileOhye" target="_blank">https://www.google.com/+MaileOhye</a><br />
+<a href="https://www.google.com/+GoogleWebmasters" target="_blank">https://www.google.com/+GoogleWebmasters</a><br />
+<a href="https://www.google.com/+MattCutts" target="_blank">https://www.google.com/+MattCutts</a> (if he returns to Google)</p>
+<p><strong>List of SEO blogs to follow</strong></p>
+<p style="padding-left: 30px;"><a href="http://moz.com/blog" target="_blank">http://moz.com/blog</a><br />
+<a href="http://moz.com/rand/" target="_blank">http://moz.com/rand/</a><br />
+<a href="http://searchengineland.com/" target="_blank">http://searchengineland.com/</a><br />
+<a href="http://searchenginewatch.com/" target="_blank">http://searchenginewatch.com/</a><br />
+<a href="http://www.seobook.com/blog" target="_blank">http://www.seobook.com/blog</a><br />
+<a href="http://blog.searchmetrics.com/" target="_blank">http://blog.searchmetrics.com/</a><br />
+<a href="http://www.stateofdigital.com/" target="_blank">http://www.stateofdigital.com/</a><br />
+<a href="http://cognitiveseo.com/" target="_blank">http://cognitiveseo.com/</a><br />
+<a href="http://googlewebmastercentral.blogspot.com" target="_blank">http://googlewebmastercentral.blogspot.com</a></p>
+<p><strong>Some more general web marketing and content marketing sites<br />
+</strong></p>
+<p style="padding-left: 30px;"><a href="http://www.convinceandconvert.com/" target="_blank">http://www.convinceandconvert.com/</a><br />
+<a href="http://www.internetmarketingninjas.com/" target="_blank">http://www.internetmarketingninjas.com/</a><br />
+<a href="http://sethgodin.typepad.com/" target="_blank">http://sethgodin.typepad.com/</a><br />
+<a href="http://sherpablog.marketingsherpa.com/" target="_blank">http://sherpablog.marketingsherpa.com/</a><br />
+<a href="http://chiefmartec.com/" target="_blank">http://chiefmartec.com/</a><br />
+<a href="http://chrisbrogan.com/" target="_blank">http://chrisbrogan.com/</a><br />
+<a href="http://www.convinceandconvert.com/" target="_blank">http://www.convinceandconvert.com/</a><br />
+<a href="http://heidicohen.com/" target="_blank">http://heidicohen.com/</a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/ecommerce-seo-trends-for-2015/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>From bricks to clicks: 5 reasons you need to sell online today</title>
+		<link>http://www.prestashop.com/blog/en/from-bricks-to-clicks-5-reasons-you-need-to-sell-online-today/</link>
+		<comments>http://www.prestashop.com/blog/en/from-bricks-to-clicks-5-reasons-you-need-to-sell-online-today/#comments</comments>
+		<pubDate>Tue, 02 Dec 2014 16:55:57 +0000</pubDate>
+		<dc:creator>Julie Liu</dc:creator>
+				<category><![CDATA[Ecommerce Tips and Advice]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=19044</guid>
+		<description><![CDATA[Are you a small business with a local storefront thinking about selling online? Not sure if online shopping is a trend or the future? As an ecommerce software provider, we would (of course) say you definitely need an online shop. &#8230; <a href="http://www.prestashop.com/blog/en/from-bricks-to-clicks-5-reasons-you-need-to-sell-online-today/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p>Are you a small business with a local storefront thinking about selling online? Not sure if online shopping is a trend or the future? As an ecommerce software provider, we would (of course) say you definitely need an online shop. But just saying so isn’t enough.</p>
+<p>Today we support our claim with our article titled, “From bricks to clicks: 5 reasons you need to sell online today.” We’re sharing the limitations of a traditional brick and mortar and showing you how an online shop complements your retail shop to help you get the best of both worlds.</p>
+<p><img class="aligncenter size-full wp-image-19051" title="BRICK-AND-MORTAR .small" src="http://www.prestashop.com/blog/en/files/2014/12/BRICK-AND-MORTAR-.small_.jpg" alt="" width="580" height="305" /><br />
+<span id="more-19044"></span></p>
+<h4><span style="color: #ae2b6d;">1. Your shop is not open 24/7.</span></h4>
+<p>When is your current shop open? 8:00AM -7:00PM? What happens to customers who want to shop long after your shop has closed? Closing your shop is literally turning customers at your door, away.</p>
+<p>Sure, you can keep your shop open longer. However, the overhead to do so is significantly more than creating an online shop &#8211; especially with PrestaShop’s free open source software. The best thing about online shops? They are open 24/7. By launching one, you easily extend your store hours.</p>
+<h4><span style="color: #ae2b6d;">2. Some customers cannot physically go to your shop.</span></h4>
+<p>Many business owners are familiar with this phrase: “location, location, location”. When running a retail shop, the success of your shop is due in large to its location. If it is not convenient for customers to get to your store, you can kiss them goodbye.</p>
+<p>Opening an online shop allows everyone in the country, or even the world, to access your shop! Suddenly your shop’s location is no longer an issue. You are no longer limited to selling just to customers in your neighborhood.</p>
+<h4><span style="color: #ae2b6d;">3. Shelf space is limited.</span></h4>
+<p>Just as important as your retail shop’s location, is the amount of shelf space you have. As a retail shop owner, you know all too well that products need to be positioned and lit properly in your showroom. This limits the number of products you can display at a given time.</p>
+<p>With your online shop, the number of products you can display is unlimited. Your challenge will be to make great product pages that are easy to navigate. Start with <a href="http://www.prestashop.com/blog/en/diy-ecommerce-guide-to-gorgeous-product-photography/" target="_blank">gorgeous product images</a> then compliment them with <a href="http://www.prestashop.com/blog/en/sell-more-online-8-tips-for-your-product-descriptions/" target="_blank">great product descriptions</a>. Then help customers navigate your shop with a <a href="http://www.prestashop.com/blog/en/how-to-use-your-seo-keywords-to-structure-your-ecommerce-site/" target="_blank">keyword driven website structure</a>. With these 3 things in place, you are ready to expand your product selection beyond the shelf space of your retail shop.</p>
+<h4><span style="color: #ae2b6d;">4. Profits are limited through one sales channel.</span></h4>
+<p>Selling through a retail location is just one of the many channels you can use. Opting for just one channel limits your ability to increase profits because you are limiting your customer base. In short, by limiting customers you also limit your sales.</p>
+<p>Grow your business and sell more by adding a new sales channel &#8211; an online shop. You will target a wider customer base, and sell a larger volume of products. This will put you in the position to negotiate better inventory rates from suppliers and increase profit margins for your business overall.</p>
+<h4><span style="color: #ae2b6d;">5. Self-promotions appear untrustworthy.</span></h4>
+<p>No matter how great the products you sell are, positive product reviews that come directly from you will always appear sales-y and fake. After all, no shop owner will ever speak badly about their product(s).</p>
+<p>This is why having an online shop can benefit your retail shop. One of the greatest advantages of an online shop is the ability to leverage social proof. Customer reviews and testimonials build credibility in your products because this promotion comes from someone who doesn’t benefit from saying that the product is good.</p>
+<h4><span style="color: #ae2b6d;">In a nutshell</span></h4>
+<p>If you’re already have a retail shop, your online store simply becomes an extension of your current shop. Selling online will extend your shop’s reach, product selection and hours of operation. By doing so, you increase the number of potential customers, which can translate into additional sales.</p>
+<p>Have we convinced you to open an online shop to expand your brick and mortar store? Start <a href="http://www.prestashop.com/en/download" target="_blank">selling online with PrestaShop’s</a> shopping cart software. Already selling both online and offline? Tell us which reason is your favorite in the comments below.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/from-bricks-to-clicks-5-reasons-you-need-to-sell-online-today/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>6 A/B Tests for Optimizing your Online Store</title>
+		<link>http://www.prestashop.com/blog/en/6-ab-tests-for-optimizing-your-online-store/</link>
+		<comments>http://www.prestashop.com/blog/en/6-ab-tests-for-optimizing-your-online-store/#comments</comments>
+		<pubDate>Mon, 01 Dec 2014 13:27:44 +0000</pubDate>
+		<dc:creator>Julie Liu</dc:creator>
+				<category><![CDATA[Ecommerce Tips and Advice]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=19034</guid>
+		<description><![CDATA[Online merchants are always looking for ways to improve their online shop. Because of this, many experts have researched and tested different design elements to optimize the effectiveness of websites. As researchers learn more about online shoppers, they share their &#8230; <a href="http://www.prestashop.com/blog/en/6-ab-tests-for-optimizing-your-online-store/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p>Online merchants are always looking for ways to improve their online shop. Because of this, many experts have researched and tested different design elements to optimize the effectiveness of websites. As researchers learn more about online shoppers, they share their results through infographics, blog articles and more.</p>
+<p>With so many website elements you can test, where should you start? Today we’re helping you narrow it down by sharing 6 A/B tests for optimizing your online store.</p>
+<p><img class="aligncenter size-full wp-image-19036" title="AB-test" src="http://www.prestashop.com/blog/en/files/2014/12/AB-test.png" alt="AB testing" width="580" height="305" /></p>
+<p><span id="more-19034"></span></p>
+<p>A/B testing allows online merchants to display one of two versions of their website. By measuring each page’s effectiveness, merchants can determine which design is better at converting customers. But before you dive into these tests, it’s important to know your online store’s current performance. Collect baseline numbers for all the statistics you’d like to track before you start A/B testing these design elements.</p>
+<h4 style="color: #0c59a8;">1. Homepage Design</h4>
+<p><strong style="color: #214975;">Headings</strong> &#8211; If you currently have headings on your website, test the copy, its size or try removing it altogether.<br />
+<strong style="color: #214975;">Slider or Carousel</strong> &#8211; Is your homepage slider an awesome converter or a boring distraction? VWO, an A/B testing company, believes <a href="https://vwo.com/blog/image-slider-alternatives/" target="_blank">image sliders are no longer effective</a>. They suggest the following: using a static image, removing the block or simply limiting the number of slides to two.</p>
+<h4 style="color: #0c59a8;">2. <a style="color: #0c59a8; text-decoration: underline;" href="http://www.prestashop.com/blog/en/15-examples-of-cta-buttons-to-drive-conversions-for-online-stores/" target="_blank">Call to Action</a> or CTA</h4>
+<p><strong style="color: #214975;">Color</strong> &#8211; Research has shown that humans naturally <a href="http://www.responsecapture.com/campaign-optimization/what-message-is-your-call-to-action-sending/" target="_blank">associate color to certain ideas and feelings</a>. Find out what feeling your CTA exhibits, then try different colors to see if they are better converters.</p>
+<p><strong style="color: #214975;">Size</strong> &#8211; One thing is for sure, your CTA must be clearly visible. However, large CTAs may be distracting and take away from the overall page. A/B test to find the right fit for your website.</p>
+<p><strong style="color: #214975;">Copy</strong> &#8211; Tempting copy should be used throughout your website, but most especially for CTA buttons. When writing copy, keep in mind works for discount retailers may not convert shoppers on luxury boutiques, so be sure it carries the right tone of voice to target your customer profile.</p>
+<h4 style="color: #0c59a8;">3. Checkout: Five vs one page</h4>
+<p>Experts disagree about the effectiveness of a 5 page checkout when compared to a one page checkout. Supporters of the 5 page checkout believe it’s what customers have come to expect. On the other hand, supporters of the one page checkout believe shortening the checkout process decreases shopping cart abandonment.</p>
+<h4 style="color: #0c59a8;">4. <a style="color: #0c59a8; text-decoration: underline;" href="http://www.prestashop.com/blog/en/diy-ecommerce-guide-to-gorgeous-product-photography/" target="_blank">Product Images</a></h4>
+<p>High resolution images that showcase the product are perfect for product pages. However, are they the most effective? Try each of these product image ideas to see how they convert.</p>
+<p><strong style="color: #214975;">Background</strong> – Although white is the most commonly used color, try soft tones that goes well with your product. Adding a warm feel to the image may help lure customers in.</p>
+<p><strong style="color: #214975;">Views</strong> – Which angle is your product currently photographed from? Try switching it up! Have you tried a bird’s eye view (from up top) or a side angle view?</p>
+<p><strong style="color: #214975;">Model</strong> – Having models showcase your product can help it sell because customers get a feel of what the product will look like on a person. However, models can also distract customers from your product, decreasing your ability to make the sale. A/B test to see which option your customers prefer.</p>
+<h4 style="color: #0c59a8;">5. Social Proof</h4>
+<p>Does displaying your social media followers really help build trust in your company? Some shops benefit from displaying trust building elements like payment logos, social media buttons, and security badges. Other shops saw a lift in conversions once they were removed. Find out what works for you.</p>
+<h4 style="color: #0c59a8;">6. Pricing and Promotions</h4>
+<p>In our blog post titled, the <a href="http://www.prestashop.com/blog/en/the-psychology-of-pricing-and-discounts-for-e-commerce/" target="_blank">Phycology of Pricing and Discounts for Ecommerce</a>, we suggest 4 different ideas of product pricing and promotions you can try. However, we must caution that A/B testing pricing and promotions can be risky because customers may believe you are unfairly pricing your products. With that said, we recommend working with a professional when running pricing and promotion tests.</p>
+<h4 style="color: #0c59a8;">It’s your turn.</h4>
+<p>Regardless of which A/B test you decide to run first, remember to test one thing at a time. If you’re testing the CTA button, modify the only the text or color but not both. Modifying multiple features will make your data hard to interpret.</p>
+<hr align="left" size="2" width="20%" />
+<p>Which of these A/B tests are you looking to run? Let us know in the comments below. If you’re already running tests, tell us about your findings. Not an online merchant yet? Get started by <a href="http://www.prestashop.com/en/download" target="_blank">downloading the PrestaShop ecommerce software</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/6-ab-tests-for-optimizing-your-online-store/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Black Friday and Cyber Monday for the small, but nimble e-retailers</title>
+		<link>http://www.prestashop.com/blog/en/black-friday-and-cyber-monday-for-the-small-but-nimble-e-retailers/</link>
+		<comments>http://www.prestashop.com/blog/en/black-friday-and-cyber-monday-for-the-small-but-nimble-e-retailers/#comments</comments>
+		<pubDate>Fri, 28 Nov 2014 10:30:26 +0000</pubDate>
+		<dc:creator>Leah Anathan</dc:creator>
+				<category><![CDATA[Ecommerce Tips and Advice]]></category>
+		<category><![CDATA[Ecommerce Trends]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=19005</guid>
+		<description><![CDATA[Analysts widely expect this year’s Black Friday and Cyber Monday to break the record again. From Friday November 28 through Monday December 1, retailers should see double-digit increases in online sales over the same period last year. The giants in &#8230; <a href="http://www.prestashop.com/blog/en/black-friday-and-cyber-monday-for-the-small-but-nimble-e-retailers/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p>Analysts widely expect this year’s Black Friday and Cyber Monday to break the record again. From Friday November 28 through Monday December 1, retailers should see double-digit increases in online sales over the same period last year. The giants in retail are well-positioned to take advantage of this surge in traffic and sales, but the small and nimble ecommerce merchants will not sit on the sidelines. In the time it takes to put up the Christmas tree, every e-retailer can get ready for the most important ecommerce days of the year. Here are just a few tips for this week.</p>
+<p><img title="main" src="http://www.prestashop.com/blog/en/files/2014/11/Blog1.png" alt="" width="584" height="306" /></p>
+<h3><span id="more-19005"></span></h3>
+<h3><span style="color: #2574a9;">1. Show your holiday spirit</span></h3>
+<p>It wouldn’t be the holidays without glittering lights, boughs of holly and Rudolph’s red nose. Brick and mortar stores start their Christmas displays in early November. You don’t want to be the one house in the neighborhood with no holiday lights. Be sure to add a little sparkle to your online store. Even a simple Santa hat on the store logo or a bough of holly on the homepage banner says to visitors… this is a destination for holiday shopping! Be sure to announce your holiday promotions and consider dedicating a full landing page to your holiday offers. Now is also the time to really showcase your products with colorful photos. Help your customers see those terrific gift ideas in your online store.</p>
+<h3><span style="color: #2574a9;">2. Deck the products</span></h3>
+<p>Small, but important updates to the product catalog can make a big difference for holiday shoppers. A gift guide should be one of the first tools you put together as you prepare for the holiday rush. This will certainly help your customers to find the perfect gift for Mom, Dad and the whole family. Think about the products that will make the best gifts this holiday season and showcase them with holiday-inspired product descriptions. This will help your shoppers to see your products in a holiday context and make faster gift selections. For the most popular items in your catalog, be sure to suggest complementary gifts. In fact, bundled products encourage even more purchases by taking the guesswork out of gift giving so don’t hesitate to create gift baskets for those complimentary products.</p>
+<h3><span style="color: #2574a9;">3. Oh Ship</span></h3>
+<p>There’s nothing worse than being caught short-handed when you’re in the middle of the holiday rush. To prepare for increased shipments of your products, be sure to stock up on bestselling inventory, shipping materials and office supplies ahead of time. Look for ways to optimize your packing and shipping process this holiday season. For example, you can speed-up order processing by pre-packing your best-sellers. You can also encourage earlier holiday shipping by offering specials. Here are some shipping specials that work:<br />
+• Free shipping on orders, over a certain value<br />
+• Same day shipping<br />
+• Flat-rate shipping<br />
+• Free returns</p>
+<p>Be sure to advertise these shipping specials throughout your website and social channels with eye-catching banners and coupon codes. Last, but not least… don’t forget to factor-in time for quality checks on those shipments. You don’t want customers remembering you for the incorrect or damaged gift they received just before the holidays!</p>
+<h3><span style="color: #2574a9;">4. November is the new January</span></h3>
+<p>Did you see an advertisement for Christmas deals in your local department store – in November? Yes, you did. Each year those holiday sales start earlier and earlier because, simply stated, they work so well. Here are some holiday promotions that will get your site visitors buying this holiday season.</p>
+<p><strong><span style="color: #2574a9;">Doorbusters</span></strong></p>
+<p>Doorbusters is a marketing strategy employed by brick-and-mortar stores. The strategy is to promote special offers for short periods of time. You can offer larger discounts earlier in the day and decrease the sale as the day progresses. For example, orders completed before 8:00AM receive a 30% discount, 8:01AM-10:00AM 25%, and after 10:00AM 20%. It’s an effective way to drive customers to your site early, before they have the chance to shop somewhere else.</p>
+<p><strong><span style="color: #2574a9;">Cross-selling and upselling</span></strong></p>
+<p>Two classic marketing strategies, cross-selling and upselling will certainly help to boost sales. Cross-selling encourages customers to buy more products by suggesting complimentary, but non-competing items. For example, if your shop sells gourmet cheese, use a ‘customers also bought’ section to suggest the best bread to go with the cheese. Upselling persuades customers to spend more money by adding features to the same product. Using the same cheese example, you can upsell the gift basket which includes a nice collection of food and wine.</p>
+<p><strong><span style="color: #2574a9;">Flash sales</span></strong></p>
+<p>Flash sales is a promotional tactic that can be very effective at the holidays. People will often comparison shop or wait until the last minute to choose gifts. If you offer a flash sale, where a set of products are promoted for a limited period of time and then withdrawn, this creates urgency and deadlines. It will encourage your customers to make their purchasing decisions quickly instead of leaving the site with unpurchased products in a shopping cart.</p>
+<h3><span style="color: #2574a9;">5. Eggnog and email marketing</span></h3>
+<p>Like a strong glass of eggnog, email marketing can be your friend and your foe. You want to stay connected to your customers this holiday season, but you don’t want them to get tired of seeing your logo in their inbox. Or worse yet, they unsubscribe from your updates entirely. So what’s the right answer? Think about how your business can be a partner in holiday happiness and not just another online store. Be part of the solution, and not part of the problem. Schedule email campaigns to coincide with your holiday promotions and major seasonal milestones, but avoid saturating your subscribers with pointless emails.</p>
+<p style="padding-left: 30px;"><em>We&#8217;ve giving away an iPad Mini 3! Enter our <a title="Black Friday &amp; Cyber Monday Giveaway" href="https://www.facebook.com/prestashop/posts/995183553831920" target="_blank">Black Friday / Cyber Monday giveaway on Facebook</a> before Tuesday, Dec. 2 for a chance to win the latest Apple iPad Mini and follow us on <a title="PrestaShop on Facebook" href="http://www.facebook.com/prestashop" target="_blank">Facebook</a> for the latest news and updates about PrestaShop.</em><br />
+<a title="Facebook Giveway" href="https://www.facebook.com/prestashop/posts/995183553831920" target="_blank"><img class="alignnone" title="main" src="http://www.prestashop.com/blog/en/files/2014/11/GiveawayBlog.png" alt="" width="450" height="174" /></a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/black-friday-and-cyber-monday-for-the-small-but-nimble-e-retailers/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>A quick guide to promoting black friday and cyber monday sales</title>
+		<link>http://www.prestashop.com/blog/en/a-quick-guide-to-promoting-black-friday-and-cyber-monday-sales/</link>
+		<comments>http://www.prestashop.com/blog/en/a-quick-guide-to-promoting-black-friday-and-cyber-monday-sales/#comments</comments>
+		<pubDate>Tue, 25 Nov 2014 16:30:17 +0000</pubDate>
+		<dc:creator>Julie Liu</dc:creator>
+				<category><![CDATA[Ecommerce Tips and Advice]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=18983</guid>
+		<description><![CDATA[Black Friday and Cyber Monday are literally days away.  Many online merchants will process their largest number of orders during the weekend. If you’ve downloaded our ecommerce holiday guide, you already have great ideas for promotions you can run. Once &#8230; <a href="http://www.prestashop.com/blog/en/a-quick-guide-to-promoting-black-friday-and-cyber-monday-sales/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p>Black Friday and Cyber Monday are literally days away.  Many online merchants will process their largest number of orders during the weekend. If you’ve downloaded our <a href="http://www.prestashop.com/en/ecommerce-holiday-guide" target="_blank">ecommerce holiday guide</a>, you already have great ideas for promotions you can run.</p>
+<p style="text-align: left;"><img class="wp-image-18984 aligncenter" title="BP_Sale" src="http://www.prestashop.com/blog/en/files/2014/11/BP_Sale.png" alt="" width="540" height="283" />Once you’ve set up your sales, getting the word out is just as important. Check out this quick guide to promoting Black Friday and Cyber Monday sales.</p>
+<p><span id="more-18983"></span></p>
+<h2><span style="color: #000000;"><span style="color: #ed2279;">1.</span> Homepage Slider or Banner</span></h2>
+<p>The best place to tell customers about sales is on your homepage. Both visitors looking for sales and those simply browsing your shop will be greeted with your sale announcement. Ensure the slider or banner is linked to your sale products, so customers can start shopping immediately.</p>
+<p>BACK OFFICE &gt; MODULES &gt; IMAGE SLIDER FOR YOUR HOMEPAGE &gt; CONFIGURE</p>
+<h2><span style="color: #000000;"><strong><span style="color: #ed2279;">2.</span> Send out an email blast</strong></span></h2>
+<p>Delivering your sale directly into your customer’s inbox will put your sale directly within their reach. Entice your customer to open your email with a tempting subject line.</p>
+<p>Keep in mind that more and more customers are opening emails on mobile devices. Be sure your emails can easily be read on smaller screens and that links open on the mobile version of your website, if your website isn’t responsive. Start promoting your sales with the <a href="http://addons.prestashop.com/en/advertising-marketing-newsletter-modules/4932-newsletter-statistics.html" target="_blank">Newsletter and Statistics Module by PrestaShop</a>.</p>
+<h2 style="font-weight: inherit;" dir="ltr"><span style="color: #000000;"><strong><span style="color: #ed2279;">3.</span> Social Media is your Best Friend</strong></span></h2>
+<p style="font-weight: inherit;" dir="ltr">Connect with customers through their favorite social media channel. Keep in mind that many other companies may also be offering their Black Friday / Cyber Monday deals, so ensure your ads contain:</p>
+<ol style="font-weight: inherit;">
+<li>Enticing deals</li>
+<li>Targeted hashtags, specifically: #blackfriday #cybermonday #sale</li>
+<li>Images (promoting products or holiday themed)</li>
+</ol>
+<h2><span style="color: #000000;"><span style="color: #ed2279;">4.</span> List your Sale</span></h2>
+<p>Once you’ve notified your <em>current</em> customers about your sale, it’s time to reach out to <em>potential</em> customers. List your sale on coupon sites like <a href="http://www.retailmenot.com/" target="_blank">RetailMeNot </a>or on <a href="http://www.reddit.com/r/coupons/" target="_blank">Coupon Forums</a> to gain more visibility with online shoppers. Everyone is looking to save money and start their holiday shopping. Make your sale as easy to find as possible.</p>
+<h2><span style="color: #000000;"><span style="color: #ed2279;">5.</span> Purchase Ads</span></h2>
+<p>If your budget allows, purchase advertising. Running ads during the holiday season may not be cheap but they give you the best chance at gaining even visibility among holiday shoppers. In this day and age, you’re not limited to search engine ads. Many social media platforms offer business accounts and the ability to purchase ads. Although these advertising channels are not traditional, they have a large reach. Try <a href="https://www.facebook.com/about/ads/" target="_blank">Facebook </a>and <a href="https://support.twitter.com/groups/58-advertising/topics/242-welcome-to-twitter-ads/articles/20170393-how-twitter-ads-can-help-your-business" target="_blank">Twitter Ads</a> or even <a href="https://business.pinterest.com/en/promoted-pins" target="_blank">Promoted Pins on Pinterest</a>.</p>
+<hr align="left" size="2" width="20%" />
+<p dir="ltr">After this short read, you’re ready to get out there and promote your Black Friday and Cyber Monday sales. Are there any last minute tips you’d like to share? Tell us in the comments below. Not an online merchant yet? <a href="http://www.prestashop.com/en/download" target="_blank">Download PrestaShop’s</a> shopping cart software to get started!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/a-quick-guide-to-promoting-black-friday-and-cyber-monday-sales/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>4 tests to run before launching your ecommerce site</title>
+		<link>http://www.prestashop.com/blog/en/4-tests-to-run-before-launching-your-ecommerce-site/</link>
+		<comments>http://www.prestashop.com/blog/en/4-tests-to-run-before-launching-your-ecommerce-site/#comments</comments>
+		<pubDate>Mon, 24 Nov 2014 16:50:57 +0000</pubDate>
+		<dc:creator>Magali Ferber</dc:creator>
+				<category><![CDATA[Ecommerce Tips and Advice]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=18946</guid>
+		<description><![CDATA[Have you ever visited an online store that looks like it accidently launched in the middle of construction? For many merchants, it’s no accident. New storeowners may sometimes be unaware of everything that should be tested before their store goes &#8230; <a href="http://www.prestashop.com/blog/en/4-tests-to-run-before-launching-your-ecommerce-site/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p><img class="aligncenter size-large wp-image-18948" title="check-list4" src="http://www.prestashop.com/blog/en/files/2014/11/check-list4-1024x537.png" alt="header" width="584" height="306" />Have you ever visited an online store that looks like it accidently launched in the middle of construction? For many merchants, it’s no accident. New storeowners may sometimes be unaware of everything that should be tested before their store goes live.</p>
+<p>From device compatibility to creating user scenarios, this article covers all of the essential tests to guarantee a successful launch. Once you finish reading, you’ll know how to effectively switch from “Pardon our dust” to “Open for business!”<span id="more-18946"></span></p>
+<h4 style="color: #5c9435;">1. COMPATIBILITY &amp; RESPONSIVENESS</h4>
+<p>The first thing to check on any website before launching is its compatibility and responsiveness, to ensure customers will be able to browse the store with every program and on every device available to them.</p>
+<p>- <strong>Browser Compatibility</strong>: a browser compatibility test, such as the one available at <a href="https://crossbrowsertesting.com/" target="_blank">CrossBrowserTesting</a>, will check if your site is compatible on all of these browsers: Internet Explorer, Google Chrome, Mozilla Firefox and Safari.<br />
+- <strong>Website Responsiveness</strong>: a responsiveness test, like the one offered at <a href="http://responsivetest.net/" target="_blank">ResponsiveTest</a>, will display your website on screen sizes of the most popular desktops, tablets and phones to ensure your website displays beautifully on all of them.</p>
+<h4 style="color: #5c9435;">2. CONTENT</h4>
+<p>Next, double, triple and quadruple check your site’s content. And by content, I mean anything that visitors can see, read and hear. Confusing or unprofessional site content could affect your store’s credibility and negatively impact your sales, so make sure to review:<br />
+<span style="margin-left: 15px;"><br />
+- Spelling and grammar errors<br />
+- Formatting and homogeneity of the paragraphs, lists, and headings<br />
+- Company contact information<br />
+- Image sizes, positions, and usefulness<br />
+- Product information, prices, descriptions, images, sizes available, etc.<br />
+</span></p>
+<h4 style="color: #5c9435;">3. FUNCTIONALITY</h4>
+<p>Because your store is an interactive experience, it is not enough to just look at your pages to test if they are spot-on, you must interact with them and play with different scenarios. Here is a list of situations to double check to make sure the basic functionalities are working properly:<br />
+<span style="margin-left: 15px;"><br />
+- Click on every link, button, image or text to make sure it takes you to the right page.<br />
+- Check that external links, such as social media links, open on a separate tab or window.<br />
+- Create test customer accounts.<br />
+- Place test orders using all the payment methods you have available.<br />
+- Delete the test orders once you are ready to launch.<br />
+- If you have a Multilanguage store, test the different languages.<br />
+- If you sell internationally, test the different currencies.<br />
+</span></p>
+<h4 style="color: #5c9435;">4. USER EXPERIENCE (BONUS!)</h4>
+<p>An extra step to test before your online store’s successful launch is user experience, or in other words, ensuring that the journey within your website flows correctly. There are three levels at which you can test user experience. Run these tests every time you make a significant change on your website.</p>
+<ol>
+<li><strong>Test it yourself.</strong> Imagine that you are a customer that first visits the store. Ask yourself questions. Create situations to test user experiences such as finding relevant information, purchasing or searching for a specific product.</li>
+<li><strong>Have your friends test it.</strong> Watch them navigate your site and ask them to execute certain actions or find specific pieces of information. Try to capture moments in which they get stuck and why they do so. Sometimes, even a simple modification in content, like a clearer call to action, can help solve these “stuck moments” and significantly improve your user experience.</li>
+<li><strong>Have a professional service test it.</strong> User testing through websites such as <a href="http://www.usertesting.com/" target="_blank">UserTesting.com</a> are a great investment. The concept of their test is the same as the one above, but the difference is that your website will be tested by many different participants. This will help you confirm that your concept and messages are easily understandable throughout the user journey on your online Store.</li>
+</ol>
+<h4 style="color: #5c9435;">5. THE LAUNCH</h4>
+<p>That’s it &#8211; you are now ready to launch! PrestaShop users, can activate your Online Store from your back-office, under the “Preferences / Maintenance” page, and setting the “Enable Shop” option to YES. Congratulations! Your store is officially open for business.</p>
+<p>Not a PrestaShop merchant? <a href="http://www.prestashop.com/en/download" target="_blank">Download</a> PrestaShop to start launching your online store.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/4-tests-to-run-before-launching-your-ecommerce-site/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Minified using disk: basic
+Page Caching using disk: enhanced
+Object Caching 830/983 objects using disk: basic
+
+Served from: www.prestashop.com @ 2014-12-29 16:56:07 -->

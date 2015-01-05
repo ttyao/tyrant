@@ -16,7 +16,7 @@
                             </div>
                             {if $slide.link}
                             <div class="pos-slideshow-readmore">
-                                <a href="{$slide.link}" title="{l s=('Read more') mod='posslideshow'}">{l s=('Shop now') mod= 'posslideshow'}</a>	
+                                <a href="{$slide.link}" title="{l s=('Read more') mod='posslideshow'}">{l s=('查看详情') mod= 'posslideshow'}</a>
                             </div>
                             {/if}
                     </div>
@@ -44,13 +44,13 @@
 			nextText: 'Next',
                         afterLoad: function(){
                          $('.pos-loading').css("display","none");
-                        },     
-                        beforeChange: function(){ 
+                        },
+                        beforeChange: function(){
                             $('.pos-slideshow-title, .pos-slideshow-des').css("left","-100%" );
-                            $('.pos-slideshow-readmore').css("left","-100%"); 
-                        }, 
-                        afterChange: function(){ 
-                            $('.pos-slideshow-title, .pos-slideshow-des, .pos-slideshow-readmore').css("left","100px") 
+                            $('.pos-slideshow-readmore').css("left","-100%");
+                        },
+                        afterChange: function(){
+                            $('.pos-slideshow-title, .pos-slideshow-des, .pos-slideshow-readmore').css("left","100px")
                         }
  		});
     });

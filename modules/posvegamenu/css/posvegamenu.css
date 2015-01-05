@@ -48,7 +48,7 @@ margin: -5px 0 0 -15px;
 padding: 0;
 width: 19px;
 position: relative;
-z-index: 1;    
+z-index: 1;
 }
 /*.pt_vmegamenu div.pt_menu .parentMenu{*/
 /*    width:100%;*/
@@ -90,7 +90,7 @@ background: none;
  .pt_vmegamenu div.pt_menu .parentMenu.noSubMenu span.block-title:hover,
  .pt_vmegamenu div.pt_menu.act .parentMenu.noSubMenu a
  {
-background-image: none    
+background-image: none
 }
 .custom-menu-right { float: left; margin: 0;}
 .pt_vmegamenu .column.blockright { width: 150px !important; }
@@ -156,7 +156,7 @@ display: none;}
     color: #897725;
 }
 .pt_vmegamenu .itemMenu h4.level3:hover, .pt_vmegamenu .itemMenu a.level3:hover{
-color:#f36b6c 
+color:#f36b6c
 }
 .pt_vmegamenu .itemSubMenu h4.level4,
 .pt_vmegamenu .itemSubMenu a.level4,
@@ -187,7 +187,7 @@ background-position: 0 -33px
 
 .pt_vmegamenu div.column {
     float:left;
-    width:170px;
+    width:90px;
     margin-right: 15px;
     padding-right:0;
 }
@@ -229,7 +229,7 @@ margin-right: 0;}
 }
 .pt_vmegamenu div.popup .blockright img{
     max-width: 100%;
-} 
+}
 .pt_vmegamenu .parentMenu .block-title{
     color: #1E7EC8;
 }
@@ -268,7 +268,7 @@ margin-right: 0;}
 }
 
 .pt_vmegamenu img{
-  
+
   max-width: 100%;
   display: block;
   height: auto;}
