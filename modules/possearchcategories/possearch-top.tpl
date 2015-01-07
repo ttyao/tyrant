@@ -34,7 +34,7 @@
 			<div class="pos_search form-group">
                 {if $cate_on == 1}
                     <select name="poscats" class="selectpicker">
-					 <option value="">{l s='Categories'}</option>
+					 <option value="">{l s='商品分类'}</option>
                         {$categories_option}
                     </select>
                 {/if}
@@ -43,7 +43,7 @@
 				<i class="icon-search"></i>
 			</button>
 			<input class="search_query form-control" type="text" id="pos_query_top" name="search_query" value="{$search_query|escape:'html':'UTF-8'|stripslashes}" />
-		</div>
+        </div>
     </form>
 </div>
 {include file="$self/possearch-instantsearch.tpl"}
