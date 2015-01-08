@@ -8323,6 +8323,20 @@ font-size: 11px;}
 .block-static-1 .box-content .box-title{
 display: none;}
 }
+@media (max-width: 1200px) {
+  .block-static-1 {
+    display: none;
+  }
+  .pos-new-product {
+    display: none;
+  }
+  .pos-feature-product {
+    display: none;
+  }
+  .pos-slideshow-container {
+    display: none;
+  }
+}
 /* bestseller */
 #product #best-sellers_block_right {
 margin: 0;}
