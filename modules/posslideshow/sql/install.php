@@ -16,6 +16,7 @@
 						`id_lang` int(11) unsigned NOT NULL,
 						`title` varchar(250) NOT NULL,
 						`link` varchar(250) NOT NULL DEFAULT "#",
+						`link_title` varchar(250) NOT NULL DEFAULT "Shop now",
 						`description` longtext NOT NULL,
 						`image` longtext NOT NULL,
                         PRIMARY KEY (`id_pos_slideshow`,`id_lang`)
@@ -53,12 +54,14 @@
         $title = $titles->item(0)->nodeValue;
         $links = $block->getElementsByTagName("link");
         $link = $links->item(0)->nodeValue;
+		$link_titles = $block->getElementsByTagName("link_title");
+        $link_title = $links->item(0)->nodeValue;
         $descriptions = $block->getElementsByTagName("description");
         $description = $descriptions->item(0)->nodeValue;
 		$id_langs = $block->getElementsByTagName('id_lang');
 		$id_lang = $id_langs->item(0)->nodeValue;
-        $sql[] = "insert into `" . _DB_PREFIX_ . "pos_slideshow_lang` (`id_pos_slideshow`,`id_lang`, `title`, `link`, `description`) 
-           values('".$id."','".$id_lang."','".$title."','".$link."','".$description."');";
+        $sql[] = "insert into `" . _DB_PREFIX_ . "pos_slideshow_lang` (`id_pos_slideshow`,`id_lang`, `title`, `link`, `link_title`, `description`) 
+           values('".$id."','".$id_lang."','".$title."','".$link."','".$link_title."','".$description."');";
     }
 
     $blockshops = $doc->getElementsByTagName("slideshow_shop");

@@ -1,3 +1,23 @@
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$(".tab_category-slider3").hide();
+	$(".tab_category-slider3:first").show(); 
+
+	$(".postabcateslider3 ul.tab_cates li").click(function() {
+		$(".postabcateslider3 ul.tab_cates li").removeClass("active");
+		$(this).addClass("active");
+		$(".tab_category-slider3").hide();
+		$(".tab_category-slider3").removeClass("animate1 {$tab_effect}");
+		var activeTab = $(this).attr("rel"); 
+		$("#"+activeTab) .addClass("animate1 {$tab_effect}");
+		$("#"+activeTab).fadeIn(); 
+	});
+});
+
+</script>
+
 <div class="tab-category-container-slider postabcateslider3">
 	<div class="container">
 		<div class="container-inner row">
@@ -12,12 +32,9 @@
 				</ul>
 				<div class="tab_container"> 
 					{foreach from=$productCates item=productCate name=postabcateslider3}
-					<div id="tab_{$productCate.id}" class="tab_category"> 
-					<div class="productTabCategorySlider_control">
-						<span class="productTabCategorySlider_prev"></span>
-						<span class="productTabCategorySlider_next"></span>
-					</div>
-					<ul class="productTabCategorySlider productTabCategorySlider3">
+					<div id="tab_{$productCate.id}" class="tab_category tab_category-slider3"> 
+					
+					<ul class="productTabCategorySlider productTabCategorySlider3 tabcate_{$productCate.id}">
 					{foreach from=$productCate.product item=product name=postabcateslider3}
 					<li class="cate_item">
 					<div class="item-inner">
@@ -91,10 +108,12 @@
 					</ul>
 					</div>
 					<script type="text/javascript"> 
-					var owl3 = $(".postabcateslider3 .productTabCategorySlider3");
+					var owl3 = $(".tabcate_{$productCate.id}");
 
 					owl3.owlCarousel({
 					autoPlay : false,
+					navigation: true,
+					navigationText: false,
 					items :4, //10 items above 1000px browser width
 					itemsDesktop : [1199,3], //5 items between 1000px and 901px
 					itemsDesktopSmall : [992,2], // betweem 900px and 601px
@@ -102,12 +121,7 @@
 					itemsMobile : [480,1] // itemsMobile disabled - inherit from itemsTablet option
 					});
 					// Custom Navigation Events
-					$(".postabcateslider3 .productTabCategorySlider_next").click(function(){
-					owl3.trigger('owl.next');
-					})
-					$(".postabcateslider3 .productTabCategorySlider_prev").click(function(){
-					owl3.trigger('owl.prev');
-					})
+					
 					</script>
 					{/foreach}	
 				</div> <!-- .tab_container -->

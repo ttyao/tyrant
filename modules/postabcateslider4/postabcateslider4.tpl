@@ -1,3 +1,22 @@
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$(".tab_category-slider4").hide();
+	$(".tab_category-slider4:first").show(); 
+
+	$(".postabcateslider4 ul.tab_cates li").click(function() {
+		$(".postabcateslider4 ul.tab_cates li").removeClass("active");
+		$(this).addClass("active");
+		$(".tab_category-slider4").hide();
+		$(".tab_category-slider4").removeClass("animate1 {$tab_effect}");
+		var activeTab = $(this).attr("rel"); 
+		$("#"+activeTab) .addClass("animate1 {$tab_effect}");
+		$("#"+activeTab).fadeIn(); 
+	});
+});
+
+</script>
 <div class="tab-category-container-slider postabcateslider4">
 	<div class="container">
 		<div class="container-inner row">
@@ -13,11 +32,7 @@
 				<div class="tab_container"> 
 					{foreach from=$productCates item=productCate name=postabcateslider4}
 					<div id="tab_{$productCate.id}" class="tab_category"> 
-					<div class="productTabCategorySlider_control">
-						<span class="productTabCategorySlider_prev"></span>
-						<span class="productTabCategorySlider_next"></span>
-					</div>
-					<ul class="productTabCategorySlider productTabCategorySlider4">
+					<ul class="productTabCategorySlider productTabCategorySlider4 tabcate_{$productCate.id}">
 					{foreach from=$productCate.product item=product name=postabcateslider4}
 					<li class="cate_item">
 					<div class="item-inner">
@@ -91,23 +106,18 @@
 					</ul>
 					</div>
 					<script type="text/javascript"> 
-					var owl4 = $(".postabcateslider4 .productTabCategorySlider4");
+					var owl4 = $(".tabcate_{$productCate.id}");
 
 					owl4.owlCarousel({
 					autoPlay : false,
+					navigation: true,
+					navigationText: false,
 					items :4, //10 items above 1000px browser width
 					itemsDesktop : [1199,3], //5 items between 1000px and 901px
 					itemsDesktopSmall : [992,2], // betweem 900px and 601px
 					itemsTablet: [768,2], //2 items between 600 and 0
 					itemsMobile : [480,1] // itemsMobile disabled - inherit from itemsTablet option
 					});
-					// Custom Navigation Events
-					$(".postabcateslider4 .productTabCategorySlider_next").click(function(){
-					owl4.trigger('owl.next');
-					})
-					$(".postabcateslider4 .productTabCategorySlider_prev").click(function(){
-					owl4.trigger('owl.prev');
-					})
 					</script>
 					{/foreach}	
 				</div> <!-- .tab_container -->

@@ -33,7 +33,7 @@ class postabcateslider3 extends Module {
 	Configuration::updateGlobalValue($this->name . '_list_cate',$cateDefault);
 
 		return parent :: install()
-			&& $this->registerHook('tabCategory')
+			&& $this->registerHook('blockPosition3')
 			&& $this->registerHook('header')
 			&& $this->registerHook('actionOrderStatusPostUpdate')
 			&& $this->registerHook('addproduct')
@@ -114,7 +114,7 @@ class postabcateslider3 extends Module {
             ));
 		return $this->display(__FILE__, 'postabcateslider3.tpl');
 	}
-	public function hookTabCategory($params) {
+	public function hookBlockPosition3($params) {
 	        $nb = Configuration::get($this->name . '_p_limit');
 			$product_on_row = Configuration::get($this->name . '_p_on_row');
 		    $arrayCategory = array();

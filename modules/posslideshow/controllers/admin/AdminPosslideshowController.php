@@ -13,18 +13,18 @@ class AdminPosslideshowController extends ModuleAdminController
 		$this->bulk_actions = array('delete' => array('text' => $this->l('Delete selected'), 'confirm' => $this->l('Delete selected items?')));
         Shop::addTableAssociation($this->table, array('type' => 'shop'));
 		$this->context = Context::getContext();
-                
+
                 $this->fieldImageSettings = array(
  			'name' => 'image',
  			'dir' => 'blockslideshow'
  		);
                 $this->imageType = "jpg";
-		
+
 		parent::__construct();
 	}
-        
+
         public function renderList() {
-            
+
             $this->addRowAction('edit');
             $this->addRowAction('delete');
             $this->bulk_actions = array(
@@ -40,50 +40,54 @@ class AdminPosslideshowController extends ModuleAdminController
                     'align' => 'center',
                     'width' => 25
                 ),
-                  'title' => array(
+                'title' => array(
                     'title' => $this->l('Title'),
                     'width' => 90,
                 ),
-                  'link' => array(
+                'link' => array(
                     'title' => $this->l('Link'),
                     'width' => 90,
                 ),
-                
+               'link_title' => array(
+                    'title' => $this->l('Link title'),
+                    'width' => 25,
+                ),
+
                 'description' => array(
                     'title' => $this->l('Desscription'),
                     'width' => '300',
                  ),
-				 'active' => array(
-					 'title' => $this->l('Displayed'), 
-					 'width' => 25, 
-					 'align' => 'center', 
-					 'active' => 'active', 
-					 'type' => 'bool', 
-					 'orderby' => FALSE
-					 ),
+                 'active' => array(
+                     'title' => $this->l('Displayed'),
+                     'width' => 25,
+                     'align' => 'center',
+                     'active' => 'active',
+                     'type' => 'bool',
+                     'orderby' => FALSE
+                     ),
                   'porder' => array(
                     'title' => $this->l('Order'),
                     'width' => 10,
                 ),
-				
+
             );
-            
+
            /* $this->fields_list['image'] = array(
                 'title' => $this->l('Image'),
                 'width' => 70,
                 "image" => $this->fieldImageSettings["dir"]
             );*/
-//            
+//
 
             $lists = parent::renderList();
             parent::initToolbar();
 
             return $lists;
     }
-    
-    
+
+
     public function renderForm() {
-        
+
         $this->fields_form = array(
             'tinymce' => true,
             'legend' => array(
@@ -96,14 +100,21 @@ class AdminPosslideshowController extends ModuleAdminController
                     'label' => $this->l('Title:'),
                     'name' => 'title',
                     'size' => 40,
-					'lang' => true,
+                    'lang' => true,
                 ),
                 array(
                     'type' => 'text',
                     'label' => $this->l('Link:'),
                     'name' => 'link',
                     'size' => 40,
-					 'lang' => true,
+                    'lang' => true,
+                ),
+                array(
+                    'type' => 'text',
+                    'label' => $this->l('Link title:'),
+                    'name' => 'link_title',
+                    'size' => 40,
+                    'lang' => true,
                 ),
                 array(
                     'type' => 'file',
@@ -122,7 +133,7 @@ class AdminPosslideshowController extends ModuleAdminController
                 'cols' => 40,
                 'hint' => $this->l('Invalid characters:') . ' <>;=#{}'
                ),
-				 array(
+                array(
                     'type' => 'radio',
                     'label' => $this->l('Displayed:'),
                     'name' => 'active',
@@ -136,7 +147,7 @@ class AdminPosslideshowController extends ModuleAdminController
                             'id' => 'require_off',
                             'value' => 0,
                             'label' => $this->l('No')))),
-				array(
+                array(
                     'type' => 'text',
                     'label' => $this->l('Order:'),
                     'name' => 'porder',
@@ -162,6 +173,4 @@ class AdminPosslideshowController extends ModuleAdminController
 
         return parent::renderForm();
     }
-    
-
 }

@@ -7,7 +7,7 @@
 	</slideshow>
 	<slideshow>
 		<id_pos_slideshow>4</id_pos_slideshow>
-		<porder>0</porder>
+		<porder>1</porder>
 		<active>1</active>
 	</slideshow>
 
@@ -18,6 +18,7 @@
 		<id_lang>1</id_lang>
 		<title>bannerSequence1</title>
 		<link>http://posthemes.com/</link>
+		<link_title>Shop now</link_title>
 		<description>
 		<![CDATA[
 <h2 class="title" style="">The summer</h2>
@@ -33,6 +34,7 @@ This is Photoshops version  of Lorem Ipsum. Proin gravida nibh vel velit auctor 
 		<id_lang>1</id_lang>
 		<title>bannerSequence2</title>
 		<link>http://posthemes.com/</link>
+		<link_title>Shop now</link_title>
 		<description>
 		<![CDATA[
 <h2 class="title" style="">The winter</h2>
@@ -49,6 +51,7 @@ This is Photoshops version  of Lorem Ipsum. Proin gravida nibh vel velit auctor 
 		<id_lang>2</id_lang>
 		<title>bannerSequence1</title>
 		<link>http://posthemes.com/</link>
+		<link_title>Shop now</link_title>
 		<description>
 		<![CDATA[
 <h2 class="title" style="">The summer</h2>
@@ -64,6 +67,7 @@ This is Photoshops version  of Lorem Ipsum. Proin gravida nibh vel velit auctor 
 		<id_lang>2</id_lang>
 		<title>bannerSequence1</title>
 		<link>http://posthemes.com/</link>
+		<link_title>Shop now</link_title>
 		<description>
 		<![CDATA[
 <h2 class="title" style="">The winter</h2>

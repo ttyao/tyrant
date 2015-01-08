@@ -6,6 +6,7 @@ class Nivoslideshow extends ObjectModel
         public $description;
         public $image;
         public $link;
+		public $link_title;
         public $porder;
 		public $active;
 
@@ -23,7 +24,8 @@ class Nivoslideshow extends ObjectModel
 					//lang field
                     'title' => array('type' => self::TYPE_STRING,'lang' => true, 'validate' => 'isGenericName', 'required' => false, 'size' => 265),
 					'link' => array('type' => self::TYPE_STRING,'lang' => true, 'validate' => 'isGenericName', 'required' => false, 'size' => 265),
-                    'description' => array('type' => self::TYPE_HTML, 'lang' => true, 'validate' => 'isString', 'size' => 3999999999999),
+                    'link_title' => array('type' => self::TYPE_STRING,'lang' => true, 'validate' => 'isGenericName', 'required' => false, 'size' => 265),
+					'description' => array('type' => self::TYPE_HTML, 'lang' => true, 'validate' => 'isString', 'size' => 3999999999999),
                 ),
 	);
 }

@@ -8358,10 +8358,14 @@ position: relative;}
 font: 18px/25px 'calibribold';
 text-transform: uppercase;
 padding-bottom: 5px;
-background: url(../img/border_tab.png) no-repeat left bottom;
-margin: 0;
+margin: 0 20px 0 0;
 cursor: pointer;
-color: #888;}
+color: #888;
+display: inline-block;}
+.tab-category-container-slider .tab-category ul.tab_cates li.active,.tab-category-container-slider .tab-category ul.tab_cates li:hover {
+	background: url(../img/border_tab.png) no-repeat left bottom;
+	color: #333;
+}
 .productTabCategorySlider .owl-item{
 padding: 0 2px;}
 .productTabCategorySlider .owl-item .cate_item{
@@ -8453,12 +8457,12 @@ visibility: visible;
 -ms-animation: zoomIn 300ms ease;}
 .tab-category-container-slider .tab-category{
 position: relative;}
-.tab-category-container-slider .tab-category .tab_category .productTabCategorySlider_control{
+.tab-category-container-slider .tab-category .owl-controls{
 position: absolute;
-top: -5px;
+top: -35px;
 right: 0;}
-.tab-category-container-slider .tab-category .tab_category .productTabCategorySlider_control .productTabCategorySlider_next,
-.tab-category-container-slider .tab-category .tab_category .productTabCategorySlider_control .productTabCategorySlider_prev{
+.tab-category-container-slider .tab-category .owl-controls .owl-next,
+.tab-category-container-slider .tab-category .owl-controls .owl-prev{
 font-family: 'FontAwesome';
 height: 30px;
 width: 30px;
@@ -8474,13 +8478,13 @@ color: #666;
 -o-transition: all 300ms ease-in-out;
 transition: all 300ms ease-in-out;
 cursor: pointer;}
-.tab-category-container-slider .tab-category .tab_category .productTabCategorySlider_control .productTabCategorySlider_next:hover,
-.tab-category-container-slider .tab-category .tab_category .productTabCategorySlider_control .productTabCategorySlider_prev:hover{
+.tab-category-container-slider .tab-category  .owl-controls .owl-next:hover,
+.tab-category-container-slider .tab-category  .owl-controls .owl-prev:hover{
 background: #f36b6c;
 color: #fff;}
-.tab-category-container-slider .tab-category .tab_category .productTabCategorySlider_control .productTabCategorySlider_next:after{
+.tab-category-container-slider .tab-category  .owl-controls .owl-next:after{
 content: "\f105";}
-.tab-category-container-slider .tab-category .tab_category .productTabCategorySlider_control .productTabCategorySlider_prev:after{
+.tab-category-container-slider .tab-category  .owl-controls .owl-prev:after{
 content: "\f104";}
 @media (max-width: 998px){
 .productTabCategorySlider .cate_item .quick-view,

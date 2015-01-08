@@ -16,7 +16,7 @@
                             </div>
                             {if $slide.link}
                             <div class="pos-slideshow-readmore">
-                                <a href="{$slide.link}" title="{l s=('Read more') mod='posslideshow'}">{l s=('查看详情') mod= 'posslideshow'}</a>
+                                <a href="{$slide.link}" title="{l s=('Read more') mod='posslideshow'}">{$slide.link_title}</a>
                             </div>
                             {/if}
                     </div>

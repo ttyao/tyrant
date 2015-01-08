@@ -1,3 +1,22 @@
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$(".tab_category-slider1").hide();
+	$(".tab_category-slider1:first").show(); 
+
+	$(".postabcateslider1 ul.tab_cates li").click(function() {
+		$(".postabcateslider1 ul.tab_cates li").removeClass("active");
+		$(this).addClass("active");
+		$(".tab_category-slider1").hide();
+		$(".tab_category-slider1").removeClass("animate1 {$tab_effect}");
+		var activeTab = $(this).attr("rel"); 
+		$("#"+activeTab) .addClass("animate1 {$tab_effect}");
+		$("#"+activeTab).fadeIn(); 
+	});
+});
+
+</script>
 <div class="tab-category-container-slider postabcateslider1">
 	<div class="container">
 		<div class="container-inner row">
@@ -10,13 +29,10 @@
 					{/foreach}
 				</ul>
 				<div class="tab_container"> 
+					
 					{foreach from=$productCates item=productCate name=postabcateslider1}
-					<div id="tab_{$productCate.id}" class="tab_category"> 
-					<div class="productTabCategorySlider_control">
-						<span class="productTabCategorySlider_prev"></span>
-						<span class="productTabCategorySlider_next"></span>
-					</div>
-					<ul class="productTabCategorySlider productTabCategorySlider1">
+					<div id="tab_{$productCate.id}" class="tab_category tab_category-slider1"> 
+					<ul class="productTabCategorySlider productTabCategorySlider1 tabcate_{$productCate.id}">
 					{foreach from=$productCate.product item=product name=postabcateslider1}
 					<li class="cate_item">
 					<div class="item-inner">
@@ -90,10 +106,12 @@
 					</ul>
 					</div>
 					<script type="text/javascript"> 
-					var owl1 = $(".postabcateslider1 .productTabCategorySlider1");
+					var owl1 = $(".tabcate_{$productCate.id}");
 
 					owl1.owlCarousel({
 					autoPlay : false,
+					navigation: true,
+					navigationText: false,
 					items :4, //10 items above 1000px browser width
 					itemsDesktop : [1199,3], //5 items between 1000px and 901px
 					itemsDesktopSmall : [992,2], // betweem 900px and 601px
@@ -101,12 +119,7 @@
 					itemsMobile : [480,1] // itemsMobile disabled - inherit from itemsTablet option
 					});
 					// Custom Navigation Events
-					$(".postabcateslider1 .productTabCategorySlider_next").click(function(){
-					owl1.trigger('owl.next');
-					})
-					$(".postabcateslider1 .productTabCategorySlider_prev").click(function(){
-					owl1.trigger('owl.prev');
-					})
+					
 					</script>
 					{/foreach}	
 				</div> <!-- .tab_container -->

@@ -45,16 +45,17 @@ class Posslideshow extends Module {
         }  
         
         // Install SQL
-		include(dirname(__FILE__).'/sql/install.php');
-		foreach ($sql as $s)
-			if (!Db::getInstance()->execute($s))
-				return false;
+		  include(dirname(__FILE__).'/sql/install.php');
+		  foreach ($sql as $s)
+			  if (!Db::getInstance()->execute($s))
+				  return false;
         
           // Install Tabs
 		if(!(int)Tab::getIdFromClassName('AdminPosMenu')) {
                     $parent_tab = new Tab();
                     // Need a foreach for the language
-                    $parent_tab->name[$this->context->language->id] = $this->l('PosExtentions');
+					foreach (Language::getLanguages() as $language)
+					$parent_tab->name[$language['id_lang']] = $this->l('PosExtentions');
                     $parent_tab->class_name = 'AdminPosMenu';
                     $parent_tab->id_parent = 0; // Home tab
                     $parent_tab->module = $this->name;
@@ -65,7 +66,8 @@ class Posslideshow extends Module {
 		
 		$tab = new Tab();		
 		// Need a foreach for the language
-		$tab->name[$this->context->language->id] = $this->l('Manage Slideshow');
+		foreach (Language::getLanguages() as $language)
+		$tab->name[$language['id_lang']] = $this->l('Manage Slideshow');
 		$tab->class_name = 'AdminPosslideshow';
 		$tab->id_parent = (int)Tab::getIdFromClassName('AdminPosMenu');
 		$tab->module = $this->name;
@@ -109,10 +111,10 @@ class Posslideshow extends Module {
                 Configuration::deleteByName($this->name.'_show_navigation');
                 Configuration::deleteByName($this->name.'_start_slide');
 		//uninstall db
-                include(dirname(__FILE__).'/sql/uninstall_sql.php');
-		foreach ($sql as $s)
-			if (!Db::getInstance()->execute($s))
-				return false;
+                 include(dirname(__FILE__).'/sql/uninstall_sql.php');
+		 foreach ($sql as $s)
+			 if (!Db::getInstance()->execute($s))
+				 return false;
 		// Uninstall Module
 		if (!parent::uninstall())
 			return false;
