@@ -39,8 +39,8 @@
 {/if}
 		<meta name="generator" content="PrestaShop" />
 		<meta name="robots" content="{if isset($nobots)}no{/if}index,{if isset($nofollow) && $nofollow}no{/if}follow" />
-		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0" /> 
-		<meta name="apple-mobile-web-app-capable" content="yes" /> 
+		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<link rel="icon" type="image/vnd.microsoft.icon" href="{$favicon_url}?{$img_update_time}" />
 		<link rel="shortcut icon" type="image/x-icon" href="{$favicon_url}?{$img_update_time}" />
 {if isset($css_files)}
@@ -82,15 +82,6 @@
 							</div>
 						</div>
 					</div>
-					<div class="nav">
-						<div class="container">
-							<div class="row">
-								<nav>
-									{hook h="displayNav"}
-								</nav>
-							</div>
-						</div>
-					</div>
 					<div class="header_content">
 						<div class="container">
 								<div id="header_logo" class="col-xs-12 col-sm-12 col-md-3">
@@ -100,6 +91,15 @@
 								</div>
 								<div class="col-xs-12 col-sm-12 col-md-9">
 									{if isset($HOOK_TOP)}{$HOOK_TOP}{/if}
+									<div class="nav">
+										<div class="container">
+											<div class="row">
+												<nav>
+													{hook h="displayNav"}
+												</nav>
+											</div>
+										</div>
+									</div>
 								</div>
 						</div>
 					</div>

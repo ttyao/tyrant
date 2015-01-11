@@ -3,7 +3,7 @@
 		<h2>{l s='New products' mod='posnewproduct'}</h2>
 	</div>
 	{if count($products)>1}
-		<ul class="posnewproduct">			
+		<ul class="posnewproduct">
 			{foreach from=$products item=product name=posNewProducts}
 				<li>
 					<div class="item">
@@ -37,7 +37,7 @@
 						<a class="exclusive ajax_add_to_cart_button btn btn-default" href="{$link->getPageLink('cart',false, NULL, 'add=1&amp;id_product={$product.id_product|intval}', false)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Add to cart' mod='posnewproduct'}" data-id-product="{$product.id_product|intval}">
 						{l s='Add to cart' mod='posnewproduct'}
 						</a>
-						{/if}						
+						{/if}
 						{else}
 						<span class="exclusive ajax_add_to_cart_button btn btn-default disabled">
 						{l s='Add to cart' mod='posnewproduct'}
@@ -68,5 +68,5 @@
 		</script>
 	{else}
 	<p class="warning">{l s='No products for this new products.' mod='posnewproduct'}</p>
-	{/if}		 
+	{/if}
 </div>

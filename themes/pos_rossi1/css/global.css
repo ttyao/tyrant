@@ -8323,7 +8323,7 @@ font-size: 11px;}
 .block-static-1 .box-content .box-title{
 display: none;}
 }
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
   .block-static-1 {
     display: none;
   }

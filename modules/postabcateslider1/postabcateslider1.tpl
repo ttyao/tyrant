@@ -3,16 +3,16 @@
 $(document).ready(function() {
 
 	$(".tab_category-slider1").hide();
-	$(".tab_category-slider1:first").show(); 
+	$(".tab_category-slider1:first").show();
 
 	$(".postabcateslider1 ul.tab_cates li").click(function() {
 		$(".postabcateslider1 ul.tab_cates li").removeClass("active");
 		$(this).addClass("active");
 		$(".tab_category-slider1").hide();
 		$(".tab_category-slider1").removeClass("animate1 {$tab_effect}");
-		var activeTab = $(this).attr("rel"); 
+		var activeTab = $(this).attr("rel");
 		$("#"+activeTab) .addClass("animate1 {$tab_effect}");
-		$("#"+activeTab).fadeIn(); 
+		$("#"+activeTab).fadeIn();
 	});
 });
 
@@ -21,28 +21,28 @@ $(document).ready(function() {
 	<div class="container">
 		<div class="container-inner row">
 			<div class="tab-category">
-				<ul class="tab_cates"> 
+				<ul class="tab_cates">
 					{$count=0}
 					{foreach from=$productCates item=productCate name=postabcateslider1}
 						<li rel="tab_{$productCate.id}" {if $count==0} class="active"  {/if} > {$productCate.name}</li>
 						{$count= $count+1}
 					{/foreach}
 				</ul>
-				<div class="tab_container"> 
-					
+				<div class="tab_container">
+
 					{foreach from=$productCates item=productCate name=postabcateslider1}
-					<div id="tab_{$productCate.id}" class="tab_category tab_category-slider1"> 
+					<div id="tab_{$productCate.id}" class="tab_category tab_category-slider1">
 					<ul class="productTabCategorySlider productTabCategorySlider1 tabcate_{$productCate.id}">
 					{foreach from=$productCate.product item=product name=postabcateslider1}
 					<li class="cate_item">
 					<div class="item-inner">
 						<div class="box-img">
 							<div class="img_btn">
-								<a 	class="quick-view" href="{$product.link|escape:'html':'UTF-8'}" 
-									rel="{$product.link|escape:'html':'UTF-8'}" 
+								<a 	class="quick-view" href="{$product.link|escape:'html':'UTF-8'}"
+									rel="{$product.link|escape:'html':'UTF-8'}"
 									title="{l s='Quick view' mod='postabcateslider1'}"></a>
-								<a 	onclick="WishlistCart('wishlist_block_list', 'add', '{$product.id_product|intval}', $('#idCombination').val(), 1,'tabcategory'); return false;" 
-									class="add-wishlist wishlist_button" 
+								<a 	onclick="WishlistCart('wishlist_block_list', 'add', '{$product.id_product|intval}', $('#idCombination').val(), 1,'tabcategory'); return false;"
+									class="add-wishlist wishlist_button"
 									title="{l s='Add to Wishlist' mod='postabcateslider1'}" ></a>
 							</div>
 							<div class="img_main">
@@ -93,7 +93,7 @@ $(document).ready(function() {
 							<a class="cate_buy exclusive ajax_add_to_cart_button btn btn-default" href="{$link->getPageLink('cart',false, NULL, 'add=1&amp;id_product={$product.id_product|intval}', false)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Add to cart' mod='postabcateslider1'}" data-id-product="{$product.id_product|intval}">
 								{l s='Add to cart' mod='postabcateslider1'}
 							</a>
-						{/if}						
+						{/if}
 						{else}
 							<span class="cate_buy exclusive ajax_add_to_cart_button btn btn-default disabled">
 								{l s='Add to cart' mod='postabcateslider1'}
@@ -105,23 +105,23 @@ $(document).ready(function() {
 					{/foreach}
 					</ul>
 					</div>
-					<script type="text/javascript"> 
+					<script type="text/javascript">
 					var owl1 = $(".tabcate_{$productCate.id}");
 
 					owl1.owlCarousel({
 					autoPlay : false,
 					navigation: true,
 					navigationText: false,
-					items :4, //10 items above 1000px browser width
+					items :5, //10 items above 1000px browser width
 					itemsDesktop : [1199,3], //5 items between 1000px and 901px
 					itemsDesktopSmall : [992,2], // betweem 900px and 601px
 					itemsTablet: [768,2], //2 items between 600 and 0
-					itemsMobile : [480,1] // itemsMobile disabled - inherit from itemsTablet option
+					itemsMobile : [480,2] // itemsMobile disabled - inherit from itemsTablet option
 					});
 					// Custom Navigation Events
-					
+
 					</script>
-					{/foreach}	
+					{/foreach}
 				</div> <!-- .tab_container -->
 			</div>
 		</div>
