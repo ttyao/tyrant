@@ -1,5 +1,6 @@
 #languages-block-top {
   float: left;
+  display: none;
   position: relative; }
 
   #languages-block-top span.firstWord {

@@ -25,4 +25,5 @@
 */
 
 require(dirname(__FILE__).'/config/config.inc.php');
+require_once(dirname(__FILE__).'/phpconsole/src/PhpConsole/__autoload.php');
 Dispatcher::getInstance()->dispatch();

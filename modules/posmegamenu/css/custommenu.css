@@ -19,7 +19,6 @@
     line-height: 20px;
     color: #ccc;
 	font-size: 15px;
-	font-family: 'calibribold';
 	text-transform: uppercase;
 }
 .pt_custommenu div.pt_menu .parentMenu a:hover{
@@ -118,7 +117,7 @@
 }
 .pt_custommenu div.popup .blockright img{
     max-width: 100%;
-} 
+}
 
 .pt_custommenu div.pt_menu .parentMenu p{
     margin: 0;
@@ -207,7 +206,7 @@
     border: 0 !important;
     box-shadow: none !important;
     padding: 0;
-    
+
 }
 .menu-mobile {
     background:#333;
@@ -234,7 +233,6 @@
 .navbar .brand {
     color: #fff;
     text-transform: uppercase;
-    font-family: 'calibribold';
 }
 .mobilemenu {
 	list-style-type: none;
@@ -279,7 +277,7 @@
 }
 .mobilemenu a {
 	text-decoration: none;
-	
+
 	font-size: 14px;
 	font-family: 'calibri';
 	line-height: 40px;
@@ -356,7 +354,7 @@
 	top: 10px;
 	right: 10px;
 }
-.mobilemenu span.head a { 
+.mobilemenu span.head a {
 	color:#333333;
 	display:block;
 	height:15px;
@@ -383,7 +381,7 @@
 	color: #f55c59;}
 .pt_custommenu .itemMenu.level1 a.itemMenuName.level3:hover{
   color: #000;}
-  
+
 @media (min-width: 720px) and (max-width: 980px){
 	.megamenu_container .visible-desktop .pt_custommenu div.popup{
 	  width: 100%!important;
@@ -391,7 +389,7 @@
 }
 
 @media (min-width: 720px) and (max-width: 1024px){
-	.megamenu_container .visible-desktop .pt_custommenu div.pt_menu .parentMenu a, 
+	.megamenu_container .visible-desktop .pt_custommenu div.pt_menu .parentMenu a,
 	.megamenu_container .visible-desktop .pt_custommenu div.pt_menu .parentMenu span.block-title{
 	  font-size: 13px;}
 }

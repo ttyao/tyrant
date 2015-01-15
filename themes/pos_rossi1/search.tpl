@@ -25,8 +25,8 @@
 
 {capture name=path}{l s='Search'}{/capture}
 
-<h1 
-{if isset($instant_search) && $instant_search}id="instant_search_results"{/if} 
+<h1
+{if isset($instant_search) && $instant_search}id="instant_search_results"{/if}
 class="page-heading {if !isset($instant_search) || (isset($instant_search) && !$instant_search)} product-listing{/if}">
     {l s='Search'}&nbsp;
     {if $nbProducts > 0}

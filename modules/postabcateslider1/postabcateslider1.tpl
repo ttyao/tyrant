@@ -83,7 +83,9 @@ $(document).ready(function() {
 								</span>
 							</div>
 						{/if}
-						{if ($product.id_product_attribute == 0 || (isset($add_prod_display) && ($add_prod_display == 1))) && $product.available_for_order && !isset($restricted_country_mode) && $product.minimal_quantity <= 1 && $product.customizable != 2 && !$PS_CATALOG_MODE}
+						{if ($product.id_product_attribute == 0 || (isset($add_prod_display) && ($add_prod_display == 1))) &&
+							$product.available_for_order && !isset($restricted_country_mode) && $product.minimal_quantity <= 1 &&
+							$product.customizable != 2 && !$PS_CATALOG_MODE}
 						{if ($product.allow_oosp || $product.quantity > 0)}
 						{if isset($static_token)}
 							<a class="cate_buy exclusive ajax_add_to_cart_button btn btn-default" href="{$link->getPageLink('cart',false, NULL, "add=1&amp;id_product={$product.id_product|intval}&amp;token={$static_token}", false)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Add to cart' mod='postabcateslider1'}" data-id-product="{$product.id_product|intval}">

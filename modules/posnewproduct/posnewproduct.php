@@ -56,9 +56,9 @@ class Posnewproduct extends Module {
     }
 
     public function hookDisplayHome() {
-        
+
             $category = new Category(Context::getContext()->shop->getCategory(), (int) Context::getContext()->language->id);
-			$products = Product::getNewProducts((int) Context::getContext()->language->id);
+            $products = Product::getNewProducts((int) Context::getContext()->language->id);
             $this->smarty->assign(array(
                 'products' => $products,
                 'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
@@ -66,7 +66,7 @@ class Posnewproduct extends Module {
             ));
         return $this->display(__FILE__, 'posnewproduct-home.tpl');
     }
-	
+
 	public function hookBlockPosition3() {
 		if (!$this->isCached('posnewproduct.tpl', $this->getCacheId('posnewproduct'))) {
            // echo "<pre>"; print_r($slideOptions); die;

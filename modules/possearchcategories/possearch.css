@@ -1,11 +1,11 @@
 #pos_search_top{
   padding: 0;}
 #pos_search_top .form_search{
-  padding: 13px 0 14px;
+  padding: 3px 0 3px;
   position: relative;
   float: left;
   background: #fff;
-  border: 3px solid #dddddd;
+  border: 2px solid #dddddd;
   margin: 30px 0 0;
   width: 90%;}
 @media (max-width: 767px){
@@ -22,7 +22,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  padding: 14px 16px 14px;
+  padding: 3px 16px 3px;
   line-height: 17px;
   font-size: 14px;
   border: 0;
@@ -42,8 +42,8 @@
 #pos_search_top .form-group .bootstrap-select{
   max-width: 105px;}
 #pos_search_top .form-group .bootstrap-select .btn.selectpicker{
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   font-size: 14px;
   line-height: 17px;
   font-family: 'calibri';

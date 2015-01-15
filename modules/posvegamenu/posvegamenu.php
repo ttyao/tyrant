@@ -7,7 +7,7 @@ if (!defined('_PS_VERSION_'))
 // Checking compatibility with older PrestaShop and fixing it
 if (!defined('_MYSQL_ENGINE_'))
     define('_MYSQL_ENGINE_', 'MyISAM');
-	
+
 require (dirname(__FILE__).'/vegatoplinks.class.php');
 // Loading Models
 class Posvegamenu extends Module {
@@ -68,7 +68,7 @@ class Posvegamenu extends Module {
 
     public function getContent() {
         $this->_html .= '<h2>' . $this->displayName . '</h2>';
-		
+
 		$id_lang = (int)Context::getContext()->language->id;
 		$languages = $this->context->controller->getLanguages();
 		$default_language = (int)Configuration::get('PS_LANG_DEFAULT');
@@ -86,10 +86,10 @@ class Posvegamenu extends Module {
                 }
             }
         } else if (Tools::isSubmit('submitBlockposmenu')) {
-		
+
 			if (Configuration::updateValue('MOD_BLOCKPOSVENU_ITEMS', Tools::getValue('items')))
 				$this->_html .= $this->displayConfirmation($this->l('The settings have been updated.'));
-				
+
 		}else if (Tools::isSubmit('submitBlocktopmegaLinks')){
 
 			if ((!count($links_label)) && (!count($labels)));
@@ -113,7 +113,7 @@ class Posvegamenu extends Module {
 			$this->_html .= $this->displayConfirmation($this->l('The link has been removed'));
 			$update_cache = true;
 		}
-		
+
         $this->_displayForm();
 
         return $this->_html;
@@ -154,26 +154,26 @@ class Posvegamenu extends Module {
 		$default_language = (int)Configuration::get('PS_LANG_DEFAULT');
 		$spacer = str_repeat('&nbsp;', $this->spacer_size);
 		$divLangName = 'link_label';
-		
+
 		if (Tools::isSubmit('submitBlocktopmegaEdit'))
 		{
 			$id_linksvegatop = (int)Tools::getValue('id_linksvegatop', 0);
-			
+
 			$id_shop = (int)Shop::getContextShopID();
 
 			if (!Tools::isSubmit('link'))
-			{ 
+			{
 				$tmp = VegaTopLinks::getLinkLang($id_linksvegatop, $id_shop);
 				$links_label_edit = $tmp['link'];
 				$labels_edit = $tmp['label'];
 				$new_window_edit = $tmp['new_window'];
 			}
 			else
-			{ 
+			{
 				VegaTopLinks::update(Tools::getValue('link'), Tools::getValue('label'), Tools::getValue('new_window', 0), (int)$id_shop, (int)$id_linksvegatop, (int)$id_linksvegatop);
 				$this->_html .= $this->displayConfirmation($this->l('The link has been edited'));
 			}
-		
+
 		}
         $this->_html .= '
 		<form action="' . $_SERVER['REQUEST_URI'] . '" method="post">
@@ -219,11 +219,11 @@ class Posvegamenu extends Module {
                     </div>';
         $this->_html .='<div class ="submit">
                       <input type="submit" name="submitPosMegamenu" value="' . $this->l('Update') . '" class="button" />
-            </div>              
+            </div>
                  </fieldset>
             </form>';
-			
-		
+
+
 		$this->_html .= '
 		<fieldset>
 			<div class="multishop_info">
@@ -272,7 +272,7 @@ class Posvegamenu extends Module {
 		$this->_html .= '<optgroup label="'.$this->l('Categories').'">';
 		$this->getCategoryOptionLink(1, (int)$id_lang, (int)Shop::getContextShopID());
 		$this->_html .= '</optgroup>';
-		
+
 		// BEGIN Shops
 		if (Shop::isFeatureActive())
 		{
@@ -283,15 +283,15 @@ class Posvegamenu extends Module {
 				if (!$shop->setUrl() && !$shop->getBaseURL())
 					continue;
 				$this->_html .= '<option value="SHOP'.(int)$shop->id.'">'.$spacer.$shop->name.'</option>';
-			}	
+			}
 			$this->_html .= '</optgroup>';
 		}
-		
+
 		// BEGIN Products
 		$this->_html .= '<optgroup label="'.$this->l('Products').'">';
 		$this->_html .= '<option value="PRODUCT" style="font-style:italic">'.$spacer.$this->l('Choose product ID').'</option>';
 		$this->_html .= '</optgroup>';
-		
+
 		// BEGIN Menu Top Links
 		$this->_html .= '<optgroup label="'.$this->l('Mega menu Top Links').'">';
 		$links = VegaTopLinks::gets($id_lang, null, (int)Shop::getContextShopID());
@@ -307,7 +307,7 @@ class Posvegamenu extends Module {
 		}
 		$this->_html .= '</optgroup>';
 
-		
+
 		$this->_html .= '</select><br />
 								<br />
 								<a href="#" id="addItem" style="border: 1px solid rgb(170, 170, 170); margin: 2px; padding: 2px; text-align: center; display: block; text-decoration: none; background-color: rgb(250, 250, 250); color: rgb(18, 52, 86);">'.$this->l('Add').' &gt;&gt;</a>
@@ -320,7 +320,7 @@ class Posvegamenu extends Module {
 								<a href="#" id="removeItem" style="border: 1px solid rgb(170, 170, 170); margin: 2px; padding: 2px; text-align: center; display: block; text-decoration: none; background-color: rgb(250, 250, 250); color: rgb(18, 52, 86);">&lt;&lt; '.$this->l('Remove').'</a>
 							</td>
 							<td style="vertical-align:top;padding:5px 15px;">
-								<h4 style="margin-top:5px;">'.$this->l('Change position').'</h4> 
+								<h4 style="margin-top:5px;">'.$this->l('Change position').'</h4>
 								<a href="#" id="menuOrderUp" class="button" style="font-size:20px;display:block;">&uarr;</a><br/>
 								<a href="#" id="menuOrderDown" class="button" style="font-size:20px;display:block;">&darr;</a><br/>
 							</td>
@@ -402,8 +402,8 @@ class Posvegamenu extends Module {
 					<input type="submit" name="submitBlockposmenu" value="'.$this->l('Save	').'" class="button" />
 				</p>
 			</form>
-		</fieldset><br />';		
-		
+		</fieldset><br />';
+
 		$this->_html .= '
 		<fieldset>
 			<legend><img src="../img/admin/add.gif" alt="" title="" />'.$this->l('Add Menu Top Link').'</legend>
@@ -449,8 +449,8 @@ class Posvegamenu extends Module {
 
 			</form>
 		</fieldset><br />';
-		
-			
+
+
 			$links = VegaTopLinks::gets((int)$id_lang, null, (int)Shop::getContextShopID());
 
 			if (!count($links))
@@ -492,9 +492,9 @@ class Posvegamenu extends Module {
 			</fieldset>';
         return $this->_html;
     }
-	
+
 	 private function getCategoryOption($id_category = 1, $id_lang = false, $id_shop = false, $recursive = true) {
-		$cateCurrent = Configuration::get($this->name . '_list_cate');		
+		$cateCurrent = Configuration::get($this->name . '_list_cate');
 		$cateCurrent = explode(',', $cateCurrent);
 		$id_lang = $id_lang ? (int)$id_lang : (int)Context::getContext()->language->id;
 		$category = new Category((int)$id_category, (int)$id_lang, (int)$id_shop);
@@ -507,7 +507,7 @@ class Posvegamenu extends Module {
 			$children = Category::getChildren((int)$id_category, (int)$id_lang, true, (int)$id_shop);
 			$spacer = str_repeat('&nbsp;', $this->spacer_size * (int)$category->level_depth);
 		}
-		
+
 		$shop = (object) Shop::getShop((int)$category->getShopID());
 		        if (in_array('CAT'.(int)$category->id, $cateCurrent)) {
 					$this->_html .= '<option value="CAT'.(int)$category->id.'" selected ="selected" >'.(isset($spacer) ? $spacer : '').$category->name.' ('.$shop->name.')</option>';
@@ -547,10 +547,10 @@ class Posvegamenu extends Module {
             return array();
 		$id_lang = (int)$this->context->language->id;
         return Db::getInstance()->executeS('
-                        SELECT * FROM ' . _DB_PREFIX_ . 'pos_staticblock AS psb 
+                        SELECT * FROM ' . _DB_PREFIX_ . 'pos_staticblock AS psb
 							LEFT JOIN ' . _DB_PREFIX_ . 'pos_staticblock_lang AS psl ON psb.id_posstaticblock = psl.id_posstaticblock
 							LEFT JOIN ' . _DB_PREFIX_ . 'pos_staticblock_shop AS pss ON psb.id_posstaticblock = pss.id_posstaticblock
-						WHERE id_shop =' . $id_shop . ' 
+						WHERE id_shop =' . $id_shop . '
 							AND id_lang =' . $id_lang .'
 							AND `identify` = "' . $identify . '"
                     ');
@@ -561,10 +561,10 @@ class Posvegamenu extends Module {
             return array();
 		$id_lang = (int)$this->context->language->id;
         return Db::getInstance()->executeS('
-                        SELECT * FROM ' . _DB_PREFIX_ . 'pos_staticblock AS psb 
+                        SELECT * FROM ' . _DB_PREFIX_ . 'pos_staticblock AS psb
 						LEFT JOIN ' . _DB_PREFIX_ . 'pos_staticblock_lang AS psl ON psb.id_posstaticblock = psl.id_posstaticblock
 				        LEFT JOIN ' . _DB_PREFIX_ . 'pos_staticblock_shop AS pss ON psb.id_posstaticblock = pss.id_posstaticblock
-                        where id_shop =' . $id_shop . ' 
+                        where id_shop =' . $id_shop . '
 							AND id_lang =' . $id_lang .'
 							AND `identify` like "pt_ver_item_menu' . '%"
                     ');
@@ -611,11 +611,11 @@ class Posvegamenu extends Module {
             return true;
         return false;
     }
-	
-	
+
+
 
 	public function drawCustomMenuItem($category, $level = 0, $last = false, $item, $lang_id) {
-    
+
         $cateCurrent = $this->getCurrentCategoriesId($lang_id);
         $categoryObject = new Category();
         $html = array();
@@ -629,9 +629,9 @@ class Posvegamenu extends Module {
         $blockIdRight = sprintf('pt_ver_menu_idcat_%d_right', $id); // --- static block key
         $blockHtmlRight = $this->getStaticBlockContent($blockIdRight);
         if($blockHtmlRight) $blockHtml = $blockHtmlRight;
-        
+
         //$rightmenu = Mage::getStoreConfig('vmegamenu/general/rightmenu');
-		
+
         // --- Sub Categories ---
         $activeChildren = $categoryObject->getChildren($category, $lang_id);
         $activeChildren = $this->getCategoryByLevelMax($activeChildren);
@@ -642,7 +642,7 @@ class Posvegamenu extends Module {
         // --- Popup functions for show ---
         $drawPopup = ($blockHtml || count($activeChildren));
         if ($drawPopup)
-        {  
+        {
             $html[] = '<div id="ver_pt_menu' . $id . '" class="pt_menu' . $active . '" >';
         }
         else
@@ -656,7 +656,7 @@ class Posvegamenu extends Module {
         //$link = $categoryObject->getLinkRewrite($category, $lang_id);
         $parameters = "";
         $link = Context::getContext()->link->getCategoryLink((int) $category, null, null, ltrim($parameters, '/'));
-		
+
         $html[] = '<div class="parentMenu">';
 		$html[] = '<a href="' . $link . '">';
 	        $name = strip_tags($cate->name);
@@ -665,7 +665,7 @@ class Posvegamenu extends Module {
 			$html[] = '<span>' . $name . '</span>';
         $html[] = '</a>';
         $html[] = '</div>';
-        
+
         // --- Add Popup block (hidden) ---
         if ($drawPopup)
         {
@@ -678,7 +678,7 @@ class Posvegamenu extends Module {
 			$html[] = '<div class="box-popup">';
             if (count($activeChildren))
             {
-			
+
                 $html[] = '<div class="block1">';
                 $html[] = $this->drawColumns($activeChildren, $id,$id_lang);
                 if ($blockHtml && $blockHtmlRight)
@@ -699,13 +699,13 @@ class Posvegamenu extends Module {
             }
             $html[] = '</div></div></div>';
         }
-        
+
         $html[] = '</div>';
         $html = implode("\n", $html);
         return $html;
     }
-	
-	
+
+
 	private function getCMSMenuItems($parent, $depth = 1, $id_lang = false)
 	{
 		$id_lang = $id_lang ? (int)$id_lang : (int)Context::getContext()->language->id;
@@ -719,20 +719,20 @@ class Posvegamenu extends Module {
 		if (count($categories) || count($pages))
 		{
 
-			
+
 			$this->_menuLink .= '<div class ="popup" style ="display:none">';
-			
+
 			foreach ($pages as  $page) {
 				$cms = new CMS($page['id_cms'], (int)$id_lang);
 				$links = $cms->getLinks((int)$id_lang, array((int)$cms->id));
 				$selected = ($this->page_name == 'cms' && ((int)Tools::getValue('id_cms') == $page['id_cms'])) ? ' class="sfHoverForce"' : '';
-		
-				$this->_menuLink .= '<div class ="block1"><div class="column col1"><div class="itemSubMenu level3"><a href="'.$links[0]['link'].'">'.$cms->meta_title.'</a></div></div></div>'.PHP_EOL;
-			}	
-			$this->_menuLink .= '</div></div>';
-	
 
-	
+				$this->_menuLink .= '<div class ="block1"><div class="column col1"><div class="itemSubMenu level3"><a href="'.$links[0]['link'].'">'.$cms->meta_title.'</a></div></div></div>'.PHP_EOL;
+			}
+			$this->_menuLink .= '</div></div>';
+
+
+
 		}
 	}
 
@@ -783,7 +783,7 @@ class Posvegamenu extends Module {
                 $arr_catsid = explode(",", $catsid);
             }
         }
-		
+
 			$id_shop = (int) Context::getContext()->shop->id;
         foreach ($children as $child) {
              $info = new Category((int) $child['id_category'], $lang_id,$id_shop);
@@ -911,8 +911,8 @@ class Posvegamenu extends Module {
                 $countChildren++;
             }
         }
-		
-        if ($countChildren == 0) { 
+
+        if ($countChildren == 0) {
             $num = 1;
         }
 
@@ -923,7 +923,7 @@ class Posvegamenu extends Module {
 
         $parentCates = array_pad($parentCates, $num, array());
         $is_merge = Configuration::get($this->name . '_merge_cate');
-      
+
         return $parentCates;
     }
 
@@ -946,7 +946,7 @@ class Posvegamenu extends Module {
        // $this->context->controller->addJS($this->_path . 'js/mobile_menu.js');
     }
 
-    //mobile megamenu 
+    //mobile megamenu
     public function getTree($resultParents, $resultIds, $maxDepth, $id_category = null, $currentDepth = 0) {
         if (is_null($id_category))
             $id_category = $this->context->shop->getCategory();
@@ -1011,7 +1011,7 @@ class Posvegamenu extends Module {
         }
         return $blockCategTree;
     }
-	
+
 	public function getMenuCustomerLink($lang_id = NULL) {
 		$menu_items = $this->getMenuItems();
 		$id_lang = (int)$this->context->language->id;
@@ -1034,7 +1034,7 @@ class Posvegamenu extends Module {
 					$product = new Product((int)$id, true, (int)$id_lang);
 					if (!is_null($product->id))
 						$this->_menuLink .= '<div id ="pt_menu_product" class ="pt_menu"><div class="parentMenu" ><a href="'.Tools::HtmlEntitiesUTF8($product->getLink()).'"><span>'.$product->name.'</span></a></div></div>'.PHP_EOL;
-		
+
 					break;
 				case 'CMS':
 					$selected = ($this->page_name == 'cms' && (Tools::getValue('id_cms') == $id)) ? ' class="sfHover"' : '';
@@ -1042,21 +1042,21 @@ class Posvegamenu extends Module {
 					if (count($cms))
 					$this->_menuLink .= '<div id ="pt_menu_cms" class ="pt_menu"><div class="parentMenu" ><a href="'.Tools::HtmlEntitiesUTF8($cms[0]['link']).'"><span>'.$cms[0]['meta_title'].'</span></a></div></div>'.PHP_EOL;
 				break;
-				
+
 					case 'CMS_CAT':
 					$category = new CMSCategory((int)$id, (int)$id_lang);
 					if (Validate::isLoadedObject($category))
 					$this->_menuLink .= '<div id ="pt_menu_cms" class ="pt_menu"><div class="parentMenu" ><a href="'.Tools::HtmlEntitiesUTF8($category->getLink()).'"><span>'.$category->name.'</span></a>';
 					$this->_menuLink .= '</div>'.PHP_EOL;
-					$this->_menuLink .= $this->getCMSMenuItems($category->id);	
+					$this->_menuLink .= $this->getCMSMenuItems($category->id);
 
 
 				// Case to handle the option to show all Manufacturers
 				case 'ALLMAN':
-				
+
 					$link = new Link;
 					$this->_menuLink .= '<div id ="pt_menu_allsub" class ="pt_menu"><div class="parentMenu" ><a href="'.$link->getPageLink('manufacturer').'" ><span>'.$this->l('All manufacturers').'</span></a></div>'.PHP_EOL;
-	
+
 					$manufacturers = Manufacturer::getManufacturers();
 					$this->_menuLink .= '<div class ="popup" style ="display:none">';
 					foreach ($manufacturers as $key => $manufacturer)
@@ -1082,7 +1082,7 @@ class Posvegamenu extends Module {
 				case 'ALLSUP':
 					$link = new Link;
 					$this->_menuLink .= '<div id ="pt_menu_allsub" class ="pt_menu"><div class="parentMenu" ><a href="'.$link->getPageLink('supplier').'" ><span>'.$this->l('All suppliers').'</span></a></div>'.PHP_EOL;
-	
+
 					$suppliers = Supplier::getSuppliers();
 					$this->_menuLink .= '<div class ="popup" style ="display:none">';
 					foreach ($suppliers as $key => $supplier)
@@ -1096,9 +1096,9 @@ class Posvegamenu extends Module {
 					if (!is_null($supplier->id))
 					{
 						$link = new Link;
-					
+
 						$this->_menuLink .= '<div id ="pt_menu_sub" class ="pt_menu"><div class="parentMenu" ><a href="'.Tools::HtmlEntitiesUTF8($link->getSupplierLink((int)$id, $supplier->link_rewrite)).'"><span>'.$supplier->name.'</span></a></div></div>'.PHP_EOL;
-	
+
 					}
 					break;
 
@@ -1123,14 +1123,14 @@ class Posvegamenu extends Module {
 						$this->_menuLink .= '<div id ="pt_ver_menu_link" class ="pt_menu"><div class="parentMenu" ><a href="'.Tools::HtmlEntitiesUTF8($link[0]['link']).'"'.(($link[0]['new_window']) ? ' target="_blank"': '').'><span>'.$link[0]['label'].'</a></span></div></div>'.PHP_EOL;
 					}
 					break;
-					
-					
+
+
 			}
-	
+
 		}
 
 	}
-	
+
     public function hookBlockposition2() {
         //$lang_id = (int) Configuration::get('PS_LANG_DEFAULT');
 		$lang_id = (int)Context::getContext()->language->id;
@@ -1154,13 +1154,13 @@ class Posvegamenu extends Module {
             $html .= '</div>';
             $html .= '</div>';
         }
-		
+
         // foreach ($homeCates as $cate) {
             // $item++;
            // // $html .= $this->drawCustomMenuItem($cate['id_category'], 0, false, $item, $lang_id);
         // }
 		$html .= $this->_menuLink;
-	
+
         $blockCustomer = $this->getStaticBlockContent(null, 'item');
         foreach ($blockCustomer as $bc) {
             $html .= $this->drawCustomMenuBlock($bc['identify'], $bc);
@@ -1186,7 +1186,7 @@ class Posvegamenu extends Module {
 
         return $this->display(__FILE__, 'posvegamenu.tpl');
     }
-	
+
 	public function hookLeftColumn() {
         //$lang_id = (int) Configuration::get('PS_LANG_DEFAULT');
 		$lang_id = (int)Context::getContext()->language->id;
@@ -1210,13 +1210,13 @@ class Posvegamenu extends Module {
             $html .= '</div>';
             $html .= '</div>';
         }
-		
+
         // foreach ($homeCates as $cate) {
             // $item++;
            // // $html .= $this->drawCustomMenuItem($cate['id_category'], 0, false, $item, $lang_id);
         // }
 		$html .= $this->_menuLink;
-	
+
         $blockCustomer = $this->getStaticBlockContent(null, 'item');
         foreach ($blockCustomer as $bc) {
             $html .= $this->drawCustomMenuBlock($bc['identify'], $bc);
@@ -1242,7 +1242,7 @@ class Posvegamenu extends Module {
 
         return $this->display(__FILE__, 'posvegamenu.tpl');
     }
-	
+
 	private function getCMSOptions($parent = 0, $depth = 1, $id_lang = false)
 	{
 		$id_lang = $id_lang ? (int)$id_lang : (int)Context::getContext()->language->id;
@@ -1261,7 +1261,7 @@ class Posvegamenu extends Module {
 		foreach ($pages as $page)
 			$this->_html .= '<option value="CMS'.$page['id_cms'].'">'.$spacer.$page['meta_title'].'</option>';
 	}
-	
+
 	private function getCMSCategories($recursive = false, $parent = 1, $id_lang = false)
 	{
 		$id_lang = $id_lang ? (int)$id_lang : (int)Context::getContext()->language->id;
@@ -1319,7 +1319,7 @@ class Posvegamenu extends Module {
 
 		return Db::getInstance()->executeS($sql);
 	}
-	
+
 	private function makeMenuOption()
 	{
 		$menu_item = $this->getMenuItems();
@@ -1374,7 +1374,7 @@ class Posvegamenu extends Module {
 				case 'ALLSUP':
 					$this->_html .= '<option value="ALLSUP0">'.$this->l('All suppliers').'</option>'.PHP_EOL;
 					break;
-					
+
 				case 'SUP':
 					$supplier = new Supplier((int)$id, (int)$id_lang);
 					if (Validate::isLoadedObject($supplier))
@@ -1391,7 +1391,7 @@ class Posvegamenu extends Module {
 						}
 						$this->_html .= '<option value="LNK'.$link[0]['id_linksvegatop'].'">'.$link[0]['label'].'</option>';
 					}
-					break;	
+					break;
 
 				case 'SHOP':
 					$shop = new Shop((int)$id);
@@ -1401,14 +1401,14 @@ class Posvegamenu extends Module {
 			}
 		}
 	}
-	
+
 	private function getMenuItems(){
-		
+
 		return explode(',', Configuration::get('MOD_BLOCKPOSVENU_ITEMS'));
 	}
-	
+
 	public function installDb(){
-		
+
 			return (Db::getInstance()->execute('
 			CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'linksvegatop` (
 				`id_linksvegatop` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -1426,7 +1426,7 @@ class Posvegamenu extends Module {
 				INDEX ( `id_linksvegatop` , `id_lang`, `id_shop`)
 			) ENGINE = '._MYSQL_ENGINE_.' CHARACTER SET utf8 COLLATE utf8_general_ci;'));
 	}
-	
+
 	private function uninstallDb() {
 		Db::getInstance()->execute('DROP TABLE `'._DB_PREFIX_.'linksvegatop`');
 		Db::getInstance()->execute('DROP TABLE `'._DB_PREFIX_.'linksvegatop_lang`');
@@ -1435,10 +1435,10 @@ class Posvegamenu extends Module {
     private function _installHookCustomer(){
 		$hookspos = array(
 				'vegamenu',
-			); 
+			);
 		foreach( $hookspos as $hook ){
 			if( Hook::getIdByName($hook) ){
-				
+
 			} else {
 				$new_hook = new Hook();
 				$new_hook->name = pSQL($hook);

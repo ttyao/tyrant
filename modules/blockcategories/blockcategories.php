@@ -37,7 +37,7 @@ class BlockCategories extends Module
 		$this->author = 'PrestaShop';
 
 		$this->bootstrap = true;
-		parent::__construct();	
+		parent::__construct();
 
 		$this->displayName = $this->l('Categories block');
 		$this->description = $this->l('Adds a block featuring product categories.');
@@ -88,7 +88,7 @@ class BlockCategories extends Module
 	public function uninstall()
 	{
 		$id_tab = (int)Tab::getIdFromClassName('AdminBlockCategories');
-		
+
 		if ($id_tab)
 		{
 			$tab = new Tab($id_tab);
@@ -144,7 +144,7 @@ class BlockCategories extends Module
 
 		if (!isset($resultIds[$id_category]))
 			return false;
-		
+
 		$return = array(
 			'id' => $id_category,
 			'link' => $this->context->link->getCategoryLink($id_category, $resultIds[$id_category]['link_rewrite']),
@@ -180,6 +180,10 @@ class BlockCategories extends Module
 			.'&action=uploadThumbnailImages');
 		$this->smarty->assign('helper', $helper->render());
 		return $this->display(__FILE__, 'views/blockcategories_admin.tpl');
+	}
+
+	public function hookBlockposition2($params) {
+		return $this->hookLeftColumn($params);
 	}
 
 	public function hookLeftColumn($params)
@@ -372,7 +376,7 @@ class BlockCategories extends Module
 	{
 		$this->_clearBlockcategoriesCache();
 	}
-	
+
 	public function renderForm()
 	{
 		$fields_form = array(
@@ -468,7 +472,7 @@ class BlockCategories extends Module
 				)
 			),
 		);
-		
+
 		$helper = new HelperForm();
 		$helper->show_toolbar = false;
 		$helper->table =  $this->table;
@@ -487,7 +491,7 @@ class BlockCategories extends Module
 
 		return $helper->generateForm(array($fields_form));
 	}
-	
+
 	public function getConfigFieldsValues()
 	{
 		return array(
