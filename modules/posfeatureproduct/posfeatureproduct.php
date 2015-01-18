@@ -82,7 +82,7 @@ class Posfeatureproduct extends Module {
         $this->_html .= '<div class="conf confirm">' . $this->l('Settings updated') . '</div>';
     }
 
-    private function _displayForm() { 
+    private function _displayForm() {
         $this->_html .= '
 		<form action="' . $_SERVER['REQUEST_URI'] . '" method="post">
                   <fieldset>
@@ -134,7 +134,7 @@ class Posfeatureproduct extends Module {
     public function hookBlockPosition3($params) {
         return $this->getSlideshowHtml();
     }
-	
+
 	public function hookDisplayHome($params) {
         return $this->getSlideshowHtml();
     }

@@ -25,34 +25,34 @@
         </div>
     </div>
 
- <script type="text/javascript">
-    $(window).load(function() {
-        $('#pos-slideshow-home').nivoSlider({
-			effect: '{if $slideOptions.animation_type != ''}{$slideOptions.animation_type}{else}random{/if}',
-			slices: 15,
-			boxCols: 8,
-			boxRows: 4,
-			animSpeed: '{if $slideOptions.animation_speed != ''}{$slideOptions.animation_speed}{else}600{/if}',
-			pauseTime: '{if $slideOptions.pause_time != ''}{$slideOptions.pause_time}{else}5000{/if}',
-			startSlide: {if $slideOptions.start_slide != ''}{$slideOptions.start_slide}{else}0{/if},
-			directionNav: {if $slideOptions.show_arrow != 0}{$slideOptions.show_arrow}{else}false{/if},
-			controlNav: {if $slideOptions.show_navigation != 0}{$slideOptions.show_navigation}{else}false{/if},
-			controlNavThumbs: false,
-			pauseOnHover: true,
-			manualAdvance: false,
-			prevText: 'Prev',
-			nextText: 'Next',
-                        afterLoad: function(){
-                         $('.pos-loading').css("display","none");
-                        },
-                        beforeChange: function(){
-                            $('.pos-slideshow-title, .pos-slideshow-des').css("left","-100%" );
-                            $('.pos-slideshow-readmore').css("left","-100%");
-                        },
-                        afterChange: function(){
-                            $('.pos-slideshow-title, .pos-slideshow-des, .pos-slideshow-readmore').css("left","100px")
-                        }
- 		});
-    });
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('#pos-slideshow-home').nivoSlider({
+                effect: '{if $slideOptions.animation_type != ''}{$slideOptions.animation_type}{else}random{/if}',
+                slices: 15,
+                boxCols: 8,
+                boxRows: 4,
+                animSpeed: '{if $slideOptions.animation_speed != ''}{$slideOptions.animation_speed}{else}600{/if}',
+                pauseTime: '{if $slideOptions.pause_time != ''}{$slideOptions.pause_time}{else}5000{/if}',
+                startSlide: {if $slideOptions.start_slide != ''}{$slideOptions.start_slide}{else}0{/if},
+                directionNav: {if $slideOptions.show_arrow != 0}{$slideOptions.show_arrow}{else}false{/if},
+                controlNav: {if $slideOptions.show_navigation != 0}{$slideOptions.show_navigation}{else}false{/if},
+                controlNavThumbs: false,
+                pauseOnHover: true,
+                manualAdvance: false,
+                prevText: 'Prev',
+                nextText: 'Next',
+                afterLoad: function(){
+                    $('.pos-loading').css("display","none");
+                },
+                beforeChange: function(){
+                    $('.pos-slideshow-title, .pos-slideshow-des').css("left","-100%" );
+                    $('.pos-slideshow-readmore').css("left","-100%");
+                },
+                afterChange: function(){
+                    $('.pos-slideshow-title, .pos-slideshow-des, .pos-slideshow-readmore').css("left","100px")
+                }
+            });
+        });
     </script>
 {/if}

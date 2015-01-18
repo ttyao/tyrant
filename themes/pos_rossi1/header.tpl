@@ -64,15 +64,13 @@
 		<![endif]-->
 	</head>
 	<body{if isset($page_name)} id="{$page_name|escape:'html':'UTF-8'}"{/if} itemscope itemtype="http://schema.org/WebPage" class="{if isset($page_name)}{$page_name|escape:'html':'UTF-8'}{/if}{if isset($body_classes) && $body_classes|@count} {implode value=$body_classes separator=' '}{/if}{if $hide_left_column} hide-left-column{/if}{if $hide_right_column} hide-right-column{/if}{if isset($content_only) && $content_only} content_only{/if} lang_{$lang_iso}">
-	{if !isset($content_only) || !$content_only}
-		{if isset($restricted_country_mode) && $restricted_country_mode}
-			<div id="restricted-country">
-				<p>{l s='You cannot place a new order from your country.'} <span class="bold">{$geolocation_country|escape:'html':'UTF-8'}</span></p>
-			</div>
-		{/if}
+		{if !isset($content_only) || !$content_only}
+			{if isset($restricted_country_mode) && $restricted_country_mode}
+				<div id="restricted-country">
+					<p>{l s='You cannot place a new order from your country.'} <span class="bold">{$geolocation_country|escape:'html':'UTF-8'}</span></p>
+				</div>
+			{/if}
 		<div id="page">
-			<div class="container">
-			<div class="outer-row row">
 			<div class="header-container">
 				<header id="header">
 					<div class="banner">
@@ -103,6 +101,11 @@
 								</div>
 						</div>
 					</div>
+
+				</header>
+			</div>
+			<div class="container">
+				<div class="outer-row row">
 					<div class="megamenu">
 						<div class="container">
 							<div class="col-xs-12 col-sm-4 col-md-3">
@@ -113,33 +116,31 @@
 							</div>
 						</div>
 					</div>
-				</header>
-			</div>
-			{if $page_name == 'index'}
-			<div class="on_top_container">
-				<div class="container">
-					<div class="col-xs-12 col-sm-4 col-md-3 blockposition2">
-						{hook h="blockPosition2"}
-					</div>
-					<div class="col-xs-12 col-sm-8 col-md-9">
-						{hook h="bannerSequence"}
-						{hook h="blockPosition3"}
-					</div>
-				</div>
-			</div>
-			{/if}
-			{if $page_name !='index' && $page_name !='pagenotfound'}
-				{include file="$tpl_dir./breadcrumb.tpl"}
-			{/if}
-			<div class="columns-container">
-				<div id="columns" class="container">
-					<div id="slider_row" class="">
-						<div id="top_column" class="center_column col-xs-12 col-sm-12">{hook h="displayTopColumn"}</div>
-					</div>
-					<div class="">
-						{if isset($left_column_size) && !empty($left_column_size)}
-						<div id="left_column" class="column col-xs-12 col-sm-4 col-md-{$left_column_size|intval}">{$HOOK_LEFT_COLUMN}</div>
-						{/if}
-						{if isset($left_column_size) && isset($right_column_size)}{assign var='cols' value=(12 - $left_column_size - $right_column_size)}{else}{assign var='cols' value=12}{/if}
-						<div id="center_column" class="center_column col-xs-12 col-sm-8 col-md-{$cols|intval}">
-	{/if}
+					{if $page_name == 'index'}
+						<div class="on_top_container">
+							<div class="container">
+								<div class="col-xs-12 col-sm-4 col-md-3 blockposition2">
+									{hook h="blockPosition2"}
+								</div>
+								<div class="col-xs-12 col-sm-8 col-md-9">
+									{hook h="bannerSequence"}
+									{hook h="blockPosition3"}
+								</div>
+							</div>
+						</div>
+					{/if}
+					{if $page_name !='index' && $page_name !='pagenotfound'}
+						{include file="$tpl_dir./breadcrumb.tpl"}
+					{/if}
+					<div class="columns-container">
+						<div id="columns" class="container">
+							<div id="slider_row" class="">
+								<div id="top_column" class="center_column col-xs-12 col-sm-12">{hook h="displayTopColumn"}</div>
+							</div>
+							<div class="">
+								{if isset($left_column_size) && !empty($left_column_size)}
+									<div id="left_column" class="column col-xs-12 col-sm-4 col-md-{$left_column_size|intval}">{$HOOK_LEFT_COLUMN}</div>
+								{/if}
+								{if isset($left_column_size) && isset($right_column_size)}{assign var='cols' value=(12 - $left_column_size - $right_column_size)}{else}{assign var='cols' value=12}{/if}
+									<div id="center_column" class="center_column col-xs-12 col-sm-8 col-md-{$cols|intval}">
+								{/if}

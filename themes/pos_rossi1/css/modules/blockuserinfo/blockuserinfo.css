@@ -1,5 +1,7 @@
 #header_user{
-  float: right;}
+  float: right;
+  padding: 10px;
+}
 #header_user ul li{
   float: left;
   display: inline-block;

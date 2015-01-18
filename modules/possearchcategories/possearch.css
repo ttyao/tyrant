@@ -6,7 +6,7 @@
   float: left;
   background: #fff;
   border: 2px solid #dddddd;
-  margin: 30px 0 0;
+  margin: 22px 0 0;
   width: 90%;}
 @media (max-width: 767px){
 	#pos_search_top .form_search{
@@ -22,11 +22,11 @@
   position: absolute;
   top: 0;
   right: 0;
-  padding: 3px 16px 3px;
+  padding: 3px 16px 4px;
   line-height: 17px;
   font-size: 14px;
   border: 0;
-  background: #395562;
+  background: rgb(178, 221, 228);
   color: #fff;
   -webkit-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
@@ -42,13 +42,12 @@
 #pos_search_top .form-group .bootstrap-select{
   max-width: 105px;}
 #pos_search_top .form-group .bootstrap-select .btn.selectpicker{
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding: 3px 0 4px 10px;
   font-size: 14px;
   line-height: 17px;
   font-family: 'calibri';
   border: 0;
-  background: #395562;
+  background: rgb(178, 221, 228);
   color: #fff;
   -webkit-transition: all 500ms ease;
   -moz-transition: all 500ms ease;

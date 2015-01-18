@@ -35,7 +35,7 @@
 #header_user #your_account {display:none;}
 #header_user #your_account a { background-image: url('img/icon/my-account.gif') }
 
-/* user infos */ 
+/* user infos */
 #header_user_info {
 	clear:both;
 	float:right;
