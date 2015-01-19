@@ -2,3 +2,124 @@ div#chifirst_block_home p {
   font-size: 150%;
   font-style:italic;
 }
+.yaoStageBoxOuter {
+  width: 100%;
+  padding-bottom: 32%;
+}
+.yaoStageLargeBox {
+  float: left;
+  position: relative;
+  width: 16%;
+  padding-bottom: 32%;
+}
+
+.yaoStageBox {
+  float: left;
+  position: relative;
+  width: 16%;
+  padding-bottom: 16%;
+  border: 1px solid #eee;
+}
+
+.yaoStageBoxOuter .pos-new-product-home .boxInner {
+  position: absolute;
+  /*left: 10px;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+  */
+  overflow: hidden;
+  height: 100%;
+  background-color: #fefefe;
+}
+.yaoStageBoxOuter .boxInner .productImg {
+}
+
+.yaoStageLargeBox .boxInner img {
+  width: 100%;
+}
+
+.yaoStageBox .boxInner img {
+  padding: 2% 15%;
+  width: 100%;
+  -moz-transition: all 0.15s ease;
+  -webkit-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.yaoStageBox .boxInner:hover img {
+  padding: 0 13%;
+  width: 100%;
+}
+
+.yaoStageBoxOuter .pos-new-product-home .item .product-name {
+  text-align: left;
+  position: absolute;
+  top: 74%;
+  line-height: 15px;
+}
+
+.yaoStageBoxOuter .pos-new-product-home .item .price-box {
+  text-align: left;
+  position: absolute;
+  top: 88%;
+}
+
+.yaoStageBoxOuter .boxInner .addToCartButton {
+  right: 30px;
+  position: absolute;
+  top: 92%;
+}
+.yaoStageBoxOuter .boxInner .addToCartButton .ajax_add_to_cart_button {
+  text-align: right;
+  height: 28px;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  bottom:15px;
+  left:25px;
+}
+.yaoStageBoxOuter .boxInner .addToCartButton .ajax_add_to_cart_button:before{
+  font-family: 'FontAwesome';
+  content: "\f07a";
+  line-height: 15px;
+  padding-right: 7px;
+}
+
+.yaoStageBoxOuter .boxInner .addToWishList {
+  position: absolute;
+  top: 10px;
+  right:-30px;
+  -moz-transition: all 0.15s ease;
+  -webkit-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+.yaoStageBoxOuter .boxInner:hover .addToWishList {
+  right:10px;
+}
+.yaoStageBoxOuter .boxInner .addToWishList .wishListButton:before{
+  font-family: 'FontAwesome';
+  font-size: 17px;
+  content: "\f08a";
+  line-height: 15px;
+}
+
+.yaoStageBoxOuter .boxInner .quickView {
+  position: absolute;
+  top: 10px;
+  left:-30px;
+  -moz-transition: all 0.15s ease;
+  -webkit-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+.yaoStageBoxOuter .boxInner:hover .quickView {
+  left:10px;
+}
+.yaoStageBoxOuter .boxInner .quickView .quickViewButton:before{
+  font-family: 'FontAwesome';
+  font-size: 17px;
+  content: "\f002";
+  line-height: 15px;
+}

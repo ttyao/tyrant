@@ -8782,7 +8782,7 @@ margin: 0;}
 .pos-new-product-home ul li{
 position: relative;
 float: left;
-margin-bottom: 9px;}
+}
 @media (max-width: 479px){
 .pos-new-product-home ul li{ width: 100%;}
 }

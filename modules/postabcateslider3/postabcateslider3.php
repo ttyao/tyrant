@@ -117,10 +117,6 @@ class postabcateslider3 extends Module {
 	}
 
   public function hookDisplayHome($params) {
-    // Call debug from PhpConsole\Handler
-    $handler = PhpConsole\Handler::getInstance();
-    $handler->start();
-
     $nb = Configuration::get($this->name . '_p_limit');
     $product_on_row = Configuration::get($this->name . '_p_on_row');
     $arrayCategory = array();
@@ -150,8 +146,6 @@ class postabcateslider3 extends Module {
       'show_price' => Configuration::get($this->name . '_show_price'),
     );
 
-    $handler->debug($this->name);
-    $handler->debug($categoryProducts);
     $this->context->smarty->assign('slideOptions', $options);
     $this->smarty->assign(array(
       'productCates' => $arrayProductCate,

@@ -131,6 +131,17 @@ class ChiFirst extends Module
       return $helper->generateForm($fields_form);
   }
 
+  public function hookDisplayHome($params) {
+    $category = new Category(Context::getContext()->shop->getCategory(), (int) Context::getContext()->language->id);
+    $products = Product::getNewProducts((int) Context::getContext()->language->id);
+    $this->smarty->assign(array(
+      'products' => $products,
+      'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
+      'homeSize' => Image::getSize(ImageType::getFormatedName('home'))
+    ));
+    return $this->display(__FILE__, 'chifirst.tpl');
+  }
+
   public function hookDisplayLeftColumn($params)
   {
     $this->context->smarty->assign(

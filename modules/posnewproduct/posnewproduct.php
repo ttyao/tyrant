@@ -56,14 +56,13 @@ class Posnewproduct extends Module {
     }
 
     public function hookDisplayHome() {
-
-            $category = new Category(Context::getContext()->shop->getCategory(), (int) Context::getContext()->language->id);
-            $products = Product::getNewProducts((int) Context::getContext()->language->id);
-            $this->smarty->assign(array(
-                'products' => $products,
-                'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
-                'homeSize' => Image::getSize(ImageType::getFormatedName('home'))
-            ));
+        $category = new Category(Context::getContext()->shop->getCategory(), (int) Context::getContext()->language->id);
+        $products = Product::getNewProducts((int) Context::getContext()->language->id);
+        $this->smarty->assign(array(
+            'products' => $products,
+            'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
+            'homeSize' => Image::getSize(ImageType::getFormatedName('home'))
+        ));
         return $this->display(__FILE__, 'posnewproduct-home.tpl');
     }
 

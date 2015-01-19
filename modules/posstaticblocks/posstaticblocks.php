@@ -30,7 +30,7 @@ class posstaticblocks extends Module {
 
         $this->confirmUninstall = $this->l('Are you sure you want to uninstall?');
         $this->admin_tpl_path = _PS_MODULE_DIR_ . $this->name . '/views/templates/admin/';
-       
+
     }
 
     public function install() {
@@ -56,24 +56,24 @@ class posstaticblocks extends Module {
         $tab = new Tab();
         // Need a foreach for the language
 	foreach (Language::getLanguages() as $language)
-            $tab->name[$language['id_lang']] = $this->l('Manage Staticblocks');
+        $tab->name[$language['id_lang']] = $this->l('Manage Staticblocks');
         $tab->class_name = 'AdminPosstaticblocks';
-        $tab->id_parent = (int)Tab::getIdFromClassName('AdminPosMenu'); 
+        $tab->id_parent = (int)Tab::getIdFromClassName('AdminPosMenu');
         $tab->module = $this->name;
         $tab->add();
         // Set some defaults
         return parent::install() &&
-                $this->registerHook('top') &&
-                $this->registerHook('blockPosition1') &&
-				$this->registerHook('blockPosition2') &&
-				$this->registerHook('blockPosition3') &&
-				$this->registerHook('bannerSequence') &&
-                $this->registerHook('leftColumn') &&
-                $this->registerHook('rightColumn') &&
-                $this->registerHook('home') &&
-                $this->registerHook('footer') &&
-                $this->registerHook('displayHeader')&&
-                $this->registerHook('displayBackOfficeHeader');
+            $this->registerHook('top') &&
+            $this->registerHook('blockPosition1') &&
+    		$this->registerHook('blockPosition2') &&
+    		$this->registerHook('blockPosition3') &&
+    		$this->registerHook('bannerSequence') &&
+            $this->registerHook('leftColumn') &&
+            $this->registerHook('rightColumn') &&
+            $this->registerHook('home') &&
+            $this->registerHook('footer') &&
+            $this->registerHook('displayHeader')&&
+            $this->registerHook('displayBackOfficeHeader');
     }
 
     public function uninstall() {
@@ -98,8 +98,8 @@ class posstaticblocks extends Module {
             return false;
         return true;
     }
-    
-    
+
+
     public function hookTop($param) {
         $id_shop = (int)Context::getContext()->shop->id;
         $staticBlocks = $this->_staticModel->getStaticblockLists($id_shop,'top');
@@ -109,7 +109,7 @@ class posstaticblocks extends Module {
         ));
        return $this->display(__FILE__, 'block.tpl');
     }
-    
+
     public function hookLeftColumn($param) {
        $id_shop = (int)Context::getContext()->shop->id;
         $staticBlocks = $this->_staticModel->getStaticblockLists($id_shop,'leftColumn');
@@ -119,8 +119,8 @@ class posstaticblocks extends Module {
         ));
        return $this->display(__FILE__, 'block.tpl');
     }
-    
-     public function hookRightColumn($param) { 
+
+     public function hookRightColumn($param) {
         $id_shop = (int)Context::getContext()->shop->id;
         $staticBlocks = $this->_staticModel->getStaticblockLists($id_shop,'rightColumn');
         $this->smarty->assign(array(
@@ -128,8 +128,8 @@ class posstaticblocks extends Module {
         ));
        return $this->display(__FILE__, 'block.tpl');
     }
-    
-    public function hookFooter($param) { 
+
+    public function hookFooter($param) {
         $id_shop = (int)Context::getContext()->shop->id;
         $staticBlocks = $this->_staticModel->getStaticblockLists($id_shop,'footer');
         if(count($staticBlocks)<1) return null;
@@ -138,7 +138,7 @@ class posstaticblocks extends Module {
         ));
        return $this->display(__FILE__, 'block.tpl');
     }
-    
+
     public function hookHome($param) {
         $id_shop = (int)Context::getContext()->shop->id;
         $staticBlocks = $this->_staticModel->getStaticblockLists($id_shop,'home');
@@ -149,7 +149,7 @@ class posstaticblocks extends Module {
         ));
        return $this->display(__FILE__, 'block.tpl');
     }
-    
+
     public function hookBlockPosition1($param) {
         $id_shop = (int)Context::getContext()->shop->id;
         $staticBlocks = $this->_staticModel->getStaticblockLists($id_shop,'blockPosition1');
@@ -160,7 +160,7 @@ class posstaticblocks extends Module {
         ));
        return $this->display(__FILE__, 'block.tpl');
     }
-    
+
     public function hookBlockPosition2($param) {
         $id_shop = (int)Context::getContext()->shop->id;
         $staticBlocks = $this->_staticModel->getStaticblockLists($id_shop,'blockPosition2');
@@ -171,7 +171,7 @@ class posstaticblocks extends Module {
         ));
        return $this->display(__FILE__, 'block.tpl');
     }
-    
+
     public function hookBlockPosition3($param) {
         $id_shop = (int)Context::getContext()->shop->id;
         $staticBlocks = $this->_staticModel->getStaticblockLists($id_shop,'blockPosition3');
@@ -192,16 +192,16 @@ class posstaticblocks extends Module {
         ));
        return $this->display(__FILE__, 'block.tpl');
     }
-    
+
      public function hookDisplayBackOfficeHeader($params) {
 	if (method_exists($this->context->controller, 'addJquery'))
-	 {        
+	 {
 	  $this->context->controller->addJquery();
 	  $this->context->controller->addJS(($this->_path).'js/staticblock.js');
 	 }
     }
-    
-    
+
+
     public function getModulById($id_module) {
         return Db::getInstance()->getRow('
             SELECT m.*
@@ -234,7 +234,7 @@ class posstaticblocks extends Module {
     public static function getHookByArrName($arrName) {
         $result = Db::getInstance()->ExecuteS('
 		SELECT `id_hook`, `name`
-		FROM `' . _DB_PREFIX_ . 'hook` 
+		FROM `' . _DB_PREFIX_ . 'hook`
 		WHERE `name` IN (\'' . implode("','", $arrName) . '\')');
         return $result;
     }
@@ -253,17 +253,17 @@ class posstaticblocks extends Module {
             return $arrayModule;
         return array();
     }
-    
+
     private function _installHookCustomer(){
 		$hookspos = array(
 				'blockPosition1',
 				'blockPosition2',
 				'blockPosition3',
 				'bannerSequence'
-			); 
+			);
 		foreach( $hookspos as $hook ){
 			if( Hook::getIdByName($hook) ){
-				
+
 			} else {
 				$new_hook = new Hook();
 				$new_hook->name = pSQL($hook);
