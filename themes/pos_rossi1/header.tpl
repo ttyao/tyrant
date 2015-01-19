@@ -102,14 +102,9 @@
 								</div>
 						</div>
 					</div>
-
-				</header>
-			</div>
-			<div class="container">
-				<div class="outer-row row">
 					<div class="megamenu">
 						<div class="container">
-							<div class="col-xs-12 col-sm-4 col-md-3">
+							<div class="blockposition2">
 								{hook h="blockPosition1"}
 							</div>
 							<div class="megamenu_main col-xs-12 col-sm-8 col-md-9">
@@ -117,14 +112,20 @@
 							</div>
 						</div>
 					</div>
+				</header>
+			</div>
+			<div class="container">
+				<div class="outer-row row">
 					{if $page_name == 'index'}
 						<div class="on_top_container">
 							<div class="container">
-								<div class="col-xs-12 col-sm-4 col-md-3 blockposition2">
+								<div class="blockposition2">
 									{hook h="blockPosition2"}
 								</div>
-								<div class="col-xs-12 col-sm-8 col-md-9">
+								<div class="homeCenterColumn">
 									{hook h="bannerSequence"}
+								</div>
+								<div class="homeRightColumn">
 									{hook h="blockPosition3"}
 								</div>
 							</div>

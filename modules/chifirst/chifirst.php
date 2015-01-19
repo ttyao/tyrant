@@ -132,8 +132,13 @@ class ChiFirst extends Module
   }
 
   public function hookDisplayHome($params) {
-    $category = new Category(Context::getContext()->shop->getCategory(), (int) Context::getContext()->language->id);
-    $products = Product::getNewProducts((int) Context::getContext()->language->id);
+    $category = new Category(
+      (int)$params['id_category'] ?: Context::getContext()->shop->getCategory(),
+      (int) Context::getContext()->language->id,
+      (int) Context::getContext()->shop->id);
+    $products = $category->getProducts((int) Context::getContext()->language->id, 0, 10);
+    // $category = new Category(Context::getContext()->shop->getCategory(), (int) Context::getContext()->language->id);
+    // $products = Product::getNewProducts((int) Context::getContext()->language->id);
     $this->smarty->assign(array(
       'products' => $products,
       'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),

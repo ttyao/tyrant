@@ -116,47 +116,47 @@ class postabcateslider3 extends Module {
 		return $this->display(__FILE__, 'postabcateslider3.tpl');
 	}
 
-  public function hookDisplayHome($params) {
-    $nb = Configuration::get($this->name . '_p_limit');
-    $product_on_row = Configuration::get($this->name . '_p_on_row');
-    $arrayCategory = array();
-    $catSelected = Configuration::get($this->name . '_list_cate');
-    $cateArray = explode(',', $catSelected);
-    $id_lang =(int) Context::getContext()->language->id;
-    $id_shop = (int) Context::getContext()->shop->id;
-    $arrayProductCate = array();
-    foreach($cateArray as $id_category) {
-      $id_category = str_replace('CAT','',$id_category);
-      $category = new Category((int) $id_category, (int) $id_lang, (int) $id_shop);
-      $categoryProducts = $category->getProducts($this->context->language->id, 0, ($nb ? $nb : 5));
-      if($categoryProducts) {
-        $arrayProductCate[] = array('id' => $id_category, 'name'=> $category->name, 'product' => $categoryProducts);
-      }
-    }
+  // public function hookDisplayHome($params) {
+  //   $nb = Configuration::get($this->name . '_p_limit');
+  //   $product_on_row = Configuration::get($this->name . '_p_on_row');
+  //   $arrayCategory = array();
+  //   $catSelected = Configuration::get($this->name . '_list_cate');
+  //   $cateArray = explode(',', $catSelected);
+  //   $id_lang =(int) Context::getContext()->language->id;
+  //   $id_shop = (int) Context::getContext()->shop->id;
+  //   $arrayProductCate = array();
+  //   foreach($cateArray as $id_category) {
+  //     $id_category = str_replace('CAT','',$id_category);
+  //     $category = new Category((int) $id_category, (int) $id_lang, (int) $id_shop);
+  //     $categoryProducts = $category->getProducts($this->context->language->id, 0, ($nb ? $nb : 5));
+  //     if($categoryProducts) {
+  //       $arrayProductCate[] = array('id' => $id_category, 'name'=> $category->name, 'product' => $categoryProducts);
+  //     }
+  //   }
 
-    $options = array(
-      'p_height' => Configuration::get($this->name . '_p_height'),
-      'speed_slide' => Configuration::get($this->name . '_speed_slide'),
-      'a_speed' => Configuration::get($this->name . '_a_speed'),
-      'show_des' => Configuration::get($this->name . '_show_des'),
-      'show_arrow' => Configuration::get($this->name . '_show_arrow'),
-      'show_ctr' => Configuration::get($this->name . '_show_ctr'),
-      'min_item' => Configuration::get($this->name . '_min_item'),
-      'max_item' => Configuration::get($this->name . '_max_item'),
-      'show_price' => Configuration::get($this->name . '_show_price'),
-    );
+  //   $options = array(
+  //     'p_height' => Configuration::get($this->name . '_p_height'),
+  //     'speed_slide' => Configuration::get($this->name . '_speed_slide'),
+  //     'a_speed' => Configuration::get($this->name . '_a_speed'),
+  //     'show_des' => Configuration::get($this->name . '_show_des'),
+  //     'show_arrow' => Configuration::get($this->name . '_show_arrow'),
+  //     'show_ctr' => Configuration::get($this->name . '_show_ctr'),
+  //     'min_item' => Configuration::get($this->name . '_min_item'),
+  //     'max_item' => Configuration::get($this->name . '_max_item'),
+  //     'show_price' => Configuration::get($this->name . '_show_price'),
+  //   );
 
-    $this->context->smarty->assign('slideOptions', $options);
-    $this->smarty->assign(array(
-      'productCates' => $arrayProductCate,
-      'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
-      'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
-      'product_on_row' => $product_on_row,
-      'tab_effect' => Configuration::get($this->name . '_tab_effect'),
-      'title' => Configuration::get($this->name . '_title'),
-    ));
-    return $this->display(__FILE__, 'postabcateslider3-home.tpl');
-  }
+  //   $this->context->smarty->assign('slideOptions', $options);
+  //   $this->smarty->assign(array(
+  //     'productCates' => $arrayProductCate,
+  //     'add_prod_display' => Configuration::get('PS_ATTRIBUTE_CATEGORY_DISPLAY'),
+  //     'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
+  //     'product_on_row' => $product_on_row,
+  //     'tab_effect' => Configuration::get($this->name . '_tab_effect'),
+  //     'title' => Configuration::get($this->name . '_title'),
+  //   ));
+  //   return $this->display(__FILE__, 'postabcateslider3-home.tpl');
+  // }
 
 	public function hookBlockPosition3($params) {
     return;

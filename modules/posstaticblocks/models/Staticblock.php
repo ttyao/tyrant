@@ -12,6 +12,7 @@ class Staticblock extends ObjectModel
   public $insert_module;
   public $showhook;
   public $posorder;
+  public $id_category;
   public $identify;
 
   /**
@@ -24,6 +25,7 @@ class Staticblock extends ObjectModel
     'primary' => 'id_posstaticblock',
     'fields' => array(
       'posorder' => array('type' => self::TYPE_INT,'lang' => false),
+      'id_category' => array('type' => self::TYPE_INT,'lang' => false),
       'active' => array('type' => self::TYPE_INT,'lang' => false),
       'insert_module' => array('type' => self::TYPE_INT,'lang' => false),
       'showhook' => array('type' => self::TYPE_INT,'lang' => false),
@@ -58,7 +60,7 @@ class Staticblock extends ObjectModel
         $hookModule = $ob['hook_module'];
         $insert_module = $ob['insert_module'];
         if($insert_module!=0) {
-          $blockModule = $this->getModuleAssign($nameModule, $hookModule);
+          $blockModule = $this->getModuleAssign($nameModule, $hookModule, $ob);
         }
 
         // remove wrapping <p> for description
@@ -78,7 +80,7 @@ class Staticblock extends ObjectModel
     return null;
   }
 
-  public function getModuleAssign($module_name = '', $name_hook = '') {
+  public function getModuleAssign($module_name = '', $name_hook = '', $hookArgs = array()) {
     //$module_id = 7 ; $id_hook = 21 ;
 
     if (!$module_name || !$name_hook) {
@@ -101,7 +103,7 @@ class Staticblock extends ObjectModel
         return self::lofHookExec($hook_name, array(), $module->id, $array);
       } else {
         //$hook_name = substr($hook_name, 7, strlen($hook_name));
-        return self::renderModuleByHookV15($hook_name, array(), $module->id, $array);
+        return self::renderModuleByHookV15($hook_name, $hookArgs, $module->id, $array);
       }
     }
     return '';

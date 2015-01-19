@@ -55,8 +55,8 @@ class posstaticblocks extends Module {
 
         $tab = new Tab();
         // Need a foreach for the language
-	foreach (Language::getLanguages() as $language)
-        $tab->name[$language['id_lang']] = $this->l('Manage Staticblocks');
+    	foreach (Language::getLanguages() as $language)
+            $tab->name[$language['id_lang']] = $this->l('Manage Staticblocks');
         $tab->class_name = 'AdminPosstaticblocks';
         $tab->id_parent = (int)Tab::getIdFromClassName('AdminPosMenu');
         $tab->module = $this->name;
@@ -99,7 +99,6 @@ class posstaticblocks extends Module {
         return true;
     }
 
-
     public function hookTop($param) {
         $id_shop = (int)Context::getContext()->shop->id;
         $staticBlocks = $this->_staticModel->getStaticblockLists($id_shop,'top');
@@ -107,7 +106,7 @@ class posstaticblocks extends Module {
         $this->smarty->assign(array(
             'staticblocks' => $staticBlocks,
         ));
-       return $this->display(__FILE__, 'block.tpl');
+        return $this->display(__FILE__, 'block.tpl');
     }
 
     public function hookLeftColumn($param) {
@@ -117,7 +116,7 @@ class posstaticblocks extends Module {
         $this->smarty->assign(array(
             'staticblocks' => $staticBlocks,
         ));
-       return $this->display(__FILE__, 'block.tpl');
+        return $this->display(__FILE__, 'block.tpl');
     }
 
      public function hookRightColumn($param) {
@@ -126,7 +125,7 @@ class posstaticblocks extends Module {
         $this->smarty->assign(array(
             'staticblocks' => $staticBlocks,
         ));
-       return $this->display(__FILE__, 'block.tpl');
+        return $this->display(__FILE__, 'block.tpl');
     }
 
     public function hookFooter($param) {
@@ -136,7 +135,7 @@ class posstaticblocks extends Module {
         $this->smarty->assign(array(
             'staticblocks' => $staticBlocks,
         ));
-       return $this->display(__FILE__, 'block.tpl');
+        return $this->display(__FILE__, 'block.tpl');
     }
 
     public function hookHome($param) {
@@ -147,7 +146,7 @@ class posstaticblocks extends Module {
         $this->smarty->assign(array(
             'staticblocks' => $staticBlocks,
         ));
-       return $this->display(__FILE__, 'block.tpl');
+        return $this->display(__FILE__, 'block.tpl');
     }
 
     public function hookBlockPosition1($param) {
@@ -158,7 +157,7 @@ class posstaticblocks extends Module {
         $this->smarty->assign(array(
             'staticblocks' => $staticBlocks,
         ));
-       return $this->display(__FILE__, 'block.tpl');
+        return $this->display(__FILE__, 'block.tpl');
     }
 
     public function hookBlockPosition2($param) {
@@ -169,7 +168,8 @@ class posstaticblocks extends Module {
         $this->smarty->assign(array(
             'staticblocks' => $staticBlocks,
         ));
-       return $this->display(__FILE__, 'block.tpl');
+
+        return $this->display(__FILE__, 'block.tpl');
     }
 
     public function hookBlockPosition3($param) {

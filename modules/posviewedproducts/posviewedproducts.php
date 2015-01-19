@@ -39,7 +39,7 @@ class posviewedproducts extends Module
 		$this->need_instance = 0;
 
 		$this->bootstrap = true;
-		parent::__construct();	
+		parent::__construct();
 
 		$this->displayName = $this->l('Viewed products with slider');
 		$this->description = $this->l('Adds a block displaying recently viewed products.');
@@ -74,9 +74,12 @@ class posviewedproducts extends Module
 		return $output.$this->renderForm();
 	}
 
-	public function hookBlockPosition3($params)
+
+	public function hookDisplayLeftColumn($params)
 	{
-		$productsViewed = (isset($params['cookie']->viewed) && !empty($params['cookie']->viewed)) ? array_slice(array_reverse(explode(',', $params['cookie']->viewed)), 0, Configuration::get('PRODUCTS_VIEWED_NBR')) : array();
+		$productsViewed = (isset($params['cookie']->viewed) && !empty($params['cookie']->viewed)) ?
+			array_slice(array_reverse(explode(',', $params['cookie']->viewed)), 0, Configuration::get('PRODUCTS_VIEWED_NBR')) :
+			array();
 
 		if (count($productsViewed))
 		{
@@ -138,11 +141,11 @@ class posviewedproducts extends Module
 				'productsViewedObj' => $productsViewedObj,
 				'mediumSize' => Image::getSize('medium')));
 
-			
+
 		}
 		return $this->display(__FILE__, 'posviewedproducts_home.tpl');
 	}
-	
+
 	public function renderForm()
 	{
 		$fields_form = array(
@@ -171,7 +174,7 @@ class posviewedproducts extends Module
 				)
 			),
 		);
-			
+
 		$helper = new HelperForm();
 		$helper->show_toolbar = false;
 		$helper->table =  $this->table;
@@ -190,9 +193,9 @@ class posviewedproducts extends Module
 
 		return $helper->generateForm(array($fields_form));
 	}
-	
+
 	public function getConfigFieldsValues()
-	{		
+	{
 		return array(
 			'PRODUCTS_VIEWED_NBR' => Tools::getValue('PRODUCTS_VIEWED_NBR', Configuration::get('PRODUCTS_VIEWED_NBR')),
 			'PRODUCTS_VIEWED_ITEM' => Tools::getValue('PRODUCTS_VIEWED_ITEM', Configuration::get('PRODUCTS_VIEWED_ITEM')),

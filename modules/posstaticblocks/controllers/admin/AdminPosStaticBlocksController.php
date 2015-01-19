@@ -23,10 +23,10 @@ class AdminPosstaticblocksController extends ModuleAdminController {
         parent::__construct();
     }
 
-    
+
 
     public function renderList() {
-         
+
         $this->addRowAction('edit');
         $this->addRowAction('delete');
         $this->bulk_actions = array(
@@ -60,7 +60,12 @@ class AdminPosstaticblocksController extends ModuleAdminController {
             ),
             'posorder' => array(
                 'title' => $this->l('Order'),
-                'width' => '30',
+                'width' => '20',
+                'lang' => false
+            ),
+            'id_category' => array(
+                'title' => $this->l('Category_ID'),
+                'width' => '20',
                 'lang' => false
             )
         );
@@ -70,7 +75,7 @@ class AdminPosstaticblocksController extends ModuleAdminController {
 //            'width' => 70,
 //            "image" => $this->fieldImageSettings["dir"]
 //        );
-//            
+//
 //        $listSlideshows = Staticblock::getSlideshowLists($this->context->language->id);
 //        echo "<pre>"; print_r($listSlideshows); die;
         $lists = parent::renderList();
@@ -78,37 +83,35 @@ class AdminPosstaticblocksController extends ModuleAdminController {
 
         return $lists;
     }
-    
-  
+
+
 
     public function renderForm() {
-        
+
         $mod = new posstaticblocks();
         $listModules = $mod->getListModuleInstalled();
-        
-        
+
+
         $listHookPosition = array(
-            array('hook_position'=> 'top'),
+            array('hook_position'=>'top'),
             array('hook_position'=>'rightColumn'),
-            array('hook_position'=> 'leftColumn'),
+            array('hook_position'=>'leftColumn'),
             array('hook_position'=>'displayHeader'),
             array('hook_position'=>'footer'),
             array('hook_position'=>'home'),
             array('hook_position'=>'blockPosition1'),
             array('hook_position'=>'blockPosition2'),
             array('hook_position'=>'blockPosition3'),
-	    array('hook_position'=>'bannerSequence'),
-
-
+	        array('hook_position'=>'bannerSequence'),
         );
-        
+
         $this->fields_form = array(
             'tinymce' => true,
             'legend' => array(
                 'title' => $this->l('Slideshow'),
                 'image' => '../img/admin/cog.gif'
             ),
-            
+
             'input' => array(
                 array(
                     'type' => 'text',
@@ -125,61 +128,61 @@ class AdminPosstaticblocksController extends ModuleAdminController {
                     'require' => false
                 ),
                 array(
-                  'type'      => 'radio',                              
-                  'label'     => $this->l('Show/hide title'),       
-                  'desc'      => $this->l('Show/hide title?'),  
-                  'name'      => 'active',                             
-                  'required'  => true,                                 
-                  'class'     => 't',                                  
-                  'is_bool'   => true,                                 
-                  'values'    => array(                                
+                    'type'      => 'radio',
+                    'label'     => $this->l('Show/hide title'),
+                    'desc'      => $this->l('Show/hide title?'),
+                    'name'      => 'active',
+                    'required'  => true,
+                    'class'     => 't',
+                    'is_bool'   => true,
+                    'values'    => array(
                         array(
-                          'id'    => 'active_on',                          
-                          'value' => 1,                                    
-                          'label' => $this->l('Enabled')                   
+                          'id'    => 'active_on',
+                          'value' => 1,
+                          'label' => $this->l('Enabled')
                         ),
                         array(
                           'id'    => 'active_off',
                           'value' => 0,
                           'label' => $this->l('Disabled')
                         )
-                  ),
+                    ),
                 ),
-               array(
-                'type' => 'select',
-                'label' => $this->l('Hook Position:'),
-                'name' => 'hook_position',
-                'required' => true,
-                'options' => array(
-                    'query' => $listHookPosition,
-                    'id' => 'hook_position',
-                    'name' => 'hook_position'
+                array(
+                    'type' => 'select',
+                    'label' => $this->l('Hook Position:'),
+                    'name' => 'hook_position',
+                    'required' => true,
+                    'options' => array(
+                        'query' => $listHookPosition,
+                        'id' => 'hook_position',
+                        'name' => 'hook_position'
+                    ),
+
+                    'desc' => $this->l('Choose the type of the Hooks')
                 ),
-             
-                'desc' => $this->l('Choose the type of the Hooks')
-            ),
-            
-            array(
-                              'type'      => 'radio',                              
-                              'label'     => $this->l('Show/hide Hook'),       
-                              'desc'      => $this->l('Show/hide Hook?'),  
-                              'name'      => 'showhook',                             
-                              'required'  => true,                                 
-                              'class'     => 't',                                  
-                              'is_bool'   => true,                                 
-                              'values'    => array(                                
-                                    array(
-                                      'id'    => 'active_on',                          
-                                      'value' => 1,                                    
-                                      'label' => $this->l('Enabled')                   
-                                    ),
-                                    array(
-                                      'id'    => 'active_off',
-                                      'value' => 0,
-                                      'label' => $this->l('Disabled')
-                                    )
-                              ),
-                            ),
+
+                array(
+                    'type'      => 'radio',
+                    'label'     => $this->l('Show/hide Hook'),
+                    'desc'      => $this->l('Show/hide Hook?'),
+                    'name'      => 'showhook',
+                    'required'  => true,
+                    'class'     => 't',
+                    'is_bool'   => true,
+                    'values'    => array(
+                        array(
+                          'id'    => 'active_on',
+                          'value' => 1,
+                          'label' => $this->l('Enabled')
+                        ),
+                        array(
+                          'id'    => 'active_off',
+                          'value' => 0,
+                          'label' => $this->l('Disabled')
+                        )
+                    ),
+                ),
 			    array(
                     'type' => 'textarea',
                     'label' => $this->l('Description'),
@@ -191,7 +194,7 @@ class AdminPosstaticblocksController extends ModuleAdminController {
                     'cols' => 40,
                     'hint' => $this->l('Invalid characters:') . ' <>;=#{}'
                 ),
-                
+
                 array(
                     'type' => 'text',
                     'label' => $this->l('Order:'),
@@ -199,7 +202,15 @@ class AdminPosstaticblocksController extends ModuleAdminController {
                     'size' => 40,
                     'require' => false
                 ),
-                 array(
+                array(
+                    'type' => 'text',
+                    'label' => $this->l('Category_ID:'),
+                    'desc' => $this->l('Only to be used with chifirst module on homepage'),
+                    'name' => 'id_category',
+                    'size' => 40,
+                    'require' => false
+                ),
+                array(
                     'type' => 'radio',
                     'label' => $this->l('Insert Module?'),
                     'desc' => $this->l('Insert module?'),
@@ -221,17 +232,17 @@ class AdminPosstaticblocksController extends ModuleAdminController {
                     ),
                 ),
                 array(
-                'type' => 'select',
-                'label' => $this->l('Modules:'),
-                'name' => 'name_module',
-                'required' => true,
-                'options' => array(
-                    'query' => $listModules,
-                    'id' => 'name',
-                    'name' => 'name'
-                ),
+                    'type' => 'select',
+                    'label' => $this->l('Modules:'),
+                    'name' => 'name_module',
+                    'required' => true,
+                    'options' => array(
+                        'query' => $listModules,
+                        'id' => 'name',
+                        'name' => 'name'
+                    ),
                     'desc' => $this->l('Choose the type of the Module')
-               ),
+                ),
                 array(
                     'type' => 'select',
                     'label' => $this->l('Hook-Modules:'),
@@ -261,9 +272,7 @@ class AdminPosstaticblocksController extends ModuleAdminController {
 
         if (!($obj = $this->loadObject(true)))
             return;
-
-
         return parent::renderForm();
     }
-    
+
 }
