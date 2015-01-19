@@ -1,33 +1,25 @@
-div#chifirst_block_home p {
-  font-size: 150%;
-  font-style:italic;
-}
 .yaoStageBoxOuter {
   width: 100%;
-  padding-bottom: 32%;
+  font-family: 'Microsoft Yahei Regular', 'Microsoft Yahei';
+  padding-bottom: 33%;
 }
 .yaoStageLargeBox {
   float: left;
   position: relative;
-  width: 16%;
-  padding-bottom: 32%;
+  width: 16.7%;
+/*  padding-bottom: 32%; */
 }
 
 .yaoStageBox {
   float: left;
   position: relative;
-  width: 16%;
-  padding-bottom: 16%;
+  width: 16.66%;
+  padding-bottom: 16.66%;
   border: 1px solid #eee;
 }
 
-.yaoStageBoxOuter .pos-new-product-home .boxInner {
+.yaoStageBoxOuter .grid .boxInner {
   position: absolute;
-  /*left: 10px;
-  right: 10px;
-  top: 10px;
-  bottom: 10px;
-  */
   overflow: hidden;
   height: 100%;
   background-color: #fefefe;
@@ -53,59 +45,41 @@ div#chifirst_block_home p {
   width: 100%;
 }
 
-.yaoStageBoxOuter .pos-new-product-home .item .product-name {
+.yaoStageBoxOuter .grid .item .product-name {
   text-align: left;
   position: absolute;
-  top: 74%;
+  top: 71%;
   line-height: 15px;
+  margin: 0 5px;
 }
 
-.yaoStageBoxOuter .pos-new-product-home .item .price-box {
+.yaoStageBoxOuter .grid .item .price-box {
   text-align: left;
   position: absolute;
   top: 88%;
+  right: 10px;
 }
 
 .yaoStageBoxOuter .boxInner .addToCartButton {
-  right: 30px;
-  position: absolute;
-  top: 92%;
-}
-.yaoStageBoxOuter .boxInner .addToCartButton .ajax_add_to_cart_button {
-  text-align: right;
-  height: 28px;
-  border: 1px solid #dbdbdb;
-  border-radius: 10px;
-  bottom:15px;
-  left:25px;
-}
-.yaoStageBoxOuter .boxInner .addToCartButton .ajax_add_to_cart_button:before{
-  font-family: 'FontAwesome';
-  content: "\f07a";
-  line-height: 15px;
-  padding-right: 7px;
-}
-
-.yaoStageBoxOuter .boxInner .addToWishList {
+  right: -30px;
   position: absolute;
   top: 10px;
-  right:-30px;
   -moz-transition: all 0.15s ease;
   -webkit-transition: all 0.15s ease;
   -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
-.yaoStageBoxOuter .boxInner:hover .addToWishList {
-  right:10px;
+.yaoStageBoxOuter .boxInner:hover .addToCartButton {
+  right: 10px;
 }
-.yaoStageBoxOuter .boxInner .addToWishList .wishListButton:before{
+.yaoStageBoxOuter .boxInner .addToCartButton .ajax_add_to_cart_button:before{
   font-family: 'FontAwesome';
-  font-size: 17px;
-  content: "\f08a";
+  content: "\f07a";
   line-height: 15px;
+  font-size: 18px;
 }
 
-.yaoStageBoxOuter .boxInner .quickView {
+.yaoStageBoxOuter .boxInner .addToWishList {
   position: absolute;
   top: 10px;
   left:-30px;
@@ -114,12 +88,69 @@ div#chifirst_block_home p {
   -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
-.yaoStageBoxOuter .boxInner:hover .quickView {
+.yaoStageBoxOuter .boxInner:hover .addToWishList {
   left:10px;
 }
-.yaoStageBoxOuter .boxInner .quickView .quickViewButton:before{
+.yaoStageBoxOuter .boxInner .addToWishList .wishListButton:before{
   font-family: 'FontAwesome';
-  font-size: 17px;
-  content: "\f002";
+  font-size: 18px;
+  content: "\f08a";
   line-height: 15px;
+}
+
+.yaoStageTitle {
+  /*background: url(../img/bg-block.png) repeat-x center bottom;*/
+  border-bottom: 2px solid rgb(207, 68, 11);
+  /*-webkit-box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 0.2);
+  box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(50, 50, 50, 0.2);*/
+}
+.yaoStageTitle h2{
+  font: 18px/25px "Microsoft Yahei";
+  text-transform: uppercase;
+  padding: 0 0 2px 8px;
+  /*background: url(../img/border_tab.png) no-repeat left bottom;*/
+  margin: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .yaoStageLargeBox {
+    display: none;
+  }
+  .yaoStageBox {
+    width: 50%;
+    padding-bottom: 50%;
+    border: 1px solid #eee;
+  }
+  .yaoStageBoxOuter {
+    padding-bottom: 250%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .yaoStageLargeBox {
+    width: 33.3%;
+  }
+  .yaoStageBox {
+    width: 33.3%;
+    padding-bottom: 33.3%;
+    border: 1px solid #eee;
+  }
+  .yaoStageBoxOuter {
+    padding-bottom: 133.3%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .yaoStageLargeBox {
+    width: 25%;
+  }
+  .yaoStageBox {
+    width: 25%;
+    padding-bottom: 25%;
+    border: 1px solid #eee;
+  }
+  .yaoStageBoxOuter {
+    padding-bottom: 75%;
+  }
 }

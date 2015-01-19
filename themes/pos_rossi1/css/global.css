@@ -5801,22 +5801,24 @@ table.table_block td {
         font-size: 14px; } }
 
 .price {
-  font-size: 13px;
-  color: #777777;
+  font-size: 17px;
+  color: #F46465;
+  font-weight: bold;
   white-space: nowrap; }
 
 .price.product-price {
   font: normal 21px/26px 'calibribold';
-  color: #444; }
+  color: #F46465;
+}
 
 .old-price {
-  color: #6f6f6f;
+  color: #777;
+  font-style: italic;
   text-decoration: line-through;
-  font-family: 'calibribold';
   padding-right: 5px;}
 
 .old-price.product-price {
-  font-size: 17px; }
+  font-size: 15px; }
 
 .special-price {
   color: #f13340; }

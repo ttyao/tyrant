@@ -1,9 +1,5 @@
 {if count($products)>1}
-<div class="pos-new-product-home">
-  <!-- <div class="pos-new-product-home-title">
-    <h2>{l s='Latest products' mod='posnewproduct'}</h2>
-  </div> -->
-  <div class="row">
+  <div class="grid">
     <ul>
       {foreach from=$products item=product name=posNewProducts}
         {if $smarty.foreach.posNewProducts.index == 10}
@@ -37,18 +33,12 @@
                 {if ($product.id_product_attribute == 0 || (isset($add_prod_display) && ($add_prod_display == 1))) && $product.available_for_order && !isset($restricted_country_mode) && $product.minimal_quantity <= 1 && $product.customizable != 2 && !$PS_CATALOG_MODE}
                   {if ($product.allow_oosp || $product.quantity > 0)}
                     {if isset($static_token)}
-                      <a class="exclusive ajax_add_to_cart_button btn btn-default" href="{$link->getPageLink('cart',false, NULL, "add=1&amp;id_product={$product.id_product|intval}&amp;token={$static_token}", false)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Add to cart' mod='posnewproduct'}" data-id-product="{$product.id_product|intval}">
-                        {l s='Add to cart' mod='posnewproduct'}
+                      <a class="ajax_add_to_cart_button" href="{$link->getPageLink('cart',false, NULL, "add=1&amp;id_product={$product.id_product|intval}&amp;token={$static_token}", false)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Add to cart' mod='posnewproduct'}" data-id-product="{$product.id_product|intval}">
                       </a>
                     {else}
-                      <a class="exclusive ajax_add_to_cart_button btn btn-default" href="{$link->getPageLink('cart',false, NULL, 'add=1&amp;id_product={$product.id_product|intval}', false)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Add to cart' mod='posnewproduct'}" data-id-product="{$product.id_product|intval}">
-                        {l s='Add to cart' mod='posnewproduct'}
+                      <a class="ajax_add_to_cart_button" href="{$link->getPageLink('cart',false, NULL, 'add=1&amp;id_product={$product.id_product|intval}', false)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Add to cart' mod='posnewproduct'}" data-id-product="{$product.id_product|intval}">
                       </a>
                     {/if}
-                  {else}
-                    <span class="exclusive ajax_add_to_cart_button btn btn-default disabled">
-                      {l s='Add to cart' mod='posnewproduct'}
-                    </span>
                   {/if}
                 {/if}
               </div>
@@ -59,13 +49,12 @@
                   href="#">
                 </a>
               </div>
-              <div class="quickView">
+              <!-- <div class="quickView">
                 <a class="quickViewButton" href="{$product.link|escape:'html':'UTF-8'}" rel="{$product.link|escape:'html':'UTF-8'}" title="{l s='Quick view' mod='postabcateslider1'}" />
-              </div>
+              </div> -->
           </div>
         </li>
       {/foreach}
     </ul>
   </div>
-</div>
 {/if}
