@@ -828,9 +828,9 @@ header #header_logo {
 
   .col-sm-offset-11 {
     margin-left: 91.66667%; } }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .container {
-    max-width: 970px; }
+    max-width: 720px; }
 
   .col-md-1,
   .col-md-2,
@@ -988,7 +988,7 @@ header #header_logo {
 
   .col-md-offset-11 {
     margin-left: 91.66667%; } }
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .container {
     max-width: 1170px; }
 
@@ -8532,7 +8532,7 @@ right: 0;}
 .footer-top{
 padding-top: 30px;}
 .footer-top .footer-static{
-background: #395562;
+background: rgb(207, 68, 11);
 padding: 20px;
 float: left;
 width: 100%;}

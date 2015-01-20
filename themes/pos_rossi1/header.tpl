@@ -107,7 +107,7 @@
 							<div class="blockposition2">
 								{hook h="blockPosition1"}
 							</div>
-							<div class="megamenu_main col-xs-12 col-sm-8 col-md-9">
+							<div class="megamenu_main homeCenterColumn">
 								{hook h="megamenu"}
 							</div>
 						</div>

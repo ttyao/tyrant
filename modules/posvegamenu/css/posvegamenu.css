@@ -14,6 +14,7 @@ background: url(../images/bg_category.png) 0px 50% no-repeat;
     padding:0 0 2px;
     z-index: 1000;
     border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     color: #333;
 }
