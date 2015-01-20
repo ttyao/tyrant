@@ -13,6 +13,7 @@ $_LANGMAIL['An answer to your message is available #ct%1$s #tc%2$s'] = 'An answe
 $_LANGMAIL['Your new password'] = 'Your new password';
 $_LANGMAIL['Package in transit'] = 'Package in transit';
 $_LANGMAIL['New message regarding your order'] = 'New message regarding your order';
+$_LANGMAIL['New voucher for your order #%s'] = 'New voucher for your order #%s';
 $_LANGMAIL['New credit slip regarding your order'] = 'New credit slip regarding your order';
 $_LANGMAIL['Process the payment of your order'] = 'Process the payment of your order';
 $_LANGMAIL['Your order has been changed'] = 'Your order has been changed';

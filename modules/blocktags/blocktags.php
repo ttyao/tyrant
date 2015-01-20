@@ -27,20 +27,18 @@
 if (!defined('_PS_VERSION_'))
 	exit;
 
-define('BLOCKTAGS_MAX_LEVEL', 3);
-
 class BlockTags extends Module
 {
 	function __construct()
 	{
 		$this->name = 'blocktags';
 		$this->tab = 'front_office_features';
-		$this->version = '1.2.1';
+		$this->version = '1.2.4';
 		$this->author = 'PrestaShop';
 		$this->need_instance = 0;
 
 		$this->bootstrap = true;
-		parent::__construct();	
+		parent::__construct();
 
 		$this->displayName = $this->l('Tags block');
 		$this->description = $this->l('Adds a block containing your product tags.');
@@ -49,41 +47,52 @@ class BlockTags extends Module
 
 	function install()
 	{
-		$success = (parent::install() && $this->registerHook('header') && Configuration::updateValue('BLOCKTAGS_NBR', 10));
+		$success = (parent::install() && $this->registerHook('header') && $this->registerHook('leftColumn')
+			&& Configuration::updateValue('BLOCKTAGS_NBR', 10)
+			&& Configuration::updateValue('BLOCKTAGS_MAX_LEVEL', 3)
+			&& Configuration::updateValue('BLOCKTAGS_RANDOMIZE', false)
+		);
 
-		if ($success)
-		{
-			// Hook the module either on the left or right column
-			$theme = new Theme(Context::getContext()->shop->id_theme);
-			if ((!$theme->default_left_column || !$this->registerHook('leftColumn'))
-				&& (!$theme->default_right_column || !$this->registerHook('rightColumn')))
-			{
-				// If there are no colums implemented by the template, throw an error and uninstall the module
-				$this->_errors[] = $this->l('This module need to be hooked in a column and your theme does not implement one');
-				parent::uninstall();
-				return false;
-			}
-		}
 		return $success;
 	}
 
 	public function getContent()
-	{
-		$output = '';
-		if (Tools::isSubmit('submitBlockTags'))
-		{
-			if (!($tagsNbr = Tools::getValue('BLOCKTAGS_NBR')) || empty($tagsNbr))
-				$output .= $this->displayError($this->l('Please complete the "Displayed tags" field.'));
-			elseif ((int)($tagsNbr) == 0)
-				$output .= $this->displayError($this->l('Invalid number.'));
-			else
-			{
-				Configuration::updateValue('BLOCKTAGS_NBR', (int)$tagsNbr);
-				$output .= $this->displayConfirmation($this->l('Settings updated'));
-			}
-		}
-		return $output.$this->renderForm();
-	}
+        {
+                $output = '';
+                $errors = array();
+                if (Tools::isSubmit('submitBlockTags'))
+                {
+                        $tagsNbr = Tools::getValue('BLOCKTAGS_NBR');
+                        if (!strlen($tagsNbr))
+                                $errors[] = $this->l('Please complete the "Displayed tags" field.');
+                        elseif (!Validate::isInt($tagsNbr) || (int)($tagsNbr) <= 0)
+                                $errors[] = $this->l('Invalid number.');
+
+                        $tagsLevels = Tools::getValue('BLOCKTAGS_MAX_LEVEL');
+                        if (!strlen($tagsLevels))
+                                $errors[] = $this->l('Please complete the "Tags levels" field.');
+                        elseif (!Validate::isInt($tagsLevels) || (int)($tagsLevels) <= 0)
+                                $errors[] = $this->l('Invalid value for "Tags levels". Choose a positive integer number.');
+
+                        $randomize = Tools::getValue('BLOCKTAGS_RANDOMIZE');
+                        if (!strlen($randomize))
+                        	$errors[] = $this->l('Please complete the "Randomize" field.');
+                        elseif (!Validate::isBool($randomize))
+                        	$errors[] = $this->l('Invalid value for "Randomize". It has to be a boolean.');
+
+                        if (count($errors))
+                                $output = $this->displayError(implode('<br />', $errors));
+                        else
+                        {
+                                Configuration::updateValue('BLOCKTAGS_NBR', (int)$tagsNbr);
+                                Configuration::updateValue('BLOCKTAGS_MAX_LEVEL', (int)$tagsLevels);
+                                Configuration::updateValue('BLOCKTAGS_RANDOMIZE', (bool)$randomize);
+
+                                $output = $this->displayConfirmation($this->l('Settings updated'));
+                        }
+                }
+                return $output.$this->renderForm();
+        }
 
 	/**
 	* Returns module content for left column
@@ -95,7 +104,7 @@ class BlockTags extends Module
 	function hookLeftColumn($params)
 	{
 		$tags = Tag::getMainTags((int)($params['cookie']->id_lang), (int)(Configuration::get('BLOCKTAGS_NBR')));
-		
+
 		$max = -1;
 		$min = -1;
 		foreach ($tags as $tag)
@@ -105,16 +114,18 @@ class BlockTags extends Module
 			if ($tag['times'] < $min || $min == -1)
 				$min = $tag['times'];
 		}
-		
+
 		if ($min == $max)
 			$coef = $max;
 		else
 		{
-			$coef = (BLOCKTAGS_MAX_LEVEL - 1) / ($max - $min);
+			$coef = (Configuration::get('BLOCKTAGS_MAX_LEVEL') - 1) / ($max - $min);
 		}
-		
+
 		if (!sizeof($tags))
 			return false;
+		if (Configuration::get('BLOCKTAGS_RANDOMIZE'))
+			shuffle($tags);
 		foreach ($tags AS &$tag)
 			$tag['class'] = 'tag_level'.(int)(($tag['times'] - $min) * $coef + 1);
 		$this->smarty->assign('tags', $tags);
@@ -131,7 +142,7 @@ class BlockTags extends Module
 	{
 		$this->context->controller->addCSS(($this->_path).'blocktags.css', 'all');
 	}
-	
+
 	public function renderForm()
 	{
 		$fields_form = array(
@@ -146,15 +157,41 @@ class BlockTags extends Module
 						'label' => $this->l('Displayed tags'),
 						'name' => 'BLOCKTAGS_NBR',
 						'class' => 'fixed-width-xs',
-						'desc' => $this->l('Set the number of tags you would like to see displayed in this block.')
-					),
+						'desc' => $this->l('Set the number of tags you would like to see displayed in this block. (default: 10)')
+                                        ),
+                                        array(
+                                                'type' => 'text',
+                                                'label' => $this->l('Tags levels'),
+                                                'name' => 'BLOCKTAGS_MAX_LEVEL',
+                                                'class' => 'fixed-width-xs',
+                                                'desc' => $this->l('Set the number of different tags levels you would like to use. (default: 3)')
+                                        ),
+                                        array(
+                                        	'type' => 'switch',
+                                        	'label' => $this->l('Random display'),
+                                        	'name' => 'BLOCKTAGS_RANDOMIZE',
+                                        	'class' => 'fixed-width-xs',
+                                        	'desc' => $this->l('If enabled, displays tags randomly. By default, random display is disabled and the most used tags are displayed first.'),
+                                        	'values' => array(
+                                        		array(
+                                        			'id' => 'active_on',
+                                        			'value' => 1,
+                                        			'label' => $this->l('Enabled')
+                                        			),
+                                        		array(
+                                        			'id' => 'active_off',
+                                        			'value' => 0,
+                                        			'label' => $this->l('Disabled')
+                                        		)
+                                        	)
+                                        )
 				),
 				'submit' => array(
 					'title' => $this->l('Save'),
 				)
 			),
 		);
-			
+
 		$helper = new HelperForm();
 		$helper->show_toolbar = false;
 		$helper->table =  $this->table;
@@ -173,11 +210,13 @@ class BlockTags extends Module
 
 		return $helper->generateForm(array($fields_form));
 	}
-	
+
 	public function getConfigFieldsValues()
-	{		
+	{
 		return array(
-			'BLOCKTAGS_NBR' => Tools::getValue('BLOCKTAGS_NBR', Configuration::get('BLOCKTAGS_NBR')),
+			'BLOCKTAGS_NBR' => Tools::getValue('BLOCKTAGS_NBR', (int)Configuration::get('BLOCKTAGS_NBR')),
+			'BLOCKTAGS_MAX_LEVEL' => Tools::getValue('BLOCKTAGS_MAX_LEVEL', (int)Configuration::get('BLOCKTAGS_MAX_LEVEL')),
+			'BLOCKTAGS_RANDOMIZE' => Tools::getValue('BLOCKTAGS_RANDOMIZE', (bool)Configuration::get('BLOCKTAGS_RANDOMIZE')),
 		);
 	}
 

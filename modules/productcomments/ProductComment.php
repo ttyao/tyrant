@@ -305,10 +305,14 @@ class ProductComment extends ObjectModel
 	{
 		if (!Validate::isUnsignedId($this->id))
 			return false;
-		return (Db::getInstance()->execute('
+
+		$success = (Db::getInstance()->execute('
 		UPDATE `'._DB_PREFIX_.'product_comment` SET
 		`validate` = '.(int)$validate.'
 		WHERE `id_product_comment` = '.(int)$this->id));
+
+		Hook::exec('actionObjectProductCommentValidateAfter', array('object' => $this));
+		return $success;
 	}
 
 	/**
@@ -427,7 +431,7 @@ class ProductComment extends ObjectModel
 	public static function getReportedComments()
 	{
 		return Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS('
-		SELECT DISTINCT(pc.`id_product_comment`), pc.`id_product`, IF(c.id_customer, CONCAT(c.`firstname`, \' \',  c.`lastname`), pc.customer_name) customer_name, pc.`content`, pc.`grade`, pc.`date_add`, pl.`name`
+		SELECT DISTINCT(pc.`id_product_comment`), pc.`id_product`, IF(c.id_customer, CONCAT(c.`firstname`, \' \',  c.`lastname`), pc.customer_name) customer_name, pc.`content`, pc.`grade`, pc.`date_add`, pl.`name`, pc.`title`
 		FROM `'._DB_PREFIX_.'product_comment_report` pcr
 		LEFT JOIN `'._DB_PREFIX_.'product_comment` pc
 			ON pcr.id_product_comment = pc.id_product_comment

@@ -3,9 +3,6 @@
 global $_LANGPDF;
 $_LANGPDF = array();
 
-$_LANGPDF['PDF065ab3a28ca4f16f55f103adc7d0226f'] = '运送';
-$_LANGPDF['PDF6c2fbe34c186a6b5725d212ad8cd2432'] = '有效的发货单';
-$_LANGPDF['PDF88fd044d00c4ad47557c8bd9bf74e585'] = '订单回报 %s';
 $_LANGPDF['PDFf771e4a4df40bf061607fdb8e3f140dc'] = '供应订单';
 $_LANGPDF['PDF3a80d6ec5285dd5d3930db30d04e2b9e'] = '不包括折扣';
 $_LANGPDF['PDFa58b1c9575ab07c5be819243c96d9c0e'] = '包括折扣';

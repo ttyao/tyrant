@@ -5,49 +5,46 @@
 	</div>
 	{if $productsViewedObj}
 		<ul class="posviewedproducts">			
-			{foreach from=$products item=product name=posviewedproductss}
+			{foreach from=$productsViewedObj item=viewedProduct name=posviewedproductss}
 				<li>
+				
 					<div class="item">
 						<div class="pos-new-product-img">
-							<a href="{$product.link|escape:'html'}" title="{$product.legend|escape:'html':'UTF-8'}" class="content_img clearfix">
-									<img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'small_default')|escape:'html'}"
-										 alt="{$product.legend|escape:'html':'UTF-8'}"
-										 class="img-responsive"/>
+							<a class="products-block-image" href="{$viewedProduct->product_link|escape:'html':'UTF-8'}" title="{l s='More about %s' mod='blockviewed' sprintf=[$viewedProduct->name|escape:'html':'UTF-8']}" >
+							<img src="{if isset($viewedProduct->id_image) && $viewedProduct->id_image}{$link->getImageLink($viewedProduct->link_rewrite, $viewedProduct->cover, 'small_default')}{else}{$img_prod_dir}{$lang_iso}-default-medium_default.jpg{/if}" alt="{$viewedProduct->legend|escape:'html':'UTF-8'}" />
 							</a>
 						</div>
 						<div class="pos-new-product-info">
-						<h5 class="s_title_block"><a href="{$product.link|escape:'html'}" title="{$product.name|truncate:50:'...'|escape:'htmlall':'UTF-8'}">{$product.name|truncate:35:'...'|escape:'htmlall':'UTF-8'}</a></h5>
+						<h5 class="s_title_block"><a class="product-name" 
+							href="{$viewedProduct->product_link|escape:'html':'UTF-8'}" 
+							title="{l s='More about %s' mod='blockviewed' sprintf=[$viewedProduct->name|escape:'html':'UTF-8']}">
+								{$viewedProduct->name|truncate:25:'...'|escape:'html':'UTF-8'}
+							</a>
+						</h5>
 						<div>
+						{if !$PS_CATALOG_MODE}
 						<div class="price-box">
-						{if isset($product.specific_prices) && $product.specific_prices && isset($product.specific_prices.reduction) && $product.specific_prices.reduction > 0}
-						<span class="old-price product-price">
-						{displayWtPrice p=$product.price_without_reduction}
-						</span>
-						{/if}
-						<span class="price">{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}</span>
-						<meta itemprop="priceCurrency" content="{$priceDisplay}" />
+							{if $viewedProduct->reduction}
+								<span class="old-price product-price">
+									{convertPrice price=$viewedProduct->price}
+								</span>
+								{if $viewedProduct->reduction_type == 'amount'}
+									<span class="price">{convertPrice price=$viewedProduct->price - $viewedProduct->reduction}</span>
+									
+								{else}
+									<span class="price">{convertPrice price=$viewedProduct->price - round($viewedProduct->price * $viewedProduct->reduction / 100,2)}</span>
+								{/if}
+							{else}
+								<span class="price">{convertPrice price=$viewedProduct->price}</span>
+							{/if}	
 						</div>
+						
 						<div class="pos-tab-content-bottom">
-						{if ($product.id_product_attribute == 0 || (isset($add_prod_display) && ($add_prod_display == 1))) && $product.available_for_order && !isset($restricted_country_mode) && $product.minimal_quantity <= 1 && $product.customizable != 2 && !$PS_CATALOG_MODE}
-						{if ($product.allow_oosp || $product.quantity > 0)}
-						{if isset($static_token)}
-						<a class="exclusive ajax_add_to_cart_button btn btn-default" href="{$link->getPageLink('cart',false, NULL, "add=1&amp;id_product={$product.id_product|intval}&amp;token={$static_token}", false)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Add to cart' mod='posviewedproducts'}" data-id-product="{$product.id_product|intval}">
-						{l s='Add to cart' mod='posviewedproducts'}
-						</a>
-						{else}
-						<a class="exclusive ajax_add_to_cart_button btn btn-default" href="{$link->getPageLink('cart',false, NULL, 'add=1&amp;id_product={$product.id_product|intval}', false)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Add to cart' mod='posviewedproducts'}" data-id-product="{$product.id_product|intval}">
-						{l s='Add to cart' mod='posviewedproducts'}
-						</a>
-						{/if}						
-						{else}
-						<span class="exclusive ajax_add_to_cart_button btn btn-default disabled">
-						{l s='Add to cart' mod='posviewedproducts'}
-						</span>
+							<a class="exclusive ajax_add_to_cart_button btn btn-default" href="{$link->getPageLink('cart',false, NULL, "add=1&amp;id_product={$viewedProduct->id|intval}&amp;token={$static_token}", false)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Add to cart' mod='posviewedproducts'}" data-id-product="{$viewedProduct->id|intval}">
+								<span>{l s='Add to cart' mod='posviewedproducts'}</span>
+							</a>
+						</div>
 						{/if}
-						{/if}
-						</div>
-						</div>
-						</div>
 					</div>
 				</li>
 			{/foreach}

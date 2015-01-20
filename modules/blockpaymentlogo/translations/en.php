@@ -3,7 +3,7 @@
 global $_MODULE;
 $_MODULE = array();
 
-$_MODULE['<{blockpaymentlogo}prestashop>blockpaymentlogo_bbbd74a260217265015b9c8ff13b903e'] = 'Payment logos block.';
+$_MODULE['<{blockpaymentlogo}prestashop>blockpaymentlogo_eaaf494f0c90a2707d768a9df605e94b'] = 'Payment logos block';
 $_MODULE['<{blockpaymentlogo}prestashop>blockpaymentlogo_3fd11fa0ede1bd0ace9b3fcdbf6a71c9'] = 'Adds a block which displays all of your payment logos.';
 $_MODULE['<{blockpaymentlogo}prestashop>blockpaymentlogo_b15e7271053fe9dd22d80db100179085'] = 'This module need to be hooked in a column and your theme does not implement one';
 $_MODULE['<{blockpaymentlogo}prestashop>blockpaymentlogo_efc226b17e0532afff43be870bff0de7'] = 'The settings have been updated.';

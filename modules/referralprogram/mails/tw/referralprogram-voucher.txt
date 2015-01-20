@@ -1,0 +1,16 @@
+
+[{shop_url}] 
+
+{lastname} {firstname} 您好, 
+
+我們已在您名下創建了一張折扣券給您的推薦好友。
+
+您的優惠券的代碼： {voucher_num}，金额為
+{voucher_amount}.
+
+Simply copy/paste this code during the payment process for your next
+order. 		 
+
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
+

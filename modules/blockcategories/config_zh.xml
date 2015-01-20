@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>blockcategories</name>
-	<displayName><![CDATA[Categories block]]></displayName>
-	<version><![CDATA[2.8.1]]></version>
-	<description><![CDATA[Adds a block featuring product categories.]]></description>
+	<displayName><![CDATA[分类区域]]></displayName>
+	<version><![CDATA[2.8.4]]></version>
+	<description><![CDATA[添加块产品类别。]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>1</is_configurable>

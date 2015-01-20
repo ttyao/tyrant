@@ -52,11 +52,8 @@ $_MODULE['<{productcomments}prestashop>tab_8413c683b4b27cc3f4dbd4c90329d8ba'] = 
 $_MODULE['<{productcomments}prestashop>productcomments-extra_c31732fda0c6f01c446db7163b214de4'] = '写评论';
 $_MODULE['<{productcomments}prestashop>productcomments_93cba07454f06a4a960172bbd6e2a435'] = '是';
 $_MODULE['<{productcomments}prestashop>productcomments_bafd7322c6e97d25b6299b5d6fe8920b'] = '否';
-$_MODULE['<{productcomments}prestashop>productcomments_08621d00a3a801b9159a11b8bbd69f89'] = '暂无评论。';
 $_MODULE['<{productcomments}prestashop>productcomments_c31732fda0c6f01c446db7163b214de4'] = '写评论';
-$_MODULE['<{productcomments}prestashop>productcomments_b78a3223503896721cca1303f776159b'] = '联系人名称';
-$_MODULE['<{productcomments}prestashop>productcomments_0be8406951cdfda82f00f79328cf4efc'] = '评论';
-$_MODULE['<{productcomments}prestashop>productcomments_9ec6e88ba9192880b4d976ac7f9ca59c'] = '您的评论已经加入，通过审批后将被显示。';
+$_MODULE['<{productcomments}prestashop>productcomments_a4d3b161ce1309df1c4e25df28694b7b'] = '递交';
 $_MODULE['<{productcomments}prestashop>tab_34e80a799d144cfe4af46815e103f017'] = '评论';
 
 

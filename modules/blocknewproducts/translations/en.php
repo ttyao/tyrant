@@ -18,12 +18,12 @@ $_MODULE['<{blocknewproducts}prestashop>blocknewproducts_d68e7b860a7dba819fa1c75
 $_MODULE['<{blocknewproducts}prestashop>blocknewproducts_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'Enabled';
 $_MODULE['<{blocknewproducts}prestashop>blocknewproducts_b9f5c797ebbf55adccdd8539a65a0241'] = 'Disabled';
 $_MODULE['<{blocknewproducts}prestashop>blocknewproducts_c9cc8cce247e49bae79f15173ce97354'] = 'Save';
+$_MODULE['<{blocknewproducts}prestashop>blocknewproducts_home_0af0aac2e9f6bd1d5283eed39fe265cc'] = 'No new products at this time.';
 $_MODULE['<{blocknewproducts}prestashop>blocknewproducts_9ff0635f5737513b1a6f559ac2bff745'] = 'New products';
 $_MODULE['<{blocknewproducts}prestashop>blocknewproducts_43340e6cc4e88197d57f8d6d5ea50a46'] = 'Read more';
 $_MODULE['<{blocknewproducts}prestashop>blocknewproducts_60efcc704ef1456678f77eb9ee20847b'] = 'All new products';
 $_MODULE['<{blocknewproducts}prestashop>blocknewproducts_18cc24fb12f89c839ab890f8188febe8'] = 'Do not allow new products at this time.';
 $_MODULE['<{blocknewproducts}prestashop>tab_a0d0ebc37673b9ea77dd7c1a02160e2d'] = 'New arrivals';
-$_MODULE['<{blocknewproducts}prestashop>blocknewproducts_home_0af0aac2e9f6bd1d5283eed39fe265cc'] = 'No new products at this time.';
 
 
 return $_MODULE;

@@ -9,9 +9,10 @@ $_MODULE['<{blockadvertising}prestashop>blockadvertising_33476c93475bba83cdcaac1
 $_MODULE['<{blockadvertising}prestashop>blockadvertising_070e16b4f77b90e802f789b5be583cfa'] = 'File upload error.';
 $_MODULE['<{blockadvertising}prestashop>blockadvertising_254f642527b45bc260048e30704edb39'] = 'Configuration';
 $_MODULE['<{blockadvertising}prestashop>blockadvertising_a15e4232c6c1fc1e67816dd517e0e966'] = 'Image for the advertisement';
-$_MODULE['<{blockadvertising}prestashop>blockadvertising_1e2f316a07e7c8367799628f861f8717'] = 'The image will be displayed as 155 pixels by 163 pixels.';
+$_MODULE['<{blockadvertising}prestashop>blockadvertising_351ec5e81711303a312e244ec952f8e9'] = 'By default the image will appear in the left column. The recommended dimensions are 155 x 163px.';
 $_MODULE['<{blockadvertising}prestashop>blockadvertising_4163f94824da4886254e88de13fbb863'] = 'Target link for the image';
-$_MODULE['<{blockadvertising}prestashop>blockadvertising_e414bcf6353ff3288251ee68bbc6dc4a'] = 'Name of the target link';
+$_MODULE['<{blockadvertising}prestashop>blockadvertising_24c28ef67324898298e45026d8efabaf'] = 'Title of the target link';
+$_MODULE['<{blockadvertising}prestashop>blockadvertising_78315dd2b27ef8037115b9f66351c155'] = 'This title will be displayed when you mouse over the advertisement block in your shop.';
 $_MODULE['<{blockadvertising}prestashop>blockadvertising_c9cc8cce247e49bae79f15173ce97354'] = 'Save';
 
 

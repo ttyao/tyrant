@@ -3,6 +3,7 @@
 global $_MODULE;
 $_MODULE = array();
 
+$_MODULE['<{dashactivity}prestashop>dashactivity_0369e7f54bf8a30b2766e6a9a708de0b'] = 'Dashboard Activity';
 $_MODULE['<{dashactivity}prestashop>dashactivity_02b5205ddff3073efc5c8b5b9cc165ba'] = '(from %s to %s)';
 $_MODULE['<{dashactivity}prestashop>dashactivity_14542f5997c4a02d4276da364657f501'] = 'Direct link';
 $_MODULE['<{dashactivity}prestashop>dashactivity_c9cc8cce247e49bae79f15173ce97354'] = 'Save';
@@ -17,6 +18,8 @@ $_MODULE['<{dashactivity}prestashop>dashactivity_c760237f74bcc7e3f90ad956086edb6
 $_MODULE['<{dashactivity}prestashop>dashactivity_a5493eb7cba36f452249d093e7757adc'] = 'Abandoned cart (max)';
 $_MODULE['<{dashactivity}prestashop>dashactivity_45e9c82415a3bee4413485c6bcb4347f'] = 'How long (in hours) after the last action a cart is no longer to be considered as abandoned (default: 24 hrs).';
 $_MODULE['<{dashactivity}prestashop>dashboard_zone_one_91b1b529580f2bb429493a51a1af932b'] = 'Activity overview';
+$_MODULE['<{dashactivity}prestashop>dashboard_zone_one_f1206f9fadc5ce41694f69129aecac26'] = 'Configure';
+$_MODULE['<{dashactivity}prestashop>dashboard_zone_one_63a6a88c066880c5ac42394a22803ca6'] = 'Refresh';
 $_MODULE['<{dashactivity}prestashop>dashboard_zone_one_254f642527b45bc260048e30704edb39'] = 'Configuration';
 $_MODULE['<{dashactivity}prestashop>dashboard_zone_one_edfc5fccc0439856b5bd432522ef47aa'] = 'Online Visitors';
 $_MODULE['<{dashactivity}prestashop>dashboard_zone_one_962b7da7912bc637b03626e23b5832b5'] = 'in the last %d minutes';

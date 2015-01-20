@@ -1,0 +1,18 @@
+
+[{shop_url}] 
+
+恭喜！ 
+
+您推薦的朋友{sponsored_firstname} {sponsored_lastname}
+剛剛在{shop_name} [{shop_url}]
+下了她／他的第一個訂單！
+
+我們很高興為您提供折扣券，價值{discount_display}
+(VOUCHER #
+{discount_name})。您可以在下次下單的時候使用。 		 
+
+祝好。 
+
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
+

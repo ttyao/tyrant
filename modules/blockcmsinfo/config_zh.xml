@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>blockcmsinfo</name>
-	<displayName><![CDATA[Custom CMS information block]]></displayName>
-	<version><![CDATA[1.5.1]]></version>
-	<description><![CDATA[Adds custom information blocks in your store.]]></description>
+	<displayName><![CDATA[客户服务信息模块]]></displayName>
+	<version><![CDATA[1.5.2]]></version>
+	<description><![CDATA[在您店铺添加客户信息模块。]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>1</is_configurable>

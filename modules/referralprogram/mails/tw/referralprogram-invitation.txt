@@ -1,0 +1,20 @@
+
+[{shop_url}] 
+
+{firstname_friend} {lastname_friend}, 歡迎加入！ 
+
+您的朋友{firstname} {lastname} 想向您推薦{shop_name}
+[{shop_url}]!
+
+我們很高興為您提供折扣券，價值{discount}。您可以在下次下單的時候使用。
+推薦給好友，贏得一張{discount}! 折扣券
+註冊非常簡單。只需點擊這裡！ [{link}]
+
+在註冊時，不要忘記把推薦給您的朋友的郵件地址填上：
+{email}.
+
+祝好。 
+
+{shop_name} [{shop_url}] powered by
+PrestaShop(tm) [http://www.prestashop.com/] 
+

@@ -1,6 +1,6 @@
 <?php
 /*
-* 2007-2014 PrestaShop
+* 2007-2015 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -19,7 +19,7 @@
 * needs please refer to http://www.prestashop.com for more information.
 *
 *  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2014 PrestaShop SA
+*  @copyright  2007-2015 PrestaShop SA
 *  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 */
@@ -128,17 +128,7 @@ class FrontControllerCore extends Controller
 		$css_files = $this->css_files;
 		$js_files = $this->js_files;
 
-		// If we call a SSL controller without SSL or a non SSL controller with SSL, we redirect with the right protocol
-		if (Configuration::get('PS_SSL_ENABLED') && $_SERVER['REQUEST_METHOD'] != 'POST' && $this->ssl != Tools::usingSecureMode())
-		{
-			header('HTTP/1.1 301 Moved Permanently');
-			header('Cache-Control: no-cache');
-			if ($this->ssl)
-				header('Location: '.Tools::getShopDomainSsl(true).$_SERVER['REQUEST_URI']);
-			else
-				header('Location: '.Tools::getShopDomain(true).$_SERVER['REQUEST_URI']);
-			exit();
-		}
+		$this->sslRedirection();
 
 		if ($this->ajax)
 		{
@@ -176,8 +166,19 @@ class FrontControllerCore extends Controller
 			throw new PrestaShopException((sprintf(Tools::displayError('Current theme unavailable "%s". Please check your theme directory name and permissions.'), basename(rtrim(_PS_THEME_DIR_, '/\\')))));
 
 		if (Configuration::get('PS_GEOLOCATION_ENABLED'))
+		{
 			if (($newDefault = $this->geolocationManagement($this->context->country)) && Validate::isLoadedObject($newDefault))
 				$this->context->country = $newDefault;
+		}
+		elseif (!isset($this->context->cookie->id_currency) && Configuration::get('PS_DETECT_COUNTRY'))
+		{
+			$country = new Country((int)Tools::getCountry());
+			if (validate::isLoadedObject($country))
+			{
+				$this->context->country = $country;
+				$this->context->cookie->id_currency = (int)$this->context->country->id_currency;
+			}
+		}
 
 		$currency = Tools::setCurrency($this->context->cookie);
 
@@ -331,12 +332,15 @@ class FrontControllerCore extends Controller
 			'hide_right_column' => !$this->display_column_right,
 			'base_dir' => _PS_BASE_URL_.__PS_BASE_URI__,
 			'base_dir_ssl' => $protocol_link.Tools::getShopDomainSsl().__PS_BASE_URI__,
+			'force_ssl' => Configuration::get('PS_SSL_ENABLED') && Configuration::get('PS_SSL_ENABLED_EVERYWHERE'),
 			'content_dir' => $protocol_content.Tools::getHttpHost().__PS_BASE_URI__,
 			'base_uri' => $protocol_content.Tools::getHttpHost().__PS_BASE_URI__.(!Configuration::get('PS_REWRITING_SETTINGS') ? 'index.php' : ''),
 			'tpl_dir' => _PS_THEME_DIR_,
+			'tpl_uri' => _THEME_DIR_,
 			'modules_dir' => _MODULE_DIR_,
 			'mail_dir' => _MAIL_DIR_,
 			'lang_iso' => $this->context->language->iso_code,
+			'language_code' => $this->context->language->language_code ? $this->context->language->language_code : $this->context->language->iso_code,
 			'come_from' => Tools::getHttpHost(true, true).Tools::htmlentitiesUTF8(str_replace(array('\'', '\\'), '', urldecode($_SERVER['REQUEST_URI']))),
 			'cart_qties' => (int)$cart->nbProducts(),
 			'currencies' => Currency::getCurrencies(),
@@ -360,7 +364,11 @@ class FrontControllerCore extends Controller
 			'quick_view' => (bool)Configuration::get('PS_QUICK_VIEW'),
 			'shop_phone' => Configuration::get('PS_SHOP_PHONE'),
 			'compared_products' => is_array($compared_products) ? $compared_products : array(),
-			'comparator_max_item' => (int)Configuration::get('PS_COMPARATOR_MAX_ITEM')
+			'comparator_max_item' => (int)Configuration::get('PS_COMPARATOR_MAX_ITEM'),
+			'currencyRate' => (float)$currency->getConversationRate(),
+			'currencySign' => $currency->sign,
+			'currencyFormat' => $currency->format,
+			'currencyBlank' => $currency->blank,
 		));
 
 		// Add the tpl files directory for mobile
@@ -615,6 +623,22 @@ class FrontControllerCore extends Controller
 		exit;
 	}
 
+	protected function sslRedirection()
+	{
+		// If we call a SSL controller without SSL or a non SSL controller with SSL, we redirect with the right protocol
+		if (Configuration::get('PS_SSL_ENABLED') && $_SERVER['REQUEST_METHOD'] != 'POST' && $this->ssl != Tools::usingSecureMode())
+		{
+			$this->context->cookie->disallowWriting();
+			header('HTTP/1.1 301 Moved Permanently');
+			header('Cache-Control: no-cache');
+			if ($this->ssl)
+				header('Location: '.Tools::getShopDomainSsl(true).$_SERVER['REQUEST_URI']);
+			else
+				header('Location: '.Tools::getShopDomain(true).$_SERVER['REQUEST_URI']);
+			exit();
+		}
+	}
+
 	protected function canonicalRedirection($canonical_url = '')
 	{
 		if (!$canonical_url || !Configuration::get('PS_CANONICAL_REDIRECT') || strtoupper($_SERVER['REQUEST_METHOD']) != 'GET' || Tools::getValue('live_edit'))
@@ -710,9 +734,6 @@ class FrontControllerCore extends Controller
 						'geolocation_country' => 'Undefined'
 					));
 			}
-			/* If not exists we disabled the geolocation feature */
-			else
-				Configuration::updateValue('PS_GEOLOCATION_ENABLED', 0);
 		}
 		return false;
 	}
@@ -740,7 +761,6 @@ class FrontControllerCore extends Controller
 			$this->addCSS(_THEME_MOBILE_CSS_DIR_.'jqm-docs.css', 'all');
 			$this->addCSS(_THEME_MOBILE_CSS_DIR_.'global.css', 'all');
 			$this->addCSS(_THEME_MOBILE_CSS_DIR_.'global_ext.css', 'all');
-
 		}
 	}
 
@@ -961,19 +981,27 @@ class FrontControllerCore extends Controller
 
 	protected static function isInWhitelistForGeolocation()
 	{
+		static $allowed = null;
+
+		if ($allowed !== null)
+			return $allowed;
+
 		$allowed = false;
 		$user_ip = Tools::getRemoteAddr();
 		$ips = array();
+
 		// retrocompatibility
 		$ips_old = explode(';', Configuration::get('PS_GEOLOCATION_WHITELIST'));
 		if (is_array($ips_old) && count($ips_old))
 			foreach ($ips_old as $ip)
 				$ips = array_merge($ips, explode("\n", $ip));
+
 		$ips = array_map('trim', $ips);
 		if (is_array($ips) && count($ips))
 			foreach ($ips as $ip)
 				if (!empty($ip) && preg_match('/^'.$ip.'.*/', $user_ip))
 					$allowed = true;
+
 		return $allowed;
 	}
 
@@ -991,7 +1019,7 @@ class FrontControllerCore extends Controller
 		return (strcasecmp(Tools::getToken(false), Tools::getValue('token')) == 0);
 	}
 
-	public function addMedia($media_uri, $css_media_type = null, $offset = null, $remove = false)
+	public function addMedia($media_uri, $css_media_type = null, $offset = null, $remove = false, $check_path = true)
 	{
 		if (!is_array($media_uri))
 		{
@@ -1004,7 +1032,7 @@ class FrontControllerCore extends Controller
 		$list_uri = array();
 		foreach ($media_uri as $file => $media)
 		{
-			if (!preg_match('/^http(s?):\/\//i', $media))
+			if (!Validate::isAbsoluteUrl($media))
 			{
 				$different = 0;
                 $different_css = 0;
@@ -1014,19 +1042,23 @@ class FrontControllerCore extends Controller
 					$type = 'js';
 					$file = $media;
 				}
-				$override_path = str_replace(__PS_BASE_URI__.'modules/', _PS_ROOT_DIR_.'/themes/'._THEME_NAME_.'/'.$type.'/modules/', $file, $different);
+				if (strpos($file, __PS_BASE_URI__.'modules/') === 0)
+				{
+					$override_path = str_replace(__PS_BASE_URI__.'modules/', _PS_ROOT_DIR_.'/themes/'._THEME_NAME_.'/'.$type.'/modules/', $file, $different);
+					if (strrpos($override_path, $type.'/'.basename($file)) !== false)
+						$override_path_css = str_replace($type.'/'.basename($file) , basename($file), $override_path, $different_css);
 
-                $override_path_css = str_replace(basename ($file), $type.'/'.basename ($file), str_replace(__PS_BASE_URI__, _PS_ROOT_DIR_.'/', $file), $different_css );
-
-				if ($different && file_exists($override_path))
-					$file = str_replace(__PS_BASE_URI__.'modules/', __PS_BASE_URI__.'themes/'._THEME_NAME_.'/'.$type.'/modules/', $file, $different);
-                elseif ($different_css && file_exists($override_path_css))
-                    $file = $override_path_css;
-
-				if ($css_media_type)
-					$list_uri[$file] = $media;
+					if ($different && @filemtime($override_path))
+						$file = str_replace(__PS_BASE_URI__.'modules/', __PS_BASE_URI__.'themes/'._THEME_NAME_.'/'.$type.'/modules/', $file, $different);
+					elseif ($different_css && @filemtime($override_path_css))
+						$file = $override_path_css;
+					if ($css_media_type)
+						$list_uri[$file] = $media;
+					else
+						$list_uri[] = $file;
+				}
 				else
-					$list_uri[] = $file;
+					$list_uri[$file] = $media;
 			}
 			else
 				$list_uri[$file] = $media;
@@ -1040,43 +1072,47 @@ class FrontControllerCore extends Controller
 		}
 
 		if ($css_media_type)
-			return parent::addCSS($list_uri, $css_media_type, $offset);
-		return parent::addJS($list_uri);
+			return parent::addCSS($list_uri, $css_media_type, $offset, $check_path);
+		return parent::addJS($list_uri, $check_path);
 	}
 
-	public function removeMedia($media_uri, $css_media_type = null)
+	public function removeMedia($media_uri, $css_media_type = null, $check_path = true)
 	{
-		Frontcontroller::addMedia($media_uri, $css_media_type, null, true);
+		Frontcontroller::addMedia($media_uri, $css_media_type, null, true, $check_path);
 	}
 
 	/**
 	 * Add one or several CSS for front, checking if css files are overriden in theme/css/modules/ directory
 	 *
 	 * @see Controller::addCSS()
+	 * @param string $css_media_type
+	 * @param integer $offset
+	 * @param bool $check_path
 	 */
-	public function addCSS($css_uri, $css_media_type = 'all', $offset = null)
+	public function addCSS($css_uri, $css_media_type = 'all', $offset = null, $check_path = true)
 	{
-		return Frontcontroller::addMedia($css_uri, $css_media_type, $offset = null);
+		return Frontcontroller::addMedia($css_uri, $css_media_type, $offset = null, false, $check_path);
 	}
 
-	public function removeCSS($css_uri, $css_media_type = 'all')
+	public function removeCSS($css_uri, $css_media_type = 'all', $check_path = true)
 	{
-		return Frontcontroller::removeMedia($css_uri, $css_media_type);
+		return Frontcontroller::removeMedia($css_uri, $css_media_type, $check_path);
 	}
 
 	/**
 	 * Add one or several JS files for front, checking if js files are overriden in theme/js/modules/ directory
 	 *
 	 * @see Controller::addJS()
+	 * @param bool $check_path
 	 */
-	public function addJS($js_uri)
+	public function addJS($js_uri, $check_path = true)
 	{
-		return Frontcontroller::addMedia($js_uri);
+		return Frontcontroller::addMedia($js_uri, null, null, false, $check_path);
 	}
 
-	public function removeJS($js_uri)
+	public function removeJS($js_uri, $check_path = true)
 	{
-		return Frontcontroller::removeMedia($js_uri);
+		return Frontcontroller::removeMedia($js_uri, $check_path);
 	}
 
 	protected function recoverCart()

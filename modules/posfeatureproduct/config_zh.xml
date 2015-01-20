@@ -3,7 +3,7 @@
 	<name>posfeatureproduct</name>
 	<displayName><![CDATA[Featured products with slider on the homepage.]]></displayName>
 	<version><![CDATA[1.1]]></version>
-	<description><![CDATA[Displays featured products in any where of your homepage.]]></description>
+	<description><![CDATA[在主页任何地方显示推荐商品]]></description>
 	<author><![CDATA[Posthemes]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>1</is_configurable>

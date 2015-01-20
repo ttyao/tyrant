@@ -14,10 +14,14 @@ $_MODULE['<{blockspecials}prestashop>blockspecials_00d23a76e43b46dae9ec7aa9dcbeb
 $_MODULE['<{blockspecials}prestashop>blockspecials_b9f5c797ebbf55adccdd8539a65a0241'] = 'Disabled';
 $_MODULE['<{blockspecials}prestashop>blockspecials_61465481ac2491b37e4517960bbd4a14'] = 'Number of cached files';
 $_MODULE['<{blockspecials}prestashop>blockspecials_e80a11f1704b88ad50f8fc6ce0f43525'] = 'Specials are displayed randomly on the front-end, but since it takes a lot of ressources, it is better to cache the results. The cache is reset daily. 0 will disable the cache.';
+$_MODULE['<{blockspecials}prestashop>blockspecials_26986c3388870d4148b1b5375368a83d'] = 'Products to display';
+$_MODULE['<{blockspecials}prestashop>blockspecials_63c150b9c1204c4825ce5914aed20717'] = 'Define the number of products to be displayed in this block on home page.';
 $_MODULE['<{blockspecials}prestashop>blockspecials_c9cc8cce247e49bae79f15173ce97354'] = 'Save';
+$_MODULE['<{blockspecials}prestashop>blockspecials-home_e420850bc0f6c94eff7edb2041b206bd'] = 'No special products at this time.';
 $_MODULE['<{blockspecials}prestashop>blockspecials_d1aa22a3126f04664e0fe3f598994014'] = 'Specials';
 $_MODULE['<{blockspecials}prestashop>blockspecials_b4f95c1ea534936cc60c6368c225f480'] = 'All specials';
 $_MODULE['<{blockspecials}prestashop>blockspecials_3c9f5a6dc6585f75042bd4242c020081'] = 'No specials at this time.';
+$_MODULE['<{blockspecials}prestashop>tab_d1aa22a3126f04664e0fe3f598994014'] = 'Specials';
 
 
 return $_MODULE;

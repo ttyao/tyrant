@@ -26,7 +26,7 @@
 {if $products}
 	{if !$refresh}
 	<div class="wishlistLinkTop">
-		<a href="#" id="hideSendWishlist" class="button_account" onclick="WishlistVisibility('wishlistLinkTop', 'SendWishlist'); return false;" title="{l s='Close this wishlist' mod='blockwishlist'}" rel="nofollow">{l s='Close this wishlist' mod='blockwishlist'}</a>
+		<a href="#" id="hideWishlist" class="button_account" onclick="WishlistVisibility('wishlistLinkTop', 'Wishlist'); return false;" title="{l s='Close this wishlist' mod='blockwishlist'}" rel="nofollow">{l s='Close this wishlist' mod='blockwishlist'}</a>
 		<ul class="clearfix display_list">
 			<li>
 				<a href="#" id="hideBoughtProducts" class="button_account"  onclick="WishlistVisibility('wlp_bought', 'BoughtProducts'); return false;" title="{l s='Hide products' mod='blockwishlist'}">{l s='Hide products' mod='blockwishlist'}</a>
@@ -34,14 +34,16 @@
 			</li>
 			{if count($productsBoughts)}
 			<li>
-				<a href="#" id="hideBoughtProductsInfos" class="button_account" onclick="WishlistVisibility('wlp_bought_infos', 'BoughtProductsInfos'); return false;" title="{l s="Hide products" mod='blockwishlist'}">{l s="Hide bought product's info" mod='blockwishlist'}</a>
-				<a href="#" id="showBoughtProductsInfos" class="button_account"  onclick="WishlistVisibility('wlp_bought_infos', 'BoughtProductsInfos'); return false;" title="{l s="Show products" mod='blockwishlist'}">{l s="Show bought product's info" mod='blockwishlist'}</a>
+				<a href="#" id="hideBoughtProductsInfos" class="button_account" onclick="WishlistVisibility('wlp_bought_infos', 'BoughtProductsInfos'); return false;" title="{l s="Hide products" mod='blockwishlist'}">{l s="Hide bought products' info" mod='blockwishlist'}</a>
+				<a href="#" id="showBoughtProductsInfos" class="button_account"  onclick="WishlistVisibility('wlp_bought_infos', 'BoughtProductsInfos'); return false;" title="{l s="Show products" mod='blockwishlist'}">{l s="Show bought products' info" mod='blockwishlist'}</a>
 			</li>
 			{/if}
 		</ul>
 		<p class="wishlisturl">{l s='Permalink' mod='blockwishlist'}: <input type="text" value="{$link->getModuleLink('blockwishlist', 'view', ['token' => $token_wish])|escape:'html':'UTF-8'}" style="width:540px;" readonly="readonly" /></p>
 		<p class="submit">
-			<a href="#" id="showSendWishlist" class="button_account exclusive" onclick="WishlistVisibility('wl_send', 'SendWishlist'); return false;" title="{l s='Send this wishlist' mod='blockwishlist'}">{l s='Send this wishlist' mod='blockwishlist'}</a>
+			<div id="showSendWishlist">
+				<a href="#" class="button_account exclusive" onclick="WishlistVisibility('wl_send', 'SendWishlist'); return false;" title="{l s='Send this wishlist' mod='blockwishlist'}">{l s='Send this wishlist' mod='blockwishlist'}</a>
+			</div>
 		</p>
 	{/if}
 	<div class="wlp_bought">
@@ -63,15 +65,36 @@
 						{/if}
 							<br />{l s='Quantity' mod='blockwishlist'}:<input type="text" id="quantity_{$product.id_product}_{$product.id_product_attribute}" value="{$product.quantity|intval}" size="3"  />
 							<br /><br />
-							{l s='Priority' mod='blockwishlist'}: 
+							{l s='Priority' mod='blockwishlist'}:
 							<select id="priority_{$product.id_product}_{$product.id_product_attribute}">
 								<option value="0"{if $product.priority eq 0} selected="selected"{/if}>{l s='High' mod='blockwishlist'}</option>
 								<option value="1"{if $product.priority eq 1} selected="selected"{/if}>{l s='Medium' mod='blockwishlist'}</option>
 								<option value="2"{if $product.priority eq 2} selected="selected"{/if}>{l s='Low' mod='blockwishlist'}</option>
 							</select>
+							{if $wishlists|count > 1}
+								<br /><br />
+								{l s='Move'}:
+								<br />
+                                {foreach name=wl from=$wishlists item=wishlist}
+                                    {if $smarty.foreach.wl.first}
+                                       <select class="wishlist_change_button">
+                                       <option>---</option>
+                                    {/if}
+                                    {if $id_wishlist != {$wishlist.id_wishlist}}
+	                                        <option title="{$wishlist.name}" value="{$wishlist.id_wishlist}" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" data-quantity="{$product.quantity|intval}" data-priority="{$product.priority}" data-id-old-wishlist="{$id_wishlist}" data-id-new-wishlist="{$wishlist.id_wishlist}">
+	                                                {l s='Move to %s'|sprintf:$wishlist.name mod='blockwishlist'}
+	                                        </option>
+                                    {/if}
+                                    {if $smarty.foreach.wl.last}
+                                        </select>
+                                        <br />
+                                    {/if}
+                                {/foreach}
+                            {/if}
 						</span>
 					</div>
 				</div>
+				<br />
 				<div class="btn_action">
 					<a href="javascript:;" class="exclusive lnksave" onclick="WishlistProductManage('wlp_bought_{$product.id_product_attribute}', 'update', '{$id_wishlist}', '{$product.id_product}', '{$product.id_product_attribute}', $('#quantity_{$product.id_product}_{$product.id_product_attribute}').val(), $('#priority_{$product.id_product}_{$product.id_product_attribute}').val());" title="{l s='Save' mod='blockwishlist'}">{l s='Save' mod='blockwishlist'}</a>
 				</div>
@@ -80,7 +103,10 @@
 		</ul>
 	</div>
 	{if !$refresh}
-	<form method="post" class="wl_send std hidden" onsubmit="return (false);">
+	<form method="post" class="wl_send std" onsubmit="return (false);" style="display: none;">
+		<a id="hideSendWishlist" class="button_account btn icon"  href="#" onclick="WishlistVisibility('wl_send', 'SendWishlist'); return false;" rel="nofollow" title="{l s='Close this wishlist' mod='blockwishlist'}">
+			<i class="icon-remove"></i>
+		</a>
 		<fieldset>
 			<p class="required">
 				<label for="email1">{l s='Email' mod='blockwishlist'}1 <sup>*</sup></label>
@@ -116,7 +142,7 @@
 			{if $bought.quantity > 0}
 				<tr>
 					<td class="first_item">
-						<span style="float:left;"><img src="{$link->getImageLink($product.link_rewrite, $product.cover, 'small')|escape:'html'}" alt="{$product.name|escape:'html':'UTF-8'}" /></span>			
+						<span style="float:left;"><img src="{$link->getImageLink($product.link_rewrite, $product.cover, 'small')|escape:'html'}" alt="{$product.name|escape:'html':'UTF-8'}" /></span>
 						<span style="float:left;">
 							{$product.name|truncate:40:'...'|escape:'html':'UTF-8'}
 						{if isset($product.attributes_small)}

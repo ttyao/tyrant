@@ -12,7 +12,6 @@ $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_fb32badede7c861
 $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_f4f70727dc34561dfde1a3c529b6205c'] = '设置';
 $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_aafe06caae02aee29775402368a6d22c'] = '关于顾客数据隐私的信息';
 $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_03e1a999dcdb904300ee1b1e767c83c9'] = '信息将会在创建账户的表单显示。';
-$_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_4df598f7b52577f4bc8d7d408c91eb1a'] = '温馨提示：如果客户隐私信息在此表中无法完成，你可以添加一个连接到你的一个网页的超链接。你可以通过＂喜好＂菜单里CMS页面来创建新页面。';
 $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_c9cc8cce247e49bae79f15173ce97354'] = '保存';
 $_MODULE['<{blockcustomerprivacy}prestashop>blockcustomerprivacy_fb0440f9ca32a8b49eded51b09e70821'] = '顾客数据隐私';
 

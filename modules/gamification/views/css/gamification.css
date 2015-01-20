@@ -58,15 +58,15 @@
 
 ul#gamification_badges_list {
 	list-style-type:none;
-	overflow: auto;
 	height: 300px;
 	width: 315px;
 	padding-top:10px;
+	overflow: auto;
 }
 
 ul#gamification_badges_list li {
 	display: block;
-    min-height: 110px;
+    min-height: 165px;
     padding: 5px;
     width: 132px;
 	margin-bottom:10px;

@@ -3,6 +3,7 @@
 global $_MODULE;
 $_MODULE = array();
 
+$_MODULE['<{dashgoals}prestashop>dashgoals_50698c5b8ffaf2b7dd089898a244a668'] = 'Dashboard Goals';
 $_MODULE['<{dashgoals}prestashop>dashgoals_86f5978d9b80124f509bdb71786e929e'] = 'January';
 $_MODULE['<{dashgoals}prestashop>dashgoals_659e59f062c75f81259d22786d6c44aa'] = 'February';
 $_MODULE['<{dashgoals}prestashop>dashgoals_fa3e5edac607a88d8fd7ecb9d6d67424'] = 'March';
@@ -29,7 +30,9 @@ $_MODULE['<{dashgoals}prestashop>config_e4c3da18c66c0147144767efeb59198f'] = 'Co
 $_MODULE['<{dashgoals}prestashop>config_8c804960da61b637c548c951652b0cac'] = 'Average Cart Value';
 $_MODULE['<{dashgoals}prestashop>config_11ff9f68afb6b8b5b8eda218d7c83a65'] = 'Sales';
 $_MODULE['<{dashgoals}prestashop>config_c9cc8cce247e49bae79f15173ce97354'] = 'Save';
-$_MODULE['<{dashgoals}prestashop>dashboard_zone_two_791d8672c108dc2fdf9989373bbf4484'] = 'Your forecast';
+$_MODULE['<{dashgoals}prestashop>dashboard_zone_two_89c1265be62d3ba835a3d963db5956b0'] = 'Forecast';
+$_MODULE['<{dashgoals}prestashop>dashboard_zone_two_f1206f9fadc5ce41694f69129aecac26'] = 'Configure';
+$_MODULE['<{dashgoals}prestashop>dashboard_zone_two_63a6a88c066880c5ac42394a22803ca6'] = 'Refresh';
 $_MODULE['<{dashgoals}prestashop>dashboard_zone_two_e7935ae6c516d89405ec532359d2d75a'] = 'Traffic';
 $_MODULE['<{dashgoals}prestashop>dashboard_zone_two_3bb1503332637805beddb73a2dd1fe1b'] = 'Conversion';
 $_MODULE['<{dashgoals}prestashop>dashboard_zone_two_8c804960da61b637c548c951652b0cac'] = 'Average Cart Value';

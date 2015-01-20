@@ -1,12 +1,15 @@
 <?php
 session_start();
-mb_internal_encoding('UTF-8');
 
 if (!defined('_PS_ADMIN_DIR_'))
-		define('_PS_ADMIN_DIR_', getcwd().'/../');
+		define('_PS_ADMIN_DIR_',dirname(__FILE__).'/../../');
 
 require_once(_PS_ADMIN_DIR_.'/../config/config.inc.php');
 require_once(_PS_ADMIN_DIR_.'/init.php');
+
+if (function_exists('mb_internal_encoding'))
+	mb_internal_encoding('UTF-8');
+
 $products_accesses = Profile::getProfileAccess(Context::getContext()->employee->id_profile, Tab::getIdFromClassName('AdminProducts'));
 $cms_accesses = Profile::getProfileAccess(Context::getContext()->employee->id_profile, Tab::getIdFromClassName('AdminCmsContent'));
 
@@ -30,8 +33,9 @@ if (!$products_accesses['edit'] && !$cms_accesses['edit'])
 //    |   |   |   |- responsivefilemanager
 //    |   |   |   |   |- plugin.min.js
 
-$base_url="http://".$_SERVER['HTTP_HOST'];  // DON'T TOUCH (base url (only domain) of site (without final /)).
-$upload_dir = __PS_BASE_URI__.'img/cms/'; // path from base_url to base of upload folder (with start and final /)
+
+$base_url= Tools::getHttpHost(true);  // DON'T TOUCH (base url (only domain) of site (without final /)).
+$upload_dir = __PS_BASE_URI__.'/img/cms/'; // path from base_url to base of upload folder (with start and final /)
 $current_path = _PS_ROOT_DIR_.'/img/cms/'; // relative path from filemanager folder to upload folder (with final /)
 //thumbs folder can't put inside upload folder
 $thumbs_base_path = _PS_ROOT_DIR_.'/img/tmp/cms/'; // relative path from filemanager folder to thumbs folder (with final /)
@@ -42,7 +46,7 @@ $thumbs_base_path = _PS_ROOT_DIR_.'/img/tmp/cms/'; // relative path from fileman
 
 $MaxSizeUpload=100; //Mb
 
-$default_language="zh"; //default language file name
+$default_language="en"; //default language file name
 $icon_theme="ico"; //ico or ico_dark you can cusatomize just putting a folder inside filemanager/img
 $show_folder_size=true; //Show or not show folder size in list view feature in filemanager (is possible, if there is a large folder, to greatly increase the calculations)
 $show_sorting_bar=true; //Show or not show sorting feature in filemanager
@@ -96,10 +100,10 @@ $duplicate_files=true;
 //Allowed extensions (lowercase insert)
 //**********************
 $ext_img = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'tiff', 'svg'); //Images
-$ext_file = array('doc', 'docx','rtf', 'pdf', 'xls', 'xlsx', 'txt', 'csv','html','xhtml','psd','sql','log','fla','xml','ade','adp','mdb','accdb','ppt','pptx','odt','ots','ott','odb','odg','otp','otg','odf','ods','odp','css','ai'); //Files
-$ext_video = array('mov', 'mpeg', 'mp4', 'avi', 'mpg','wma',"flv","webm"); //Video
-$ext_music = array('mp3', 'm4a', 'ac3', 'aiff', 'mid','ogg','wav'); //Audio
-$ext_misc = array('zip', 'rar','gz','tar','iso','dmg'); //Archives
+$ext_file = array('pdf'); //array('doc', 'docx','rtf', 'pdf', 'xls', 'xlsx', 'txt', 'csv','html','xhtml','psd','sql','log','fla','xml','ade','adp','mdb','accdb','ppt','pptx','odt','ots','ott','odb','odg','otp','otg','odf','ods','odp','css','ai'); //Files
+$ext_video = array();//array('mov', 'mpeg', 'mp4', 'avi', 'mpg','wma',"flv","webm"); //Video
+$ext_music = array();//array('mp3', 'm4a', 'ac3', 'aiff', 'mid','ogg','wav'); //Audio
+$ext_misc = array();// array('zip', 'rar','gz','tar','iso','dmg'); //Archives
 
 $ext=array_merge($ext_img, $ext_file, $ext_misc, $ext_video,$ext_music); //allowed extensions
 

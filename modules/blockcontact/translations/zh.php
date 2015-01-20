@@ -16,7 +16,6 @@ $_MODULE['<{blockcontact}prestashop>blockcontact_673ae02fffb72f0fe68a66f096a0134
 $_MODULE['<{blockcontact}prestashop>blockcontact_736c5a7e834b7021bfa97180fc453115'] = '联系我们的专家支援组！';
 $_MODULE['<{blockcontact}prestashop>nav_02d4482d332e1aef3437cd61c9bcc624'] = '联系我们';
 $_MODULE['<{blockcontact}prestashop>blockcontact_9cfc9b74983d504ec71db33967591249'] = '联系我们';
-$_MODULE['<{blockcontact}prestashop>nav_9cfc9b74983d504ec71db33967591249'] = '联系我们';
 
 
 return $_MODULE;

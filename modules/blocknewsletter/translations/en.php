@@ -39,6 +39,9 @@ $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_b37f32d509cf5aabe806b1679
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_506e58042922bff5bd753dc612e84f5b'] = 'Welcome voucher code';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_1d612b943b8f4792bff603384a46e5f1'] = 'Leave blank to disable by default.';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_c9cc8cce247e49bae79f15173ce97354'] = 'Save';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_b192ab83a19105bbf1e2d1fab548249a'] = 'Export Newsletter Subscribers';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_c97b56b16c6fda0ef4e93f2135479647'] = 'Generate a .CSV file based on BlockNewsletter subscribers data. Only subscribers without an account on the shop will be exported.';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_dbb392a2dc9b38722e69f6032faea73e'] = 'Export .CSV file';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_f6df4ad6dc4798f26d1f2460eef4f2e9'] = 'Search for addresses';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_375afa60efcc1d48300bd339cb8154b0'] = 'Email address to search';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_e347582d22a4ba3c822de504b23d4704'] = 'Example: contact@prestashop.com or @prestashop.com';

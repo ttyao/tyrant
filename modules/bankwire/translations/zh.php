@@ -43,10 +43,6 @@ $_MODULE['<{bankwire}prestashop>payment_return_19c419a8a4f1cd621853376a930a2e24'
 $_MODULE['<{bankwire}prestashop>payment_return_b9a1cae09e5754424e33764777cfcaa0'] = '一旦收到您的汇款凭证, 我们会立即发送您的订单。';
 $_MODULE['<{bankwire}prestashop>payment_return_ca7e41a658753c87973936d7ce2429a8'] = '对于任何问题或提供进一步资料，请联系我们';
 $_MODULE['<{bankwire}prestashop>payment_return_d15feee53d81ea16269e54d4784fa123'] = '我们在您的订单中发现一个问题。如果您认为这是一个错误，您可以联系我们';
-$_MODULE['<{bankwire}prestashop>payment_execution_99227bacb2b4dfa29ce1701ac265a923'] = '银行电汇付款';
-$_MODULE['<{bankwire}prestashop>payment_execution_b939c4940deb5588f47ee8f12c61f11f'] = '请单击“确认订单”来确认您的订单';
-$_MODULE['<{bankwire}prestashop>payment_return_63fb3f7c94ee5d8027bf599885de279d'] = '别忘了在“你的电汇”主题下添加订单号%d';
-$_MODULE['<{bankwire}prestashop>payment_return_dfe239de8c0b2453a8e8f7657a191d5d'] = '客户服务';
 
 
 return $_MODULE;

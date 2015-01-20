@@ -13,17 +13,12 @@ $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_84b0c5fdef19ab8ef61cd80
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_00d23a76e43b46dae9ec7aa9dcbebb32'] = '启用';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_b9f5c797ebbf55adccdd8539a65a0241'] = '禁用';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_c9cc8cce247e49bae79f15173ce97354'] = '保存';
-$_MODULE['<{blockbestsellers}prestashop>blockbestsellers-home_3cb29f0ccc5fd220a97df89dafe46290'] = '最畅销产品';
-$_MODULE['<{blockbestsellers}prestashop>blockbestsellers-home_d3da97e2d9aee5c8fbe03156ad051c99'] = '更多';
-$_MODULE['<{blockbestsellers}prestashop>blockbestsellers-home_4351cfebe4b61d8aa5efa1d020710005'] = '查看';
-$_MODULE['<{blockbestsellers}prestashop>blockbestsellers-home_eae99cd6a931f3553123420b16383812'] = '最畅销款汇总';
-$_MODULE['<{blockbestsellers}prestashop>blockbestsellers-home_adc570b472f54d65d3b90b8cee8368a9'] = '敬请期待最畅销款';
+$_MODULE['<{blockbestsellers}prestashop>blockbestsellers-home_09a5fe24fe0fc9ce90efc4aa507c66e7'] = '暂时无畅销商品。';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_1d0a2e1f62ccf460d604ccbc9e09da95'] = '阅览畅销商品';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_3cb29f0ccc5fd220a97df89dafe46290'] = '最畅销产品';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_eae99cd6a931f3553123420b16383812'] = '最畅销款汇总';
 $_MODULE['<{blockbestsellers}prestashop>blockbestsellers_f7be84d6809317a6eb0ff3823a936800'] = '现在没有畅销品';
 $_MODULE['<{blockbestsellers}prestashop>tab_d7b2933ba512ada478c97fa43dd7ebe6'] = '最畅销产品';
-$_MODULE['<{blockbestsellers}prestashop>blockbestsellers-home_09a5fe24fe0fc9ce90efc4aa507c66e7'] = '暂时无畅销商品。';
 
 
 return $_MODULE;
