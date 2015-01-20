@@ -1,3 +1,17 @@
+#header .megamenuSticky {
+  position: fixed;
+  top: 0px;
+}
+
+.megamenu {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  -webkit-box-shadow: 4px 4px 2px rgba(50, 50, 50, 0.2);
+  box-shadow: 4px 4px 2px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 4px 4px 2px rgba(50, 50, 50, 0.2);
+}
+
 .megamenu > .container{
   background: rgb(207, 68, 11);
   padding: 5px 0;
@@ -27,9 +41,6 @@
 }
 .homeCenterColumn .pos-slideshow-container {
   margin: 15px;
-  -webkit-box-shadow: 4px 4px 2px rgba(50, 50, 50, 0.2);
-  box-shadow: 4px 4px 2px rgba(50, 50, 50, 0.2);
-  -moz-box-shadow: 4px 4px 2px rgba(50, 50, 50, 0.2);
 }
 
 .homeRightColumn {

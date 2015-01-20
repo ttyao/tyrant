@@ -12,7 +12,7 @@ class posspecialsproductsslide extends Module
 		$this->version = '1.0';
 		$this->author = 'posthemes';
 		parent::__construct();
-		
+
 		$this->displayName = ('Specials products slide');
 		$this->description = $this->l('Adds a block displaying your current discounted products');
 	}
@@ -57,7 +57,7 @@ class posspecialsproductsslide extends Module
 				)
 			),
 		);
-			
+
 		$helper = new HelperForm();
 		$helper->show_toolbar = false;
 		$helper->table =  $this->table;
@@ -77,29 +77,29 @@ class posspecialsproductsslide extends Module
 		return $helper->generateForm(array($fields_form));
 	}
 
-	function hookBlockPosition2($params)
-	{
-	global $smarty;
-    global $cookie;
-        $category = new Category(1);
-        $nb = (int)Configuration::get('SPECIAL_PRODUCTS_NBR');
-		
-        $products = Product::getPricesDrop((int)$cookie->id_lang, 0, ((int)$nb ? $nb : 4), false);		
-		
-		$smarty->assign(array(
-			'allow_buy_when_out_of_stock' => Configuration::get('PS_ORDER_OUT_OF_STOCK', false),
-			'max_quantity_to_allow_display' => Configuration::get('PS_LAST_QTIES'),
-			'category' => $category,
-			'products' => $products,
-			'currency' => new Currency(intval($params['cart']->id_currency)),
-			'lang' => Language::getIsoById(intval($params['cookie']->id_lang)),
-			'productNumber' => sizeof($products),
-			'homeSize' => Image::getSize('home'),
-		));
-		return $this->display(__FILE__, 'posspecialsproductsslide.tpl');
-	}
+	// function hookBlockPosition2($params)
+	// {
+	// global $smarty;
+ //    global $cookie;
+ //        $category = new Category(1);
+ //        $nb = (int)Configuration::get('SPECIAL_PRODUCTS_NBR');
+
+ //        $products = Product::getPricesDrop((int)$cookie->id_lang, 0, ((int)$nb ? $nb : 4), false);
+
+	// 	$smarty->assign(array(
+	// 		'allow_buy_when_out_of_stock' => Configuration::get('PS_ORDER_OUT_OF_STOCK', false),
+	// 		'max_quantity_to_allow_display' => Configuration::get('PS_LAST_QTIES'),
+	// 		'category' => $category,
+	// 		'products' => $products,
+	// 		'currency' => new Currency(intval($params['cart']->id_currency)),
+	// 		'lang' => Language::getIsoById(intval($params['cookie']->id_lang)),
+	// 		'productNumber' => sizeof($products),
+	// 		'homeSize' => Image::getSize('home'),
+	// 	));
+	// 	return $this->display(__FILE__, 'posspecialsproductsslide.tpl');
+	// }
 	public function getConfigFieldsValues()
-	{		
+	{
 		return array(
 			'SPECIAL_PRODUCTS_NBR' => Tools::getValue('SPECIAL_PRODUCTS_NBR', Configuration::get('SPECIAL_PRODUCTS_NBR')),
 		);
