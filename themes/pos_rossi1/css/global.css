@@ -15,7 +15,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font: inherit;
+  font-family: 'FontAwesome', 'Microsoft Yahei', 'Microsoft Yahei Regular' !important;
   font-size: 100%;
   vertical-align: baseline; }
 
