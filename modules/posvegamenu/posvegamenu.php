@@ -1126,7 +1126,7 @@ class Posvegamenu extends Module {
     $html = $this->getMenuHTML();
     $this->context->smarty->assign(
       array(
-        'megamenu' => "<div class='popupMenu hidden'>".$html."</div>",
+        'megamenu' => "<div class='popupMenu popupMenuHidden'>".$html."</div>",
         'top_offset' => Configuration::get($this->name . '_top_offset'),
         'effect' => Configuration::get($this->name . '_effect'),
         'menu_link' =>  $this->_menuLink,

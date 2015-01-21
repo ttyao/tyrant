@@ -28,7 +28,7 @@
         });
 
         $('.megamenu .blockposition1').off('click').click(function(){
-            $('.popupMenu').toggleClass('hidden');
+            $('.popupMenu').toggleClass('popupMenuHidden');
         });
     });
 </script>
