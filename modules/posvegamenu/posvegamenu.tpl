@@ -1,8 +1,6 @@
 
 <div class="navleft-container">
-	 <div id="pt_vmegamenu" class="pt_vmegamenu">
-        {$megamenu}
-    </div>
+    {$megamenu}
 </div>
 
 <div class="clearfix"></div>
@@ -27,6 +25,10 @@
             if(VMEGAMENU_POPUP_EFFECT == 0) $(this).find('.popup').stop(true,true).slideUp('fast');
             if(VMEGAMENU_POPUP_EFFECT == 1) $(this).find('.popup').stop(true,true).fadeOut('fast');
             if(VMEGAMENU_POPUP_EFFECT == 2) $(this).find('.popup').stop(true,true).hide('fast');
-        })
-});
+        });
+
+        $('.megamenu .blockposition1').off('click').click(function(){
+            $('.popupMenu').toggleClass('hidden');
+        });
+    });
 </script>

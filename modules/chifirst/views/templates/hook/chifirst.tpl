@@ -1,11 +1,11 @@
-{if count($products)>1}
+{if count($products)>=1}
   <div class="grid">
     <ul>
       {foreach from=$products item=product name=posNewProducts}
         {if $smarty.foreach.posNewProducts.index == 10}
           {break}
         {/if}
-        {$product1 = $products[10 - $smarty.foreach.posNewProducts.index]}
+        <!-- {$product1 = $products[10 - $smarty.foreach.posNewProducts.index]} -->
         <li class="yaoStageBox">
           <div class="item boxInner">
             <div class="productImg">

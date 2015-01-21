@@ -42,20 +42,20 @@ class posstaticblocks extends Module {
                 return false;
 
           // Install Tabs
-		if(!(int)Tab::getIdFromClassName('AdminPosMenu')) {
-			$parent_tab = new Tab();
-			// Need a foreach for the language
-			$parent_tab->name[$this->context->language->id] = $this->l('PosExtentions');
-			$parent_tab->class_name = 'AdminPosMenu';
-			$parent_tab->id_parent = 0; // Home tab
-			$parent_tab->module = $this->name;
-			$parent_tab->add();
-		}
+        if(!(int)Tab::getIdFromClassName('AdminPosMenu')) {
+            $parent_tab = new Tab();
+            // Need a foreach for the language
+            $parent_tab->name[$this->context->language->id] = $this->l('PosExtentions');
+            $parent_tab->class_name = 'AdminPosMenu';
+            $parent_tab->id_parent = 0; // Home tab
+            $parent_tab->module = $this->name;
+            $parent_tab->add();
+        }
 
 
         $tab = new Tab();
         // Need a foreach for the language
-    	foreach (Language::getLanguages() as $language)
+        foreach (Language::getLanguages() as $language)
             $tab->name[$language['id_lang']] = $this->l('Manage Staticblocks');
         $tab->class_name = 'AdminPosstaticblocks';
         $tab->id_parent = (int)Tab::getIdFromClassName('AdminPosMenu');
@@ -65,9 +65,9 @@ class posstaticblocks extends Module {
         return parent::install() &&
             $this->registerHook('top') &&
             $this->registerHook('blockPosition1') &&
-    		$this->registerHook('blockPosition2') &&
-    		$this->registerHook('blockPosition3') &&
-    		$this->registerHook('bannerSequence') &&
+            $this->registerHook('blockPosition2') &&
+            $this->registerHook('blockPosition3') &&
+            $this->registerHook('bannerSequence') &&
             $this->registerHook('leftColumn') &&
             $this->registerHook('rightColumn') &&
             $this->registerHook('home') &&
@@ -193,14 +193,12 @@ class posstaticblocks extends Module {
        return $this->display(__FILE__, 'block.tpl');
     }
 
-     public function hookDisplayBackOfficeHeader($params) {
-	if (method_exists($this->context->controller, 'addJquery'))
-	 {
-	  $this->context->controller->addJquery();
-	  $this->context->controller->addJS(($this->_path).'js/staticblock.js');
-	 }
+    public function hookDisplayBackOfficeHeader($params) {
+      if (method_exists($this->context->controller, 'addJquery')) {
+        $this->context->controller->addJquery();
+        $this->context->controller->addJS(($this->_path).'js/staticblock.js');
+      }
     }
-
 
     public function getModulById($id_module) {
         return Db::getInstance()->getRow('
@@ -228,14 +226,15 @@ class posstaticblocks extends Module {
                 }
             }
         $results = self::getHookByArrName($hooks);
+        PC::debug($results);
         return $results;
     }
 
     public static function getHookByArrName($arrName) {
         $result = Db::getInstance()->ExecuteS('
-		SELECT `id_hook`, `name`
-		FROM `' . _DB_PREFIX_ . 'hook`
-		WHERE `name` IN (\'' . implode("','", $arrName) . '\')');
+        SELECT `id_hook`, `name`
+        FROM `' . _DB_PREFIX_ . 'hook`
+        WHERE `name` IN (\'' . implode("','", $arrName) . '\')');
         return $result;
     }
   //$hooks = $this->getHooksByModuleId(10);
@@ -255,24 +254,24 @@ class posstaticblocks extends Module {
     }
 
     private function _installHookCustomer(){
-		$hookspos = array(
-				'blockPosition1',
-				'blockPosition2',
-				'blockPosition3',
-				'bannerSequence'
-			);
-		foreach( $hookspos as $hook ){
-			if( Hook::getIdByName($hook) ){
+        $hookspos = array(
+                'blockPosition1',
+                'blockPosition2',
+                'blockPosition3',
+                'bannerSequence'
+            );
+        foreach( $hookspos as $hook ){
+            if( Hook::getIdByName($hook) ){
 
-			} else {
-				$new_hook = new Hook();
-				$new_hook->name = pSQL($hook);
-				$new_hook->title = pSQL($hook);
-				$new_hook->add();
-				$id_hook = $new_hook->id;
-			}
-		}
-		return true;
-	}
+            } else {
+                $new_hook = new Hook();
+                $new_hook->name = pSQL($hook);
+                $new_hook->title = pSQL($hook);
+                $new_hook->add();
+                $id_hook = $new_hook->id;
+            }
+        }
+        return true;
+    }
 
 }

@@ -40,7 +40,9 @@
   top: 0;
   left: 0;}
 #pos_search_top .form-group .bootstrap-select{
-  max-width: 105px;}
+  max-width: 105px;
+  display: none; /*hide category */
+}
 #pos_search_top .form-group .bootstrap-select .btn.selectpicker{
   padding: 3px 0 4px 10px;
   font-size: 14px;

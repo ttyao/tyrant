@@ -104,7 +104,7 @@
 					</div>
 					<div class="megamenu">
 						<div class="container">
-							<div class="blockposition2">
+							<div class="blockposition1 topPopupMenu">
 								{hook h="blockPosition1"}
 							</div>
 							<div class="megamenu_main homeCenterColumn">

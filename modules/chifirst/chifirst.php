@@ -137,6 +137,8 @@ class ChiFirst extends Module
       (int) Context::getContext()->language->id,
       (int) Context::getContext()->shop->id);
     $products = $category->getProducts((int) Context::getContext()->language->id, 0, 10);
+    // PC::debug($category);
+    // PC::debug($products);
     // $category = new Category(Context::getContext()->shop->getCategory(), (int) Context::getContext()->language->id);
     // $products = Product::getNewProducts((int) Context::getContext()->language->id);
     $this->smarty->assign(array(

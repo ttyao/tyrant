@@ -50,6 +50,7 @@ class Posvegamenu extends Module {
     $this->installDb();
     return parent::install() &&
       $this->registerHook('displayHeader') &&
+      $this->registerHook('blockposition1') &&
       $this->registerHook('blockposition2') &&
       $this->registerHook('leftcolumn');
   }
@@ -1120,61 +1121,72 @@ class Posvegamenu extends Module {
 
 	}
 
-    public function hookBlockposition2() {
-        //$lang_id = (int) Configuration::get('PS_LANG_DEFAULT');
-		$lang_id = (int)Context::getContext()->language->id;
-        $category = new Category();
-        //$homeCates = $category->getHomeCategories($lang_id);
-		$this->getMenuCustomerLink($lang_id);
-	    $item = 0;
-        $html = "";
-        $showhome = Configuration::get($this->name . '_show_homepage');
-        if ($showhome) {
-            $page_name = Dispatcher::getInstance()->getController();
-            $active = null;
-            if ($page_name == 'index')
-                $active = ' act';
-            $id = "_home";
-            $html .= '<div id="ver_pt_menu' . $id . '" class="pt_menu' . $active . '">';
-            $html .= '<div class="parentMenu">';
-            $html .= '<a href="' . __PS_BASE_URI__ . '">';
-            $html .= '<span>' . $this->l('Home') . '</span>';
-            $html .= '</a>';
-            $html .= '</div>';
-            $html .= '</div>';
-        }
+  public function hookBlockposition1() {
+    $this->_menuLink = '';
+    $html = $this->getMenuHTML();
+    $this->context->smarty->assign(
+      array(
+        'megamenu' => "<div class='popupMenu hidden'>".$html."</div>",
+        'top_offset' => Configuration::get($this->name . '_top_offset'),
+        'effect' => Configuration::get($this->name . '_effect'),
+        'menu_link' =>  $this->_menuLink,
+      )
+    );
+    return $this->display(__FILE__, 'posvegamenu.tpl');
+  }
 
-        // foreach ($homeCates as $cate) {
-            // $item++;
-           // // $html .= $this->drawCustomMenuItem($cate['id_category'], 0, false, $item, $lang_id);
-        // }
-		$html .= $this->_menuLink;
+  public function hookBlockposition2() {
+    $this->_menuLink = '';
+    $html = $this->getMenuHTML();
+    $this->context->smarty->assign(
+      array(
+        'megamenu' => $html,
+        'top_offset' => Configuration::get($this->name . '_top_offset'),
+        'effect' => Configuration::get($this->name . '_effect'),
+        'menu_link' =>  $this->_menuLink,
+      )
+    );
+    return $this->display(__FILE__, 'posvegamenu.tpl');
+  }
 
-        $blockCustomer = $this->getStaticBlockContent(null, 'item');
-        foreach ($blockCustomer as $bc) {
-            $html .= $this->drawCustomMenuBlock($bc['identify'], $bc);
-        }
-        $isDhtml = (Configuration::get('BLOCK_CATEG_DHTML') == 1 ? true : false);
-        $blockCategTree = $this->getblockCategTree();
-        $this->smarty->assign('blockCategTree', $blockCategTree);
-        if (file_exists(_PS_THEME_DIR_ . 'modules/blockcategories/blockcategories.tpl'))
-            $this->smarty->assign('branche_tpl_path', _PS_THEME_DIR_ . 'modules/blockcategories/category-tree-branch.tpl');
-        else
-            $this->smarty->assign('branche_tpl_path', _PS_MODULE_DIR_ . 'blockcategories/category-tree-branch.tpl');
-        $this->smarty->assign('isDhtml', $isDhtml);
-        $this->context->smarty->assign(
-                array(
-                    'megamenu' => $html,
-                    'top_offset' => Configuration::get($this->name . '_top_offset'),
-                    'effect' => Configuration::get($this->name . '_effect'),
-					 'menu_link' =>  $this->_menuLink,
-                )
-        );
-        //$test = $this->seperateColumns($homeCates,4, $lang_id);
-
-
-        return $this->display(__FILE__, 'posvegamenu.tpl');
+  private function getMenuHTML() {
+    $lang_id = (int)Context::getContext()->language->id;
+    $category = new Category();
+    //$homeCates = $category->getHomeCategories($lang_id);
+    $this->getMenuCustomerLink($lang_id);
+    $item = 0;
+    $html = "";
+    $showhome = Configuration::get($this->name . '_show_homepage');
+    if ($showhome) {
+      $page_name = Dispatcher::getInstance()->getController();
+      $active = null;
+      if ($page_name == 'index')
+          $active = ' act';
+      $id = "_home";
+      $html .= '<div id="pt_vmegamenu" class="pt_vmegamenu"><div id="ver_pt_menu' . $id . '" class="pt_menu' . $active . '">';
+      $html .= '<div class="parentMenu">';
+      $html .= '<a href="' . __PS_BASE_URI__ . '">';
+      $html .= '<span>' . $this->l('Home') . '</span>';
+      $html .= '</a>';
+      $html .= '</div>';
+      $html .= '</div></div>';
     }
+
+    $html .= '<div id="pt_vmegamenu" class="pt_vmegamenu">'.$this->_menuLink.'</div>';
+    $blockCustomer = $this->getStaticBlockContent(null, 'item');
+    foreach ($blockCustomer as $bc) {
+      $html .= $this->drawCustomMenuBlock($bc['identify'], $bc);
+    }
+    $isDhtml = (Configuration::get('BLOCK_CATEG_DHTML') == 1 ? true : false);
+    $blockCategTree = $this->getblockCategTree();
+    $this->smarty->assign('blockCategTree', $blockCategTree);
+    if (file_exists(_PS_THEME_DIR_ . 'modules/blockcategories/blockcategories.tpl'))
+      $this->smarty->assign('branche_tpl_path', _PS_THEME_DIR_ . 'modules/blockcategories/category-tree-branch.tpl');
+    else
+      $this->smarty->assign('branche_tpl_path', _PS_MODULE_DIR_ . 'blockcategories/category-tree-branch.tpl');
+    $this->smarty->assign('isDhtml', $isDhtml);
+    return $html;
+  }
 
 	public function hookLeftColumn() {
         //$lang_id = (int) Configuration::get('PS_LANG_DEFAULT');

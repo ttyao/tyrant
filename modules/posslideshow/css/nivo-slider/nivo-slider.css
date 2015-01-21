@@ -9,7 +9,7 @@
  * Contributing author: Tyler Smith (@mbmufffin)
  */
 .pos-slideshow-container { }
- 
+
 /* Browser Resets */
 .pos-slideshow-container .flex-container a:active,
 .pos-slideshow-container .flexslider a:active,
@@ -17,18 +17,22 @@
 .pos-slideshow-container .flexslider a:focus  {outline: none;}
 .pos-slideshow-container .slides,
 .pos-slideshow-container .flex-control-nav,
-.pos-slideshow-container .flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+.pos-slideshow-container .flex-direction-nav {margin: 0; padding: 0; list-style: none;}
 
 /* FlexSlider Necessary Styles
-*********************************/ 
-.pos-slideshow-container .flexslider {margin: 0; padding: 0;}
+*********************************/
+.pos-slideshow-container .flexslider {margin: 0; padding: 0;
+    -webkit-box-shadow: 4px 4px 2px rgba(50, 50, 50, 0.2);
+    box-shadow: 4px 4px 2px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow: 4px 4px 2px rgba(50, 50, 50, 0.2);
+    }
 .pos-slideshow-container .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden; position: relative; } /* Hide the slides before the JS is loaded. Avoids image jumping */
 .pos-slideshow-container .flexslider .slides img {width: 100%; display: block;}
 .pos-slideshow-container .flex-pauseplay span {text-transform: capitalize;}
 
 /* Clearfix for the .slides element */
-.pos-slideshow-container .slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
-html[xmlns] .pos-slideshow-container .slides {display: block;} 
+.pos-slideshow-container .slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .pos-slideshow-container .slides {display: block;}
 * html .pos-slideshow-container .slides {height: 1%;}
 
 /* No JavaScript Fallback */
@@ -86,7 +90,7 @@ html[xmlns] .pos-slideshow-container .slides {display: block;}
 	position: relative;
 	overflow: hidden;
 	height: auto;
-	width: 100%; 
+	width: 100%;
 }
 .nivoslider img {
 	position: absolute;
@@ -113,8 +117,8 @@ html[xmlns] .pos-slideshow-container .slides {display: block;}
 
 .banner7-caption {
 	position: absolute;
- 	left:0; 
- 	top:0;	
+ 	left:0;
+ 	top:0;
 	width: 100%;
 	background: none;
 	color: #fff;
@@ -123,14 +127,14 @@ html[xmlns] .pos-slideshow-container .slides {display: block;}
 }
 .banner7-title {
 	position: absolute;
- 	left:100px; 
+ 	left:100px;
  	top:50px;
 	width: 300px;
-	-webkit-transition:all 0.5s ease; 
+	-webkit-transition:all 0.5s ease;
   	   -moz-transition:all 0.5s ease;
      	-ms-transition:all 0.5s ease;
      	 -o-transition:all 0.5s ease;
-        	transition:all 0.5s ease;   
+        	transition:all 0.5s ease;
 }
 .banner7-title h3 {
 	color: #fff;
@@ -139,28 +143,28 @@ html[xmlns] .pos-slideshow-container .slides {display: block;}
 }
 .banner7-des {
 	position: absolute;
- 	left:100px; 
+ 	left:100px;
  	top: 110px;
 	width: 300px;
-	-webkit-transition:all 1.5s ease; 
+	-webkit-transition:all 1.5s ease;
   	   -moz-transition:all 1.5s ease;
      	-ms-transition:all 1.5s ease;
      	 -o-transition:all 1.5s ease;
-        	transition:all 1.5s ease;  
+        	transition:all 1.5s ease;
 }
 .banner7-readmore {
 	position: absolute;
- 	left:100px; 
- 	top:200px; 
-	-webkit-transition:all 1.5s ease; 
+ 	left:100px;
+ 	top:200px;
+	-webkit-transition:all 1.5s ease;
   	   -moz-transition:all 1.5s ease;
      	-ms-transition:all 1.5s ease;
      	 -o-transition:all 1.5s ease;
-        	transition:all 1.5s ease;  
+        	transition:all 1.5s ease;
 }
 .banner7-readmore a {
 	color: #fff;
-	font-size: 20px; 
+	font-size: 20px;
 }
 .pos-slideshow-container .pos-loading {
 	width: 16px;
@@ -182,7 +186,7 @@ html[xmlns] .pos-slideshow-container .slides {display: block;}
  * Free to use and abuse under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  */
- 
+
 /* The Nivo Slider styles */
 .nivoSlider {
 	position:relative;
@@ -198,7 +202,7 @@ html[xmlns] .pos-slideshow-container .slides {display: block;}
 }
 .nivo-main-image {
 	display: block !important;
-	position: relative !important; 
+	position: relative !important;
 	width: 100% !important;
 }
 
@@ -214,8 +218,8 @@ html[xmlns] .pos-slideshow-container .slides {display: block;}
 	margin:0;
 	z-index:6;
 	display:none;
-	background:white; 
-	filter:alpha(opacity=0); 
+	background:white;
+	filter:alpha(opacity=0);
 	opacity:0;
 }
 /* The slices and boxes in the Slider */
@@ -236,12 +240,12 @@ html[xmlns] .pos-slideshow-container .slides {display: block;}
 
 .nivo-caption {
   position:absolute;
- 	
-  right: 0; 
- 	
-  top: 40%;	
+
+  right: 0;
+
+  top: 40%;
 	color:#fff;
-	
+
   width: 50%;
 	z-index:8;
 }
@@ -271,5 +275,5 @@ filter: alpha(opacity=100);
 opacity:1;
 -webkit-animation: fadeInLeft 300ms ease;
 -moz-animation: fadeInLeft 300ms ease;
--ms-animation: fadeInLeft 300ms ease;	
+-ms-animation: fadeInLeft 300ms ease;
 }
