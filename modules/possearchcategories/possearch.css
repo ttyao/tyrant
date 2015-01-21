@@ -16,7 +16,7 @@
   display: none;}
 #pos_search_top .form-control{
   border: 0;
-  padding: 0 45px 0 110px;
+  padding: 0 45px 0 10px;
   height: 17px;}
 #pos_search_top .submit_search{
   position: absolute;

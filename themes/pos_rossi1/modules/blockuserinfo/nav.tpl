@@ -29,19 +29,6 @@
 		<li id="header_link_sitemap">
 			<a href="{$link->getModuleLink('blockwishlist', 'mywishlist', array(), true)|addslashes}" title="My Wishlist">{l s='my wishlist' mod='blockuserinfo'}</a>
 		</li>
-		<li>
-			<a href="{$link->getPageLink('order')|escape:'html'}" title="Check Out">{l s='check out' mod='blockuserinfo'}</a>
-		</li>
-		{if !$PS_CATALOG_MODE}
-		<li id="shopping_cart">
-			<a href="{$link->getPageLink($order_process, true)|escape:'html'}" title="{l s='View my shopping cart' mod='blockuserinfo'}" rel="nofollow">{l s='Cart' mod='blockuserinfo'}
-			<span class="ajax_cart_quantity{if $cart_qties == 0} unvisible{/if}">{$cart_qties}</span>
-			<span class="ajax_cart_product_txt{if $cart_qties != 1} unvisible{/if}">{l s='Item' mod='blockuserinfo'}</span>
-			<span class="ajax_cart_product_txt_s{if $cart_qties < 2} unvisible{/if}">{l s='Items' mod='blockuserinfo'}</span>
-			<span class="ajax_cart_no_product{if $cart_qties > 0} unvisible{/if}">{l s='(empty)' mod='blockuserinfo'}</span>
-			</a>
-		</li>
-		{/if}
 		<li class="user_status">
 			{if $logged}
 				<a href="{$link->getPageLink('my-account', true)|escape:'html'}" title="{$cookie->customer_firstname} {$cookie->customer_lastname}" class="account" rel="nofollow">{l s='My Account' mod='blockuserinfo'}</a>

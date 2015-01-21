@@ -110,6 +110,7 @@
 							<div class="megamenu_main homeCenterColumn">
 								{hook h="megamenu"}
 							</div>
+							<div class="topCart" />
 						</div>
 					</div>
 				</header>
