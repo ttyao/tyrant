@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>statsbestsuppliers</name>
-	<displayName><![CDATA[Best suppliers]]></displayName>
-	<version><![CDATA[1.2]]></version>
-	<description><![CDATA[Adds a list of the best suppliers to the Stats dashboard.]]></description>
+	<displayName><![CDATA[最佳供应商]]></displayName>
+	<version><![CDATA[1.3.1]]></version>
+	<description><![CDATA[在仪表盘添加最好的供应商列表。]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[analytics_stats]]></tab>
 	<is_configurable>0</is_configurable>

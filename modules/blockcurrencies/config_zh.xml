@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>blockcurrencies</name>
-	<displayName><![CDATA[Currency block]]></displayName>
+	<displayName><![CDATA[货币模块]]></displayName>
 	<version><![CDATA[0.3.1]]></version>
-	<description><![CDATA[Adds a block allowing customers to choose their preferred shopping currency.]]></description>
+	<description><![CDATA[添加选择货币的模块]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>0</is_configurable>

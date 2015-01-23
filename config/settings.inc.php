@@ -1,8 +1,8 @@
 <?php
 define('_DB_SERVER_', 'localhost');
 define('_DB_NAME_', 'uswusc5_pr750');
-define('_DB_USER_', 'uswusc5_pr750');
-define('_DB_PASSWD_', 'E(46Pc(Sf7');
+define('_DB_USER_', 'root');
+define('_DB_PASSWD_', 'root');
 define('_DB_PREFIX_', 'ps_');
 define('_MYSQL_ENGINE_', 'InnoDB');
 define('_PS_CACHING_SYSTEM_', 'CacheMemcache');

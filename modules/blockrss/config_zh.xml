@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>blockrss</name>
-	<displayName><![CDATA[RSS feed block]]></displayName>
-	<version><![CDATA[1.2.1]]></version>
-	<description><![CDATA[Adds a block displaying a RSS feed.]]></description>
+	<displayName><![CDATA[RSS Feed区域]]></displayName>
+	<version><![CDATA[1.2.3]]></version>
+	<description><![CDATA[增加一个版块显示RSS订阅]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>1</is_configurable>

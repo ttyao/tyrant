@@ -160,6 +160,7 @@
 		<module name="pigmbhpaymill"/>
 		<module name="prediggo"/>
 		<module name="prestastats"/>
+		<module name="psphipay"/>
 		<module name="realexredirect"/>
 		<module name="riskified"/>
 		<module name="sendinblue"/>

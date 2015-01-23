@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>blockcms</name>
-	<displayName><![CDATA[CMS block]]></displayName>
+	<displayName><![CDATA[CMS 模块]]></displayName>
 	<version><![CDATA[2.0.1]]></version>
-	<description><![CDATA[Adds a block with several CMS links.]]></description>
+	<description><![CDATA[增加一个几个CMS连接的区域]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>1</is_configurable>

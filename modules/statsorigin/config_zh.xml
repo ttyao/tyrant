@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>statsorigin</name>
-	<displayName><![CDATA[Visitors origin]]></displayName>
-	<version><![CDATA[1.2]]></version>
-	<description><![CDATA[Adds a graph displaying the websites your visitors came from to the Stats dashboard.]]></description>
+	<displayName><![CDATA[访问者来源]]></displayName>
+	<version><![CDATA[1.3.1]]></version>
+	<description><![CDATA[在仪表盘添加一个显示访问者来自的网站图表。]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[analytics_stats]]></tab>
 	<is_configurable>0</is_configurable>

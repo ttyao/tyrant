@@ -27,5 +27,6 @@
 require_once(dirname(__FILE__).'/phpconsole/src/PhpConsole/__autoload.php');
 PhpConsole\Helper::register();
 PC::getConnector()->getDebugDispatcher()->detectTraceAndSource = true;
+PC::debug("test");
 require(dirname(__FILE__).'/config/config.inc.php');
 Dispatcher::getInstance()->dispatch();

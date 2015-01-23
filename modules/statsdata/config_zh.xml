@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>statsdata</name>
-	<displayName><![CDATA[Data mining for statistics]]></displayName>
-	<version><![CDATA[1.3]]></version>
-	<description><![CDATA[This module must be enabled if you want to use statistics.]]></description>
+	<displayName><![CDATA[数据挖掘统计]]></displayName>
+	<version><![CDATA[1.4.1]]></version>
+	<description><![CDATA[如果你想使用统计，此模块必须启用]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[analytics_stats]]></tab>
 	<is_configurable>1</is_configurable>

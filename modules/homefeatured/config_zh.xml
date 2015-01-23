@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>homefeatured</name>
-	<displayName><![CDATA[Featured products on the homepage]]></displayName>
-	<version><![CDATA[1.5]]></version>
-	<description><![CDATA[Displays featured products in the central column of your homepage.]]></description>
+	<displayName><![CDATA[主页推荐产品]]></displayName>
+	<version><![CDATA[1.6.2]]></version>
+	<description><![CDATA[显示在您的主页中央的特色商品。]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>1</is_configurable>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>blockwishlist</name>
-	<displayName><![CDATA[Wishlist block]]></displayName>
-	<version><![CDATA[1.0]]></version>
-	<description><![CDATA[Adds a block containing the customer&#039;s wishlists.]]></description>
+	<displayName><![CDATA[收藏列表区域]]></displayName>
+	<version><![CDATA[1.2.0]]></version>
+	<description><![CDATA[增加一个包含顾客的收藏列表的模块。]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>1</is_configurable>

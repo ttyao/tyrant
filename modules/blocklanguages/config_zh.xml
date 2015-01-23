@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>blocklanguages</name>
-	<displayName><![CDATA[Language block]]></displayName>
-	<version><![CDATA[1.3.1]]></version>
+	<displayName><![CDATA[Language selector block]]></displayName>
+	<version><![CDATA[1.3.2]]></version>
 	<description><![CDATA[Adds a block allowing customers to select a language for your store&#039;s content.]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>

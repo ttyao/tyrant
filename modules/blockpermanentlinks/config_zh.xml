@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>blockpermanentlinks</name>
-	<displayName><![CDATA[Permanent links block]]></displayName>
+	<displayName><![CDATA[固定链接区域]]></displayName>
 	<version><![CDATA[0.2.1]]></version>
-	<description><![CDATA[Adds a block which  displays permanent links such as sitemap, contact, etc.]]></description>
+	<description><![CDATA[添加一个固定链接如站点地图，联系我们等。]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>0</is_configurable>

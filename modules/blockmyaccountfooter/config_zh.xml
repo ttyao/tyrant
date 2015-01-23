@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>blockmyaccountfooter</name>
-	<displayName><![CDATA[My account block for your website&#039;s footer]]></displayName>
+	<displayName><![CDATA[我的账户模块]]></displayName>
 	<version><![CDATA[1.5.1]]></version>
-	<description><![CDATA[Displays a block with links relative to user accounts.]]></description>
+	<description><![CDATA[增加与用户账户相关链接的区域]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>0</is_configurable>

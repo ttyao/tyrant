@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>blocksearch</name>
-	<displayName><![CDATA[Quick search block]]></displayName>
-	<version><![CDATA[1.5.1]]></version>
-	<description><![CDATA[Adds a quick search field to your website.]]></description>
+	<displayName><![CDATA[快速搜索区域]]></displayName>
+	<version><![CDATA[1.5.3]]></version>
+	<description><![CDATA[在您的网站增加一个快速搜索栏。]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[search_filter]]></tab>
 	<is_configurable>0</is_configurable>

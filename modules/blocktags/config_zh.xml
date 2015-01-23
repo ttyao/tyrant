@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>blocktags</name>
-	<displayName><![CDATA[Tags block]]></displayName>
-	<version><![CDATA[1.2.1]]></version>
-	<description><![CDATA[Adds a block containing your product tags.]]></description>
+	<displayName><![CDATA[标签区域]]></displayName>
+	<version><![CDATA[1.2.4]]></version>
+	<description><![CDATA[添加一个您的商品标签模块。]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>1</is_configurable>

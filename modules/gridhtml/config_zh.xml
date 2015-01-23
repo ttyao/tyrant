@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>gridhtml</name>
-	<displayName><![CDATA[Simple HTML table display]]></displayName>
-	<version><![CDATA[1.2.1]]></version>
+	<displayName><![CDATA[简单HTML]]></displayName>
+	<version><![CDATA[1.2.2]]></version>
 	<description><![CDATA[Allows the statistics system to display data in a grid.]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[administration]]></tab>

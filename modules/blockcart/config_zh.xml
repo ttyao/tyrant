@@ -2,7 +2,7 @@
 <module>
 	<name>blockcart</name>
 	<displayName><![CDATA[购物车区域]]></displayName>
-	<version><![CDATA[1.5.2]]></version>
+	<version><![CDATA[1.5.4]]></version>
 	<description><![CDATA[添加一个块包含顾客的购物车的模块。]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>

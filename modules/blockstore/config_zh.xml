@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>blockstore</name>
-	<displayName><![CDATA[Store locator block]]></displayName>
+	<displayName><![CDATA[商品模块]]></displayName>
 	<version><![CDATA[1.2.1]]></version>
-	<description><![CDATA[Displays an image link to PrestaShop&#039;s store locator feature.]]></description>
+	<description><![CDATA[显示一个图像链接到Prestashop的店铺定位功能。]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>1</is_configurable>

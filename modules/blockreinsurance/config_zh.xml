@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>blockreinsurance</name>
-	<displayName><![CDATA[Customer reassurance block]]></displayName>
+	<displayName><![CDATA[客户保证版块]]></displayName>
 	<version><![CDATA[2.1.1]]></version>
-	<description><![CDATA[Adds an information block aimed at offering helpful information to reassure customers that your store is trustworthy.]]></description>
+	<description><![CDATA[增加一个信息版块提供有用的信息，让客户放心您的店铺是值得信赖的。]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>1</is_configurable>

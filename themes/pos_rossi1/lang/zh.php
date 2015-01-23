@@ -286,7 +286,7 @@ $_LANG['order-address-multishipping-products_d28f8bbb0740354aae5456da9cc56d0e'] 
 $_LANG['order-address-multishipping-products_deb10517653c255364175796ace3553f'] = '产品';
 $_LANG['order-address-multishipping_06933067aafd48425d67bcb01bba5cb6'] = '更新';
 $_LANG['order-address-multishipping_284b47b0bb63ae2df3b29f0e691d6fcf'] = '地址';
-$_LANG['order-address-multishipping_7e0bf6d67701868aac3116ade8fea957'] = '继续至结帐处';
+$_LANG['order-address-multishipping_7e0bf6d67701868aac3116ade8fea957'] = '核对订单';
 $_LANG['order-address-multishipping_82a7d396bbd6f6fef648578b4ae2ea81'] = '选择账单地址：';
 $_LANG['order-address-multishipping_86024cad1e83101d97359d7351051156'] = '商品';
 $_LANG['order-address-multishipping_8a8c9edb5531fa2f822295d1830d090f'] = '您的送货地址';
@@ -309,7 +309,7 @@ $_LANG['order-address-product-line_ec211f7c20af43e742bf2570c3cb84f9'] = '添加'
 $_LANG['order-address_06933067aafd48425d67bcb01bba5cb6'] = '更新';
 $_LANG['order-address_284b47b0bb63ae2df3b29f0e691d6fcf'] = '地址';
 $_LANG['order-address_390b4c95516a4b7faf97389ca46fc0c7'] = '使用接货地址作为帐单地址。';
-$_LANG['order-address_7e0bf6d67701868aac3116ade8fea957'] = '继续至结帐处';
+$_LANG['order-address_7e0bf6d67701868aac3116ade8fea957'] = '核对订单';
 $_LANG['order-address_82a7d396bbd6f6fef648578b4ae2ea81'] = '选择账单地址：';
 $_LANG['order-address_86024cad1e83101d97359d7351051156'] = '商品';
 $_LANG['order-address_8a8c9edb5531fa2f822295d1830d090f'] = '您的送货地址';

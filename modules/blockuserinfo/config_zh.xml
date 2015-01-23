@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>blockuserinfo</name>
-	<displayName><![CDATA[User info block]]></displayName>
+	<displayName><![CDATA[用户信息区域]]></displayName>
 	<version><![CDATA[0.3.1]]></version>
-	<description><![CDATA[Adds a block that displays information about the customer.]]></description>
+	<description><![CDATA[添加一个区域，显示有关客户的信息]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>0</is_configurable>

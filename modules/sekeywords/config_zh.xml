@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>sekeywords</name>
-	<displayName><![CDATA[Search engine keywords]]></displayName>
-	<version><![CDATA[1.2.2]]></version>
-	<description><![CDATA[Displays which keywords have led visitors to your website.]]></description>
+	<displayName><![CDATA[搜索引擎关键字]]></displayName>
+	<version><![CDATA[1.2.4]]></version>
+	<description><![CDATA[显示引导访问者进入您的网站的关键字。]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[analytics_stats]]></tab>
 	<is_configurable>0</is_configurable>
