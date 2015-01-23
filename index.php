@@ -24,8 +24,8 @@
 *  International Registered Trademark & Property of PrestaShop SA
 */
 
-require(dirname(__FILE__).'/config/config.inc.php');
 require_once(dirname(__FILE__).'/phpconsole/src/PhpConsole/__autoload.php');
 PhpConsole\Helper::register();
 PC::getConnector()->getDebugDispatcher()->detectTraceAndSource = true;
+require(dirname(__FILE__).'/config/config.inc.php');
 Dispatcher::getInstance()->dispatch();

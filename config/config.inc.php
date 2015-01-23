@@ -24,6 +24,12 @@
 *  International Registered Trademark & Property of PrestaShop SA
 */
 
+// force to load chinese site
+if (substr($_SERVER["REQUEST_URI"], 0, 3) == '/en') {
+	header("Location: http://".$_SERVER[HTTP_HOST].'/zh/'.substr($_SERVER[REQUEST_URI],4));
+	die();
+}
+
 require_once(dirname(__FILE__).'/defines.inc.php');
 $start_time = microtime(true);
 

@@ -184,40 +184,42 @@
   color: #333;
   width: 270px;
   min-width: 270px;
-  padding: 10px;}
-  @media (max-width: 767px) {
-    #header .cart_block {
-      top: 36px;
-      width: 100%; } }
-  #header .cart_block a {
-    color: #333; }
-    #header .cart_block a:hover {
-      color: #f36b6c; }
-  #header .cart_block .cart_block_list .remove_link a,
-  #header .cart_block .cart_block_list .ajax_cart_block_remove_link {
-    color: #333;
-    outline: none;
-    text-decoration: none; }
-    #header .cart_block .cart_block_list .remove_link a:hover,
-    #header .cart_block .cart_block_list .ajax_cart_block_remove_link:hover {
-      color: #f36b6c; }
-  #header .cart_block .price {
-    color: #333; }
+  padding: 10px;
+}
+@media (max-width: 767px) {
+  #header .cart_block {
+    top: 36px;
+    width: 100%; }
+}
+#header .cart_block a {
+  color: #333; }
+#header .cart_block a:hover {
+  color: #f36b6c; }
+#header .cart_block .cart_block_list .remove_link a,
+#header .cart_block .cart_block_list .ajax_cart_block_remove_link {
+  color: #333;
+  outline: none;
+  text-decoration: none; }
+  #header .cart_block .cart_block_list .remove_link a:hover,
+  #header .cart_block .cart_block_list .ajax_cart_block_remove_link:hover {
+    color: #f36b6c; }
+#header .cart_block .price {
+  color: #333; }
 /*   #header .cart_block dt {
-    background: url(../../../img/cart-shadow.png) repeat-x; }
-    #header .cart_block dt.first_item {
-      background: none; } */
-  #header .cart_block .product-atributes {
-    padding-bottom: 10px;
-    font-size: 11px; }
-    #header .cart_block .product-atributes a {
-      color: #9c9b9b; }
-      #header .cart_block .product-atributes a:hover {
-        color: #333; }
+  background: url(../../../img/cart-shadow.png) repeat-x; }
+  #header .cart_block dt.first_item {
+    background: none; } */
+#header .cart_block .product-atributes {
+  padding-bottom: 10px;
+  font-size: 11px; }
+  #header .cart_block .product-atributes a {
+    color: #9c9b9b; }
+    #header .cart_block .product-atributes a:hover {
+      color: #333; }
 /*   #header .cart_block .cart-prices {
-    border: none;
-    background: url(../../../img/cart-shadow.png) repeat-x #3d3d3d; }
-  #header .cart_block .cart-buttons {
+  border: none;
+  background: url(../../../img/cart-shadow.png) repeat-x #3d3d3d; }
+#header .cart_block .cart-buttons {
     background: url(../../../img/cart-shadow.png) repeat-x #333333; } */
 #header .block_content {
   margin-bottom: 0; }

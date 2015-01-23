@@ -148,6 +148,7 @@ define('PS_ORDER_PROCESS_OPC', 1);
 define('PS_ROUND_UP', 0);
 define('PS_ROUND_DOWN', 1);
 define('PS_ROUND_HALF', 2);
+define('PS_ROUND_HALF_UP', 2);
 
 /* Registration behavior */
 define('PS_REGISTRATION_PROCESS_STANDARD', 0);

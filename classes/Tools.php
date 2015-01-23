@@ -616,7 +616,6 @@ class ToolsCore
 			else
 				$price /= $c_rate;
 		}
-
 		return $price;
 	}
 

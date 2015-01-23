@@ -226,7 +226,6 @@ class posstaticblocks extends Module {
                 }
             }
         $results = self::getHookByArrName($hooks);
-        PC::debug($results);
         return $results;
     }
 
