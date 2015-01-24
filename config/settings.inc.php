@@ -1,6 +1,9 @@
 <?php
-define('_DB_SERVER_', 'localhost');
 define('_DB_NAME_', 'uswusc5_pr750');
+// define('_DB_SERVER_', '192.145.239.20');
+// define('_DB_USER_', 'uswusc5_pr750');
+// define('_DB_PASSWD_', 'E(46Pc(Sf7');
+define('_DB_SERVER_', 'localhost');
 define('_DB_USER_', 'root');
 define('_DB_PASSWD_', 'root');
 define('_DB_PREFIX_', 'ps_');
@@ -17,3 +20,4 @@ if (!defined('_PS_VERSION_'))
 	define('_PS_VERSION_', '1.6.0.9');
 define('_RIJNDAEL_KEY_', '8j4PIBaKRYNq19xtX0oX1ZLXMAHgFrTL');
 define('_RIJNDAEL_IV_', '8oiHFpDEEsTRT+gEPJAPiA==');
+//define('__LOCAL_DEV_URL__', 'localhost:8888');

@@ -154,18 +154,20 @@ class ShopUrlCore extends ObjectModel
 
 	public static function cacheMainDomainForShop($id_shop)
 	{
-		if (!isset(self::$main_domain_ssl[(int)$id_shop]) || !isset(self::$main_domain[(int)$id_shop]))
-		{
-			$row = Db::getInstance()->getRow('
-			SELECT domain, domain_ssl
-			FROM '._DB_PREFIX_.'shop_url
-			WHERE main = 1
-			AND id_shop = '.($id_shop !== null ? (int)$id_shop : (int)Context::getContext()->shop->id));
-			self::$main_domain[(int)$id_shop] = $row['domain'];
-			self::$main_domain_ssl[(int)$id_shop] = $row['domain_ssl'];
+		if (define('__LOCAL_DEV_PATH__')) {
+			self::$main_domain[0] = 'localhost:8888';
+			self::$main_domain_ssl[0] = 'localhost:8888';
+		} else if (!isset(self::$main_domain_ssl[(int)$id_shop]) || !isset(self::$main_domain[(int)$id_shop])) {
+			// $row = Db::getInstance()->getRow('
+			// SELECT domain, domain_ssl
+			// FROM '._DB_PREFIX_.'shop_url
+			// WHERE main = 1
+			// AND id_shop = '.($id_shop !== null ? (int)$id_shop : (int)Context::getContext()->shop->id));
+			// self::$main_domain[(int)$id_shop] = $row['domain'];
+			// self::$main_domain_ssl[(int)$id_shop] = $row['domain_ssl'];
 		}
 	}
-	
+
 	public static function resetMainDomainCache()
 	{
 		self::$main_domain = array();

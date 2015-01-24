@@ -69,7 +69,6 @@ if (_PS_DEBUG_PROFILING_)
 	include_once(_PS_TOOL_DIR_.'profiling/Db.php');
 	include_once(_PS_TOOL_DIR_.'profiling/Tools.php');
 }
-
 if (Tools::isPHPCLI() && isset($argc) && isset($argv))
 	Tools::argvToGET($argc, $argv);
 
@@ -109,6 +108,7 @@ catch (PrestaShopException $e)
 {
 	$e->displayMessage();
 }
+
 define('_THEME_NAME_', $theme_name);
 define('__PS_BASE_URI__', $context->shop->getBaseURI());
 
