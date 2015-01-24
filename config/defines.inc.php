@@ -147,8 +147,14 @@ define('PS_ORDER_PROCESS_OPC', 1);
 
 define('PS_ROUND_UP', 0);
 define('PS_ROUND_DOWN', 1);
-define('PS_ROUND_HALF', 2);
 define('PS_ROUND_HALF_UP', 2);
+define('PS_ROUND_HALF_DOWN', 3);
+define('PS_ROUND_HALF_EVEN', 4);
+define('PS_ROUND_HALF_ODD', 5);
+/* Backward compatibility */
+define('PS_ROUND_HALF', PS_ROUND_HALF_UP);
+
+define('_PS_PRICE_COMPUTE_PRECISION_', 2);
 
 /* Registration behavior */
 define('PS_REGISTRATION_PROCESS_STANDARD', 0);

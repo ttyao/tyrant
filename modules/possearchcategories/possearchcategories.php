@@ -233,6 +233,11 @@ class Possearchcategories extends Module
 
 		}
 		$shop = (object) Shop::getShop((int)$category->getShopID());
+
+		//added by Henry, to fix warning
+		$this->_html = '';
+		//
+
 		if($category->name!='Root' && $category->name!='Home'){
 			$this->_html .= '<option value="'.(int)$category->id.'">'.(isset($spacer) ? $spacer : '').$category->name.' </option>';
 		}
