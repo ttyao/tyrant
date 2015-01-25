@@ -158,6 +158,7 @@
 		<module name="payplug"/>
 		<module name="payulatam"/>
 		<module name="pigmbhpaymill"/>
+		<module name="powatag"/>
 		<module name="prediggo"/>
 		<module name="prestastats"/>
 		<module name="psphipay"/>

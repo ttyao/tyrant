@@ -53,7 +53,7 @@
 	{/if}
 	<!-- Pagination -->
 	<div id="pagination{if isset($paginationId)}_{$paginationId}{/if}" class="pagination clearfix">
-	    {if $nb_products > $products_per_page && $start!=$stop}
+<!-- 	    {if $nb_products > $products_per_page && $start!=$stop}
 			<form class="showall" action="{if !is_array($requestNb)}{$requestNb}{else}{$requestNb.requestUrl}{/if}" method="get">
 				<div>
 					{if isset($search_query) AND $search_query}
@@ -76,7 +76,8 @@
 				</div>
 			</form>
 		{/if}
-		{if $start!=$stop}
+ -->
+ 		{if $start!=$stop}
 			<ul class="pagination">
 				{if $p != 1}
 					{assign var='p_previous' value=$p-1}
@@ -186,22 +187,23 @@
 			</ul>
 		{/if}
 	</div>
-    <div class="product-count">
-    	{if ($n*$p) < $nb_products }
-    		{assign var='productShowing' value=$n*$p}
-        {else}
-        	{assign var='productShowing' value=($n*$p-$nb_products-$n*$p)*-1}
-        {/if}
-        {if $p==1}
-        	{assign var='productShowingStart' value=1}
-        {else}
-        	{assign var='productShowingStart' value=$n*$p-$n+1}
-        {/if}
-        {if $nb_products > 1}
-        	{l s='Showing %1$d - %2$d of %3$d items' sprintf=[$productShowingStart, $productShowing, $nb_products]}
-		{else}
-        	{l s='Showing %1$d - %2$d of 1 item' sprintf=[$productShowingStart, $productShowing]}
-       	{/if}
-    </div>
+	{include file="./nbr-product-page.tpl"}
+  <div class="product-count">
+  	{if ($n*$p) < $nb_products }
+  		{assign var='productShowing' value=$n*$p}
+      {else}
+      	{assign var='productShowing' value=($n*$p-$nb_products-$n*$p)*-1}
+      {/if}
+      {if $p==1}
+      	{assign var='productShowingStart' value=1}
+      {else}
+      	{assign var='productShowingStart' value=$n*$p-$n+1}
+      {/if}
+      {if $nb_products > 1}
+      	{l s='Showing %1$d - %2$d of %3$d items' sprintf=[$productShowingStart, $productShowing, $nb_products]}
+	{else}
+      	{l s='Showing %1$d - %2$d of 1 item' sprintf=[$productShowingStart, $productShowing]}
+     	{/if}
+  </div>
 	<!-- /Pagination -->
 {/if}

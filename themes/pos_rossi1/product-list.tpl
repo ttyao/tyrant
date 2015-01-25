@@ -38,7 +38,7 @@
 	{math equation="nbLi/nbItemsPerLine" nbLi=$nbLi nbItemsPerLine=$nbItemsPerLine assign=nbLines}
 	{math equation="nbLi/nbItemsPerLineTablet" nbLi=$nbLi nbItemsPerLineTablet=$nbItemsPerLineTablet assign=nbLinesTablet}
 	<!-- Products list -->
-	<ul{if isset($id) && $id} id="{$id}"{/if} class="product_list grid row{if isset($class) && $class} {$class}{/if}">
+	<ul{if isset($id) && $id} id="{$id}"{/if} class="yaoProductListOuter grid row{if isset($class) && $class} {$class}{/if}">
 	{foreach from=$products item=product name=products}
 		{math equation="(total%perLine)" total=$smarty.foreach.products.total perLine=$nbItemsPerLine assign=totModulo}
 		{math equation="(total%perLineT)" total=$smarty.foreach.products.total perLineT=$nbItemsPerLineTablet assign=totModuloTablet}
@@ -46,9 +46,9 @@
 		{if $totModulo == 0}{assign var='totModulo' value=$nbItemsPerLine}{/if}
 		{if $totModuloTablet == 0}{assign var='totModuloTablet' value=$nbItemsPerLineTablet}{/if}
 		{if $totModuloMobile == 0}{assign var='totModuloMobile' value=$nbItemsPerLineMobile}{/if}
-		<li class="ajax_block_product{if $page_name == 'index' || $page_name == 'product'} col-xs-12 col-sm-4 col-md-3{else} col-xs-12 col-sm-6 col-md-3{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLine == 0} last-in-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLine == 1} first-in-line{/if}{if $smarty.foreach.products.iteration > ($smarty.foreach.products.total - $totModulo)} last-line{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLineTablet == 0} last-item-of-tablet-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLineTablet == 1} first-item-of-tablet-line{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLineMobile == 0} last-item-of-mobile-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLineMobile == 1} first-item-of-mobile-line{/if}{if $smarty.foreach.products.iteration > ($smarty.foreach.products.total - $totModuloMobile)} last-mobile-line{/if}">
-			<div class="product-container" itemscope itemtype="http://schema.org/Product">
-				<div class="left-block">
+		<li class="ajax_block_product">
+			<div class="yaoProductListBox" itemscope itemtype="http://schema.org/Product">
+				<div class="boxInner">
 					<div class="product-image-container">
 						<a class="product_img_link"	href="{$product.link|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}" itemprop="url">
 							{if Hook::exec('rotatorImg')}
@@ -61,24 +61,24 @@
 						</a>
 						<div class="img_btn">
 							{if isset($quick_view) && $quick_view}
-							<a class="quick-view" 
-								href="{$product.link|escape:'html':'UTF-8'}" 
+							<a class="quick-view"
+								href="{$product.link|escape:'html':'UTF-8'}"
 								rel="{$product.link|escape:'html':'UTF-8'}"
 								title="{l s='Quick view'}">
 								<span></span>
 							</a>
 							{/if}
 							{if isset($comparator_max_item) && $comparator_max_item}
-								<a title="{l s='Add to compare'}" 
-									class="add_to_compare" 
-									href="{$product.link|escape:'html':'UTF-8'}" 
+								<a title="{l s='Add to compare'}"
+									class="add_to_compare"
+									href="{$product.link|escape:'html':'UTF-8'}"
 									data-id-product="{$product.id_product}">
 									<span></span>
 								</a>
 							{/if}
-							<a 	onclick="WishlistCart('wishlist_block_list', 'add', '{$product.id_product|intval}', $('#idCombination').val(), 1,'tabcategory'); return false;" 
-								class="add-wishlist wishlist_button" 
-								title="{l s='Add to Wishlist' mod='postabcateslider1'}" 
+							<a 	onclick="WishlistCart('wishlist_block_list', 'add', '{$product.id_product|intval}', $('#idCombination').val(), 1,'tabcategory'); return false;"
+								class="add-wishlist wishlist_button"
+								title="{l s='Add to Wishlist' mod='postabcateslider1'}"
 								href="#">
 								<span></span>
 							</a>
@@ -101,13 +101,13 @@
 					<h5 itemprop="name" class="product-name" >
 						{if isset($product.pack_quantity) && $product.pack_quantity}{$product.pack_quantity|intval|cat:' x '}{/if}
 						<a href="{$product.link|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}" itemprop="url" >
-							{$product.name|truncate:45:'...'|escape:'html':'UTF-8'}
+							{$product.name|truncate:25:'...'|escape:'html':'UTF-8'}
 						</a>
 					</h5>
-					{hook h='displayProductListReviews' product=$product}
+					<!-- {hook h='displayProductListReviews' product=$product}
 					<p class="product-desc" itemprop="description">
 						{$product.description_short|strip_tags:'UTF-8'|truncate:360:'...'}
-					</p>
+					</p> -->
 					{if (!$PS_CATALOG_MODE AND ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
 					<div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="content_price">
 						{if isset($product.show_price) && $product.show_price && !isset($restricted_country_mode)}
@@ -131,17 +131,17 @@
 						{if ($product.id_product_attribute == 0 || (isset($add_prod_display) && ($add_prod_display == 1))) && $product.available_for_order && !isset($restricted_country_mode) && $product.minimal_quantity <= 1 && $product.customizable != 2 && !$PS_CATALOG_MODE}
 							{if ($product.allow_oosp || $product.quantity > 0)}
 								{if isset($static_token)}
-									<a class="cate_buy exclusive ajax_add_to_cart_button btn btn-default" href="{$link->getPageLink('cart',false, NULL, "add=1&amp;id_product={$product.id_product|intval}&amp;token={$static_token}", false)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Add to cart' mod='posnewproduct'}" data-id-product="{$product.id_product|intval}">
-									{l s='Add to cart' mod='posnewproduct'}
+									<a class="cate_buy exclusive ajax_add_to_cart_button btn btn-default" href="{$link->getPageLink('cart',false, NULL, "add=1&amp;id_product={$product.id_product|intval}&amp;token={$static_token}", false)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='购买' mod='posnewproduct'}" data-id-product="{$product.id_product|intval}">
+									{l s='购买' mod='posnewproduct'}
 									</a>
 								{else}
 									<a class="cate_buy exclusive ajax_add_to_cart_button btn btn-default" href="{$link->getPageLink('cart',false, NULL, 'add=1&amp;id_product={$product.id_product|intval}', false)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Add to cart' mod='posnewproduct'}" data-id-product="{$product.id_product|intval}">
-									{l s='Add to cart' mod='posnewproduct'}
+									{l s='购买' mod='posnewproduct'}
 									</a>
-								{/if}						
+								{/if}
 							{else}
 								<span class="cate_buy exclusive ajax_add_to_cart_button btn btn-default disabled">
-								{l s='Add to cart' mod='posnewproduct'}
+								{l s='购买' mod='posnewproduct'}
 								</span>
 							{/if}
 						{/if}
@@ -160,7 +160,7 @@
 								<span class="discount">{l s='Reduced price!'}</span>
 							{/if}
 					</div>
-					{if (!$PS_CATALOG_MODE && $PS_STOCK_MANAGEMENT && ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
+					<!-- {if (!$PS_CATALOG_MODE && $PS_STOCK_MANAGEMENT && ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
 						{if isset($product.available_for_order) && $product.available_for_order && !isset($restricted_country_mode)}
 							<span itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="availability">
 								{if ($product.allow_oosp || $product.quantity > 0)}
@@ -178,7 +178,7 @@
 								{/if}
 							</span>
 						{/if}
-					{/if}
+					{/if} -->
 				</div>
 			</div><!-- .product-container> -->
 		</li>

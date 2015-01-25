@@ -910,7 +910,7 @@ class FrontControllerCore extends Controller
 			$this->context = Context::getContext();
 
 		// Retrieve the default number of products per page and the other available selections
-		$default_products_per_page = max(1, (int)Configuration::get('PS_PRODUCTS_PER_PAGE'));
+		$default_products_per_page = max(20, (int)Configuration::get('PS_PRODUCTS_PER_PAGE'));
 		$nArray = array($default_products_per_page, $default_products_per_page * 2, $default_products_per_page * 5);
 
 		if ((int)Tools::getValue('n') && (int)$total_products > 0)

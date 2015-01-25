@@ -24,11 +24,11 @@
 *}
 {include file="$tpl_dir./errors.tpl"}
 {if isset($category)}
-	{if $category->id AND $category->active}
-    	{if $scenes || $category->description || $category->id_image}
-			<div class="content_scene_cat">
-            	 {if $scenes}
-                 	<div class="content_scene">
+    {if $category->id AND $category->active}
+        {if $scenes || $category->description || $category->id_image}
+            <div class="content_scene_cat">
+                 {if $scenes}
+                    <div class="content_scene">
                         <!-- Scenes -->
                         {include file="$tpl_dir./scenes.tpl" scenes=$scenes}
                         {if $category->description}
@@ -43,12 +43,12 @@
                             </div>
                         {/if}
                     </div>
-				{else}
+                {else}
                     <!-- Category image -->
                     <div class="content_scene_cat_bg">
-						<div class="cate_img_content">
-							<img src="{$link->getCatImageLink($category->link_rewrite, $category->id_image)|escape:'html':'UTF-8'}" alt="" class="img-responsive" style="width: 100%;">
-						</div>
+                        <div class="cate_img_content">
+                            <img src="{$link->getCatImageLink($category->link_rewrite, $category->id_image)|escape:'html':'UTF-8'}" alt="" class="img-responsive" style="width: 100%;">
+                        </div>
                         {if $category->description}
                             <div class="cat_desc">
                             <span class="category-name">
@@ -71,29 +71,28 @@
                      </div>
                   {/if}
             </div>
-		{/if}
-		<h1 class="page-heading{if (isset($subcategories) && !$products) || (isset($subcategories) && $products) || !isset($subcategories) && $products} product-listing{/if}"><span class="cat-name">{$category->name|escape:'html':'UTF-8'}{if isset($categoryNameComplement)}&nbsp;{$categoryNameComplement|escape:'html':'UTF-8'}{/if}</span>{include file="$tpl_dir./category-count.tpl"}</h1>
-		
-		{if $products}
-			<div class="content_sortPagiBar clearfix">
-            	<div class="sortPagiBar clearfix">
-            		{include file="./product-sort.tpl"}
-                	{include file="./nbr-product-page.tpl"}
-				</div>
-                <div class="top-pagination-content clearfix">
-                	{include file="./product-compare.tpl"}
-					{include file="$tpl_dir./pagination.tpl"}
+        {/if}
+        <h1 class="page-heading{if (isset($subcategories) && !$products) || (isset($subcategories) && $products) || !isset($subcategories) && $products} product-listing{/if}"><span class="cat-name">{$category->name|escape:'html':'UTF-8'}{if isset($categoryNameComplement)}&nbsp;{$categoryNameComplement|escape:'html':'UTF-8'}{/if}</span>{include file="$tpl_dir./category-count.tpl"}</h1>
+        {if $products}
+            <div class="content_sortPagiBar clearfix">
+                <div class="sortPagiBar clearfix">
+                    {include file="./product-sort.tpl"}
+                    {include file="./pagination.tpl"}
                 </div>
-			</div>
-			{include file="./product-list.tpl" products=$products}
-			<div class="content_sortPagiBar">
-				<div class="bottom-pagination-content clearfix">
-					{include file="./product-compare.tpl" paginationId='bottom'}
+                <!-- <div class="top-pagination-content clearfix">
+                    {include file="./product-compare.tpl"}
+                </div> -->
+            </div>
+            {include file="./product-list.tpl" products=$products}
+            <div class="content_sortPagiBar clearfix">
+                <div class="sortPagiBar clearfix">
+                    <!-- {include file="./product-compare.tpl" paginationId='bottom'} -->
+                    {include file="./product-sort.tpl"}
                     {include file="./pagination.tpl" paginationId='bottom'}
-				</div>
-			</div>
-		{/if}
-	{elseif $category->id}
-		<p class="alert alert-warning">{l s='This category is currently unavailable.'}</p>
-	{/if}
+                </div>
+            </div>
+        {/if}
+    {elseif $category->id}
+        <p class="alert alert-warning">{l s='This category is currently unavailable.'}</p>
+    {/if}
 {/if}
