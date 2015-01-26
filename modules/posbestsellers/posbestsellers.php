@@ -210,27 +210,32 @@ class posbestsellers extends Module
 			$this->context->controller->addCSS(_THEME_CSS_DIR_.'product_list.css');
 	}
 
-	public function hookBlockPosition2($params)
-	{
-		if (!$this->isCached('posbestsellers.tpl', $this->getCacheId('posbestsellers-col')))
-		{
-			if (!isset(posbestsellers::$cache_best_sellers))
-				posbestsellers::$cache_best_sellers = $this->getBestSellers($params);
-			$this->smarty->assign(array(
-				'best_sellers' => posbestsellers::$cache_best_sellers,
-				'display_link_bestsellers' => Configuration::get('PS_DISPLAY_BEST_SELLERS'),
-				'mediumSize' => Image::getSize(ImageType::getFormatedName('medium')),
-				'smallSize' => Image::getSize(ImageType::getFormatedName('small')),
-				'nbr' =>Configuration::get('FEATURED_NBR'),
-				'item' =>Configuration::get('PRODUCT_ITEM'),
-			));
-		}
+	// public function hookBlockPosition2($params)
+	// {
+	// 	if (!$this->isCached('posbestsellers.tpl', $this->getCacheId('posbestsellers-col')))
+	// 	{
+	// 		if (!isset(posbestsellers::$cache_best_sellers))
+	// 			posbestsellers::$cache_best_sellers = $this->getBestSellers($params);
+	// 		$this->smarty->assign(array(
+	// 			'best_sellers' => posbestsellers::$cache_best_sellers,
+	// 			'display_link_bestsellers' => Configuration::get('PS_DISPLAY_BEST_SELLERS'),
+	// 			'mediumSize' => Image::getSize(ImageType::getFormatedName('medium')),
+	// 			'smallSize' => Image::getSize(ImageType::getFormatedName('small')),
+	// 			'nbr' =>Configuration::get('FEATURED_NBR'),
+	// 			'item' =>Configuration::get('PRODUCT_ITEM'),
+	// 		));
+	// 	}
 
-		if (posbestsellers::$cache_best_sellers === false)
-			return false;
+	// 	if (posbestsellers::$cache_best_sellers === false)
+	// 		return false;
 
-		return $this->display(__FILE__, 'posbestsellers.tpl', $this->getCacheId('posbestsellers-col'));
+	// 	return $this->display(__FILE__, 'posbestsellers.tpl', $this->getCacheId('posbestsellers-col'));
+	// }
+
+	public function hookDisplayLeftColumn($params) {
+		return $this->hookDisplayRightColumn($params);
 	}
+
 	public function hookDisplayRightColumn($params)
 	{
 		if (!$this->isCached('posbestsellers.tpl', $this->getCacheId('posbestsellers-col')))
