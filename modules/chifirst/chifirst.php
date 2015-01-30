@@ -132,6 +132,7 @@ class ChiFirst extends Module
   }
 
   public function hookDisplayHome($params) {
+    $this->context->controller->addCSS($this->_path.'css/chifirst.css', 'all');
     $category = new Category(
       (int)$params['id_category'] ?: Context::getContext()->shop->getCategory(),
       (int) Context::getContext()->language->id,

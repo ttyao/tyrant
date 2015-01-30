@@ -61,7 +61,7 @@
 											{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
 										</span>
 									</div>
-									{/if}	
+									{/if}
 								{/if}
 							</div>
 						</div>
@@ -83,7 +83,7 @@
 	  auto: true,
 	  minSlides: 3,
 	  maxSlides: 3,
-	  pause: 2500,
+	  pause: 4000,
 	  speed: 1000,
 	});
     });

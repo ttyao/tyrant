@@ -5,7 +5,9 @@
             <div id="pos-slideshow-home" class="slides">
                 {$count=0}
                 {foreach from=$slides key=key item=slide}
-                    <img style ="display:none" src="{$slide.image}" data-thumb="{$slide.image}"  alt="" title="#htmlcaption{$slide.id_pos_slideshow}"  />
+                    <a href="{$slide.link}">
+                        <img style ="display:none" src="{$slide.image}" data-thumb="{$slide.image}"  alt="" title="#htmlcaption{$slide.id_pos_slideshow}"  />
+                    </a>
                 {/foreach}
             </div>
             {if $slideOptions.show_caption != 0}
@@ -14,10 +16,10 @@
                             <div class="pos-slideshow-des">
                                 {$slide.description}
                             </div>
-                            {if $slide.link}
-                            <div class="pos-slideshow-readmore">
-                                <a href="{$slide.link}" title="{l s=('Read more') mod='posslideshow'}">{$slide.link_title}</a>
-                            </div>
+                            {if $slide.link && $slide.link_title}
+                                <div class="pos-slideshow-readmore">
+                                    <a href="{$slide.link}" title="{l s=('Read more') mod='posslideshow'}">{$slide.link_title}</a>
+                                </div>
                             {/if}
                     </div>
                  {/foreach}

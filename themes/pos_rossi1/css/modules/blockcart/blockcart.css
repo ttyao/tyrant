@@ -350,7 +350,7 @@
 #layer_cart .layer_cart_cart {
   background: #fafafa;
   border-left: 1px solid #d6d4d4;
-  padding: 21px 30px 170px 30px;
+  padding: 21px 5px 0px 5px;
   -webkit-border-radius: 0px 4px 4px 0px;
   -moz-border-radius: 0px 4px 4px 0px;
   -ms-border-radius: 0px 4px 4px 0px;
@@ -383,10 +383,9 @@
   padding: 0 0 7px 0; }
 #layer_cart .layer_cart_cart .button-container {
   position: absolute;
-  bottom: 0;
   left: 0;
   width: 100%;
-  padding: 0px 30px 20px 30px; }
+  padding: 0px 5px 20px 5px; }
 #layer_cart .layer_cart_cart .button-container .btn {
   margin-bottom: 10px; }
 #layer_cart .layer_cart_cart .button-container span.exclusive-medium {
