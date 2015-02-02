@@ -6,11 +6,11 @@
   float: left;
   background: #fff;
   border: 2px solid #dddddd;
-  margin: 22px 0 0;
+  margin: 30px 0 0;
   width: 90%;}
 @media (max-width: 767px){
-	#pos_search_top .form_search{
-		width: 100%;}
+  #pos_search_top .form_search{
+    width: 100%;}
 }
 #pos_search_top label{
   display: none;}

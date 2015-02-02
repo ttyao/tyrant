@@ -15,7 +15,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: 'FontAwesome', 'Microsoft Yahei', 'Microsoft Yahei Regular' !important;
+  font-family: '宋体', 'FontAwesome', 'Microsoft Yahei', 'Microsoft Yahei Regular' !important;
   font-size: 100%;
   vertical-align: baseline; }
 
@@ -6067,7 +6067,7 @@ border-radius: 70px;}
 .block .products-block li .product-content {
   overflow: hidden; }
 .block .products-block li .product-content h5 {
-  margin: -3px 0 0 0; }
+  margin: -1px 0 0 0; }
 .block .products-block .product-name {
   font-size: 15px;
   line-height: 18px; }

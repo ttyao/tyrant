@@ -107,7 +107,7 @@
     position: relative;
   }
   .header_content {
-    background-image: url("../../../img/head_bg1.jpg");
+    background-image: url("../../../img/banner.jpg");
     background-repeat: repeat;
     height: 90px;
   }
@@ -177,5 +177,8 @@
   }
 }
 
+.paypalusa {
+  margin-top: 40px;
+}
 
 

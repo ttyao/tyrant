@@ -21,7 +21,7 @@
 .firstdata-full { border-top: #A7A8AB solid 1px; clear: both; overflow: hidden; padding-top: 15px; }
 .firstdata-full p { color: #00A9E0; font-size: 16px; line-height: 20px; padding: 0px 0px 0px 410px; }
 img.firstdata-cc { float: left; margin: 0px 0px 0px -410px; }
- 
+
 #firstdata-configuration fieldset { background-image: url(../img/sep.png); background-position: center top; background-repeat: repeat-y; }
 #firstdata-configuration input.text { width: 90%; }
 
@@ -45,7 +45,8 @@ div.firstdata-half ol li p a:hover, a.firstdata-credentials-link:hover { text-de
 div.payment_module { padding-bottom: 20px; text-transform: none; }
 div.payment_module .firstdata-logo { clear: both; float: none; margin-bottom: 20px; }
 .payment_module #firstdata_form img { float: none; }
-.block-left { display: inline-block; float: left; margin-right: 20px; }
+.block-left { margin: 10px 0 0 0; }
+.expiration_div {margin: 40px 0 0 0;}
 #firstdata_form label { display: inline-block; margin-bottom: 4px; text-transform: uppercase; }
 #firstdata_form input[type="text"], #firstdata_form select { border: #CCCCCC solid 1px; margin: 0px 0px 15px 0px; padding: 3px; }
 #firstdata_form a { display: inline; position: relative; }
