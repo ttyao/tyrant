@@ -1,0 +1,44 @@
+
+
+.facebookcandvc-content div.menu-content{
+	border: 1px solid #CCCCCC;
+    margin: 10px 5px 0;
+    padding: 10px;
+}
+
+.facebookcandvc-content h3.title-block-content{
+	margin-top:5px;
+	font-size:1.25em;
+	color:#E8871E;
+}
+
+.facebookcandvc-menu{width:25%;
+			 float:left;
+			 padding:5px}
+
+ul.leftMenu  {
+	font-size:12px;
+    list-style: none outside none;
+    margin: 1px 0 0;
+    padding: 0 0 16px;
+}
+
+.ps15-width{/*width: 100%; margin: 0px auto;*/}
+
+ul.leftMenu li {
+    padding: 0;
+	float:left;
+   margin-top:5px;
+}
+
+ul.leftMenu li a {
+      border: 1px solid #CCCCCC;
+    display: block;
+    font-size: 110%;
+    font-weight: bold;
+	margin: 0 5px;
+    padding: 10px;
+}
+ul.leftMenu li a.selected{ 
+	background-color:#F4E6C9;
+}

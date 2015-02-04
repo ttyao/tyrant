@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>facebookcandvc</name>
+	<displayName><![CDATA[Facebook Connect, Fan Coupon, Coupon for registration]]></displayName>
+	<version><![CDATA[1.0.7]]></version>
+	<description><![CDATA[Facebook Connect, Fan Coupon, Coupon for registration]]></description>
+	<author><![CDATA[mitrocops.com]]></author>
+	<tab><![CDATA[social_networks]]></tab>
+	<confirmUninstall><![CDATA[Are you sure you want to remove it ? Be careful, all your configuration and your data will be lost]]></confirmUninstall>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>
