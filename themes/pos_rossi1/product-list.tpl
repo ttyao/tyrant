@@ -54,9 +54,9 @@
 							{if Hook::exec('rotatorImg')}
 								{hook h='rotatorImg' product=$product}
 							{else}
-								<img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')|escape:'html'}"
+								<img data-src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')|escape:'html'}"
 									alt="{$product.legend|escape:'html':'UTF-8'}"
-									class="replace-2x img-responsive"/>
+									class="replace-2x img-responsive lazyload"/>
 							{/if}
 						</a>
 						<div class="img_btn">
@@ -149,7 +149,7 @@
 					{if isset($product.color_list)}
 						<div class="color-list-container">{$product.color_list}</div>
 					{/if}
-					<div class="product-flags">
+					<!-- <div class="product-flags">
 						{if (!$PS_CATALOG_MODE AND ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
 							{if isset($product.online_only) && $product.online_only}
 								<span class="online_only">{l s='Online only'}</span>
@@ -159,7 +159,7 @@
 							{elseif isset($product.reduction) && $product.reduction && isset($product.show_price) && $product.show_price && !$PS_CATALOG_MODE}
 								<span class="discount">{l s='Reduced price!'}</span>
 							{/if}
-					</div>
+					</div> -->
 					<!-- {if (!$PS_CATALOG_MODE && $PS_STOCK_MANAGEMENT && ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
 						{if isset($product.available_for_order) && $product.available_for_order && !isset($restricted_country_mode)}
 							<span itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="availability">

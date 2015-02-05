@@ -10,7 +10,7 @@
  * http://www.mitrocops.com/LICENSE.txt
  *
  /*
- * 
+ *
  * @author    Mitrocops <developersaddons@gmail.com>
  * @category Others
  * @package facebookcandvc
@@ -21,7 +21,7 @@
 
 {if $facebookcandvcis15 == 0}
 <link href="{$base_dir_ssl|escape:'html'}modules/facebookcandvc/css/facebookcandvc.css" rel="stylesheet" type="text/css" media="all" />
-{/if} 
+{/if}
 
 
 
@@ -40,7 +40,7 @@ $(document).ready(function(){
 
 {/literal}{if $facebookcandvcfauthis_on == 1}{literal}
 
-var ph = '<div class="facebook-auth-page-clear"></div><div class="facebook-auth-page">'+
+var ph = '<div class="facebook-auth-page-clear"></div><div class="facebook-auth-page box">'+
 {/literal}{if $facebookcandvcvis_on == 1 && $facebookcandvcadvauthis_on == 1}{literal}
 '<p>{/literal}{$facebookcandvcadvtextauth|escape:"htmlall":"UTF-8"}{literal}</p>'+
 {/literal}{/if}{literal}
@@ -49,7 +49,7 @@ var ph = '<div class="facebook-auth-page-clear"></div><div class="facebook-auth-
 '<\/a>'+
 '<\/div>';
 
-$('#login_form').after(ph);
+$('#create-account_form').before(ph);
 
 {/literal}{/if}{literal}
 
@@ -64,8 +64,11 @@ if($('#header_user_info a'))
  	$('#header_user_info a').after(log_in_button);
 
 //for PS 1.6 >
-if($('.header_user_info'))
-		$('.header_user_info').after('<div class="header_user_info_ps16">'+log_in_button+'<\/div>');
+// if($('.header_user_info'))
+//   $('.header_user_info').after('<div class="header_user_info_ps16">'+log_in_button+'<\/div>');
+
+if($('#header_nav'))
+  $('#header_nav').append('<li>'+log_in_button+'</li>');
 
 {/literal}{/if}{literal}
 
@@ -83,12 +86,12 @@ function facebooklogin(type){
 		return;
 	}
 
-	FB.init({appId: '{/literal}{$facebookcandvcappid}{literal}', 
-		 status: true, 
-		 cookie: true, 
+	FB.init({appId: '{/literal}{$facebookcandvcappid}{literal}',
+		 status: true,
+		 cookie: true,
 		 xfbml: true,
        	 oauth: true});
-    
+
 	FB.login(function(response) {
         if (response.status == 'connected') {
 
@@ -102,14 +105,14 @@ function facebooklogin(type){
         		$('#fb-welcome-img').css('opacity',0.5);
         	}
         	// connect with facebook
-        	$.ajax({			
-        		type: 'POST',			
-        		url: baseDir+'modules/facebookcandvc/facebook.php',			
-        		async: true,			
-        		cache: false,			
-        		data: '',			
-        		success: function(data)			
-        		{	
+        	$.ajax({
+        		type: 'POST',
+        		url: baseDir+'modules/facebookcandvc/facebook.php',
+        		async: true,
+        		cache: false,
+        		data: '',
+        		success: function(data)
+        		{
         		if(type == "auth"){
             		$('#fb-auth-img').css('opacity',1);
             	}
@@ -119,70 +122,70 @@ function facebooklogin(type){
             	if(type == "welcome"){
             		$('#fb-welcome-img').css('opacity',1);
             	}
-            	
+
 				if(data != "auth"){
         		{/literal}{if $facebookcandvcvis_on == 1}{literal}
-	        		if ($('div#fb-con-wrapper').length == 0)				
-	        		{					
+	        		if ($('div#fb-con-wrapper').length == 0)
+	        		{
 	        			//conwrapper = $('<div>', {'id':'fb-con-wrapper'});
-	        			conwrapper = '<div id="fb-con-wrapper"><\/div>';		
-	        			$('body').append(conwrapper);				
+	        			conwrapper = '<div id="fb-con-wrapper"><\/div>';
+	        			$('body').append(conwrapper);
 	        		}
-	        		
-	        		if ($('div#fb-con').length == 0)				
-					{					
-						//condom = $('<div>', {'id':'fb-con'});
-	        			condom = '<div id="fb-con"><\/div>';					
-						$('body').append(condom);				
-					}				
 
-					$('div#fb-con').fadeIn(function(){	
-								
-						$(this).css('filter', 'alpha(opacity=70)');					
-						$(this).bind('click dblclick', function(){						
-						$('div#fb-con-wrapper').hide();						
-						$(this).fadeOut();	
-						window.location.reload();				
-						});				
-					});				
+	        		if ($('div#fb-con').length == 0)
+					{
+						//condom = $('<div>', {'id':'fb-con'});
+	        			condom = '<div id="fb-con"><\/div>';
+						$('body').append(condom);
+					}
+
+					$('div#fb-con').fadeIn(function(){
+
+						$(this).css('filter', 'alpha(opacity=70)');
+						$(this).bind('click dblclick', function(){
+						$('div#fb-con-wrapper').hide();
+						$(this).fadeOut();
+						window.location.reload();
+						});
+					});
 
 					//$('div#fb-con-wrapper').html(data).fadeIn();
 					$('div#fb-con-wrapper').html('<a id="button-close" style="display: inline;"><\/a>'+data).fadeIn();
 
 					$("a#button-close").click(function() {
 		        		$('div#fb-con-wrapper').hide();
-		        		$('div#fb-con').fadeOut();	
+		        		$('div#fb-con').fadeOut();
 
 		        		{/literal}{if $facebookcandvcorder_page == 1}{literal}
 							var url = "{/literal}{$base_dir_ssl}{$facebookcandvcuri|urldecode}{literal}";
 							window.location.href= url;
-						{/literal}{else}{literal}		
+						{/literal}{else}{literal}
 							window.location.reload();
 						{/literal}{/if}{literal}
-						
+
 		        	});
-		        	
-					
+
+
 				{/literal}{else}{literal}
 
 					{/literal}{if $facebookcandvcorder_page == 1}{literal}
 						var url = "{/literal}{$base_dir_ssl|escape:'html'}{$facebookcandvcuri|urldecode}{literal}";
 						window.location.href= url;
-					{/literal}{else}{literal}		
+					{/literal}{else}{literal}
 						window.location.reload();
-					{/literal}{/if}{literal}		
-					
-					
+					{/literal}{/if}{literal}
+
+
 				{/literal}{/if}{literal}
 				} else {
 					{/literal}{if $facebookcandvcorder_page == 1}{literal}
 						var url = "{/literal}{$base_dir_ssl|escape:'html'}{$facebookcandvcuri|urldecode}{literal}";
 						window.location.href= url;
-					{/literal}{else}{literal}		
+					{/literal}{else}{literal}
 						window.location.reload();
 					{/literal}{/if}{literal}
-				}		
-        		}		
+				}
+        		}
 
         		});
         } else {
@@ -200,7 +203,7 @@ function facebooklogin(type){
         }
     }, {scope:'email'});
     return false;
-	
+
 }
 
  {/literal}{/if}{literal}
@@ -214,69 +217,69 @@ function facebooklogin(type){
                 <script type="text/javascript">
                 $(document).ready(function(){
 
-                 
-                    
+
+
                     // like
                     FB.Event.subscribe("edge.create", function(targetUrl) {
                        if(targetUrl == '{/literal}{$facebookcandvcfanpageurl}{literal}'){
 
                     	  $('#facebook-fan-coupon-block').css('opacity',0.5);
-                    	  $.ajax({			
-                          		type: 'POST',			
-                          		url: baseDir+'modules/facebookcandvc/fan.php',			
-                          		async: true,			
-                          		cache: false,			
-                          		data: 'like=1',			
-                          		success: function(data)			
-                          		{	
+                    	  $.ajax({
+                          		type: 'POST',
+                          		url: baseDir+'modules/facebookcandvc/fan.php',
+                          		async: true,
+                          		cache: false,
+                          		data: 'like=1',
+                          		success: function(data)
+                          		{
                     		  		  $('#facebook-fan-coupon-block').css('opacity',1);
                     		  		  if(data.length==0) return;
-		                    		  if ($('div#fb-con-wrapper').length == 0)				
-		            	        		{					
-		            	        			conwrapper = '<div id="fb-con-wrapper"><\/div>';		
-		            	        			$('body').append(conwrapper);				
+		                    		  if ($('div#fb-con-wrapper').length == 0)
+		            	        		{
+		            	        			conwrapper = '<div id="fb-con-wrapper"><\/div>';
+		            	        			$('body').append(conwrapper);
 		            	        		}
-		            	        		
-		            	        		if ($('div#fb-con').length == 0)				
-		            					{					
-		            						condom = '<div id="fb-con"><\/div>';					
-		            						$('body').append(condom);				
-		            					}				
-		
-		            					$('div#fb-con').fadeIn(function(){	
-		            								
-		            						$(this).css('filter', 'alpha(opacity=70)');					
-		            						$(this).bind('click dblclick', function(){						
-		            						$('div#fb-con-wrapper').hide();						
-		            						$(this).fadeOut();	
-		            						});				
-		            					});				
-		
+
+		            	        		if ($('div#fb-con').length == 0)
+		            					{
+		            						condom = '<div id="fb-con"><\/div>';
+		            						$('body').append(condom);
+		            					}
+
+		            					$('div#fb-con').fadeIn(function(){
+
+		            						$(this).css('filter', 'alpha(opacity=70)');
+		            						$(this).bind('click dblclick', function(){
+		            						$('div#fb-con-wrapper').hide();
+		            						$(this).fadeOut();
+		            						});
+		            					});
+
 		            					//$('div#fb-con-wrapper').html(data).fadeIn();
 
 		            					$('div#fb-con-wrapper').html('<a id="button-close" style="display: inline;"><\/a>'+data).fadeIn();
 
 		            					$("a#button-close").click(function() {
 		            		        		$('div#fb-con-wrapper').hide();
-		            		        		$('div#fb-con').fadeOut();	
-		            							
+		            		        		$('div#fb-con').fadeOut();
+
 		            		        	});
-									
-		                          }		
+
+		                          }
 
                       		});
-                      
-                          
+
+
                        }
                     });
 
                     // unlike
                     FB.Event.subscribe("edge.remove", function(targetUrl) {
-                     
-                    });  
-                	
+
+                    });
+
                 });
-              
+
 		</script>
 		{/literal}
 

@@ -144,8 +144,8 @@
 .yaoProductListBox .content_price {
   position: relative;
   float: left;
-  margin-left: 5px;
-  margin-bottom: 5px;
+  margin: 5px 0 5px 5px;
+  width: 100px;
 }
 .yaoProductListBox .product-name {
   margin: 0 5px;

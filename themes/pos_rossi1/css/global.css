@@ -5804,7 +5804,7 @@ table.table_block td {
   white-space: nowrap; }
 
 .price.product-price {
-  font: normal 21px/26px 'calibribold';
+  font: normal 17px/21px 'calibribold';
   color: #F46465;
 }
 
@@ -5815,7 +5815,7 @@ table.table_block td {
   padding-right: 5px;}
 
 .old-price.product-price {
-  font-size: 15px; }
+  font-size: 12px; }
 
 .special-price {
   color: #f13340; }

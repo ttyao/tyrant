@@ -26,12 +26,16 @@
 <!-- Block user information module HEADER -->
 <div id="header_user" {if $PS_CATALOG_MODE}class="header_user_catalog"{/if}>
 	<ul id="header_nav">
-		<li id="header_link_sitemap">
-			<a href="{$link->getModuleLink('blockwishlist', 'mywishlist', array(), true)|addslashes}" title="My Wishlist">{l s='my wishlist' mod='blockuserinfo'}</a>
-		</li>
+		{if $logged}
+			<li id="header_link_sitemap">
+				<a href="{$link->getModuleLink('blockwishlist', 'mywishlist', array(), true)|addslashes}" title="My Wishlist">{l s='my wishlist' mod='blockuserinfo'}</a>
+			</li>
+		{/if}
 		<li class="user_status">
 			{if $logged}
-				<a href="{$link->getPageLink('my-account', true)|escape:'html'}" title="{$cookie->customer_firstname} {$cookie->customer_lastname}" class="account" rel="nofollow">{l s='My Account' mod='blockuserinfo'}</a>
+				<a href="{$link->getPageLink('my-account', true)|escape:'html'}" title="{l s='My Account' mod='blockuserinfo'}" class="account" rel="nofollow">
+					{$cookie->customer_firstname} {$cookie->customer_lastname}
+				</a>
 			{else}
 				<a href="{$link->getPageLink('my-account', true)|escape:'html'}" title="{l s='Log in to your customer account' mod='blockuserinfo'}" class="login" rel="nofollow">{l s='Sign in' mod='blockuserinfo'}</a>
 			{/if}

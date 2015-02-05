@@ -10,9 +10,9 @@
           <div class="item boxInner">
             <div class="productImg">
               <a class="product_img_link" href="{$product.link|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}" itemprop="url">
-                <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')|escape:'html'}"
+                <img data-src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')|escape:'html'}"
                    alt="{$product.legend|escape:'html':'UTF-8'}"
-                   class="img-responsive"/>
+                   class="img-responsive lazyload"/>
               </a>
             </div>
             <div class="productInfo">
