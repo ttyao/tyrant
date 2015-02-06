@@ -1,6 +1,10 @@
 {if isset($posts) AND !empty($posts)}
 <div id="recent_article_smart_blog_block_left"  class="block blogModule boxPlain">
-   <h2 class='sdstitle_block'><a href="{smartblog::GetSmartBlogLink('smartblog')}">{l s='Recent Articles' mod='smartblogrecentposts'}</a></h2>
+  <div class='title_block'>
+    <strong>
+      <a href="{smartblog::GetSmartBlogLink('smartblog')}">{l s='Recent Articles' mod='smartblogrecentposts'}</a>
+    </strong>
+  </div>
    <div class="block_content sdsbox-content">
       <ul class="recentArticles">
         {foreach from=$posts item="post"}

@@ -74,5 +74,5 @@ a.firstdata-card-cvc-info:hover { background-color: none; }
 a.firstdata-card-cvc-info:hover div.cvc-info { display: block; z-index: 10; }
 div.cvc-info:hover { cursor: default; }
 #firstdata_cvv_help_img { display: block; margin: 0px; }
-#firstdata_form .button { float: left; margin-right: 20px; }
+#firstdata_form .button { margin-right: 20px; }
 #firstdata_submitload { float: left; margin-top: 2px; }

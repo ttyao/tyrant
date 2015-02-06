@@ -96,7 +96,7 @@
 		<is_default>0</is_default>
 		<showhook>1</showhook>
 	</block>
-<!-- block language configuration -->	
+<!-- block language configuration -->
 	<block_language>
 		<id_posstaticblock>1</id_posstaticblock>
 		<id_lang>1</id_lang>
@@ -121,11 +121,11 @@
 		<![CDATA[
 <div class="col-xs-12 col-sm-12 col-md-5">
 <ul class="link-follow">
-<li class="first"><a class="facebook fa fa-facebook" href="https://www.facebook.com/posthemes"><span>facebook</span></a></li>
-<li><a class="rss fa fa-rss" href="#"><span>rss</span></a></li>
+<li class="first"><a class="facebook fa fa-facebook" href="https://www.facebook.com/pages/Yaoay-%E6%91%87%E5%95%8A%E6%91%87%E9%9B%B6%E9%A3%9F%E7%BD%91/624461557699204"><span>facebook</span></a></li>
+<!-- <li><a class="rss fa fa-rss" href="#"><span>rss</span></a></li> -->
 <li><a class="twitter fa fa-twitter" href="https://twitter.com/posthemes"><span>twitter</span></a></li>
 <li><a class="skype fa fa-skype" href="#"><span>skype</span></a></li>
-<li class="last"><a class="dribbble fa fa-dribbble" href="#"><span>dribbble</span></a></li>
+<!-- <li class="last"><a class="dribbble fa fa-dribbble" href="#"><span>dribbble</span></a></li> -->
 </ul>
 </div>
 		]]>
