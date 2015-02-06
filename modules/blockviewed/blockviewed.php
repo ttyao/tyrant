@@ -91,7 +91,7 @@ class BlockViewed extends Module
 			WHERE p.id_product IN ('.$productIds.')
 			AND pl.id_lang = '.(int)($params['cookie']->id_lang).'
 			AND cl.id_lang = '.(int)($params['cookie']->id_lang).'
-			GROUP BY product_shop.id_product'
+			GROUP BY product_shop.id_product limit 5'
 			);
 
 			$productsImagesArray = array();

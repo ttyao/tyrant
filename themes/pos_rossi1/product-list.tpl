@@ -56,7 +56,8 @@
 							{else}
 								<img data-src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')|escape:'html'}"
 									alt="{$product.legend|escape:'html':'UTF-8'}"
-									class="replace-2x img-responsive lazyload"/>
+									src="/img/Loading.gif"
+									class="lazyload replace-2x img-responsive"/>
 							{/if}
 						</a>
 						<div class="img_btn">
