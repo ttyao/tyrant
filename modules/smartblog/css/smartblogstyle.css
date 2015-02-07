@@ -25,7 +25,7 @@
     overflow: hidden;
 }
 .articleContent{
-   
+
 }
 .articleContent img{
     max-width: 98%;
@@ -549,8 +549,10 @@ div.relProduct .price-new {
     padding: 0px 10px;
     font-weight: bold;
 }
-.sdsreadMore .comment a{
-    text-decoration: none;
+.sdsarticle-des a {
+    text-decoration: underline;
+    font-weight: bolder;
+    color: rgb(85, 26, 139);
 }
 fieldset.account_creation {
     background: none repeat scroll 0 0 #F8F8F8;
