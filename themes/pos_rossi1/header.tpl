@@ -31,7 +31,7 @@
   <head>
     <meta charset="utf-8" />
     <title>{$meta_title|escape:'html':'UTF-8'}</title>
-    {if isset($meta_description) AND $meta_description}
+    {if isset($meta_description) AND $meta_description AND strpos($meta_description, 'Prestashop')}
       <meta name="description" content="{$meta_description|escape:'html':'UTF-8'}" />
     {else}
       <meta name="description" content="美国摇啊摇零食网-美国最大最全的亚洲购物网站，为你提供最全最健康的中国及亚洲零食及美妆产品，让你足不出户也能享受家的便利。最全最好的商品，最优最有保障的网购体验。" />

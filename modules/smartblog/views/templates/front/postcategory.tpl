@@ -10,8 +10,8 @@
     {else}
 	{if $smartdisablecatimg == '1'}
                   {assign var="activeimgincat" value='0'}
-                    {$activeimgincat = $smartshownoimg} 
-        {if $title_category != ''}        
+                    {$activeimgincat = $smartshownoimg}
+        {if $title_category != ''}
            {foreach from=$categoryinfo item=category}
             <div id="sdsblogCategory">
                {if ($cat_image != "no" && $activeimgincat == 0) || $activeimgincat == 1}
@@ -19,10 +19,10 @@
                {/if}
                 {$category.description}
             </div>
-             {/foreach}  
+             {/foreach}
         {/if}
     {/if}
-    <div id="smartblogcat" class="block">
+    <div id="smartblogcat" class="center_column col-xs-12 col-sm-8 col-md-9">
 {foreach from=$postcategory item=post}
     {include file="./category_loop.tpl" postcategory=$postcategory}
 {/foreach}
