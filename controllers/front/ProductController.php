@@ -77,8 +77,14 @@ class ProductControllerCore extends FrontController
 	{
 		parent::init();
 
-		if ($id_product = (int)Tools::getValue('id_product'))
+		if ($id_product = (int)Tools::getValue('id_product')) {
 			$this->product = new Product($id_product, true, $this->context->language->id, $this->context->shop->id);
+
+			// TODO: understand why new Product doesn't call ProductCore's constructor
+			// hack use tags as meta_keywords
+			$this->product->meta_description = $this->product->name;
+			$this->product->meta_keywords = $this->product->getTags($this->context->language->id).','.$this->product->name;
+		}
 
 		if (!Validate::isLoadedObject($this->product))
 		{

@@ -298,7 +298,7 @@ class Posmegamenu extends Module {
       {
         if ($link['label'] == '')
         {
-          $link = MenuTopLinks::get($link['id_linksmegatop'], $default_language, (int)Shop::getContextShopID());
+          $link = MegaTopLinks::get($link['id_linksmegatop'], $default_language, (int)Shop::getContextShopID());
           $this->_html .= '<option value="LNK'.(int)$link[0]['id_linksmegatop'].'">'.$spacer.$link[0]['label'].'</option>';
         }
         else
