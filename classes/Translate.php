@@ -52,7 +52,7 @@ class TranslateCore
 		{
 			$iso = Context::getContext()->language->iso_code;
 			if (empty($iso))
-				$iso = Language::getIsoById((int)(Configuration::get('PS_LANG_DEFAULT')));			
+				$iso = Language::getIsoById((int)(Configuration::get('PS_LANG_DEFAULT')));
 			if (file_exists(_PS_TRANSLATIONS_DIR_.$iso.'/admin.php'))
 				include_once(_PS_TRANSLATIONS_DIR_.$iso.'/admin.php');
 		}
@@ -81,6 +81,9 @@ class TranslateCore
 		if ($sprintf !== null)
 			$str = Translate::checkAndReplaceArgs($str, $sprintf);
 
+		if (!$str)
+			$str = $string;
+
 		return ($addslashes ? addslashes($str) : stripslashes($str));
 	}
 
@@ -106,6 +109,9 @@ class TranslateCore
 			$str = $lang_array['AdminTab'.$key];
 		else
 			// note in 1.5, some translations has moved from AdminXX to helper/*.tpl
+			$str = $string;
+
+		if (!$str)
 			$str = $string;
 
 		return $str;
@@ -185,8 +191,8 @@ class TranslateCore
 				$ret = htmlspecialchars($ret, ENT_COMPAT, 'UTF-8');
 
 			if ($sprintf === null)
-				$lang_cache[$cache_key] = $ret; 
-			else    
+				$lang_cache[$cache_key] = $ret;
+			else
          	return $ret;
 
 		}

@@ -25,24 +25,29 @@
 
 <!-- pos search module TOP -->
 <div id="pos_search_top" class="wrap_seach list-inline col-xs-12 col-sm-8 col-md-9">
-	<form method="get" action="{$link->getPageLink('search')|escape:'html'}" id="searchbox" class="form-inline" role="form">
-		<div class="form_search">
-			<label for="pos_query_top"><!-- image on background --></label>
+    <div class="search_top_announcement">
+    {l s='欢欢喜喜迎羊年, 结账输入FREESHEEP, 摇啊摇送您小肥羊!'}
+    </div>
+    <div class="search_top_announcement_below">
+    </div>
+    <form method="get" action="{$link->getPageLink('search')|escape:'html'}" id="searchbox" class="form-inline" role="form">
+        <div class="form_search">
+            <label for="pos_query_top"><!-- image on background --></label>
             <input type="hidden" name="controller" value="search" />
             <input type="hidden" name="orderby" value="position" />
             <input type="hidden" name="orderway" value="desc" />
-			<div class="pos_search form-group">
+            <div class="pos_search form-group">
                 {if $cate_on == 1}
                     <select name="poscats" class="selectpicker">
-					 <option value="">{l s='商品分类'}</option>
+                     <option value="">{l s='商品分类'}</option>
                         {$categories_option}
                     </select>
                 {/if}
             </div>
-			<button type="submit" name="submit_search" value="{l s='Search' mod='possearchcategories'}" class="btn btn-default submit_search">
-				<i class="icon-search"></i>
-			</button>
-			<input class="search_query form-control" type="text" id="pos_query_top" name="search_query" value="{$search_query|escape:'html':'UTF-8'|stripslashes}" />
+            <button type="submit" name="submit_search" value="{l s='Search' mod='possearchcategories'}" class="btn btn-default submit_search">
+                <i class="icon-search"></i>
+            </button>
+            <input class="search_query form-control" type="text" id="pos_query_top" name="search_query" value="{$search_query|escape:'html':'UTF-8'|stripslashes}" />
         </div>
     </form>
 </div>

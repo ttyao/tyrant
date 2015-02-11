@@ -1,5 +1,15 @@
 #pos_search_top{
   padding: 0;}
+#pos_search_top .search_top_announcement {
+  position: absolute;
+  margin: 10px 0 0 5px;
+  color: #222;
+}
+#pos_search_top .search_top_announcement_below {
+  position: absolute;
+  margin: 40px 0 0 5px;
+  color: #222;
+}
 #pos_search_top .form_search{
   padding: 3px 0 3px;
   position: relative;

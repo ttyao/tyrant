@@ -2363,7 +2363,12 @@ class AdminControllerCore extends Controller
 		// classname has changed, from AdminXXX to AdminXXXController, so we remove 10 characters and we keep same keys
 		elseif (strtolower(substr($class, -10)) == 'controller')
 			$class = substr($class, 0, -10);
-		return Translate::getAdminTranslation($string, $class, $addslashes, $htmlentities);
+
+		$ret = Translate::getAdminTranslation($string, $class, $addslashes, $htmlentities);
+		if (!$ret) {
+			return $string;
+		}
+		return $ret;
 	}
 
 	/**
