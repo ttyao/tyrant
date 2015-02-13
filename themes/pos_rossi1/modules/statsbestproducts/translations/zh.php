@@ -12,6 +12,7 @@ $_MODULE['<{statsbestproducts}pos_rossi1>statsbestproducts_11ff9f68afb6b8b5b8eda
 $_MODULE['<{statsbestproducts}pos_rossi1>statsbestproducts_25f4b31e8f3baec8b2f266e05af88943'] = '售出数量/天';
 $_MODULE['<{statsbestproducts}pos_rossi1>statsbestproducts_7664a37e0cc56aaf39aebf2edbd3f98e'] = '网页浏览';
 $_MODULE['<{statsbestproducts}pos_rossi1>statsbestproducts_7bd5825a187064017975513b95d7f7de'] = '待售量';
+$_MODULE['<{statsbestproducts}pos_rossi1>statsbestproducts_4d3d769b812b6faa6b76e1a8abaece2d'] = '在售';
 $_MODULE['<{statsbestproducts}pos_rossi1>statsbestproducts_950cf49f8ca529be64c924f16fcb5404'] = '最佳产品';
 $_MODULE['<{statsbestproducts}pos_rossi1>statsbestproducts_15429f69e40860368f6e113e4cba5601'] = '在仪表盘添加最畅销商品列表。';
 $_MODULE['<{statsbestproducts}pos_rossi1>statsbestproducts_998e4c5c80f27dec552e99dfed34889a'] = 'CSV导出';

@@ -8,9 +8,15 @@ $_MODULE['<{blockcategories}pos_rossi1>blockcategories_23e0d4ecc25de9b2777fdaca3
 $_MODULE['<{blockcategories}pos_rossi1>blockcategories_0cf328636f0d607ac24a5c435866b94b'] = '动态HTML：无效的选择。';
 $_MODULE['<{blockcategories}pos_rossi1>blockcategories_f4f70727dc34561dfde1a3c529b6205c'] = '设置';
 $_MODULE['<{blockcategories}pos_rossi1>blockcategories_1379a6b19242372c1f23cc9adedfcdd6'] = '根分类';
+$_MODULE['<{blockcategories}pos_rossi1>blockcategories_c6d333d07d30f7b4c31a94bbd510bf88'] = '';
+$_MODULE['<{blockcategories}pos_rossi1>blockcategories_89b278a71f2be5f620307502326587a0'] = '';
 $_MODULE['<{blockcategories}pos_rossi1>blockcategories_62381fc27e62649a16182a616de3f7ea'] = '当前分类';
+$_MODULE['<{blockcategories}pos_rossi1>blockcategories_52b68aaa602d202c340d9e4e9157f276'] = '上级分类';
+$_MODULE['<{blockcategories}pos_rossi1>blockcategories_199f6ead1ce5a19131b6b6c568306d81'] = '';
 $_MODULE['<{blockcategories}pos_rossi1>blockcategories_19561e33450d1d3dfe6af08df5710dd0'] = '最大分级';
+$_MODULE['<{blockcategories}pos_rossi1>blockcategories_584d4e251b6f778eda9cfc2fc756b0b0'] = '';
 $_MODULE['<{blockcategories}pos_rossi1>blockcategories_971fd8cc345d8bd9f92e9f7d88fdf20c'] = '动态';
+$_MODULE['<{blockcategories}pos_rossi1>blockcategories_c10efcaa2a8ff4eedaa3538fff78eb53'] = '';
 $_MODULE['<{blockcategories}pos_rossi1>blockcategories_00d23a76e43b46dae9ec7aa9dcbebb32'] = '启用';
 $_MODULE['<{blockcategories}pos_rossi1>blockcategories_b9f5c797ebbf55adccdd8539a65a0241'] = '禁用';
 $_MODULE['<{blockcategories}pos_rossi1>blockcategories_6b46ae48421828d9973deec5fa9aa0c3'] = '分类';

@@ -20,5 +20,5 @@ $_MODULE['<{blocknewproducts}pos_rossi1>blocknewproducts_9ff0635f5737513b1a6f559
 $_MODULE['<{blocknewproducts}pos_rossi1>blocknewproducts_43340e6cc4e88197d57f8d6d5ea50a46'] = '阅读更多';
 $_MODULE['<{blocknewproducts}pos_rossi1>blocknewproducts_60efcc704ef1456678f77eb9ee20847b'] = '本周新品汇总';
 $_MODULE['<{blocknewproducts}pos_rossi1>blocknewproducts_18cc24fb12f89c839ab890f8188febe8'] = '敬请期待本周新品';
-$_MODULE['<{blocknewproducts}pos_rossi1>tab_a0d0ebc37673b9ea77dd7c1a02160e2d'] = '最新商品';
 $_MODULE['<{blocknewproducts}pos_rossi1>blocknewproducts_home_0af0aac2e9f6bd1d5283eed39fe265cc'] = '敬请期待本周新品';
+$_MODULE['<{blocknewproducts}pos_rossi1>tab_a0d0ebc37673b9ea77dd7c1a02160e2d'] = '最新商品';

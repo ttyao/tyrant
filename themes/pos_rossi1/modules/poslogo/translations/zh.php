@@ -1,0 +1,32 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{poslogo}pos_rossi1>logo_8c2857a9ad1d8f31659e35e904e20fa6'] = '';
+$_MODULE['<{poslogo}pos_rossi1>poslogo_03ebbc76d83cfa6ab157f569a11c7ff6'] = '';
+$_MODULE['<{poslogo}pos_rossi1>poslogo_3b9f76c26e934de34800041506121425'] = '';
+$_MODULE['<{poslogo}pos_rossi1>poslogo_876f23178c29dc2552c0b48bf23cd9bd'] = '';
+$_MODULE['<{poslogo}pos_rossi1>poslogo_969c45682a25a479225e46167a9d1df2'] = '';
+$_MODULE['<{poslogo}pos_rossi1>poslogo_97b2944dd364df92f35416b996b837d9'] = '';
+$_MODULE['<{poslogo}pos_rossi1>poslogo_c888438d14855d7d96a2724ee9c306bd'] = '';
+$_MODULE['<{poslogo}pos_rossi1>poslogo_f4f70727dc34561dfde1a3c529b6205c'] = '';
+$_MODULE['<{poslogo}pos_rossi1>poslogo_33cf540aabae7e18e87aeb64b73d7261'] = '';
+$_MODULE['<{poslogo}pos_rossi1>poslogo_36d1a11d89bfff9daf82000fe4b2b241'] = '';
+$_MODULE['<{poslogo}pos_rossi1>poslogo_06933067aafd48425d67bcb01bba5cb6'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_d3b206d196cd6be3a2764c1fb90b200f'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_e25f0ecd41211b01c83e5fec41df4fe7'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_b718adec73e04ce3ec720dd11a06a308'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_b78a3223503896721cca1303f776159b'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_0c530abc910730d7c7842c55147a661c'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_a240fa27925a635b08dc28c9e4f9216d'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_be53a0541a6d36f6ecb879fa2c584b08'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_e833b5e560bdc737fe850bc50d0c5f0c'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_51ec9bf4aaeab1b25bb57f9f8d4de557'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_ef2f59f06132ddc2e1bc8d00abbe6e02'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_461900b74731e07320ca79366df3e809'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_5d87a2c14646272803de1384127225a0'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_b5a7adde1af5c87d7fd797b6245c2a39'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_6252c0f2c2ed83b7b06dfca86d4650bb'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_2ca3deb5cd68fa9119b285804fab572f'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_c9cc8cce247e49bae79f15173ce97354'] = '';
+$_MODULE['<{poslogo}pos_rossi1>adminposlogo_f16b5952df8d25ea30b25ff95ee8fedf'] = '';

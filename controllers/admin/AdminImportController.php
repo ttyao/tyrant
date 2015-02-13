@@ -1741,8 +1741,10 @@ class AdminImportControllerCore extends AdminController
 							$this->warnings[] = sprintf(Tools::displayError('Product #%1$d: the picture (%2$s) cannot be saved.'), $image->id_product, $url);
 					}
 				}
-				if (isset($product->id_category))
-					$product->updateCategories(array_map('intval', $product->id_category));
+
+				// this will clear existing category
+				// if (isset($product->id_category))
+				// 	$product->updateCategories(array_map('intval', $product->id_category));
 
 				$product->checkDefaultAttributes();
 				if (!$product->cache_default_attribute)

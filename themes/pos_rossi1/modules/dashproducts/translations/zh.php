@@ -2,6 +2,7 @@
 
 global $_MODULE;
 $_MODULE = array();
+$_MODULE['<{dashproducts}pos_rossi1>dashproducts_6655df4af87b2038afd507a33545a56d'] = '';
 $_MODULE['<{dashproducts}pos_rossi1>dashproducts_2ea989f83006e233627987293f4bde0a'] = '客户名';
 $_MODULE['<{dashproducts}pos_rossi1>dashproducts_068f80c7519d0528fb08e82137a72131'] = '单件商品';
 $_MODULE['<{dashproducts}pos_rossi1>dashproducts_96b0141273eabab320119c467cdcaf17'] = '总计';
@@ -18,6 +19,7 @@ $_MODULE['<{dashproducts}pos_rossi1>dashproducts_ed4832a84ee072b00a6740f65718359
 $_MODULE['<{dashproducts}pos_rossi1>dashproducts_2c04f1ad7694378897b98624780327ff'] = '已加入购物车';
 $_MODULE['<{dashproducts}pos_rossi1>dashproducts_ce4ee01637f4279d02d0f232459dc9a4'] = '已购买';
 $_MODULE['<{dashproducts}pos_rossi1>dashproducts_37be07209f53a5d636d5c904ca9ae64c'] = '比例';
+$_MODULE['<{dashproducts}pos_rossi1>dashproducts_1eb18ea1d018abef5759cef60ddc289b'] = '';
 $_MODULE['<{dashproducts}pos_rossi1>dashproducts_cf5f3091e30dee6597885d8c0e0c357f'] = '条件';
 $_MODULE['<{dashproducts}pos_rossi1>dashproducts_13348442cc6a27032d2b4aa28b75a5d3'] = '搜索';
 $_MODULE['<{dashproducts}pos_rossi1>dashproducts_fd69c5cf902969e6fb71d043085ddee6'] = '结果';
@@ -37,3 +39,4 @@ $_MODULE['<{dashproducts}pos_rossi1>dashboard_zone_two_3d23ac9ab254a9f1014c3a859
 $_MODULE['<{dashproducts}pos_rossi1>dashboard_zone_two_82f0f8d535196ce2a6ea16652d981f94'] = '热门 %d 件产品';
 $_MODULE['<{dashproducts}pos_rossi1>dashboard_zone_two_5da618e8e4b89c66fe86e32cdafde142'] = '从';
 $_MODULE['<{dashproducts}pos_rossi1>dashboard_zone_two_01b6e20344b68835c5ed1ddedf20d531'] = '至';
+$_MODULE['<{dashproducts}pos_rossi1>dashboard_zone_two_1daaca459ce1e6610e0b97a9ad723f27'] = '';

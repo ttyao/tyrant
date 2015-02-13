@@ -81,8 +81,9 @@ class TranslateCore
 		if ($sprintf !== null)
 			$str = Translate::checkAndReplaceArgs($str, $sprintf);
 
-		if (!$str)
+		if (!$str) {
 			$str = $string;
+		}
 
 		return ($addslashes ? addslashes($str) : stripslashes($str));
 	}

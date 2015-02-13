@@ -173,6 +173,7 @@ $_MODULE['<{autoupgrade}pos_rossi1>adminselfupgrade_f36d7ee6cae92008008a95bf5898
 $_MODULE['<{autoupgrade}pos_rossi1>adminselfupgrade_f39b870765d50b64ba7a6facea83010d'] = 'All files have been added to archive.';
 $_MODULE['<{autoupgrade}pos_rossi1>adminselfupgrade_995d693d79b7f8a95c6b7b195970eed2'] = '%1$s added to archive. %2$s files left.';
 $_MODULE['<{autoupgrade}pos_rossi1>adminselfupgrade_4f1030e1e84ec150a7786a243cd7fb08'] = 'Error when trying to add %1$s to archive %2$s.';
+$_MODULE['<{autoupgrade}pos_rossi1>adminselfupgrade_0800a1e6039f6249a7c9012d1d4e7ebd'] = '';
 $_MODULE['<{autoupgrade}pos_rossi1>adminselfupgrade_d85360d9b6992f471292bf16fe32a16d'] = 'File %1$s (size: %2$s) added to archive.';
 $_MODULE['<{autoupgrade}pos_rossi1>adminselfupgrade_6e30d5ad868a1053455a9219e14883fc'] = 'File %1$s (size: %2$s) has been skipped during backup.';
 $_MODULE['<{autoupgrade}pos_rossi1>adminselfupgrade_8a5062d4832b42720342c513d7d52f7d'] = '[ERROR] Error on backup using PclZip: %s.';

@@ -26,7 +26,7 @@
 <!-- pos search module TOP -->
 <div id="pos_search_top" class="wrap_seach list-inline col-xs-12 col-sm-8 col-md-9">
     <div class="search_top_announcement">
-    {l s='欢欢喜喜迎羊年, 结账输入FREESHEEP, 摇啊摇送您小肥羊!'}
+    {l s='欢欢喜喜迎羊年, 结账输入SHEEP, 摇啊摇送您小肥羊!'}
     </div>
     <div class="search_top_announcement_below">
     </div>
