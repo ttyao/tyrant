@@ -82,7 +82,7 @@
 	  controls: false,
 	  auto: true,
 	  minSlides: 3,
-	  maxSlides: 3,
+	  maxSlides: 12,
 	  pause: 4000,
 	  speed: 1000,
 	});

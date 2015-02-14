@@ -232,6 +232,7 @@ class BlockBestSellers extends Module
 
 	public function hookRightColumn($params)
 	{
+		Configuration::updateValue('PS_BLOCK_BESTSELLERS_TO_DISPLAY',10);
 		if (!$this->isCached('blockbestsellers.tpl', $this->getCacheId('blockbestsellers-col')))
 		{
 			if (!isset(BlockBestSellers::$cache_best_sellers))

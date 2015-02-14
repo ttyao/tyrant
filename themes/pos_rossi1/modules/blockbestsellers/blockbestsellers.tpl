@@ -45,7 +45,6 @@
                   {$product.name|strip_tags:'UTF-8'|escape:'html':'UTF-8'}
                 </a>
               </h5>
-              <p class="product-description">{$product.description_short|strip_tags:'UTF-8'|truncate:75:'...'}</p>
               {if !$PS_CATALOG_MODE}
                 <div class="price-box">
                   <span class="price">{$product.price}</span>
@@ -55,9 +54,6 @@
           </li>
         {/foreach}
       </ul>
-      <div class="lnk">
-        <a href="{$link->getPageLink('best-sales')|escape:'html'}" title="{l s='All best sellers' mod='blockbestsellers'}"  class="btn btn-default button button-small"><span>{l s='All best sellers' mod='blockbestsellers'}<i class="icon-chevron-right right"></i></span></a>
-      </div>
     {else}
       <p>{l s='No best sellers at this time' mod='blockbestsellers'}</p>
     {/if}
