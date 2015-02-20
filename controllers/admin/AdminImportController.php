@@ -1743,8 +1743,8 @@ class AdminImportControllerCore extends AdminController
 				}
 
 				// this will clear existing category
-				// if (isset($product->id_category))
-				// 	$product->updateCategories(array_map('intval', $product->id_category));
+				if (isset($product->id_category))
+				 	$product->updateCategories(array_map('intval', $product->id_category));
 
 				$product->checkDefaultAttributes();
 				if (!$product->cache_default_attribute)

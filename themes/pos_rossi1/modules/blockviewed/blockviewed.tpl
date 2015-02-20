@@ -48,9 +48,11 @@
               </a>
             </h5>
             <p class="product-description">{$viewedProduct->description_short|strip_tags:'UTF-8'|truncate:40}</p>
-            <div class="price-box">
-              <span class="price">{$viewedProduct->price}</span>
-            </div>
+            {if (isset($viewedProduct->price))}
+              <div class="price-box">
+                <span class="price">{$viewedProduct->price}</span>
+              </div>
+            {/if}
           </div>
         </li>
       {/foreach}

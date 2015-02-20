@@ -10,7 +10,7 @@
  * http://www.mitrocops.com/LICENSE.txt
  *
  /*
- * 
+ *
  * @author    Mitrocops <developersaddons@gmail.com>
  * @category Others
  * @package facebookcandvc
@@ -36,7 +36,7 @@ $obj = new facebookcandvchelp();
 
 $data_voucher = $obj->login($data);
 
-if(Configuration::get($name_module.'vis_on') == 1 && $data_voucher['auth'] == 0){	
+if(Configuration::get($name_module.'vis_on') == 1 && $data_voucher['auth'] == 0){
 if(defined('_MYSQL_ENGINE_')){
 	$_http_host = $smarty->tpl_vars['base_dir_ssl']->value;
 } else {
@@ -44,12 +44,12 @@ if(defined('_MYSQL_ENGINE_')){
 }
 echo '<h4>';
 echo '<img src="'.$_http_host.'modules/facebookcandvc/i/logo-16x16.gif"/>&nbsp;';
-echo $data_translate['firsttext'].' '.$data_translate['discountvalue'];
+echo 'Discount Value: '.$data_translate['discountvalue'];
 echo '</h4>';
 echo '<br/>';
-echo '<div style="font-weight:normal;font-size:12px">'.$data_translate['secondtext'].': &nbsp;<b>'.$data_voucher['data']['voucher_code'].'</b></div>';
+echo '<div style="font-weight:normal;font-size:12px">Coupon Code: &nbsp;<b>'.$data_voucher['data']['voucher_code'].'</b></div>';
 echo '<br/>';
-echo '<div style="font-weight:normal;font-size:12px">'.$data_translate['threetext'].': &nbsp;<b>'.$data_voucher['data']['date_until'].'</b></div>';
+echo '<div style="font-weight:normal;font-size:12px">Expiration Date: &nbsp;<b>'.$data_voucher['data']['date_until'].'</b></div>';
 } else {
 	echo "auth";
 }

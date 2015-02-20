@@ -35,12 +35,16 @@
     {if isset($meta_description) AND $meta_description AND !strpos($meta_description, 'PrestaShop')}
       <meta name="description" content="{$meta_description|escape:'html':'UTF-8'} - 美国摇啊摇零食网" />
     {else}
-      <meta name="description" content="美国摇啊摇零食网-美国最大最全的亚洲购物网站，为你提供最全最健康的中国及亚洲零食及美妆产品，让你足不出户也能享受家的便利。最全最好的商品，最优最有保障的网购体验。" />
+      <meta name="description" content="美国摇啊摇零食网-美国最新最潮的亚洲购物网站,为您带来中国及亚洲零食和美妆产品.摇啊摇,摇到家乡的味道。" />
     {/if}
     {if isset($meta_keywords) AND $meta_keywords}
-      <meta name="keywords" content="{$meta_keywords|escape:'html':'UTF-8'},美国,yaoay,摇啊摇,华人,网上,华人超市,在线超市,网上中国超市,中国零食,日本零食,亚洲零食,健康零食,中国商品,网购,亚洲商品,中国食品,亚洲食品,日韩美妆,护肤保养" />
+      <meta name="keywords" content="美国,yaoay,摇啊摇,华人,网上,华人超市,在线超市,网上中国超市,中国零食,日本零食,亚洲零食,健康零食,中国商品,网购,亚洲商品,中国食品,亚洲食品,日韩美妆,护肤保养,{$meta_keywords|escape:'html':'UTF-8'}" />
     {else}
-      <meta name="keywords" content="{$meta_description|escape:'html':'UTF-8'},美国,yaoay,摇啊摇,华人,网上,华人超市,在线超市,网上中国超市,中国零食,日本零食,亚洲零食,健康零食,中国商品,网购,亚洲商品,中国食品,亚洲食品,日韩美妆,护肤保养" />
+      {if isset($meta_description) AND $meta_description AND !strpos($meta_description, 'PrestaShop')}
+        <meta name="keywords" content="美国,yaoay,摇啊摇,华人,网上,华人超市,在线超市,网上中国超市,中国零食,日本零食,亚洲零食,健康零食,中国商品,网购,亚洲商品,中国食品,亚洲食品,日韩美妆,护肤保养,{$meta_description|escape:'html':'UTF-8'}" />
+      {else}
+        <meta name="keywords" content="美国,yaoay,摇啊摇,华人,网上,华人超市,在线超市,网上中国超市,中国零食,日本零食,亚洲零食,健康零食,中国商品,网购,亚洲商品,中国食品,亚洲食品,日韩美妆,护肤保养" />
+      {/if}
     {/if}
     <meta name="generator" content="PrestaShop" />
     <meta name="generator" content="Yaoay" />
