@@ -107,7 +107,7 @@ class TagCore extends ObjectModel
 		 	 		return false;
 				$tag = trim(Tools::substr($tag, 0, self::$definition['fields']['name']['size']));
 				$tag_obj = new Tag(null, $tag, (int)$id_lang);
-
+	
 				/* Tag does not exist in database */
 				if (!Validate::isLoadedObject($tag_obj))
 				{
@@ -130,34 +130,31 @@ class TagCore extends ObjectModel
 
 	public static function getMainTags($id_lang, $nb = 10)
 	{
-		// $sql_groups = '';
-		// if (Group::isFeatureActive())
-		// {
-		// 	$groups = FrontController::getCurrentCustomerGroups();
-		// 	$sql_groups = '
-		// 	AND p.`id_product` IN (
-		// 		SELECT cp.`id_product`
-		// 		FROM `'._DB_PREFIX_.'category_product` cp
-		// 		LEFT JOIN `'._DB_PREFIX_.'category_group` cg ON (cp.`id_category` = cg.`id_category`)
-		// 		WHERE cg.`id_group` '.(count($groups) ? 'IN ('.implode(',', $groups).')' : '= 1').'
-		// 	)';
-		// }
+		$sql_groups = '';
+		if (Group::isFeatureActive())
+		{
+			$groups = FrontController::getCurrentCustomerGroups();
+			$sql_groups = '
+			AND p.`id_product` IN (
+				SELECT cp.`id_product`
+				FROM `'._DB_PREFIX_.'category_product` cp
+				LEFT JOIN `'._DB_PREFIX_.'category_group` cg ON (cp.`id_category` = cg.`id_category`)
+				WHERE cg.`id_group` '.(count($groups) ? 'IN ('.implode(',', $groups).')' : '= 1').'
+			)';
+		}
 
-		// return Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS('
-		// SELECT t.name, COUNT(pt.id_tag) AS times
-		// FROM `'._DB_PREFIX_.'product_tag` pt
-		// LEFT JOIN `'._DB_PREFIX_.'tag` t ON (t.id_tag = pt.id_tag)
-		// LEFT JOIN `'._DB_PREFIX_.'product` p ON (p.id_product = pt.id_product)
-		// '.Shop::addSqlAssociation('product', 'p').'
-		// WHERE t.`id_lang` = '.(int)$id_lang.'
-		// AND product_shop.`active` = 1
-		// '.$sql_groups.'
-		// GROUP BY t.id_tag
-		// ORDER BY times DESC
-		// LIMIT '.(int)$nb);
-		$result = [];
-		$result[] = new array("name" => "马油", "times" => 123);
-		return $result;
+		return Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS('
+		SELECT t.name, COUNT(pt.id_tag) AS times
+		FROM `'._DB_PREFIX_.'product_tag` pt
+		LEFT JOIN `'._DB_PREFIX_.'tag` t ON (t.id_tag = pt.id_tag)
+		LEFT JOIN `'._DB_PREFIX_.'product` p ON (p.id_product = pt.id_product)
+		'.Shop::addSqlAssociation('product', 'p').'
+		WHERE t.`id_lang` = '.(int)$id_lang.'
+		AND product_shop.`active` = 1
+		'.$sql_groups.'
+		GROUP BY t.id_tag
+		ORDER BY times DESC
+		LIMIT '.(int)$nb);
 	}
 
 	public static function getProductTags($id_product)
