@@ -104,7 +104,7 @@ class BlockTags extends Module
 	function hookLeftColumn($params)
 	{
 		$tags = Tag::getMainTags((int)($params['cookie']->id_lang), (int)(Configuration::get('BLOCKTAGS_NBR')));
-
+    PC::debug($tags);
 		$max = -1;
 		$min = -1;
 		foreach ($tags as $tag)
