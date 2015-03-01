@@ -119,11 +119,11 @@ ul#thumbs_list_frame li a.shown img{
 outline: 3px solid #cdcdcd;}
 /* link list */
 #usefull_link_block {
-list-style-type: none; 
+list-style-type: none;
 display: block;
 margin-bottom: 15px;}
 #usefull_link_block li {
-margin: 0 10px 8px 0; 
+margin: 0 10px 8px 0;
 display: inline;
 }
 #product_payment_logos{
@@ -144,7 +144,7 @@ color: #666;
 font-size: 19px;
 line-height: 22px;
 left: 0;
-font-weight: normal; 
+font-weight: normal;
 margin-right: 7px;
 display: inline-block;
 text-align: center;
@@ -201,7 +201,7 @@ margin-bottom: 30px;}
 .pb-center-column h1 {
 padding-bottom: 9px;
 font-size: 20px;
-color: #666; 
+color: #666;
 margin: 0;
 font-family: 'calibribold';
 text-transform: uppercase;}
@@ -222,7 +222,7 @@ display: none; }
 padding: 0 0 9px;
 word-wrap: break-word; }
 .pb-center-column #short_description_block #short_description_content p {
-line-height: 22px; 
+line-height: 22px;
 font-size: 15px;
 margin: 0;}
 .pb-center-column #buy_block {
@@ -232,7 +232,7 @@ display: inline-block;
 width: 75px;
 font-weight: 700;
 font-size: 12px;
-text-align: left; 
+text-align: left;
 float: left;
 margin: 0;
 padding-top: 5px;}
@@ -279,7 +279,7 @@ padding-bottom: 3px; }
 vertical-align: top;
 display: block; }
 #attributes .attribute_list {
-width: 100%; 
+width: 100%;
 overflow: hidden;}
 #attributes .attribute_list .form-control {
 max-width: 230px; }
@@ -329,7 +329,7 @@ box-shadow: inset 0 6px 6px rgba(0, 0, 0, 0.05);
 padding: 19px 19px 17px; } */
 
 .box-cart-bottom {
-padding: 0; 
+padding: 0;
 display: inline-block;
 float: left;
 }
@@ -434,7 +434,7 @@ display: none; } }
 #center_column.col-sm-9 .col-md-3 .box-info-product .exclusive.added:before {
 content: "\f00c"; }
 #center_column.col-sm-9 .col-md-3 .box-info-product .exclusive.added.disabled:before, #center_column.col-sm-9 .col-md-3 .box-info-product .exclusive.disabled:before {
-height:51px;      
+height:51px;
 content: "\f110";
 animation: 2s linear 0s normal none infinite spin;
 -webkit-animation: 2s linear 0s normal none infinite spin;
@@ -621,7 +621,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColo
 
 /* prices */
 .content_prices {
-padding: 0; 
+padding: 0;
 margin: 10px 0;
 padding: 0;
 }
@@ -631,8 +631,9 @@ display: none; }
 
 .our_price_display {
 font: normal 24px/25px 'calibribold';
-color: #444; 
+color: #444;
 display: inline-block;
+margin-left: 5px;
 }
 @media (max-width: 991px) {
 .our_price_display {
@@ -673,10 +674,10 @@ text-align: left; }
 
 .buttons_bottom_block {
 clear: both;
-padding: 0; 
+padding: 0;
 position: relative;}
 .buttons_bottom_block #wishlist_button {
-font-weight: 700; 
+font-weight: 700;
 color: #777676;
 }
 

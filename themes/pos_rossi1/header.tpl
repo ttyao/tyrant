@@ -30,6 +30,7 @@
 <html lang="{$lang_iso}">
   <head>
     <meta charset="utf-8" />
+    {PC::debug($meta_title)}
     <title>{$meta_title|escape:'html':'UTF-8'}</title>
     {if isset($meta_description) AND $meta_description AND !strpos($meta_description, 'PrestaShop')}
       <meta name="description" content="{$meta_description|escape:'html':'UTF-8'} - 美国摇啊摇零食网" />
