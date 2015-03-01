@@ -24,19 +24,21 @@
 *}
 
 <!-- Block tags module -->
-<div id="tags_block_left" class="block tags_block">
-	<div class="title_block">
-		<strong>
-			<span>{l s='Tags' mod='blocktags'}</span>
-		</strong>
-	</div>
+<div id="tags_block_left" class="{if !isset($no_show_tag_title)}block{/if} tags_block">
+	{if !isset($no_show_tag_title)}
+		<div class="title_block">
+			<strong>
+				<span>{l s='Tags' mod='blocktags'}</span>
+			</strong>
+		</div>
+	{/if}
 	<div class="block_content">
 		{if $tags}
 			{foreach from=$tags item=tag name=myLoop}
-				<a 
+				<a
 				class="{$tag.class} {if $smarty.foreach.myLoop.last}last_item{elseif $smarty.foreach.myLoop.first}first_item{else}item{/if}"
-				href="{$link->getPageLink('search', true, NULL, "tag={$tag.name|urlencode}")|escape:'html':'UTF-8'}" 
-				title="{l s='More about' mod='blocktags'} {$tag.name|escape:'html':'UTF-8'}" 
+				href="{$link->getPageLink('search', true, NULL, "tag={$tag.name|urlencode}")|escape:'html':'UTF-8'}"
+				title="{l s='More about' mod='blocktags'} {$tag.name|escape:'html':'UTF-8'}"
 				>
 					{$tag.name|escape:'html':'UTF-8'}
 				</a>
