@@ -607,7 +607,7 @@ class CategoryCore extends ObjectModel
 	  * @param boolean $check_access set to false to return all products (even if customer hasn't access)
 	  * @return mixed Products or number of products
 	  */
-	public function getProducts($id_lang, $p, $n, $order_by = null, $order_way = null, $get_total = false, $active = true, $random = false, $random_number_products = 1, $check_access = true, Context $context = null)
+	public function getProducts($id_lang, $p, $n, $order_by = null, $order_way = null, $get_total = false, $active = true, $random = false, $random_number_products = 1, $check_access = true, Context $context = null, $only_verified = false)
 	{
 		if (!$context)
 			$context = Context::getContext();
@@ -692,11 +692,14 @@ class CategoryCore extends ObjectModel
 					AND il.`id_lang` = '.(int)$id_lang.')
 				LEFT JOIN `'._DB_PREFIX_.'manufacturer` m
 					ON m.`id_manufacturer` = p.`id_manufacturer`
+				LEFT JOIN `'._DB_PREFIX_.'stock_available` sa
+					ON sa.`id_product` = p.`id_product`
 				WHERE product_shop.`id_shop` = '.(int)$context->shop->id.'
 					AND cp.`id_category` = '.(int)$this->id
 					.($active ? ' AND product_shop.`active` = 1' : '')
 					.($front ? ' AND product_shop.`visibility` IN ("both", "catalog")' : '')
 					.($id_supplier ? ' AND p.id_supplier = '.(int)$id_supplier : '')
+					.($only_verified ? ' AND sa.quantity < 1000' : '')
 					.' GROUP BY product_shop.id_product';
 
 		if ($random === true)
