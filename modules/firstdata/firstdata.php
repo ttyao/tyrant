@@ -26,7 +26,7 @@ class Firstdata extends PaymentModule
 		$this->displayName = $this->l('First Data');
 		$this->description = $this->l('Accept Credit card payments today with First Data (Visa, Mastercard, Amex, Discover, etc.)');
 
-		
+
 		/* Backward compatibility */
 		if (_PS_VERSION_ < 1.5)
 			require(_PS_MODULE_DIR_.'firstdata/backward_compatibility/backward.php');
@@ -35,7 +35,7 @@ class Firstdata extends PaymentModule
 	public function install()
 	{
 		$this->registerHook('displayMobileHeader');
-		
+
 		return Db::getInstance()->Execute('
 		CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'firstdata` (
 			`id_cart` int(10) NOT NULL,
@@ -113,14 +113,14 @@ class Firstdata extends PaymentModule
 			$transaction_type = 34;
 			Db::getInstance()->Execute('UPDATE `'._DB_PREFIX_.'firstdata` SET date_refund = NOW() WHERE `id_cart` = '.(int)$order->id_cart);
 		}
-		
+
 		$transaction = $this->_getTransaction((int)$order->id_cart);
-		
+
 		if (isset($transaction_type))
 		{
 			$result = $this->_firstDataCall('{"gateway_id": "'.Configuration::get('FIRSTDATA_GATEWAY_ID').'", "password": "'.Configuration::get('FIRSTDATA_PASSWORD').'", "transaction_type": "'.$transaction_type.'", "amount": "'.(float)$order->getTotalPaid().'", "transaction_tag": "'.(int)$transaction['transaction_tag'].'", "authorization_num": "'.Tools::safeOutput($transaction['authorization_num']).'"}');
 			$json_result = Tools::jsondecode($result);
-			
+
 			if (isset($json_result->transaction_approved) && $json_result->transaction_approved)
 				$this->context->smarty->assign('firstdata_message', $transaction_type == 33 ? $this->l('Order successfully canceled.') : $this->l('Order successfully refunded.'));
 			else
@@ -139,7 +139,7 @@ class Firstdata extends PaymentModule
 		'firstdata_form' => './index.php?tab=AdminOrders&id_order='.(int)$order->id.'&vieworder&token='.Tools::getAdminTokenLite('AdminOrders'),
 		'firstdata_transaction_approved' => $transaction_details->transaction_approved,
 		'firstdata_bank_message' => $transaction_details->bank_message,
-		'firstdata_cc_number' => substr($transaction_details->cc_number, -4),
+		'firstdata_cc_number' => '',//substr($transaction_details->cc_number, -4),
 		'firstdata_credit_card_type' => $transaction_details->credit_card_type,
 		'firstdata_amount' => $transaction_details->amount,
 		'firstdata_cardholder_name' => $transaction_details->cardholder_name,
@@ -157,7 +157,7 @@ class Firstdata extends PaymentModule
 	public function hookPayment($params)
 	{
 		$this->smarty->assign('firstdata_ps_version', _PS_VERSION_);
-		
+
 		$currency = new Currency((int)$params['cart']->id_currency);
 
 		if (!$this->active || Configuration::get('FIRSTDATA_KEY_ID') == '' || Configuration::get('FIRSTDATA_KEY_HMAC') == '' && $currency->iso_code != 'USD')
@@ -165,7 +165,7 @@ class Firstdata extends PaymentModule
 
 		return $this->display(__FILE__, 'tpl/payment.tpl');
 	}
-	
+
 	/**
 	 * Display a confirmation message after an order has been placed
 	 *
@@ -220,7 +220,7 @@ class Firstdata extends PaymentModule
 						$payment[0]->save();
 					}
 				}
-				
+
 				/* Redirect the user to the order confirmation page / history */
 				if (_PS_VERSION_ < 1.5)
 					$redirect = __PS_BASE_URI__.'order-confirmation.php?id_cart='.(int)$this->context->cart->id.'&id_module='.(int)$this->id.'&id_order='.(int)$this->currentOrder.'&key='.$this->context->customer->secure_key;

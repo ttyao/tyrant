@@ -178,7 +178,6 @@ class Possearchcategories extends Module
 
 	public function hookRightColumn($params)
 	{
-
 		if (Tools::getValue('search_query') || !$this->isCached('possearch.tpl', $this->getCacheId()))
 		{
 			$this->calculHookCommon($params);
